@@ -1,0 +1,1472 @@
+[ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Lang,1,14,18]; ]
+import Toybox.Lang;
+[ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 2; @symbol_usingdef<0> = [Toybox,2,6,12]; @symbol_usingdef<1> = [WatchUi,2,13,20]; ]
+using Toybox.WatchUi;
+[ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 3; @symbol_usingdef<0> = [Toybox,3,6,12]; @symbol_usingdef<1> = [WatchUi,3,13,20]; @symbol_usingAlias = [Ui,3,24,26]; ]
+using Toybox.WatchUi as :Ui;
+[ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 4; @symbol_usingdef<0> = [Toybox,4,6,12]; @symbol_usingdef<1> = [Graphics,4,13,21]; ]
+using Toybox.Graphics;
+[ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 5; @symbol_usingdef<0> = [Toybox,5,6,12]; @symbol_usingdef<1> = [Graphics,5,13,21]; @symbol_usingAlias = [Gfx,5,25,28]; ]
+using Toybox.Graphics as :Gfx;
+[ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 7; @symbol_moduledef = [Rez,7,7,10]; ]
+module Rez {
+    [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 7; ]
+    <init> {
+    }
+    [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 8; @symbol_moduledef = [Drawables,8,11,20]; ]
+    module Drawables {
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 8; ]
+        <init> {
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 9; @position = 27; initialized = true; @symbol_vardef = [LauncherIcon,9,27,39]; @symbol_type<0> = [ResourceId,9,43,53]; ]
+        var LauncherIcon as ResourceId;
+    }
+    [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 12; @symbol_moduledef = [Strings,12,11,18]; ]
+    module Strings {
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 12; ]
+        <init> {
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 13; @position = 27; initialized = true; @symbol_vardef = [AppName,13,27,34]; @symbol_type<0> = [ResourceId,13,38,48]; ]
+        var AppName as ResourceId;
+    }
+    [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 16; @symbol_moduledef = [Styles,16,11,17]; ]
+    module Styles {
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 16; ]
+        <init> {
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 17; @symbol_moduledef = [prompt_font_enhanced_readability__body_with_title,17,15,64]; ]
+        module prompt_font_enhanced_readability__body_with_title {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 17; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 18; @position = 18; @symbol_constdef = [exclude,18,18,25]; @symbol_type<0> = [Boolean,18,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 21; @symbol_moduledef = [system_size__menu_header,21,15,39]; ]
+        module system_size__menu_header {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 21; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 22; @position = 18; @symbol_constdef = [height,22,18,24]; @symbol_type<0> = [Number,22,28,34]; ]
+            const height as Number = 0;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 25; @symbol_moduledef = [system_loc__hint_button_left_bottom,25,15,50]; ]
+        module system_loc__hint_button_left_bottom {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 25; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 26; @position = 18; @symbol_constdef = [exclude,26,18,25]; @symbol_type<0> = [Boolean,26,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 29; @symbol_moduledef = [prompt_font_enhanced_readability__body_no_title,29,15,62]; ]
+        module prompt_font_enhanced_readability__body_no_title {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 29; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 30; @position = 18; @symbol_constdef = [exclude,30,18,25]; @symbol_type<0> = [Boolean,30,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 33; @symbol_moduledef = [prompt_loc__body_no_title,33,15,40]; ]
+        module prompt_loc__body_no_title {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 33; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 34; @position = 18; @symbol_constdef = [x,34,18,19]; @symbol_type<0> = [Number,34,23,29]; ]
+            const x as Number = 20;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 35; @position = 18; @symbol_constdef = [y,35,18,19]; @symbol_type<0> = [Number,35,23,29]; ]
+            const y as Number = 20;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 38; @symbol_moduledef = [system_icon_dark__about,38,15,38]; ]
+        module system_icon_dark__about {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 38; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 39; @position = 18; @symbol_constdef = [filename,39,18,26]; @symbol_type<0> = [String,39,30,36]; ]
+            const filename as String = "/Users/frederiktheisen/Library/Application Support/Garmin/ConnectIQ/Devices/edge1040/system_icon_dark__about.svg";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 40; @position = 18; @symbol_constdef = [disableTransparency,40,18,37]; @symbol_type<0> = [Boolean,40,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 41; @position = 18; @symbol_constdef = [dithering,41,18,27]; @symbol_type<0> = [String,41,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 42; @position = 18; @symbol_constdef = [automaticPalette,42,18,34]; @symbol_type<0> = [Boolean,42,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 45; @symbol_moduledef = [system_icon_light__question,45,15,42]; ]
+        module system_icon_light__question {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 45; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 46; @position = 18; @symbol_constdef = [filename,46,18,26]; @symbol_type<0> = [String,46,30,36]; ]
+            const filename as String = "/Users/frederiktheisen/Library/Application Support/Garmin/ConnectIQ/Devices/edge1040/system_icon_light__question.svg";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 47; @position = 18; @symbol_constdef = [disableTransparency,47,18,37]; @symbol_type<0> = [Boolean,47,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 48; @position = 18; @symbol_constdef = [dithering,48,18,27]; @symbol_type<0> = [String,48,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 49; @position = 18; @symbol_constdef = [automaticPalette,49,18,34]; @symbol_type<0> = [Boolean,49,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 52; @symbol_moduledef = [system_loc__hint_button_left_top,52,15,47]; ]
+        module system_loc__hint_button_left_top {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 52; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 53; @position = 18; @symbol_constdef = [exclude,53,18,25]; @symbol_type<0> = [Boolean,53,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 56; @symbol_moduledef = [prompt_font__title,56,15,33]; ]
+        module prompt_font__title {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 56; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 57; @position = 18; @symbol_constdef = [exclude,57,18,25]; @symbol_type<0> = [Boolean,57,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 60; @symbol_moduledef = [system_icon_dark__discard,60,15,40]; ]
+        module system_icon_dark__discard {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 60; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 61; @position = 18; @symbol_constdef = [filename,61,18,26]; @symbol_type<0> = [String,61,30,36]; ]
+            const filename as String = "/Users/frederiktheisen/Library/Application Support/Garmin/ConnectIQ/Devices/edge1040/system_icon_dark__discard.svg";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 62; @position = 18; @symbol_constdef = [disableTransparency,62,18,37]; @symbol_type<0> = [Boolean,62,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 63; @position = 18; @symbol_constdef = [dithering,63,18,27]; @symbol_type<0> = [String,63,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 64; @position = 18; @symbol_constdef = [automaticPalette,64,18,34]; @symbol_type<0> = [Boolean,64,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 67; @symbol_moduledef = [system_size__menu_item,67,15,37]; ]
+        module system_size__menu_item {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 67; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 68; @position = 18; @symbol_constdef = [width,68,18,23]; @symbol_type<0> = [Number,68,27,33]; ]
+            const width as Number = 282;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 69; @position = 18; @symbol_constdef = [height,69,18,24]; @symbol_type<0> = [Number,69,28,34]; ]
+            const height as Number = 70;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 72; @symbol_moduledef = [system_color_dark__text,72,15,38]; ]
+        module system_color_dark__text {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 72; ]
+            <init> {
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" 74 18 ]
+                symbol [ Graphics %tmp.1 74 31 39 ];
+                %tmp.1 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.2 74 40 57 ];
+                %tmp.2 = getv %tmp.1 :COLOR_TRANSPARENT;
+                putv self :background %tmp.2;
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 73; @position = 18; @symbol_constdef = [color,73,18,23]; @symbol_type<0> = [Number,73,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 74; @position = 18; @symbol_constdef = [background,74,18,28]; ]
+            const background;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 77; @symbol_moduledef = [system_icon_destructive__discard,77,15,47]; ]
+        module system_icon_destructive__discard {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 77; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 78; @position = 18; @symbol_constdef = [filename,78,18,26]; @symbol_type<0> = [String,78,30,36]; ]
+            const filename as String = "/Users/frederiktheisen/Library/Application Support/Garmin/ConnectIQ/Devices/edge1040/system_icon_destructive__discard.svg";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 79; @position = 18; @symbol_constdef = [disableTransparency,79,18,37]; @symbol_type<0> = [Boolean,79,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 80; @position = 18; @symbol_constdef = [dithering,80,18,27]; @symbol_type<0> = [String,80,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 81; @position = 18; @symbol_constdef = [automaticPalette,81,18,34]; @symbol_type<0> = [Boolean,81,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 84; @symbol_moduledef = [system_icon_dark__hint_action_menu,84,15,49]; ]
+        module system_icon_dark__hint_action_menu {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 84; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 85; @position = 18; @symbol_constdef = [exclude,85,18,25]; @symbol_type<0> = [Boolean,85,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 88; @symbol_moduledef = [prompt_size__title,88,15,33]; ]
+        module prompt_size__title {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 88; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 89; @position = 18; @symbol_constdef = [exclude,89,18,25]; @symbol_type<0> = [Boolean,89,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 92; @symbol_moduledef = [confirmation_font__body,92,15,38]; ]
+        module confirmation_font__body {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 92; ]
+            <init> {
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" 93 18 ]
+                symbol [ Graphics %tmp.3 93 34 42 ];
+                %tmp.3 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.4 93 43 62 ];
+                %tmp.4 = getv %tmp.3 :TEXT_JUSTIFY_CENTER;
+                symbol [ Graphics %tmp.5 93 63 71 ];
+                %tmp.5 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_VCENTER %tmp.6 93 72 92 ];
+                %tmp.6 = getv %tmp.5 :TEXT_JUSTIFY_VCENTER;
+                %tmp.7 = bitor %tmp.4 %tmp.6;
+                putv self :justification %tmp.7;
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" 94 18 ]
+                symbol [ Graphics %tmp.8 94 25 33 ];
+                %tmp.8 = getm $.Toybox.Graphics;
+                symbol [ FONT_MEDIUM %tmp.9 94 34 45 ];
+                %tmp.9 = getv %tmp.8 :FONT_MEDIUM;
+                putv self :font %tmp.9;
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 93; @position = 18; @symbol_constdef = [justification,93,18,31]; ]
+            const justification;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 94; @position = 18; @symbol_constdef = [font,94,18,22]; ]
+            const font;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 97; @symbol_moduledef = [system_color_dark__background,97,15,44]; ]
+        module system_color_dark__background {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 97; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 98; @position = 18; @symbol_constdef = [color,98,18,23]; @symbol_type<0> = [Number,98,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 99; @position = 18; @symbol_constdef = [background,99,18,28]; @symbol_type<0> = [Number,99,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 102; @symbol_moduledef = [system_icon_destructive__hint_button_left_top,102,15,60]; ]
+        module system_icon_destructive__hint_button_left_top {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 102; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 103; @position = 18; @symbol_constdef = [exclude,103,18,25]; @symbol_type<0> = [Boolean,103,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 106; @symbol_moduledef = [system_size__launch_icon,106,15,39]; ]
+        module system_size__launch_icon {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 106; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 107; @position = 18; @symbol_constdef = [scaleX,107,18,24]; @symbol_type<0> = [Number,107,28,34]; ]
+            const scaleX as Number = 40;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 108; @position = 18; @symbol_constdef = [scaleY,108,18,24]; @symbol_type<0> = [Number,108,28,34]; ]
+            const scaleY as Number = 40;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 109; @position = 18; @symbol_constdef = [scaleRelativeTo,109,18,33]; @symbol_type<0> = [String,109,37,43]; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 112; @symbol_moduledef = [confirmation_input__confirm,112,15,42]; ]
+        module confirmation_input__confirm {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 112; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 113; @position = 18; @symbol_constdef = [y1,113,18,20]; @symbol_type<0> = [Number,113,24,30]; ]
+            const y1 as Number = 373;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 114; @position = 18; @symbol_constdef = [x1,114,18,20]; @symbol_type<0> = [Number,114,24,30]; ]
+            const x1 as Number = 218;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 115; @position = 18; @symbol_constdef = [y2,115,18,20]; @symbol_type<0> = [Number,115,24,30]; ]
+            const y2 as Number = 405;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 116; @position = 18; @symbol_constdef = [x2,116,18,20]; @symbol_type<0> = [Number,116,24,30]; ]
+            const x2 as Number = 250;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 119; @symbol_moduledef = [prompt_font__body_with_title,119,15,43]; ]
+        module prompt_font__body_with_title {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 119; ]
+            <init> {
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" 120 18 ]
+                symbol [ Graphics %tmp.10 120 34 42 ];
+                %tmp.10 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.11 120 43 62 ];
+                %tmp.11 = getv %tmp.10 :TEXT_JUSTIFY_CENTER;
+                symbol [ Graphics %tmp.12 120 63 71 ];
+                %tmp.12 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_VCENTER %tmp.13 120 72 92 ];
+                %tmp.13 = getv %tmp.12 :TEXT_JUSTIFY_VCENTER;
+                %tmp.14 = bitor %tmp.11 %tmp.13;
+                putv self :justification %tmp.14;
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" 121 18 ]
+                symbol [ Graphics %tmp.15 121 25 33 ];
+                %tmp.15 = getm $.Toybox.Graphics;
+                symbol [ FONT_MEDIUM %tmp.16 121 34 45 ];
+                %tmp.16 = getv %tmp.15 :FONT_MEDIUM;
+                putv self :font %tmp.16;
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 120; @position = 18; @symbol_constdef = [justification,120,18,31]; ]
+            const justification;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 121; @position = 18; @symbol_constdef = [font,121,18,22]; ]
+            const font;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 124; @symbol_moduledef = [confirmation_loc__body,124,15,37]; ]
+        module confirmation_loc__body {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 124; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 125; @position = 18; @symbol_constdef = [x,125,18,19]; @symbol_type<0> = [Number,125,23,29]; ]
+            const x as Number = 20;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 126; @position = 18; @symbol_constdef = [y,126,18,19]; @symbol_type<0> = [Number,126,23,29]; ]
+            const y as Number = 269;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 129; @symbol_moduledef = [system_icon_destructive__hint_button_left_bottom,129,15,63]; ]
+        module system_icon_destructive__hint_button_left_bottom {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 129; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 130; @position = 18; @symbol_constdef = [exclude,130,18,25]; @symbol_type<0> = [Boolean,130,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 133; @symbol_moduledef = [prompt_color_dark__background,133,15,44]; ]
+        module prompt_color_dark__background {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 133; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 134; @position = 18; @symbol_constdef = [color,134,18,23]; @symbol_type<0> = [Number,134,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 135; @position = 18; @symbol_constdef = [background,135,18,28]; @symbol_type<0> = [Number,135,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 138; @symbol_moduledef = [system_icon_destructive__hint_action_menu,138,15,56]; ]
+        module system_icon_destructive__hint_action_menu {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 138; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 139; @position = 18; @symbol_constdef = [exclude,139,18,25]; @symbol_type<0> = [Boolean,139,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 142; @symbol_moduledef = [system_loc__hint_action_menu,142,15,43]; ]
+        module system_loc__hint_action_menu {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 142; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 143; @position = 18; @symbol_constdef = [exclude,143,18,25]; @symbol_type<0> = [Boolean,143,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 146; @symbol_moduledef = [confirmation_icon__hint_confirm,146,15,46]; ]
+        module confirmation_icon__hint_confirm {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 146; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 147; @position = 18; @symbol_constdef = [filename,147,18,26]; @symbol_type<0> = [String,147,30,36]; ]
+            const filename as String = "/Users/frederiktheisen/Library/Application Support/Garmin/ConnectIQ/Devices/edge1040/confirmation_icon__hint_completion.svg";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 148; @position = 18; @symbol_constdef = [disableTransparency,148,18,37]; @symbol_type<0> = [Boolean,148,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 149; @position = 18; @symbol_constdef = [dithering,149,18,27]; @symbol_type<0> = [String,149,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 150; @position = 18; @symbol_constdef = [automaticPalette,150,18,34]; @symbol_type<0> = [Boolean,150,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 153; @symbol_moduledef = [system_loc__hint_button_left_middle,153,15,50]; ]
+        module system_loc__hint_button_left_middle {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 153; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 154; @position = 18; @symbol_constdef = [exclude,154,18,25]; @symbol_type<0> = [Boolean,154,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 157; @symbol_moduledef = [prompt_size__body_no_title,157,15,41]; ]
+        module prompt_size__body_no_title {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 157; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 158; @position = 18; @symbol_constdef = [width,158,18,23]; @symbol_type<0> = [Number,158,27,33]; ]
+            const width as Number = 242;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 159; @position = 18; @symbol_constdef = [height,159,18,24]; @symbol_type<0> = [Number,159,28,34]; ]
+            const height as Number = 329;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 162; @symbol_moduledef = [system_icon_light__hint_button_left_top,162,15,54]; ]
+        module system_icon_light__hint_button_left_top {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 162; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 163; @position = 18; @symbol_constdef = [exclude,163,18,25]; @symbol_type<0> = [Boolean,163,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 166; @symbol_moduledef = [prompt_color_light__background,166,15,45]; ]
+        module prompt_color_light__background {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 166; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 167; @position = 18; @symbol_constdef = [color,167,18,23]; @symbol_type<0> = [Number,167,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 168; @position = 18; @symbol_constdef = [background,168,18,28]; @symbol_type<0> = [Number,168,32,38]; ]
+            const background as Number = 0xFFFFFF;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 171; @symbol_moduledef = [confirmation_input__delete,171,15,41]; ]
+        module confirmation_input__delete {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 171; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 172; @position = 18; @symbol_constdef = [y1,172,18,20]; @symbol_type<0> = [Number,172,24,30]; ]
+            const y1 as Number = 373;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 173; @position = 18; @symbol_constdef = [x1,173,18,20]; @symbol_type<0> = [Number,173,24,30]; ]
+            const x1 as Number = 218;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 174; @position = 18; @symbol_constdef = [y2,174,18,20]; @symbol_type<0> = [Number,174,24,30]; ]
+            const y2 as Number = 405;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 175; @position = 18; @symbol_constdef = [x2,175,18,20]; @symbol_type<0> = [Number,175,24,30]; ]
+            const x2 as Number = 250;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 178; @symbol_moduledef = [system_icon_dark__hint_button_left_top,178,15,53]; ]
+        module system_icon_dark__hint_button_left_top {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 178; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 179; @position = 18; @symbol_constdef = [exclude,179,18,25]; @symbol_type<0> = [Boolean,179,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 182; @symbol_moduledef = [system_input__action_menu,182,15,40]; ]
+        module system_input__action_menu {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 182; ]
+            <init> {
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" 183 18 ]
+                symbol [ WatchUi %tmp.17 183 27 34 ];
+                %tmp.17 = getm $.Toybox.WatchUi;
+                symbol [ KEY_MENU %tmp.18 183 35 43 ];
+                %tmp.18 = getv %tmp.17 :KEY_MENU;
+                putv self :button %tmp.18;
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 183; @position = 18; @symbol_constdef = [button,183,18,24]; ]
+            const button;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 186; @symbol_moduledef = [system_icon_light__save,186,15,38]; ]
+        module system_icon_light__save {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 186; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 187; @position = 18; @symbol_constdef = [filename,187,18,26]; @symbol_type<0> = [String,187,30,36]; ]
+            const filename as String = "/Users/frederiktheisen/Library/Application Support/Garmin/ConnectIQ/Devices/edge1040/system_icon_light__save.svg";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 188; @position = 18; @symbol_constdef = [disableTransparency,188,18,37]; @symbol_type<0> = [Boolean,188,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 189; @position = 18; @symbol_constdef = [dithering,189,18,27]; @symbol_type<0> = [String,189,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 190; @position = 18; @symbol_constdef = [automaticPalette,190,18,34]; @symbol_type<0> = [Boolean,190,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 193; @symbol_moduledef = [prompt_color_light__body,193,15,39]; ]
+        module prompt_color_light__body {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 193; ]
+            <init> {
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" 195 18 ]
+                symbol [ Graphics %tmp.19 195 31 39 ];
+                %tmp.19 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.20 195 40 57 ];
+                %tmp.20 = getv %tmp.19 :COLOR_TRANSPARENT;
+                putv self :background %tmp.20;
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 194; @position = 18; @symbol_constdef = [color,194,18,23]; @symbol_type<0> = [Number,194,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 195; @position = 18; @symbol_constdef = [background,195,18,28]; ]
+            const background;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 198; @symbol_moduledef = [system_loc__subwindow,198,15,36]; ]
+        module system_loc__subwindow {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 198; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 199; @position = 18; @symbol_constdef = [exclude,199,18,25]; @symbol_type<0> = [Boolean,199,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 202; @symbol_moduledef = [system_icon_light__warning,202,15,41]; ]
+        module system_icon_light__warning {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 202; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 203; @position = 18; @symbol_constdef = [filename,203,18,26]; @symbol_type<0> = [String,203,30,36]; ]
+            const filename as String = "/Users/frederiktheisen/Library/Application Support/Garmin/ConnectIQ/Devices/edge1040/system_icon_light__warning.svg";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 204; @position = 18; @symbol_constdef = [disableTransparency,204,18,37]; @symbol_type<0> = [Boolean,204,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 205; @position = 18; @symbol_constdef = [dithering,205,18,27]; @symbol_type<0> = [String,205,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 206; @position = 18; @symbol_constdef = [automaticPalette,206,18,34]; @symbol_type<0> = [Boolean,206,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 209; @symbol_moduledef = [confirmation_color_light__body,209,15,45]; ]
+        module confirmation_color_light__body {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 209; ]
+            <init> {
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" 211 18 ]
+                symbol [ Graphics %tmp.21 211 31 39 ];
+                %tmp.21 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.22 211 40 57 ];
+                %tmp.22 = getv %tmp.21 :COLOR_TRANSPARENT;
+                putv self :background %tmp.22;
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 210; @position = 18; @symbol_constdef = [color,210,18,23]; @symbol_type<0> = [Number,210,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 211; @position = 18; @symbol_constdef = [background,211,18,28]; ]
+            const background;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 214; @symbol_moduledef = [confirmation_icon_light__hint_keep,214,15,49]; ]
+        module confirmation_icon_light__hint_keep {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 214; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 215; @position = 18; @symbol_constdef = [filename,215,18,26]; @symbol_type<0> = [String,215,30,36]; ]
+            const filename as String = "/Users/frederiktheisen/Library/Application Support/Garmin/ConnectIQ/Devices/edge1040/confirmation_icon__hint_keep.svg";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 216; @position = 18; @symbol_constdef = [disableTransparency,216,18,37]; @symbol_type<0> = [Boolean,216,41,48]; ]
+            const disableTransparency as Boolean = false;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 217; @position = 18; @symbol_constdef = [dithering,217,18,27]; @symbol_type<0> = [String,217,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 218; @position = 18; @symbol_constdef = [automaticPalette,218,18,34]; @symbol_type<0> = [Boolean,218,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 221; @symbol_moduledef = [activity_color_light__background,221,15,47]; ]
+        module activity_color_light__background {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 221; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 222; @position = 18; @symbol_constdef = [color,222,18,23]; @symbol_type<0> = [Number,222,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 223; @position = 18; @symbol_constdef = [background,223,18,28]; @symbol_type<0> = [Number,223,32,38]; ]
+            const background as Number = 0xFFFFFF;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 226; @symbol_moduledef = [system_icon_positive__hint_button_right_top,226,15,58]; ]
+        module system_icon_positive__hint_button_right_top {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 226; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 227; @position = 18; @symbol_constdef = [exclude,227,18,25]; @symbol_type<0> = [Boolean,227,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 230; @symbol_moduledef = [system_size__screen,230,15,34]; ]
+        module system_size__screen {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 230; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 231; @position = 18; @symbol_constdef = [width,231,18,23]; @symbol_type<0> = [Number,231,27,33]; ]
+            const width as Number = 282;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 232; @position = 18; @symbol_constdef = [height,232,18,24]; @symbol_type<0> = [Number,232,28,34]; ]
+            const height as Number = 470;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 235; @symbol_moduledef = [system_icon_destructive__hint_button_right_bottom,235,15,64]; ]
+        module system_icon_destructive__hint_button_right_bottom {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 235; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 236; @position = 18; @symbol_constdef = [exclude,236,18,25]; @symbol_type<0> = [Boolean,236,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 239; @symbol_moduledef = [system_color_light__background,239,15,45]; ]
+        module system_color_light__background {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 239; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 240; @position = 18; @symbol_constdef = [color,240,18,23]; @symbol_type<0> = [Number,240,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 241; @position = 18; @symbol_constdef = [background,241,18,28]; @symbol_type<0> = [Number,241,32,38]; ]
+            const background as Number = 0xFFFFFF;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 244; @symbol_moduledef = [system_icon_destructive__hint_button_right_top,244,15,61]; ]
+        module system_icon_destructive__hint_button_right_top {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 244; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 245; @position = 18; @symbol_constdef = [exclude,245,18,25]; @symbol_type<0> = [Boolean,245,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 248; @symbol_moduledef = [confirmation_loc__hint_confirm,248,15,45]; ]
+        module confirmation_loc__hint_confirm {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 248; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 249; @position = 18; @symbol_constdef = [x,249,18,19]; @symbol_type<0> = [Number,249,23,29]; ]
+            const x as Number = 218;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 250; @position = 18; @symbol_constdef = [y,250,18,19]; @symbol_type<0> = [Number,250,23,29]; ]
+            const y as Number = 373;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 251; @position = 18; @symbol_constdef = [horizontalJustification,251,18,41]; @symbol_type<0> = [String,251,45,51]; ]
+            const horizontalJustification as String = "center";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 252; @position = 18; @symbol_constdef = [verticalJustification,252,18,39]; @symbol_type<0> = [String,252,43,49]; ]
+            const verticalJustification as String = "center";
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 255; @symbol_moduledef = [activity_color_dark__text,255,15,40]; ]
+        module activity_color_dark__text {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 255; ]
+            <init> {
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" 257 18 ]
+                symbol [ Graphics %tmp.23 257 31 39 ];
+                %tmp.23 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.24 257 40 57 ];
+                %tmp.24 = getv %tmp.23 :COLOR_TRANSPARENT;
+                putv self :background %tmp.24;
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 256; @position = 18; @symbol_constdef = [color,256,18,23]; @symbol_type<0> = [Number,256,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 257; @position = 18; @symbol_constdef = [background,257,18,28]; ]
+            const background;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 260; @symbol_moduledef = [confirmation_input__keep,260,15,39]; ]
+        module confirmation_input__keep {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 260; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 261; @position = 18; @symbol_constdef = [y1,261,18,20]; @symbol_type<0> = [Number,261,24,30]; ]
+            const y1 as Number = 373;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 262; @position = 18; @symbol_constdef = [x1,262,18,20]; @symbol_type<0> = [Number,262,24,30]; ]
+            const x1 as Number = 63;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 263; @position = 18; @symbol_constdef = [y2,263,18,20]; @symbol_type<0> = [Number,263,24,30]; ]
+            const y2 as Number = 405;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 264; @position = 18; @symbol_constdef = [x2,264,18,20]; @symbol_type<0> = [Number,264,24,30]; ]
+            const x2 as Number = 85;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 267; @symbol_moduledef = [prompt_loc__body_with_title,267,15,42]; ]
+        module prompt_loc__body_with_title {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 267; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 268; @position = 18; @symbol_constdef = [x,268,18,19]; @symbol_type<0> = [Number,268,23,29]; ]
+            const x as Number = 20;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 269; @position = 18; @symbol_constdef = [y,269,18,19]; @symbol_type<0> = [Number,269,23,29]; ]
+            const y as Number = 142;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 272; @symbol_moduledef = [system_icon_dark__search,272,15,39]; ]
+        module system_icon_dark__search {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 272; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 273; @position = 18; @symbol_constdef = [filename,273,18,26]; @symbol_type<0> = [String,273,30,36]; ]
+            const filename as String = "/Users/frederiktheisen/Library/Application Support/Garmin/ConnectIQ/Devices/edge1040/system_icon_dark__search.svg";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 274; @position = 18; @symbol_constdef = [disableTransparency,274,18,37]; @symbol_type<0> = [Boolean,274,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 275; @position = 18; @symbol_constdef = [dithering,275,18,27]; @symbol_type<0> = [String,275,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 276; @position = 18; @symbol_constdef = [automaticPalette,276,18,34]; @symbol_type<0> = [Boolean,276,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 279; @symbol_moduledef = [activity_color_light__text,279,15,41]; ]
+        module activity_color_light__text {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 279; ]
+            <init> {
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" 281 18 ]
+                symbol [ Graphics %tmp.25 281 31 39 ];
+                %tmp.25 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.26 281 40 57 ];
+                %tmp.26 = getv %tmp.25 :COLOR_TRANSPARENT;
+                putv self :background %tmp.26;
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 280; @position = 18; @symbol_constdef = [color,280,18,23]; @symbol_type<0> = [Number,280,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 281; @position = 18; @symbol_constdef = [background,281,18,28]; ]
+            const background;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 284; @symbol_moduledef = [confirmation_icon__hint_keep,284,15,43]; ]
+        module confirmation_icon__hint_keep {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 284; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 285; @position = 18; @symbol_constdef = [filename,285,18,26]; @symbol_type<0> = [String,285,30,36]; ]
+            const filename as String = "/Users/frederiktheisen/Library/Application Support/Garmin/ConnectIQ/Devices/edge1040/confirmation_icon__hint_keep.svg";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 286; @position = 18; @symbol_constdef = [disableTransparency,286,18,37]; @symbol_type<0> = [Boolean,286,41,48]; ]
+            const disableTransparency as Boolean = false;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 287; @position = 18; @symbol_constdef = [dithering,287,18,27]; @symbol_type<0> = [String,287,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 288; @position = 18; @symbol_constdef = [automaticPalette,288,18,34]; @symbol_type<0> = [Boolean,288,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 291; @symbol_moduledef = [system_icon_dark__save,291,15,37]; ]
+        module system_icon_dark__save {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 291; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 292; @position = 18; @symbol_constdef = [filename,292,18,26]; @symbol_type<0> = [String,292,30,36]; ]
+            const filename as String = "/Users/frederiktheisen/Library/Application Support/Garmin/ConnectIQ/Devices/edge1040/system_icon_dark__save.svg";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 293; @position = 18; @symbol_constdef = [disableTransparency,293,18,37]; @symbol_type<0> = [Boolean,293,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 294; @position = 18; @symbol_constdef = [dithering,294,18,27]; @symbol_type<0> = [String,294,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 295; @position = 18; @symbol_constdef = [automaticPalette,295,18,34]; @symbol_type<0> = [Boolean,295,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 298; @symbol_moduledef = [system_icon_destructive__hint_button_left_middle,298,15,63]; ]
+        module system_icon_destructive__hint_button_left_middle {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 298; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 299; @position = 18; @symbol_constdef = [exclude,299,18,25]; @symbol_type<0> = [Boolean,299,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 302; @symbol_moduledef = [system_icon_light__search,302,15,40]; ]
+        module system_icon_light__search {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 302; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 303; @position = 18; @symbol_constdef = [filename,303,18,26]; @symbol_type<0> = [String,303,30,36]; ]
+            const filename as String = "/Users/frederiktheisen/Library/Application Support/Garmin/ConnectIQ/Devices/edge1040/system_icon_light__search.svg";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 304; @position = 18; @symbol_constdef = [disableTransparency,304,18,37]; @symbol_type<0> = [Boolean,304,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 305; @position = 18; @symbol_constdef = [dithering,305,18,27]; @symbol_type<0> = [String,305,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 306; @position = 18; @symbol_constdef = [automaticPalette,306,18,34]; @symbol_type<0> = [Boolean,306,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 309; @symbol_moduledef = [system_icon_dark__hint_button_left_bottom,309,15,56]; ]
+        module system_icon_dark__hint_button_left_bottom {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 309; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 310; @position = 18; @symbol_constdef = [exclude,310,18,25]; @symbol_type<0> = [Boolean,310,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 313; @symbol_moduledef = [system_icon_positive__hint_button_left_top,313,15,57]; ]
+        module system_icon_positive__hint_button_left_top {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 313; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 314; @position = 18; @symbol_constdef = [exclude,314,18,25]; @symbol_type<0> = [Boolean,314,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 317; @symbol_moduledef = [system_loc__hint_button_right_bottom,317,15,51]; ]
+        module system_loc__hint_button_right_bottom {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 317; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 318; @position = 18; @symbol_constdef = [exclude,318,18,25]; @symbol_type<0> = [Boolean,318,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 321; @symbol_moduledef = [confirmation_icon_dark__hint_reject,321,15,50]; ]
+        module confirmation_icon_dark__hint_reject {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 321; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 322; @position = 18; @symbol_constdef = [filename,322,18,26]; @symbol_type<0> = [String,322,30,36]; ]
+            const filename as String = "/Users/frederiktheisen/Library/Application Support/Garmin/ConnectIQ/Devices/edge1040/confirmation_icon__hint_reject.svg";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 323; @position = 18; @symbol_constdef = [disableTransparency,323,18,37]; @symbol_type<0> = [Boolean,323,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 324; @position = 18; @symbol_constdef = [dithering,324,18,27]; @symbol_type<0> = [String,324,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 325; @position = 18; @symbol_constdef = [automaticPalette,325,18,34]; @symbol_type<0> = [Boolean,325,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 328; @symbol_moduledef = [confirmation_color_dark__body,328,15,44]; ]
+        module confirmation_color_dark__body {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 328; ]
+            <init> {
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" 330 18 ]
+                symbol [ Graphics %tmp.27 330 31 39 ];
+                %tmp.27 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.28 330 40 57 ];
+                %tmp.28 = getv %tmp.27 :COLOR_TRANSPARENT;
+                putv self :background %tmp.28;
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 329; @position = 18; @symbol_constdef = [color,329,18,23]; @symbol_type<0> = [Number,329,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 330; @position = 18; @symbol_constdef = [background,330,18,28]; ]
+            const background;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 333; @symbol_moduledef = [confirmation_icon_light__hint_confirm,333,15,52]; ]
+        module confirmation_icon_light__hint_confirm {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 333; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 334; @position = 18; @symbol_constdef = [filename,334,18,26]; @symbol_type<0> = [String,334,30,36]; ]
+            const filename as String = "/Users/frederiktheisen/Library/Application Support/Garmin/ConnectIQ/Devices/edge1040/confirmation_icon__hint_completion.svg";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 335; @position = 18; @symbol_constdef = [disableTransparency,335,18,37]; @symbol_type<0> = [Boolean,335,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 336; @position = 18; @symbol_constdef = [dithering,336,18,27]; @symbol_type<0> = [String,336,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 337; @position = 18; @symbol_constdef = [automaticPalette,337,18,34]; @symbol_type<0> = [Boolean,337,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 340; @symbol_moduledef = [prompt_color_dark__title,340,15,39]; ]
+        module prompt_color_dark__title {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 340; ]
+            <init> {
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" 342 18 ]
+                symbol [ Graphics %tmp.29 342 31 39 ];
+                %tmp.29 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.30 342 40 57 ];
+                %tmp.30 = getv %tmp.29 :COLOR_TRANSPARENT;
+                putv self :background %tmp.30;
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 341; @position = 18; @symbol_constdef = [color,341,18,23]; @symbol_type<0> = [Number,341,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 342; @position = 18; @symbol_constdef = [background,342,18,28]; ]
+            const background;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 345; @symbol_moduledef = [system_icon_destructive__cancel,345,15,46]; ]
+        module system_icon_destructive__cancel {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 345; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 346; @position = 18; @symbol_constdef = [filename,346,18,26]; @symbol_type<0> = [String,346,30,36]; ]
+            const filename as String = "/Users/frederiktheisen/Library/Application Support/Garmin/ConnectIQ/Devices/edge1040/system_icon_destructive__cancel.svg";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 347; @position = 18; @symbol_constdef = [disableTransparency,347,18,37]; @symbol_type<0> = [Boolean,347,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 348; @position = 18; @symbol_constdef = [dithering,348,18,27]; @symbol_type<0> = [String,348,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 349; @position = 18; @symbol_constdef = [automaticPalette,349,18,34]; @symbol_type<0> = [Boolean,349,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 352; @symbol_moduledef = [system_icon_light__hint_button_right_bottom,352,15,58]; ]
+        module system_icon_light__hint_button_right_bottom {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 352; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 353; @position = 18; @symbol_constdef = [exclude,353,18,25]; @symbol_type<0> = [Boolean,353,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 356; @symbol_moduledef = [prompt_loc__title,356,15,32]; ]
+        module prompt_loc__title {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 356; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 357; @position = 18; @symbol_constdef = [exclude,357,18,25]; @symbol_type<0> = [Boolean,357,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 360; @symbol_moduledef = [confirmation_font_enhanced_readability__body,360,15,59]; ]
+        module confirmation_font_enhanced_readability__body {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 360; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 361; @position = 18; @symbol_constdef = [exclude,361,18,25]; @symbol_type<0> = [Boolean,361,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 364; @symbol_moduledef = [prompt_color_light__title,364,15,40]; ]
+        module prompt_color_light__title {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 364; ]
+            <init> {
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" 366 18 ]
+                symbol [ Graphics %tmp.31 366 31 39 ];
+                %tmp.31 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.32 366 40 57 ];
+                %tmp.32 = getv %tmp.31 :COLOR_TRANSPARENT;
+                putv self :background %tmp.32;
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 365; @position = 18; @symbol_constdef = [color,365,18,23]; @symbol_type<0> = [Number,365,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 366; @position = 18; @symbol_constdef = [background,366,18,28]; ]
+            const background;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 369; @symbol_moduledef = [system_icon_dark__hint_button_right_top,369,15,54]; ]
+        module system_icon_dark__hint_button_right_top {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 369; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 370; @position = 18; @symbol_constdef = [exclude,370,18,25]; @symbol_type<0> = [Boolean,370,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 373; @symbol_moduledef = [system_icon_dark__hint_button_left_middle,373,15,56]; ]
+        module system_icon_dark__hint_button_left_middle {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 373; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 374; @position = 18; @symbol_constdef = [exclude,374,18,25]; @symbol_type<0> = [Boolean,374,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 377; @symbol_moduledef = [confirmation_icon_dark__hint_keep,377,15,48]; ]
+        module confirmation_icon_dark__hint_keep {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 377; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 378; @position = 18; @symbol_constdef = [filename,378,18,26]; @symbol_type<0> = [String,378,30,36]; ]
+            const filename as String = "/Users/frederiktheisen/Library/Application Support/Garmin/ConnectIQ/Devices/edge1040/confirmation_icon__hint_keep.svg";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 379; @position = 18; @symbol_constdef = [disableTransparency,379,18,37]; @symbol_type<0> = [Boolean,379,41,48]; ]
+            const disableTransparency as Boolean = false;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 380; @position = 18; @symbol_constdef = [dithering,380,18,27]; @symbol_type<0> = [String,380,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 381; @position = 18; @symbol_constdef = [automaticPalette,381,18,34]; @symbol_type<0> = [Boolean,381,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 384; @symbol_moduledef = [system_icon_light__cancel,384,15,40]; ]
+        module system_icon_light__cancel {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 384; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 385; @position = 18; @symbol_constdef = [filename,385,18,26]; @symbol_type<0> = [String,385,30,36]; ]
+            const filename as String = "/Users/frederiktheisen/Library/Application Support/Garmin/ConnectIQ/Devices/edge1040/system_icon_light__cancel.svg";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 386; @position = 18; @symbol_constdef = [disableTransparency,386,18,37]; @symbol_type<0> = [Boolean,386,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 387; @position = 18; @symbol_constdef = [dithering,387,18,27]; @symbol_type<0> = [String,387,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 388; @position = 18; @symbol_constdef = [automaticPalette,388,18,34]; @symbol_type<0> = [Boolean,388,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 391; @symbol_moduledef = [confirmation_icon_light__hint_reject,391,15,51]; ]
+        module confirmation_icon_light__hint_reject {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 391; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 392; @position = 18; @symbol_constdef = [filename,392,18,26]; @symbol_type<0> = [String,392,30,36]; ]
+            const filename as String = "/Users/frederiktheisen/Library/Application Support/Garmin/ConnectIQ/Devices/edge1040/confirmation_icon__hint_reject.svg";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 393; @position = 18; @symbol_constdef = [disableTransparency,393,18,37]; @symbol_type<0> = [Boolean,393,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 394; @position = 18; @symbol_constdef = [dithering,394,18,27]; @symbol_type<0> = [String,394,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 395; @position = 18; @symbol_constdef = [automaticPalette,395,18,34]; @symbol_type<0> = [Boolean,395,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 398; @symbol_moduledef = [system_icon_light__about,398,15,39]; ]
+        module system_icon_light__about {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 398; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 399; @position = 18; @symbol_constdef = [filename,399,18,26]; @symbol_type<0> = [String,399,30,36]; ]
+            const filename as String = "/Users/frederiktheisen/Library/Application Support/Garmin/ConnectIQ/Devices/edge1040/system_icon_light__about.svg";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 400; @position = 18; @symbol_constdef = [disableTransparency,400,18,37]; @symbol_type<0> = [Boolean,400,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 401; @position = 18; @symbol_constdef = [dithering,401,18,27]; @symbol_type<0> = [String,401,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 402; @position = 18; @symbol_constdef = [automaticPalette,402,18,34]; @symbol_type<0> = [Boolean,402,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 405; @symbol_moduledef = [system_size__toast_icon,405,15,38]; ]
+        module system_size__toast_icon {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 405; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 406; @position = 18; @symbol_constdef = [scaleX,406,18,24]; @symbol_type<0> = [Number,406,28,34]; ]
+            const scaleX as Number = 40;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 407; @position = 18; @symbol_constdef = [scaleRelativeTo,407,18,33]; @symbol_type<0> = [String,407,37,43]; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 410; @symbol_moduledef = [system_icon_dark__hint_button_right_middle,410,15,57]; ]
+        module system_icon_dark__hint_button_right_middle {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 410; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 411; @position = 18; @symbol_constdef = [exclude,411,18,25]; @symbol_type<0> = [Boolean,411,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 414; @symbol_moduledef = [confirmation_icon__hint_reject,414,15,45]; ]
+        module confirmation_icon__hint_reject {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 414; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 415; @position = 18; @symbol_constdef = [filename,415,18,26]; @symbol_type<0> = [String,415,30,36]; ]
+            const filename as String = "/Users/frederiktheisen/Library/Application Support/Garmin/ConnectIQ/Devices/edge1040/confirmation_icon__hint_reject.svg";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 416; @position = 18; @symbol_constdef = [disableTransparency,416,18,37]; @symbol_type<0> = [Boolean,416,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 417; @position = 18; @symbol_constdef = [dithering,417,18,27]; @symbol_type<0> = [String,417,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 418; @position = 18; @symbol_constdef = [automaticPalette,418,18,34]; @symbol_type<0> = [Boolean,418,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 421; @symbol_moduledef = [system_icon_light__hint_action_menu,421,15,50]; ]
+        module system_icon_light__hint_action_menu {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 421; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 422; @position = 18; @symbol_constdef = [exclude,422,18,25]; @symbol_type<0> = [Boolean,422,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 425; @symbol_moduledef = [system_icon_light__hint_button_right_middle,425,15,58]; ]
+        module system_icon_light__hint_button_right_middle {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 425; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 426; @position = 18; @symbol_constdef = [exclude,426,18,25]; @symbol_type<0> = [Boolean,426,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 429; @symbol_moduledef = [system_icon_destructive__hint_button_right_middle,429,15,64]; ]
+        module system_icon_destructive__hint_button_right_middle {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 429; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 430; @position = 18; @symbol_constdef = [exclude,430,18,25]; @symbol_type<0> = [Boolean,430,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 433; @symbol_moduledef = [confirmation_loc__hint_reject,433,15,44]; ]
+        module confirmation_loc__hint_reject {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 433; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 434; @position = 18; @symbol_constdef = [x,434,18,19]; @symbol_type<0> = [Number,434,23,29]; ]
+            const x as Number = 63;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 435; @position = 18; @symbol_constdef = [y,435,18,19]; @symbol_type<0> = [Number,435,23,29]; ]
+            const y as Number = 373;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 436; @position = 18; @symbol_constdef = [horizontalJustification,436,18,41]; @symbol_type<0> = [String,436,45,51]; ]
+            const horizontalJustification as String = "center";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 437; @position = 18; @symbol_constdef = [verticalJustification,437,18,39]; @symbol_type<0> = [String,437,43,49]; ]
+            const verticalJustification as String = "center";
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 440; @symbol_moduledef = [confirmation_icon_dark__hint_delete,440,15,50]; ]
+        module confirmation_icon_dark__hint_delete {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 440; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 441; @position = 18; @symbol_constdef = [filename,441,18,26]; @symbol_type<0> = [String,441,30,36]; ]
+            const filename as String = "/Users/frederiktheisen/Library/Application Support/Garmin/ConnectIQ/Devices/edge1040/system_icon_dark__discard.svg";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 442; @position = 18; @symbol_constdef = [disableTransparency,442,18,37]; @symbol_type<0> = [Boolean,442,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 443; @position = 18; @symbol_constdef = [dithering,443,18,27]; @symbol_type<0> = [String,443,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 444; @position = 18; @symbol_constdef = [automaticPalette,444,18,34]; @symbol_type<0> = [Boolean,444,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 447; @symbol_moduledef = [activity_color_dark__background,447,15,46]; ]
+        module activity_color_dark__background {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 447; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 448; @position = 18; @symbol_constdef = [color,448,18,23]; @symbol_type<0> = [Number,448,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 449; @position = 18; @symbol_constdef = [background,449,18,28]; @symbol_type<0> = [Number,449,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 452; @symbol_moduledef = [system_icon_light__hint_button_left_bottom,452,15,57]; ]
+        module system_icon_light__hint_button_left_bottom {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 452; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 453; @position = 18; @symbol_constdef = [exclude,453,18,25]; @symbol_type<0> = [Boolean,453,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 456; @symbol_moduledef = [system_icon_positive__hint_button_left_middle,456,15,60]; ]
+        module system_icon_positive__hint_button_left_middle {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 456; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 457; @position = 18; @symbol_constdef = [exclude,457,18,25]; @symbol_type<0> = [Boolean,457,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 460; @symbol_moduledef = [system_size__menu_icon,460,15,37]; ]
+        module system_size__menu_icon {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 460; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 461; @position = 18; @symbol_constdef = [scaleX,461,18,24]; @symbol_type<0> = [Number,461,28,34]; ]
+            const scaleX as Number = 24;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 462; @position = 18; @symbol_constdef = [scaleY,462,18,24]; @symbol_type<0> = [Number,462,28,34]; ]
+            const scaleY as Number = 24;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 463; @position = 18; @symbol_constdef = [scaleRelativeTo,463,18,33]; @symbol_type<0> = [String,463,37,43]; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 466; @symbol_moduledef = [system_icon_destructive__warning,466,15,47]; ]
+        module system_icon_destructive__warning {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 466; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 467; @position = 18; @symbol_constdef = [filename,467,18,26]; @symbol_type<0> = [String,467,30,36]; ]
+            const filename as String = "/Users/frederiktheisen/Library/Application Support/Garmin/ConnectIQ/Devices/edge1040/system_icon_destructive__warning.svg";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 468; @position = 18; @symbol_constdef = [disableTransparency,468,18,37]; @symbol_type<0> = [Boolean,468,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 469; @position = 18; @symbol_constdef = [dithering,469,18,27]; @symbol_type<0> = [String,469,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 470; @position = 18; @symbol_constdef = [automaticPalette,470,18,34]; @symbol_type<0> = [Boolean,470,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 473; @symbol_moduledef = [system_loc__hint_button_right_middle,473,15,51]; ]
+        module system_loc__hint_button_right_middle {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 473; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 474; @position = 18; @symbol_constdef = [exclude,474,18,25]; @symbol_type<0> = [Boolean,474,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 477; @symbol_moduledef = [system_icon_dark__cancel,477,15,39]; ]
+        module system_icon_dark__cancel {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 477; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 478; @position = 18; @symbol_constdef = [filename,478,18,26]; @symbol_type<0> = [String,478,30,36]; ]
+            const filename as String = "/Users/frederiktheisen/Library/Application Support/Garmin/ConnectIQ/Devices/edge1040/system_icon_dark__cancel.svg";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 479; @position = 18; @symbol_constdef = [disableTransparency,479,18,37]; @symbol_type<0> = [Boolean,479,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 480; @position = 18; @symbol_constdef = [dithering,480,18,27]; @symbol_type<0> = [String,480,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 481; @position = 18; @symbol_constdef = [automaticPalette,481,18,34]; @symbol_type<0> = [Boolean,481,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 484; @symbol_moduledef = [prompt_size__body_with_title,484,15,43]; ]
+        module prompt_size__body_with_title {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 484; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 485; @position = 18; @symbol_constdef = [width,485,18,23]; @symbol_type<0> = [Number,485,27,33]; ]
+            const width as Number = 242;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 486; @position = 18; @symbol_constdef = [height,486,18,24]; @symbol_type<0> = [Number,486,28,34]; ]
+            const height as Number = 186;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 489; @symbol_moduledef = [system_loc__hint_button_right_top,489,15,48]; ]
+        module system_loc__hint_button_right_top {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 489; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 490; @position = 18; @symbol_constdef = [exclude,490,18,25]; @symbol_type<0> = [Boolean,490,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 493; @symbol_moduledef = [system_color_light__text,493,15,39]; ]
+        module system_color_light__text {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 493; ]
+            <init> {
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" 495 18 ]
+                symbol [ Graphics %tmp.33 495 31 39 ];
+                %tmp.33 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.34 495 40 57 ];
+                %tmp.34 = getv %tmp.33 :COLOR_TRANSPARENT;
+                putv self :background %tmp.34;
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 494; @position = 18; @symbol_constdef = [color,494,18,23]; @symbol_type<0> = [Number,494,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 495; @position = 18; @symbol_constdef = [background,495,18,28]; ]
+            const background;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 498; @symbol_moduledef = [system_icon_light__check,498,15,39]; ]
+        module system_icon_light__check {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 498; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 499; @position = 18; @symbol_constdef = [filename,499,18,26]; @symbol_type<0> = [String,499,30,36]; ]
+            const filename as String = "/Users/frederiktheisen/Library/Application Support/Garmin/ConnectIQ/Devices/edge1040/system_icon_light__check.svg";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 500; @position = 18; @symbol_constdef = [disableTransparency,500,18,37]; @symbol_type<0> = [Boolean,500,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 501; @position = 18; @symbol_constdef = [dithering,501,18,27]; @symbol_type<0> = [String,501,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 502; @position = 18; @symbol_constdef = [automaticPalette,502,18,34]; @symbol_type<0> = [Boolean,502,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 505; @symbol_moduledef = [confirmation_input__reject,505,15,41]; ]
+        module confirmation_input__reject {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 505; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 506; @position = 18; @symbol_constdef = [y1,506,18,20]; @symbol_type<0> = [Number,506,24,30]; ]
+            const y1 as Number = 373;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 507; @position = 18; @symbol_constdef = [x1,507,18,20]; @symbol_type<0> = [Number,507,24,30]; ]
+            const x1 as Number = 63;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 508; @position = 18; @symbol_constdef = [y2,508,18,20]; @symbol_type<0> = [Number,508,24,30]; ]
+            const y2 as Number = 405;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 509; @position = 18; @symbol_constdef = [x2,509,18,20]; @symbol_type<0> = [Number,509,24,30]; ]
+            const x2 as Number = 85;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 512; @symbol_moduledef = [system_icon_light__revert,512,15,40]; ]
+        module system_icon_light__revert {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 512; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 513; @position = 18; @symbol_constdef = [filename,513,18,26]; @symbol_type<0> = [String,513,30,36]; ]
+            const filename as String = "/Users/frederiktheisen/Library/Application Support/Garmin/ConnectIQ/Devices/edge1040/system_icon_light__revert.svg";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 514; @position = 18; @symbol_constdef = [disableTransparency,514,18,37]; @symbol_type<0> = [Boolean,514,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 515; @position = 18; @symbol_constdef = [dithering,515,18,27]; @symbol_type<0> = [String,515,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 516; @position = 18; @symbol_constdef = [automaticPalette,516,18,34]; @symbol_type<0> = [Boolean,516,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 519; @symbol_moduledef = [system_size__subwindow,519,15,37]; ]
+        module system_size__subwindow {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 519; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 520; @position = 18; @symbol_constdef = [exclude,520,18,25]; @symbol_type<0> = [Boolean,520,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 523; @symbol_moduledef = [system_icon_positive__hint_button_left_bottom,523,15,60]; ]
+        module system_icon_positive__hint_button_left_bottom {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 523; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 524; @position = 18; @symbol_constdef = [exclude,524,18,25]; @symbol_type<0> = [Boolean,524,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 527; @symbol_moduledef = [system_icon_dark__check,527,15,38]; ]
+        module system_icon_dark__check {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 527; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 528; @position = 18; @symbol_constdef = [filename,528,18,26]; @symbol_type<0> = [String,528,30,36]; ]
+            const filename as String = "/Users/frederiktheisen/Library/Application Support/Garmin/ConnectIQ/Devices/edge1040/system_icon_dark__check.svg";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 529; @position = 18; @symbol_constdef = [disableTransparency,529,18,37]; @symbol_type<0> = [Boolean,529,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 530; @position = 18; @symbol_constdef = [dithering,530,18,27]; @symbol_type<0> = [String,530,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 531; @position = 18; @symbol_constdef = [automaticPalette,531,18,34]; @symbol_type<0> = [Boolean,531,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 534; @symbol_moduledef = [confirmation_loc__hint_keep,534,15,42]; ]
+        module confirmation_loc__hint_keep {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 534; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 535; @position = 18; @symbol_constdef = [x,535,18,19]; @symbol_type<0> = [Number,535,23,29]; ]
+            const x as Number = 63;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 536; @position = 18; @symbol_constdef = [y,536,18,19]; @symbol_type<0> = [Number,536,23,29]; ]
+            const y as Number = 373;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 537; @position = 18; @symbol_constdef = [horizontalJustification,537,18,41]; @symbol_type<0> = [String,537,45,51]; ]
+            const horizontalJustification as String = "center";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 538; @position = 18; @symbol_constdef = [verticalJustification,538,18,39]; @symbol_type<0> = [String,538,43,49]; ]
+            const verticalJustification as String = "center";
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 541; @symbol_moduledef = [confirmation_loc__hint_delete,541,15,44]; ]
+        module confirmation_loc__hint_delete {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 541; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 542; @position = 18; @symbol_constdef = [x,542,18,19]; @symbol_type<0> = [Number,542,23,29]; ]
+            const x as Number = 218;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 543; @position = 18; @symbol_constdef = [y,543,18,19]; @symbol_type<0> = [Number,543,23,29]; ]
+            const y as Number = 373;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 544; @position = 18; @symbol_constdef = [horizontalJustification,544,18,41]; @symbol_type<0> = [String,544,45,51]; ]
+            const horizontalJustification as String = "center";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 545; @position = 18; @symbol_constdef = [verticalJustification,545,18,39]; @symbol_type<0> = [String,545,43,49]; ]
+            const verticalJustification as String = "center";
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 548; @symbol_moduledef = [system_icon_positive__hint_action_menu,548,15,53]; ]
+        module system_icon_positive__hint_action_menu {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 548; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 549; @position = 18; @symbol_constdef = [exclude,549,18,25]; @symbol_type<0> = [Boolean,549,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 552; @symbol_moduledef = [system_icon_positive__hint_button_right_middle,552,15,61]; ]
+        module system_icon_positive__hint_button_right_middle {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 552; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 553; @position = 18; @symbol_constdef = [exclude,553,18,25]; @symbol_type<0> = [Boolean,553,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 556; @symbol_moduledef = [system_icon_light__hint_button_left_middle,556,15,57]; ]
+        module system_icon_light__hint_button_left_middle {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 556; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 557; @position = 18; @symbol_constdef = [exclude,557,18,25]; @symbol_type<0> = [Boolean,557,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 560; @symbol_moduledef = [system_icon_dark__hint_button_right_bottom,560,15,57]; ]
+        module system_icon_dark__hint_button_right_bottom {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 560; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 561; @position = 18; @symbol_constdef = [exclude,561,18,25]; @symbol_type<0> = [Boolean,561,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 564; @symbol_moduledef = [system_icon_positive__hint_button_right_bottom,564,15,61]; ]
+        module system_icon_positive__hint_button_right_bottom {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 564; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 565; @position = 18; @symbol_constdef = [exclude,565,18,25]; @symbol_type<0> = [Boolean,565,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 568; @symbol_moduledef = [system_icon_dark__revert,568,15,39]; ]
+        module system_icon_dark__revert {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 568; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 569; @position = 18; @symbol_constdef = [filename,569,18,26]; @symbol_type<0> = [String,569,30,36]; ]
+            const filename as String = "/Users/frederiktheisen/Library/Application Support/Garmin/ConnectIQ/Devices/edge1040/system_icon_dark__revert.svg";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 570; @position = 18; @symbol_constdef = [disableTransparency,570,18,37]; @symbol_type<0> = [Boolean,570,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 571; @position = 18; @symbol_constdef = [dithering,571,18,27]; @symbol_type<0> = [String,571,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 572; @position = 18; @symbol_constdef = [automaticPalette,572,18,34]; @symbol_type<0> = [Boolean,572,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 575; @symbol_moduledef = [confirmation_icon_light__hint_delete,575,15,51]; ]
+        module confirmation_icon_light__hint_delete {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 575; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 576; @position = 18; @symbol_constdef = [filename,576,18,26]; @symbol_type<0> = [String,576,30,36]; ]
+            const filename as String = "/Users/frederiktheisen/Library/Application Support/Garmin/ConnectIQ/Devices/edge1040/system_icon_dark__discard.svg";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 577; @position = 18; @symbol_constdef = [disableTransparency,577,18,37]; @symbol_type<0> = [Boolean,577,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 578; @position = 18; @symbol_constdef = [dithering,578,18,27]; @symbol_type<0> = [String,578,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 579; @position = 18; @symbol_constdef = [automaticPalette,579,18,34]; @symbol_type<0> = [Boolean,579,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 582; @symbol_moduledef = [system_icon_dark__question,582,15,41]; ]
+        module system_icon_dark__question {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 582; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 583; @position = 18; @symbol_constdef = [filename,583,18,26]; @symbol_type<0> = [String,583,30,36]; ]
+            const filename as String = "/Users/frederiktheisen/Library/Application Support/Garmin/ConnectIQ/Devices/edge1040/system_icon_dark__question.svg";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 584; @position = 18; @symbol_constdef = [disableTransparency,584,18,37]; @symbol_type<0> = [Boolean,584,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 585; @position = 18; @symbol_constdef = [dithering,585,18,27]; @symbol_type<0> = [String,585,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 586; @position = 18; @symbol_constdef = [automaticPalette,586,18,34]; @symbol_type<0> = [Boolean,586,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 589; @symbol_moduledef = [system_icon_light__discard,589,15,41]; ]
+        module system_icon_light__discard {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 589; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 590; @position = 18; @symbol_constdef = [filename,590,18,26]; @symbol_type<0> = [String,590,30,36]; ]
+            const filename as String = "/Users/frederiktheisen/Library/Application Support/Garmin/ConnectIQ/Devices/edge1040/system_icon_light__discard.svg";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 591; @position = 18; @symbol_constdef = [disableTransparency,591,18,37]; @symbol_type<0> = [Boolean,591,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 592; @position = 18; @symbol_constdef = [dithering,592,18,27]; @symbol_type<0> = [String,592,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 593; @position = 18; @symbol_constdef = [automaticPalette,593,18,34]; @symbol_type<0> = [Boolean,593,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 596; @symbol_moduledef = [device_info,596,15,26]; ]
+        module device_info {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 596; ]
+            <init> {
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" 598 18 ]
+                symbol [ Toybox %tmp.36 598 32 38 ];
+                %tmp.36 = getv ? :Toybox;
+                symbol [ System %tmp.37 598 39 45 ];
+                %tmp.37 = getv %tmp.36 :System;
+                symbol [ SCREEN_SHAPE_RECTANGLE %tmp.38 598 46 68 ];
+                %tmp.38 = getv %tmp.37 :SCREEN_SHAPE_RECTANGLE;
+                putv self :screenShape %tmp.38;
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 597; @position = 18; @symbol_constdef = [screenWidth,597,18,29]; @symbol_type<0> = [Number,597,33,39]; ]
+            const screenWidth as Number = 282;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 598; @position = 18; @symbol_constdef = [screenShape,598,18,29]; ]
+            const screenShape;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 599; @position = 18; @symbol_constdef = [hasNightMode,599,18,30]; @symbol_type<0> = [Boolean,599,34,41]; ]
+            const hasNightMode as Boolean = true;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 600; @position = 18; @symbol_constdef = [hasGpu,600,18,24]; @symbol_type<0> = [Boolean,600,28,35]; ]
+            const hasGpu as Boolean = false;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 601; @position = 18; @symbol_constdef = [screenHeight,601,18,30]; @symbol_type<0> = [Number,601,34,40]; ]
+            const screenHeight as Number = 470;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 602; @position = 18; @symbol_constdef = [hasTouchScreen,602,18,32]; @symbol_type<0> = [Boolean,602,36,43]; ]
+            const hasTouchScreen as Boolean = true;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 603; @position = 18; @symbol_constdef = [hasEnhancedReadabilityMode,603,18,44]; @symbol_type<0> = [Boolean,603,48,55]; ]
+            const hasEnhancedReadabilityMode as Boolean = false;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 606; @symbol_moduledef = [confirmation_icon_dark__hint_confirm,606,15,51]; ]
+        module confirmation_icon_dark__hint_confirm {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 606; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 607; @position = 18; @symbol_constdef = [filename,607,18,26]; @symbol_type<0> = [String,607,30,36]; ]
+            const filename as String = "/Users/frederiktheisen/Library/Application Support/Garmin/ConnectIQ/Devices/edge1040/confirmation_icon__hint_completion.svg";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 608; @position = 18; @symbol_constdef = [disableTransparency,608,18,37]; @symbol_type<0> = [Boolean,608,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 609; @position = 18; @symbol_constdef = [dithering,609,18,27]; @symbol_type<0> = [String,609,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 610; @position = 18; @symbol_constdef = [automaticPalette,610,18,34]; @symbol_type<0> = [Boolean,610,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 613; @symbol_moduledef = [prompt_font__body_no_title,613,15,41]; ]
+        module prompt_font__body_no_title {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 613; ]
+            <init> {
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" 614 18 ]
+                symbol [ Graphics %tmp.39 614 34 42 ];
+                %tmp.39 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.40 614 43 62 ];
+                %tmp.40 = getv %tmp.39 :TEXT_JUSTIFY_CENTER;
+                symbol [ Graphics %tmp.41 614 63 71 ];
+                %tmp.41 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_VCENTER %tmp.42 614 72 92 ];
+                %tmp.42 = getv %tmp.41 :TEXT_JUSTIFY_VCENTER;
+                %tmp.43 = bitor %tmp.40 %tmp.42;
+                putv self :justification %tmp.43;
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" 615 18 ]
+                symbol [ Graphics %tmp.44 615 25 33 ];
+                %tmp.44 = getm $.Toybox.Graphics;
+                symbol [ FONT_MEDIUM %tmp.45 615 34 45 ];
+                %tmp.45 = getv %tmp.44 :FONT_MEDIUM;
+                putv self :font %tmp.45;
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 614; @position = 18; @symbol_constdef = [justification,614,18,31]; ]
+            const justification;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 615; @position = 18; @symbol_constdef = [font,615,18,22]; ]
+            const font;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 618; @symbol_moduledef = [prompt_size__title_icon,618,15,38]; ]
+        module prompt_size__title_icon {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 618; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 619; @position = 18; @symbol_constdef = [scaleX,619,18,24]; @symbol_type<0> = [Number,619,28,34]; ]
+            const scaleX as Number = 75;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 620; @position = 18; @symbol_constdef = [scaleY,620,18,24]; @symbol_type<0> = [Number,620,28,34]; ]
+            const scaleY as Number = 75;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 621; @position = 18; @symbol_constdef = [scaleRelativeTo,621,18,33]; @symbol_type<0> = [String,621,37,43]; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 624; @symbol_moduledef = [system_icon_dark__warning,624,15,40]; ]
+        module system_icon_dark__warning {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 624; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 625; @position = 18; @symbol_constdef = [filename,625,18,26]; @symbol_type<0> = [String,625,30,36]; ]
+            const filename as String = "/Users/frederiktheisen/Library/Application Support/Garmin/ConnectIQ/Devices/edge1040/system_icon_dark__warning.svg";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 626; @position = 18; @symbol_constdef = [disableTransparency,626,18,37]; @symbol_type<0> = [Boolean,626,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 627; @position = 18; @symbol_constdef = [dithering,627,18,27]; @symbol_type<0> = [String,627,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 628; @position = 18; @symbol_constdef = [automaticPalette,628,18,34]; @symbol_type<0> = [Boolean,628,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 631; @symbol_moduledef = [prompt_loc__title_icon,631,15,37]; ]
+        module prompt_loc__title_icon {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 631; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 632; @position = 18; @symbol_constdef = [x,632,18,19]; @symbol_type<0> = [Number,632,23,29]; ]
+            const x as Number = 141;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 633; @position = 18; @symbol_constdef = [y,633,18,19]; @symbol_type<0> = [Number,633,23,29]; ]
+            const y as Number = 50;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 634; @position = 18; @symbol_constdef = [horizontalJustification,634,18,41]; @symbol_type<0> = [String,634,45,51]; ]
+            const horizontalJustification as String = "center";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 635; @position = 18; @symbol_constdef = [verticalJustification,635,18,39]; @symbol_type<0> = [String,635,43,49]; ]
+            const verticalJustification as String = "center";
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 638; @symbol_moduledef = [prompt_font_enhanced_readability__title,638,15,54]; ]
+        module prompt_font_enhanced_readability__title {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 638; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 639; @position = 18; @symbol_constdef = [exclude,639,18,25]; @symbol_type<0> = [Boolean,639,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 642; @symbol_moduledef = [prompt_color_dark__body,642,15,38]; ]
+        module prompt_color_dark__body {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 642; ]
+            <init> {
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" 644 18 ]
+                symbol [ Graphics %tmp.46 644 31 39 ];
+                %tmp.46 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.47 644 40 57 ];
+                %tmp.47 = getv %tmp.46 :COLOR_TRANSPARENT;
+                putv self :background %tmp.47;
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 643; @position = 18; @symbol_constdef = [color,643,18,23]; @symbol_type<0> = [Number,643,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 644; @position = 18; @symbol_constdef = [background,644,18,28]; ]
+            const background;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 647; @symbol_moduledef = [confirmation_icon__hint_delete,647,15,45]; ]
+        module confirmation_icon__hint_delete {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 647; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 648; @position = 18; @symbol_constdef = [filename,648,18,26]; @symbol_type<0> = [String,648,30,36]; ]
+            const filename as String = "/Users/frederiktheisen/Library/Application Support/Garmin/ConnectIQ/Devices/edge1040/system_icon_dark__discard.svg";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 649; @position = 18; @symbol_constdef = [disableTransparency,649,18,37]; @symbol_type<0> = [Boolean,649,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 650; @position = 18; @symbol_constdef = [dithering,650,18,27]; @symbol_type<0> = [String,650,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 651; @position = 18; @symbol_constdef = [automaticPalette,651,18,34]; @symbol_type<0> = [Boolean,651,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 654; @symbol_moduledef = [system_icon_light__hint_button_right_top,654,15,55]; ]
+        module system_icon_light__hint_button_right_top {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 654; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 655; @position = 18; @symbol_constdef = [exclude,655,18,25]; @symbol_type<0> = [Boolean,655,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 658; @symbol_moduledef = [confirmation_size__body,658,15,38]; ]
+        module confirmation_size__body {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 658; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 659; @position = 18; @symbol_constdef = [width,659,18,23]; @symbol_type<0> = [Number,659,27,33]; ]
+            const width as Number = 242;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 660; @position = 18; @symbol_constdef = [height,660,18,24]; @symbol_type<0> = [Number,660,28,34]; ]
+            const height as Number = 100;
+        }
+        [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 663; @symbol_moduledef = [system_icon_positive__check,663,15,42]; ]
+        module system_icon_positive__check {
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 663; ]
+            <init> {
+            }
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 664; @position = 18; @symbol_constdef = [filename,664,18,26]; @symbol_type<0> = [String,664,30,36]; ]
+            const filename as String = "/Users/frederiktheisen/Library/Application Support/Garmin/ConnectIQ/Devices/edge1040/system_icon_positive__check.svg";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 665; @position = 18; @symbol_constdef = [disableTransparency,665,18,37]; @symbol_type<0> = [Boolean,665,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 666; @position = 18; @symbol_constdef = [dithering,666,18,27]; @symbol_type<0> = [String,666,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 667; @position = 18; @symbol_constdef = [automaticPalette,667,18,34]; @symbol_type<0> = [Boolean,667,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+    }
+}
+[ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen"; @line = 1; ]
+<init> {
+}

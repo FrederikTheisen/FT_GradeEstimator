@@ -1,0 +1,1133 @@
+[ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Activity,1,14,22]; ]
+import Toybox.Activity;
+[ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [Lang,2,14,18]; ]
+import Toybox.Lang;
+[ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [Time,3,14,18]; ]
+import Toybox.Time;
+[ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc"; @line = 4; @symbol_importdef<0> = [Toybox,4,7,13]; @symbol_importdef<1> = [WatchUi,4,14,21]; ]
+import Toybox.WatchUi;
+[ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc"; @line = 5; @symbol_importdef<0> = [Toybox,5,7,13]; @symbol_importdef<1> = [FitContributor,5,14,28]; ]
+import Toybox.FitContributor;
+[ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc"; @line = 7; @symbol_classdef = [GradeEstimatorView,7,6,24]; @symbol_extends<0> = [WatchUi,7,33,40]; @symbol_extends<1> = [SimpleDataField,7,41,56]; ]
+class GradeEstimatorView extends WatchUi.SimpleDataField {
+    [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc"; @line = 7; ]
+    <init> {
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 26 8 ]
+        %tmp.1 = newa 1;
+        symbol [ SAMPLE_WINDOW %tmp.3 26 34 47 ];
+        %tmp.3 = getv ? :SAMPLE_WINDOW;
+        %tmp.4 = dup %tmp.1;
+        %tmp.5 = aputv %tmp.4 0 %tmp.3;
+        putv self :buffer %tmp.5;
+    }
+    [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc"; @line = 7; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc"; @line = 9; @position = 10; @symbol_constdef = [SAMPLE_WINDOW,9,10,23]; ]
+    const SAMPLE_WINDOW = 6;
+    [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc"; @line = 10; @position = 10; @symbol_constdef = [EMA_ALPHA,10,10,19]; ]
+    const EMA_ALPHA = 0.25;
+    [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc"; @line = 11; @position = 10; @symbol_constdef = [EMA_ALT_ALPHA,11,10,23]; ]
+    const EMA_ALT_ALPHA = 0.33;
+    [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc"; @line = 12; @position = 10; @symbol_constdef = [THRESHOLD_LIGHT,12,10,25]; ]
+    const THRESHOLD_LIGHT = 5.0;
+    [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc"; @line = 13; @position = 10; @symbol_constdef = [THRESHOLD_STEEP,13,10,25]; ]
+    const THRESHOLD_STEEP = 10.0;
+    [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc"; @line = 14; @position = 10; @symbol_constdef = [FIELD_ID_GRADE,14,10,24]; ]
+    const FIELD_ID_GRADE = 30;
+    [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc"; @line = 15; @position = 10; @symbol_constdef = [FIELD_ID_LIGHT,15,10,24]; ]
+    const FIELD_ID_LIGHT = 31;
+    [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc"; @line = 16; @position = 10; @symbol_constdef = [FIELD_ID_STEEP,16,10,24]; ]
+    const FIELD_ID_STEEP = 32;
+    [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc"; @line = 17; @position = 10; @symbol_constdef = [FIELD_ID_MAXGRADE,17,10,27]; ]
+    const FIELD_ID_MAXGRADE = 33;
+    [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc"; @line = 18; @position = 10; @symbol_constdef = [MAX_ALT_JUMP,18,10,22]; ]
+    const MAX_ALT_JUMP = 5;
+    [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc"; @line = 20; @position = 10; @symbol_constdef = [buffer_str,20,10,20]; ]
+    const buffer_str = "|";
+    [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc"; @line = 21; @position = 10; @symbol_constdef = [blank_str,21,10,19]; ]
+    const blank_str = "-.-";
+    [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc"; @line = 22; @position = 10; @symbol_constdef = [suffix,22,10,16]; ]
+    const suffix = "%";
+    [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc"; @line = 23; @position = 10; @symbol_constdef = [str_format,23,10,20]; ]
+    const str_format = "%+.1f";
+    [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc"; @line = 26; @position = 8; @symbol_vardef = [buffer,26,8,14]; @symbol_type<0> = [Array,26,18,23]; ]
+    var buffer as Array;
+    [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc"; @line = 27; @position = 8; @symbol_vardef = [bufIndex,27,8,16]; @symbol_type<0> = [Number,27,20,26]; ]
+    var bufIndex as Number = 0;
+    [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc"; @line = 28; @position = 8; @symbol_vardef = [accWinDist,28,8,18]; @symbol_type<0> = [Float,28,22,27]; ]
+    var accWinDist as Float = 0.0;
+    [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc"; @line = 29; @position = 8; @symbol_vardef = [emaValue,29,8,16]; @symbol_type<0> = [Float,29,20,25]; ]
+    var emaValue as Float = 0.0;
+    [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc"; @line = 30; @position = 8; @symbol_vardef = [distLight,30,8,17]; @symbol_type<0> = [Float,30,21,26]; ]
+    var distLight as Float = 0.0;
+    [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc"; @line = 31; @position = 8; @symbol_vardef = [distSteep,31,8,17]; @symbol_type<0> = [Float,31,21,26]; ]
+    var distSteep as Float = 0.0;
+    [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc"; @line = 32; @position = 8; @symbol_vardef = [maxGrade,32,8,16]; @symbol_type<0> = [Float,32,20,25]; ]
+    var maxGrade as Float = 0.0;
+    [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc"; @line = 33; @position = 8; @symbol_vardef = [bufFull,33,8,15]; @symbol_type<0> = [Boolean,33,19,26]; ]
+    var bufFull as Boolean = false;
+    [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc"; @line = 34; @position = 8; @symbol_vardef = [lastSample,34,8,18]; @symbol_type<0> = [Number,34,22,28]; ]
+    var lastSample as Number = 0;
+    [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc"; @line = 37; @position = 8; @symbol_vardef = [gradeField,37,8,18]; ]
+    var gradeField;
+    [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc"; @line = 37; @position = 20; @symbol_vardef = [lightField,37,20,30]; ]
+    var lightField;
+    [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc"; @line = 37; @position = 32; @symbol_vardef = [steepField,37,32,42]; ]
+    var steepField;
+    [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc"; @line = 37; @position = 44; @symbol_vardef = [maxField,37,44,52]; ]
+    var maxField;
+    [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc"; @line = 39; @symbol_functiondef = [getBufferString,39,13,28]; @symbol_return<0> = [String,39,34,40]; ]
+    function getBufferString() as String {
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_39_41_48_4_start:
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 40 8 ]
+        [ "_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_39_41_48_4_start" "_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_39_41_48_4_stop" ]
+        %str.1 = local;
+        symbol [ str %str.1 40 12 15 ];
+        %tmp.1 = "";
+        lputv %str.1 %tmp.1;
+        symbol [ str %str.1 40 12 15 ];
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 41 8 ]
+        for @_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_41_8_44_8_for_test @_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_41_8_44_8_for_incr @_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_41_8_44_8_for_end;
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_41_8_44_8_for_init:
+        [ "_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_41_8_44_8_for_begin" "_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_41_8_44_8_for_end" ]
+        %i.2 = local;
+        symbol [ i %i.2 41 17 18 ];
+        %tmp.2 = 0;
+        lputv %i.2 %tmp.2;
+        symbol [ i %i.2 41 17 18 ];
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_41_8_44_8_for_test:
+        %tmp.3 = lgetv %i.2;
+        symbol [ i %tmp.3 41 24 25 ];
+        symbol [ SAMPLE_WINDOW %tmp.5 41 28 41 ];
+        %tmp.5 = getv ? :SAMPLE_WINDOW;
+        %tmp.6 = lt %tmp.3 %tmp.5;
+        bf %tmp.6 @_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_41_8_44_8_for_end;
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_41_8_44_8_for_begin:
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_41_48_44_8_start:
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 42 12 ]
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_42_12_43_31_if_stmt:
+        %tmp.7 = lgetv %i.2;
+        symbol [ i %tmp.7 42 16 17 ];
+        symbol [ bufIndex %tmp.9 42 20 28 ];
+        %tmp.9 = getv ? :bufIndex;
+        %tmp.10 = lt %tmp.7 %tmp.9;
+        bf %tmp.10 @_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_42_12_43_31_if_else_false;
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_42_12_43_31_if_true:
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_42_30_42_44_start:
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 42 32 ]
+        %tmp.11 = lgetv %str.1;
+        symbol [ str %tmp.11 42 32 35 ];
+        %tmp.12 = "|";
+        %tmp.13 = add %tmp.11 %tmp.12;
+        lputv %str.1 %tmp.13;
+        symbol [ str %str.1 42 32 35 ];
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_42_30_42_44_stop:
+        goto @_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_42_12_43_31_if_end;
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_42_12_43_31_if_else_false:
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_43_17_43_31_start:
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 43 19 ]
+        %tmp.14 = lgetv %str.1;
+        symbol [ str %tmp.14 43 19 22 ];
+        %tmp.15 = ".";
+        %tmp.16 = add %tmp.14 %tmp.15;
+        lputv %str.1 %tmp.16;
+        symbol [ str %str.1 43 19 22 ];
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_43_17_43_31_stop:
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_42_12_43_31_if_end:
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_41_48_44_8_stop:
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_41_8_44_8_for_incr:
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 41 ]
+        %tmp.19 = lgetv %i.2;
+        symbol [ i %tmp.19 41 43 44 ];
+        %tmp.20 = add %tmp.19 1;
+        lputv %i.2 %tmp.20;
+        symbol [ i %i.2 41 43 44 ];
+        goto @_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_41_8_44_8_for_test;
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_41_8_44_8_for_end:
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 45 8 ]
+        %tmp.21 = lgetv %str.1;
+        symbol [ str %tmp.21 45 8 11 ];
+        %tmp.22 = "";
+        %tmp.23 = add %tmp.21 %tmp.22;
+        lputv %str.1 %tmp.23;
+        symbol [ str %str.1 45 8 11 ];
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 47 8 ]
+        %tmp.24 = lgetv %str.1;
+        symbol [ str %tmp.24 47 15 18 ];
+        ret %tmp.24;
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_39_41_48_4_stop:
+    }
+    [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc"; @line = 50; @symbol_functiondef = [initialize,50,13,23]; ]
+    function initialize() as Void {
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_50_26_92_4_start:
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 51 8 ]
+        symbol [ SimpleDataField %tmp.2 51 8 23 ];
+        %tmp.2 = getv ? :SimpleDataField;
+        symbol [ initialize %tmp.3 51 24 34 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 53 8 ]
+        %tmp.4 = "Grade";
+        symbol [ label ? 53 8 13 ];
+        putv self :label %tmp.4;
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 56 8 ]
+        %tmp.5 = self;
+        symbol [ createField %tmp.6 56 21 32 ];
+        %tmp.6 = getv function %tmp.5 :createField;
+        %tmp.7 = "ft_grade";
+        symbol [ FIELD_ID_GRADE %tmp.9 57 24 38 ];
+        %tmp.9 = getv ? :FIELD_ID_GRADE;
+        symbol [ FitContributor %tmp.10 58 12 26 ];
+        %tmp.10 = getm $.Toybox.FitContributor;
+        symbol [ DATA_TYPE_FLOAT %tmp.11 58 27 42 ];
+        %tmp.11 = getv %tmp.10 :DATA_TYPE_FLOAT;
+        %tmp.12 = newd 2;
+        %tmp.14 = const :mesgType;
+        symbol [ mesgType %tmp.14 59 14 22 const ];
+        symbol [ FitContributor %tmp.15 59 24 38 ];
+        %tmp.15 = getm $.Toybox.FitContributor;
+        symbol [ MESG_TYPE_RECORD %tmp.16 59 39 55 ];
+        %tmp.16 = getv %tmp.15 :MESG_TYPE_RECORD;
+        %tmp.17 = dup %tmp.12;
+        %tmp.18 = aputv %tmp.17 %tmp.14 %tmp.16;
+        %tmp.20 = const :units;
+        symbol [ units %tmp.20 59 58 63 const ];
+        %tmp.21 = "%";
+        %tmp.22 = dup %tmp.18;
+        %tmp.23 = aputv %tmp.22 %tmp.20 %tmp.21;
+        %tmp.24 = invoke %tmp.5 %tmp.6(%tmp.7, %tmp.9, %tmp.11, %tmp.23);
+        symbol [ gradeField ? 56 8 18 ];
+        putv self :gradeField %tmp.24;
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 61 8 ]
+        symbol [ gradeField %tmp.26 61 8 18 ];
+        %tmp.26 = getv ? :gradeField;
+        symbol [ setData %tmp.27 61 19 26 ];
+        %tmp.27 = getv function %tmp.26 :setData;
+        %tmp.28 = 0.0;
+        invoke %tmp.26 %tmp.27(%tmp.28);
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 64 8 ]
+        %tmp.29 = self;
+        symbol [ createField %tmp.30 64 21 32 ];
+        %tmp.30 = getv function %tmp.29 :createField;
+        %tmp.31 = "dist_5pct";
+        symbol [ FIELD_ID_LIGHT %tmp.33 65 25 39 ];
+        %tmp.33 = getv ? :FIELD_ID_LIGHT;
+        symbol [ FitContributor %tmp.34 66 12 26 ];
+        %tmp.34 = getm $.Toybox.FitContributor;
+        symbol [ DATA_TYPE_FLOAT %tmp.35 66 27 42 ];
+        %tmp.35 = getv %tmp.34 :DATA_TYPE_FLOAT;
+        %tmp.36 = newd 2;
+        %tmp.38 = const :mesgType;
+        symbol [ mesgType %tmp.38 67 14 22 const ];
+        symbol [ FitContributor %tmp.39 67 24 38 ];
+        %tmp.39 = getm $.Toybox.FitContributor;
+        symbol [ MESG_TYPE_SESSION %tmp.40 67 39 56 ];
+        %tmp.40 = getv %tmp.39 :MESG_TYPE_SESSION;
+        %tmp.41 = dup %tmp.36;
+        %tmp.42 = aputv %tmp.41 %tmp.38 %tmp.40;
+        %tmp.44 = const :units;
+        symbol [ units %tmp.44 67 59 64 const ];
+        %tmp.45 = "m";
+        %tmp.46 = dup %tmp.42;
+        %tmp.47 = aputv %tmp.46 %tmp.44 %tmp.45;
+        %tmp.48 = invoke %tmp.29 %tmp.30(%tmp.31, %tmp.33, %tmp.35, %tmp.47);
+        symbol [ lightField ? 64 8 18 ];
+        putv self :lightField %tmp.48;
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 69 8 ]
+        symbol [ lightField %tmp.50 69 8 18 ];
+        %tmp.50 = getv ? :lightField;
+        symbol [ setData %tmp.51 69 19 26 ];
+        %tmp.51 = getv function %tmp.50 :setData;
+        %tmp.52 = 0.0;
+        invoke %tmp.50 %tmp.51(%tmp.52);
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 71 8 ]
+        %tmp.53 = self;
+        symbol [ createField %tmp.54 71 21 32 ];
+        %tmp.54 = getv function %tmp.53 :createField;
+        %tmp.55 = "dist_10pct";
+        symbol [ FIELD_ID_STEEP %tmp.57 72 26 40 ];
+        %tmp.57 = getv ? :FIELD_ID_STEEP;
+        symbol [ FitContributor %tmp.58 73 12 26 ];
+        %tmp.58 = getm $.Toybox.FitContributor;
+        symbol [ DATA_TYPE_FLOAT %tmp.59 73 27 42 ];
+        %tmp.59 = getv %tmp.58 :DATA_TYPE_FLOAT;
+        %tmp.60 = newd 2;
+        %tmp.62 = const :mesgType;
+        symbol [ mesgType %tmp.62 74 14 22 const ];
+        symbol [ FitContributor %tmp.63 74 24 38 ];
+        %tmp.63 = getm $.Toybox.FitContributor;
+        symbol [ MESG_TYPE_SESSION %tmp.64 74 39 56 ];
+        %tmp.64 = getv %tmp.63 :MESG_TYPE_SESSION;
+        %tmp.65 = dup %tmp.60;
+        %tmp.66 = aputv %tmp.65 %tmp.62 %tmp.64;
+        %tmp.68 = const :units;
+        symbol [ units %tmp.68 74 59 64 const ];
+        %tmp.69 = "m";
+        %tmp.70 = dup %tmp.66;
+        %tmp.71 = aputv %tmp.70 %tmp.68 %tmp.69;
+        %tmp.72 = invoke %tmp.53 %tmp.54(%tmp.55, %tmp.57, %tmp.59, %tmp.71);
+        symbol [ steepField ? 71 8 18 ];
+        putv self :steepField %tmp.72;
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 76 8 ]
+        symbol [ steepField %tmp.74 76 8 18 ];
+        %tmp.74 = getv ? :steepField;
+        symbol [ setData %tmp.75 76 19 26 ];
+        %tmp.75 = getv function %tmp.74 :setData;
+        %tmp.76 = 0.0;
+        invoke %tmp.74 %tmp.75(%tmp.76);
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 78 8 ]
+        %tmp.77 = self;
+        symbol [ createField %tmp.78 78 19 30 ];
+        %tmp.78 = getv function %tmp.77 :createField;
+        %tmp.79 = "grade_max";
+        symbol [ FIELD_ID_MAXGRADE %tmp.81 79 25 42 ];
+        %tmp.81 = getv ? :FIELD_ID_MAXGRADE;
+        symbol [ FitContributor %tmp.82 80 12 26 ];
+        %tmp.82 = getm $.Toybox.FitContributor;
+        symbol [ DATA_TYPE_FLOAT %tmp.83 80 27 42 ];
+        %tmp.83 = getv %tmp.82 :DATA_TYPE_FLOAT;
+        %tmp.84 = newd 2;
+        %tmp.86 = const :mesgType;
+        symbol [ mesgType %tmp.86 81 14 22 const ];
+        symbol [ FitContributor %tmp.87 81 24 38 ];
+        %tmp.87 = getm $.Toybox.FitContributor;
+        symbol [ MESG_TYPE_SESSION %tmp.88 81 39 56 ];
+        %tmp.88 = getv %tmp.87 :MESG_TYPE_SESSION;
+        %tmp.89 = dup %tmp.84;
+        %tmp.90 = aputv %tmp.89 %tmp.86 %tmp.88;
+        %tmp.92 = const :units;
+        symbol [ units %tmp.92 81 59 64 const ];
+        %tmp.93 = "%";
+        %tmp.94 = dup %tmp.90;
+        %tmp.95 = aputv %tmp.94 %tmp.92 %tmp.93;
+        %tmp.96 = invoke %tmp.77 %tmp.78(%tmp.79, %tmp.81, %tmp.83, %tmp.95);
+        symbol [ maxField ? 78 8 16 ];
+        putv self :maxField %tmp.96;
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 83 8 ]
+        symbol [ maxField %tmp.98 83 8 16 ];
+        %tmp.98 = getv ? :maxField;
+        symbol [ setData %tmp.99 83 17 24 ];
+        %tmp.99 = getv function %tmp.98 :setData;
+        %tmp.100 = 0.0;
+        invoke %tmp.98 %tmp.99(%tmp.100);
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 86 8 ]
+        symbol [ SAMPLE_WINDOW %tmp.103 86 26 39 ];
+        %tmp.103 = getv ? :SAMPLE_WINDOW;
+        %tmp.101 = newa %tmp.103;
+        symbol [ buffer ? 86 8 14 ];
+        putv self :buffer %tmp.101;
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 87 8 ]
+        %tmp.104 = 0;
+        symbol [ bufIndex ? 87 8 16 ];
+        putv self :bufIndex %tmp.104;
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 88 8 ]
+        %tmp.105 = 0.0;
+        symbol [ accWinDist ? 88 8 18 ];
+        putv self :accWinDist %tmp.105;
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 89 8 ]
+        %tmp.106 = 0.0;
+        symbol [ emaValue ? 89 8 16 ];
+        putv self :emaValue %tmp.106;
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 90 8 ]
+        %tmp.107 = 0.0;
+        symbol [ distLight ? 90 8 17 ];
+        putv self :distLight %tmp.107;
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 91 8 ]
+        %tmp.108 = 0.0;
+        symbol [ distSteep ? 91 8 17 ];
+        putv self :distSteep %tmp.108;
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_50_26_92_4_stop:
+    }
+    [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc"; @line = 94; @symbol_functiondef = [compute,94,13,20]; @symbol_param<0> = [info,94,21,25]; ]
+    function compute(info) {
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_94_27_180_4_start:
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 96 8 ]
+        [ "_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_94_27_180_4_start" "_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_94_27_180_4_stop" ]
+        %speed.1 = local;
+        symbol [ speed %speed.1 96 12 17 ];
+        %tmp.1 = lgetv %info;
+        symbol [ info %tmp.1 96 23 27 ];
+        symbol [ currentSpeed %tmp.2 96 28 40 ];
+        %tmp.2 = getv %tmp.1 :currentSpeed;
+        lputv %speed.1 %tmp.2;
+        symbol [ speed %speed.1 96 12 17 ];
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 97 8 ]
+        [ "_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_94_27_180_4_start" "_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_94_27_180_4_stop" ]
+        %altitude.2 = local;
+        symbol [ altitude %altitude.2 97 12 20 ];
+        %tmp.3 = lgetv %info;
+        symbol [ info %tmp.3 97 23 27 ];
+        symbol [ altitude %tmp.4 97 28 36 ];
+        %tmp.4 = getv %tmp.3 :altitude;
+        lputv %altitude.2 %tmp.4;
+        symbol [ altitude %altitude.2 97 12 20 ];
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 98 8 ]
+        [ "_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_94_27_180_4_start" "_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_94_27_180_4_stop" ]
+        %distSec.3 = local;
+        symbol [ distSec %distSec.3 98 12 19 ];
+        %tmp.5 = lgetv %speed.1;
+        symbol [ speed %tmp.5 98 23 28 ];
+        %tmp.6 = 1.0;
+        %tmp.7 = mul %tmp.5 %tmp.6;
+        lputv %distSec.3 %tmp.7;
+        symbol [ distSec %distSec.3 98 12 19 ];
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 99 8 ]
+        [ "_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_94_27_180_4_start" "_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_94_27_180_4_stop" ]
+        %eDist.4 = local;
+        symbol [ eDist %eDist.4 99 12 17 ];
+        %tmp.8 = lgetv %info;
+        symbol [ info %tmp.8 99 20 24 ];
+        symbol [ elapsedDistance %tmp.9 99 25 40 ];
+        %tmp.9 = getv %tmp.8 :elapsedDistance;
+        lputv %eDist.4 %tmp.9;
+        symbol [ eDist %eDist.4 99 12 17 ];
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 100 8 ]
+        [ "_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_94_27_180_4_start" "_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_94_27_180_4_stop" ]
+        %eTime.5 = local;
+        symbol [ eTime %eTime.5 100 12 17 ];
+        %tmp.10 = lgetv %info;
+        symbol [ info %tmp.10 100 20 24 ];
+        symbol [ elapsedTime %tmp.11 100 25 36 ];
+        %tmp.11 = getv %tmp.10 :elapsedTime;
+        %tmp.12 = 1000;
+        %tmp.13 = div %tmp.11 %tmp.12;
+        lputv %eTime.5 %tmp.13;
+        symbol [ eTime %eTime.5 100 12 17 ];
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 102 8 ]
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_102_8_102_84_if_stmt:
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_102_12_102_58_begin:
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_102_12_102_38_begin:
+        %tmp.14 = lgetv %speed.1;
+        symbol [ speed %tmp.14 102 12 17 ];
+        %tmp.15 = null;
+        %tmp.16 = eq %tmp.14 %tmp.15;
+        bt %tmp.16 @_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_102_8_102_84_if_true;
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_102_29_102_38_false:
+        %tmp.17 = lgetv %eDist.4;
+        symbol [ eDist %tmp.17 102 29 34 ];
+        %tmp.18 = null;
+        %tmp.19 = eq %tmp.17 %tmp.18;
+        push %tmp.19;
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_102_29_102_38_end:
+        %tmp.20 = phi [%tmp.16 @_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_102_12_102_38_begin] [%tmp.19 @_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_102_29_102_38_false] [%tmp.20 @_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_102_29_102_38_end];
+        bt %tmp.20 @_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_102_8_102_84_if_true;
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_102_46_102_58_false:
+        %tmp.21 = lgetv %altitude.2;
+        symbol [ altitude %tmp.21 102 46 54 ];
+        %tmp.22 = null;
+        %tmp.23 = eq %tmp.21 %tmp.22;
+        push %tmp.23;
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_102_46_102_58_end:
+        %tmp.24 = phi [%tmp.20 @_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_102_12_102_58_begin] [%tmp.23 @_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_102_46_102_58_false] [%tmp.24 @_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_102_46_102_58_end];
+        bf %tmp.24 @_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_102_8_102_84_if_end;
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_102_8_102_84_if_true:
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_102_64_102_84_start:
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 102 66 ]
+        symbol [ blank_str %tmp.26 102 73 82 ];
+        %tmp.26 = getv ? :blank_str;
+        ret %tmp.26;
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_102_64_102_84_stop:
+        goto @_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_102_8_102_84_if_end;
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_102_8_102_84_if_end:
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 105 8 ]
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_105_8_110_8_if_stmt:
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_105_12_105_48_begin:
+        %tmp.27 = lgetv %speed.1;
+        symbol [ speed %tmp.27 105 12 17 ];
+        %tmp.28 = 1.0;
+        %tmp.29 = lt %tmp.27 %tmp.28;
+        bt %tmp.29 @_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_105_8_110_8_if_true;
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_105_27_105_48_false:
+        %tmp.30 = lgetv %eTime.5;
+        symbol [ eTime %tmp.30 105 27 32 ];
+        symbol [ lastSample %tmp.32 105 35 45 ];
+        %tmp.32 = getv ? :lastSample;
+        %tmp.33 = 1.1;
+        %tmp.34 = add %tmp.32 %tmp.33;
+        %tmp.35 = gt %tmp.30 %tmp.34;
+        push %tmp.35;
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_105_27_105_48_end:
+        %tmp.36 = phi [%tmp.29 @_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_105_12_105_48_begin] [%tmp.35 @_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_105_27_105_48_false] [%tmp.36 @_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_105_27_105_48_end];
+        bf %tmp.36 @_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_105_8_110_8_if_end;
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_105_8_110_8_if_true:
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_105_53_110_8_start:
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 106 12 ]
+        %tmp.37 = self;
+        symbol [ _resetAll %tmp.38 106 12 21 ];
+        %tmp.38 = getv function %tmp.37 :_resetAll;
+        invoke %tmp.37 %tmp.38();
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 107 12 ]
+        symbol [ gradeField %tmp.40 107 12 22 ];
+        %tmp.40 = getv ? :gradeField;
+        symbol [ setData %tmp.41 107 23 30 ];
+        %tmp.41 = getv function %tmp.40 :setData;
+        %tmp.42 = 0.0;
+        invoke %tmp.40 %tmp.41(%tmp.42);
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 108 12 ]
+        %tmp.43 = lgetv %eTime.5;
+        symbol [ eTime %tmp.43 108 25 30 ];
+        symbol [ lastSample ? 108 12 22 ];
+        putv self :lastSample %tmp.43;
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 109 12 ]
+        symbol [ blank_str %tmp.45 109 19 28 ];
+        %tmp.45 = getv ? :blank_str;
+        ret %tmp.45;
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_105_53_110_8_stop:
+        goto @_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_105_8_110_8_if_end;
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_105_8_110_8_if_end:
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 112 8 ]
+        %tmp.46 = lgetv %eTime.5;
+        symbol [ eTime %tmp.46 112 21 26 ];
+        symbol [ lastSample ? 112 8 18 ];
+        putv self :lastSample %tmp.46;
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 115 8 ]
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_115_8_115_67_if_stmt:
+        symbol [ bufFull %tmp.48 115 12 19 ];
+        %tmp.48 = getv ? :bufFull;
+        bf %tmp.48 @_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_115_8_115_67_if_end;
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_115_8_115_67_if_true:
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_115_21_115_67_start:
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 115 23 ]
+        symbol [ accWinDist %tmp.49 115 23 33 ];
+        %tmp.49 = getv self :accWinDist;
+        symbol [ buffer %tmp.51 115 37 43 ];
+        %tmp.51 = getv ? :buffer;
+        symbol [ bufIndex %tmp.53 115 44 52 ];
+        %tmp.53 = getv ? :bufIndex;
+        %tmp.54 = agetv %tmp.51 %tmp.53;
+        %tmp.55 = "distance";
+        %tmp.56 = agetv %tmp.54 %tmp.55;
+        %tmp.57 = sub %tmp.49 %tmp.56;
+        symbol [ accWinDist ? 115 23 33 ];
+        putv self :accWinDist dup %tmp.57;
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_115_21_115_67_stop:
+        goto @_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_115_8_115_67_if_end;
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_115_8_115_67_if_end:
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 116 8 ]
+        symbol [ buffer %tmp.58 116 8 14 ];
+        %tmp.58 = getv self :buffer;
+        %tmp.59 = newd 2;
+        %tmp.60 = "altitude";
+        %tmp.61 = lgetv %altitude.2;
+        symbol [ altitude %tmp.61 116 43 51 ];
+        %tmp.62 = dup %tmp.59;
+        %tmp.63 = aputv %tmp.62 %tmp.60 %tmp.61;
+        %tmp.64 = "distance";
+        %tmp.65 = lgetv %distSec.3;
+        symbol [ distSec %tmp.65 116 67 74 ];
+        %tmp.66 = dup %tmp.63;
+        %tmp.67 = aputv %tmp.66 %tmp.64 %tmp.65;
+        symbol [ bufIndex %tmp.69 116 15 23 ];
+        %tmp.69 = getv ? :bufIndex;
+        aputv %tmp.58 %tmp.69 %tmp.67;
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 117 8 ]
+        symbol [ accWinDist %tmp.70 117 8 18 ];
+        %tmp.70 = getv self :accWinDist;
+        %tmp.71 = lgetv %distSec.3;
+        symbol [ distSec %tmp.71 117 22 29 ];
+        %tmp.72 = add %tmp.70 %tmp.71;
+        symbol [ accWinDist ? 117 8 18 ];
+        putv self :accWinDist dup %tmp.72;
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 118 8 ]
+        symbol [ bufIndex %tmp.74 118 20 28 ];
+        %tmp.74 = getv ? :bufIndex;
+        %tmp.75 = 1;
+        %tmp.76 = add %tmp.74 %tmp.75;
+        symbol [ SAMPLE_WINDOW %tmp.78 118 36 49 ];
+        %tmp.78 = getv ? :SAMPLE_WINDOW;
+        %tmp.79 = mod %tmp.76 %tmp.78;
+        symbol [ bufIndex ? 118 8 16 ];
+        putv self :bufIndex %tmp.79;
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 120 8 ]
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_120_8_120_45_if_stmt:
+        symbol [ bufIndex %tmp.81 120 12 20 ];
+        %tmp.81 = getv ? :bufIndex;
+        %tmp.82 = 0;
+        %tmp.83 = eq %tmp.81 %tmp.82;
+        bf %tmp.83 @_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_120_8_120_45_if_end;
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_120_8_120_45_if_true:
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_120_27_120_45_start:
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 120 29 ]
+        %tmp.84 = true;
+        symbol [ bufFull ? 120 29 36 ];
+        putv self :bufFull %tmp.84;
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_120_27_120_45_stop:
+        goto @_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_120_8_120_45_if_end;
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_120_8_120_45_if_end:
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 122 8 ]
+        symbol [ System %tmp.86 122 8 14 ];
+        %tmp.86 = getv ? :System;
+        symbol [ println %tmp.87 122 15 22 ];
+        %tmp.87 = getv function %tmp.86 :println;
+        %tmp.88 = lgetv %eTime.5;
+        symbol [ eTime %tmp.88 122 23 28 ];
+        symbol [ format %tmp.89 122 29 35 ];
+        %tmp.89 = getv function %tmp.88 :format;
+        %tmp.90 = "%d";
+        %tmp.91 = invoke %tmp.88 %tmp.89(%tmp.90);
+        %tmp.92 = "s | ";
+        %tmp.93 = add %tmp.91 %tmp.92;
+        %tmp.94 = lgetv %eDist.4;
+        symbol [ eDist %tmp.94 122 53 58 ];
+        symbol [ format %tmp.95 122 59 65 ];
+        %tmp.95 = getv function %tmp.94 :format;
+        %tmp.96 = "%.1f";
+        %tmp.97 = invoke %tmp.94 %tmp.95(%tmp.96);
+        %tmp.98 = add %tmp.93 %tmp.97;
+        %tmp.99 = "m | ";
+        %tmp.100 = add %tmp.98 %tmp.99;
+        %tmp.101 = lgetv %altitude.2;
+        symbol [ altitude %tmp.101 122 85 93 ];
+        symbol [ format %tmp.102 122 94 100 ];
+        %tmp.102 = getv function %tmp.101 :format;
+        %tmp.103 = "%.2f";
+        %tmp.104 = invoke %tmp.101 %tmp.102(%tmp.103);
+        %tmp.105 = add %tmp.100 %tmp.104;
+        %tmp.106 = "m | ";
+        %tmp.107 = add %tmp.105 %tmp.106;
+        symbol [ bufIndex %tmp.109 122 120 128 ];
+        %tmp.109 = getv ? :bufIndex;
+        symbol [ format %tmp.110 122 129 135 ];
+        %tmp.110 = getv function %tmp.109 :format;
+        %tmp.111 = "%d";
+        %tmp.112 = invoke %tmp.109 %tmp.110(%tmp.111);
+        %tmp.113 = add %tmp.107 %tmp.112;
+        invoke %tmp.86 %tmp.87(%tmp.113);
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 124 8 ]
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_124_8_127_8_if_stmt:
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_124_12_124_31_begin:
+        symbol [ accWinDist %tmp.115 124 12 22 ];
+        %tmp.115 = getv ? :accWinDist;
+        %tmp.116 = 5;
+        %tmp.117 = lt %tmp.115 %tmp.116;
+        bt %tmp.117 @_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_124_8_127_8_if_true;
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_124_30_124_31_false:
+        symbol [ bufFull %tmp.119 124 31 38 ];
+        %tmp.119 = getv ? :bufFull;
+        %tmp.120 = not %tmp.119;
+        push %tmp.120;
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_124_30_124_31_end:
+        %tmp.121 = phi [%tmp.117 @_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_124_12_124_31_begin] [%tmp.120 @_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_124_30_124_31_false] [%tmp.121 @_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_124_30_124_31_end];
+        bf %tmp.121 @_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_124_8_127_8_if_end;
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_124_8_127_8_if_true:
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_124_40_127_8_start:
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 125 12 ]
+        symbol [ gradeField %tmp.123 125 12 22 ];
+        %tmp.123 = getv ? :gradeField;
+        symbol [ setData %tmp.124 125 23 30 ];
+        %tmp.124 = getv function %tmp.123 :setData;
+        %tmp.125 = 0.0;
+        invoke %tmp.123 %tmp.124(%tmp.125);
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 126 12 ]
+        %tmp.126 = self;
+        symbol [ getBufferString %tmp.127 126 19 34 ];
+        %tmp.127 = getv function %tmp.126 :getBufferString;
+        %tmp.128 = invoke %tmp.126 %tmp.127();
+        ret %tmp.128;
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_124_40_127_8_stop:
+        goto @_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_124_8_127_8_if_end;
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_124_8_127_8_if_end:
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 129 8 ]
+        [ "_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_94_27_180_4_start" "_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_94_27_180_4_stop" ]
+        %prevIdx.6 = local;
+        symbol [ prevIdx %prevIdx.6 129 12 19 ];
+        symbol [ bufIndex %tmp.130 129 25 33 ];
+        %tmp.130 = getv ? :bufIndex;
+        %tmp.131 = 1;
+        %tmp.132 = sub %tmp.130 %tmp.131;
+        symbol [ SAMPLE_WINDOW %tmp.134 129 40 53 ];
+        %tmp.134 = getv ? :SAMPLE_WINDOW;
+        %tmp.135 = add %tmp.132 %tmp.134;
+        symbol [ SAMPLE_WINDOW %tmp.137 129 57 70 ];
+        %tmp.137 = getv ? :SAMPLE_WINDOW;
+        %tmp.138 = mod %tmp.135 %tmp.137;
+        lputv %prevIdx.6 %tmp.138;
+        symbol [ prevIdx %prevIdx.6 129 12 19 ];
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 130 8 ]
+        [ "_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_94_27_180_4_start" "_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_94_27_180_4_stop" ]
+        %prevAlt.7 = local;
+        symbol [ prevAlt %prevAlt.7 130 12 19 ];
+        symbol [ buffer %tmp.140 130 24 30 ];
+        %tmp.140 = getv ? :buffer;
+        %tmp.141 = lgetv %prevIdx.6;
+        symbol [ prevIdx %tmp.141 130 31 38 ];
+        %tmp.142 = agetv %tmp.140 %tmp.141;
+        %tmp.143 = "altitude";
+        %tmp.144 = agetv %tmp.142 %tmp.143;
+        lputv %prevAlt.7 %tmp.144;
+        symbol [ prevAlt %prevAlt.7 130 12 19 ];
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 131 8 ]
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_131_8_136_4_if_stmt:
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_131_12_131_60_begin:
+        %tmp.145 = lgetv %prevAlt.7;
+        symbol [ prevAlt %tmp.145 131 12 19 ];
+        %tmp.146 = null;
+        %tmp.147 = ne %tmp.145 %tmp.146;
+        bf %tmp.147 @_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_131_8_136_4_if_end;
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_131_31_131_60_true:
+        %tmp.148 = lgetv %altitude.2;
+        symbol [ altitude %tmp.148 131 32 40 ];
+        %tmp.149 = lgetv %prevAlt.7;
+        symbol [ prevAlt %tmp.149 131 43 50 ];
+        %tmp.150 = as %tmp.149 { (!Null) };
+        %tmp.151 = sub %tmp.148 %tmp.150;
+        symbol [ abs %tmp.152 131 52 55 ];
+        %tmp.152 = getv function %tmp.151 :abs;
+        %tmp.153 = invoke %tmp.151 %tmp.152();
+        symbol [ MAX_ALT_JUMP %tmp.155 131 60 72 ];
+        %tmp.155 = getv ? :MAX_ALT_JUMP;
+        %tmp.156 = gt %tmp.153 %tmp.155;
+        push %tmp.156;
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_131_31_131_60_end:
+        %tmp.157 = phi [%tmp.147 @_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_131_12_131_60_begin] [%tmp.156 @_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_131_31_131_60_true] [%tmp.157 @_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_131_31_131_60_end];
+        bf %tmp.157 @_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_131_8_136_4_if_end;
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_131_8_136_4_if_true:
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_131_74_136_4_start:
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 132 12 ]
+        symbol [ System %tmp.159 132 12 18 ];
+        %tmp.159 = getv ? :System;
+        symbol [ println %tmp.160 132 19 26 ];
+        %tmp.160 = getv function %tmp.159 :println;
+        %tmp.161 = "Alt jump of ";
+        %tmp.162 = lgetv %altitude.2;
+        symbol [ altitude %tmp.162 132 45 53 ];
+        %tmp.163 = lgetv %prevAlt.7;
+        symbol [ prevAlt %tmp.163 132 56 63 ];
+        %tmp.164 = as %tmp.163 { (!Null) };
+        %tmp.165 = sub %tmp.162 %tmp.164;
+        %tmp.166 = add %tmp.161 %tmp.165;
+        %tmp.167 = "m exceeds ";
+        %tmp.168 = add %tmp.166 %tmp.167;
+        symbol [ MAX_ALT_JUMP %tmp.170 132 82 94 ];
+        %tmp.170 = getv ? :MAX_ALT_JUMP;
+        %tmp.171 = add %tmp.168 %tmp.170;
+        %tmp.172 = "m — resetting buffer";
+        %tmp.173 = add %tmp.171 %tmp.172;
+        invoke %tmp.159 %tmp.160(%tmp.173);
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 133 12 ]
+        %tmp.174 = self;
+        symbol [ _resetAll %tmp.175 133 12 21 ];
+        %tmp.175 = getv function %tmp.174 :_resetAll;
+        invoke %tmp.174 %tmp.175();
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 134 12 ]
+        symbol [ gradeField %tmp.177 134 12 22 ];
+        %tmp.177 = getv ? :gradeField;
+        symbol [ setData %tmp.178 134 23 30 ];
+        %tmp.178 = getv function %tmp.177 :setData;
+        %tmp.179 = 0.0;
+        invoke %tmp.177 %tmp.178(%tmp.179);
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 135 12 ]
+        symbol [ blank_str %tmp.181 135 19 28 ];
+        %tmp.181 = getv ? :blank_str;
+        ret %tmp.181;
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_131_74_136_4_stop:
+        goto @_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_131_8_136_4_if_end;
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_131_8_136_4_if_end:
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 139 8 ]
+        [ "_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_94_27_180_4_start" "_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_94_27_180_4_stop" ]
+        %oldestIdx.8 = local;
+        symbol [ oldestIdx %oldestIdx.8 139 12 21 ];
+        symbol [ bufIndex %tmp.183 139 24 32 ];
+        %tmp.183 = getv ? :bufIndex;
+        lputv %oldestIdx.8 %tmp.183;
+        symbol [ oldestIdx %oldestIdx.8 139 12 21 ];
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 140 8 ]
+        [ "_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_94_27_180_4_start" "_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_94_27_180_4_stop" ]
+        %dh.9 = local;
+        symbol [ dh %dh.9 140 12 14 ];
+        %tmp.184 = lgetv %altitude.2;
+        symbol [ altitude %tmp.184 140 17 25 ];
+        symbol [ buffer %tmp.186 140 28 34 ];
+        %tmp.186 = getv ? :buffer;
+        %tmp.187 = lgetv %oldestIdx.8;
+        symbol [ oldestIdx %tmp.187 140 35 44 ];
+        %tmp.188 = agetv %tmp.186 %tmp.187;
+        %tmp.189 = "altitude";
+        %tmp.190 = agetv %tmp.188 %tmp.189;
+        %tmp.191 = sub %tmp.184 %tmp.190;
+        lputv %dh.9 %tmp.191;
+        symbol [ dh %dh.9 140 12 14 ];
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 141 8 ]
+        [ "_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_94_27_180_4_start" "_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_94_27_180_4_stop" ]
+        %grade_raw.10 = local;
+        symbol [ grade_raw %grade_raw.10 141 12 21 ];
+        %tmp.192 = lgetv %dh.9;
+        symbol [ dh %tmp.192 141 24 26 ];
+        symbol [ accWinDist %tmp.194 141 29 39 ];
+        %tmp.194 = getv ? :accWinDist;
+        %tmp.195 = div %tmp.192 %tmp.194;
+        lputv %grade_raw.10 %tmp.195;
+        symbol [ grade_raw %grade_raw.10 141 12 21 ];
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 142 8 ]
+        [ "_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_94_27_180_4_start" "_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_94_27_180_4_stop" ]
+        %delta.11 = local;
+        symbol [ delta %delta.11 142 12 17 ];
+        symbol [ emaValue %tmp.197 142 20 28 ];
+        %tmp.197 = getv ? :emaValue;
+        %tmp.198 = lgetv %grade_raw.10;
+        symbol [ grade_raw %tmp.198 142 31 40 ];
+        %tmp.199 = sub %tmp.197 %tmp.198;
+        lputv %delta.11 %tmp.199;
+        symbol [ delta %delta.11 142 12 17 ];
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 144 8 ]
+        symbol [ System %tmp.201 144 8 14 ];
+        %tmp.201 = getv ? :System;
+        symbol [ println %tmp.202 144 15 22 ];
+        %tmp.202 = getv function %tmp.201 :println;
+        %tmp.203 = " - speed:      ";
+        %tmp.204 = lgetv %speed.1;
+        symbol [ speed %tmp.204 144 43 48 ];
+        symbol [ format %tmp.205 144 49 55 ];
+        %tmp.205 = getv function %tmp.204 :format;
+        %tmp.206 = "%.2f";
+        %tmp.207 = invoke %tmp.204 %tmp.205(%tmp.206);
+        %tmp.208 = add %tmp.203 %tmp.207;
+        %tmp.209 = "m/s | ";
+        %tmp.210 = add %tmp.208 %tmp.209;
+        %tmp.211 = lgetv %speed.1;
+        symbol [ speed %tmp.211 144 78 83 ];
+        %tmp.212 = 3.6;
+        %tmp.213 = mul %tmp.211 %tmp.212;
+        symbol [ format %tmp.214 144 89 95 ];
+        %tmp.214 = getv function %tmp.213 :format;
+        %tmp.215 = "%.1f";
+        %tmp.216 = invoke %tmp.213 %tmp.214(%tmp.215);
+        %tmp.217 = add %tmp.210 %tmp.216;
+        %tmp.218 = "kmh";
+        %tmp.219 = add %tmp.217 %tmp.218;
+        invoke %tmp.201 %tmp.202(%tmp.219);
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 145 8 ]
+        symbol [ System %tmp.221 145 8 14 ];
+        %tmp.221 = getv ? :System;
+        symbol [ println %tmp.222 145 15 22 ];
+        %tmp.222 = getv function %tmp.221 :println;
+        %tmp.223 = " - acc dist:   ";
+        symbol [ accWinDist %tmp.225 145 43 53 ];
+        %tmp.225 = getv ? :accWinDist;
+        symbol [ format %tmp.226 145 54 60 ];
+        %tmp.226 = getv function %tmp.225 :format;
+        %tmp.227 = "%.3f";
+        %tmp.228 = invoke %tmp.225 %tmp.226(%tmp.227);
+        %tmp.229 = add %tmp.223 %tmp.228;
+        invoke %tmp.221 %tmp.222(%tmp.229);
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 146 8 ]
+        symbol [ System %tmp.231 146 8 14 ];
+        %tmp.231 = getv ? :System;
+        symbol [ println %tmp.232 146 15 22 ];
+        %tmp.232 = getv function %tmp.231 :println;
+        %tmp.233 = " - elev gain:  ";
+        %tmp.234 = lgetv %dh.9;
+        symbol [ dh %tmp.234 146 43 45 ];
+        symbol [ format %tmp.235 146 46 52 ];
+        %tmp.235 = getv function %tmp.234 :format;
+        %tmp.236 = "%.2f";
+        %tmp.237 = invoke %tmp.234 %tmp.235(%tmp.236);
+        %tmp.238 = add %tmp.233 %tmp.237;
+        invoke %tmp.231 %tmp.232(%tmp.238);
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 147 8 ]
+        symbol [ System %tmp.240 147 8 14 ];
+        %tmp.240 = getv ? :System;
+        symbol [ println %tmp.241 147 15 22 ];
+        %tmp.241 = getv function %tmp.240 :println;
+        %tmp.242 = " - grade:      ";
+        %tmp.243 = 100;
+        %tmp.244 = lgetv %grade_raw.10;
+        symbol [ grade_raw %tmp.244 147 48 57 ];
+        %tmp.245 = mul %tmp.243 %tmp.244;
+        symbol [ format %tmp.246 147 59 65 ];
+        %tmp.246 = getv function %tmp.245 :format;
+        %tmp.247 = "%.3f";
+        %tmp.248 = invoke %tmp.245 %tmp.246(%tmp.247);
+        %tmp.249 = add %tmp.242 %tmp.248;
+        invoke %tmp.240 %tmp.241(%tmp.249);
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 149 8 ]
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_149_8_152_8_if_stmt:
+        %tmp.250 = lgetv %delta.11;
+        symbol [ delta %tmp.250 149 12 17 ];
+        symbol [ abs %tmp.251 149 18 21 ];
+        %tmp.251 = getv function %tmp.250 :abs;
+        %tmp.252 = invoke %tmp.250 %tmp.251();
+        %tmp.253 = 0.05;
+        %tmp.254 = gt %tmp.252 %tmp.253;
+        bf %tmp.254 @_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_149_8_152_8_if_end;
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_149_8_152_8_if_true:
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_149_32_152_8_start:
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 150 12 ]
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_150_12_151_48_if_stmt:
+        %tmp.255 = lgetv %delta.11;
+        symbol [ delta %tmp.255 150 16 21 ];
+        %tmp.256 = 0;
+        %tmp.257 = gt %tmp.255 %tmp.256;
+        bf %tmp.257 @_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_150_12_151_48_if_else_false;
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_150_12_151_48_if_true:
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_150_27_150_58_start:
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 150 29 ]
+        symbol [ emaValue %tmp.259 150 41 49 ];
+        %tmp.259 = getv ? :emaValue;
+        %tmp.260 = 0.05;
+        %tmp.261 = sub %tmp.259 %tmp.260;
+        lputv %grade_raw.10 %tmp.261;
+        symbol [ grade_raw %grade_raw.10 150 29 38 ];
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_150_27_150_58_stop:
+        goto @_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_150_12_151_48_if_end;
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_150_12_151_48_if_else_false:
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_151_17_151_48_start:
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 151 19 ]
+        symbol [ emaValue %tmp.263 151 31 39 ];
+        %tmp.263 = getv ? :emaValue;
+        %tmp.264 = 0.05;
+        %tmp.265 = add %tmp.263 %tmp.264;
+        lputv %grade_raw.10 %tmp.265;
+        symbol [ grade_raw %grade_raw.10 151 19 28 ];
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_151_17_151_48_stop:
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_150_12_151_48_if_end:
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_149_32_152_8_stop:
+        goto @_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_149_8_152_8_if_end;
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_149_8_152_8_if_end:
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 154 8 ]
+        [ "_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_94_27_180_4_start" "_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_94_27_180_4_stop" ]
+        %alpha.12 = local;
+        symbol [ alpha %alpha.12 154 12 17 ];
+        symbol [ EMA_ALPHA %tmp.267 154 20 29 ];
+        %tmp.267 = getv ? :EMA_ALPHA;
+        symbol [ EMA_ALT_ALPHA %tmp.269 154 32 45 ];
+        %tmp.269 = getv ? :EMA_ALT_ALPHA;
+        %tmp.270 = lgetv %dh.9;
+        symbol [ dh %tmp.270 154 48 50 ];
+        symbol [ abs %tmp.271 154 51 54 ];
+        %tmp.271 = getv function %tmp.270 :abs;
+        %tmp.272 = invoke %tmp.270 %tmp.271();
+        %tmp.273 = mul %tmp.269 %tmp.272;
+        %tmp.274 = 1;
+        %tmp.275 = lgetv %dh.9;
+        symbol [ dh %tmp.275 154 64 66 ];
+        symbol [ abs %tmp.276 154 67 70 ];
+        %tmp.276 = getv function %tmp.275 :abs;
+        %tmp.277 = invoke %tmp.275 %tmp.276();
+        %tmp.278 = add %tmp.274 %tmp.277;
+        %tmp.279 = div %tmp.273 %tmp.278;
+        %tmp.280 = add %tmp.267 %tmp.279;
+        lputv %alpha.12 %tmp.280;
+        symbol [ alpha %alpha.12 154 12 17 ];
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 156 8 ]
+        %tmp.281 = lgetv %alpha.12;
+        symbol [ alpha %tmp.281 156 19 24 ];
+        %tmp.282 = lgetv %grade_raw.10;
+        symbol [ grade_raw %tmp.282 156 27 36 ];
+        %tmp.283 = mul %tmp.281 %tmp.282;
+        %tmp.284 = 1;
+        %tmp.285 = lgetv %alpha.12;
+        symbol [ alpha %tmp.285 156 44 49 ];
+        %tmp.286 = sub %tmp.284 %tmp.285;
+        symbol [ emaValue %tmp.288 156 53 61 ];
+        %tmp.288 = getv ? :emaValue;
+        %tmp.289 = mul %tmp.286 %tmp.288;
+        %tmp.290 = add %tmp.283 %tmp.289;
+        symbol [ emaValue ? 156 8 16 ];
+        putv self :emaValue %tmp.290;
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 158 8 ]
+        symbol [ System %tmp.292 158 8 14 ];
+        %tmp.292 = getv ? :System;
+        symbol [ println %tmp.293 158 15 22 ];
+        %tmp.293 = getv function %tmp.292 :println;
+        %tmp.294 = " - ema grade:  ";
+        %tmp.295 = 100;
+        symbol [ emaValue %tmp.297 158 48 56 ];
+        %tmp.297 = getv ? :emaValue;
+        %tmp.298 = mul %tmp.295 %tmp.297;
+        symbol [ format %tmp.299 158 58 64 ];
+        %tmp.299 = getv function %tmp.298 :format;
+        %tmp.300 = "%.3f";
+        %tmp.301 = invoke %tmp.298 %tmp.299(%tmp.300);
+        %tmp.302 = add %tmp.294 %tmp.301;
+        invoke %tmp.292 %tmp.293(%tmp.302);
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 161 8 ]
+        [ "_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_94_27_180_4_start" "_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_94_27_180_4_stop" ]
+        %pctGrade.13 = local;
+        symbol [ pctGrade %pctGrade.13 161 12 20 ];
+        symbol [ emaValue %tmp.304 161 23 31 ];
+        %tmp.304 = getv ? :emaValue;
+        %tmp.305 = 100.0;
+        %tmp.306 = mul %tmp.304 %tmp.305;
+        lputv %pctGrade.13 %tmp.306;
+        symbol [ pctGrade %pctGrade.13 161 12 20 ];
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 162 8 ]
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_162_8_162_65_if_stmt:
+        %tmp.307 = lgetv %pctGrade.13;
+        symbol [ pctGrade %tmp.307 162 12 20 ];
+        symbol [ THRESHOLD_LIGHT %tmp.309 162 24 39 ];
+        %tmp.309 = getv ? :THRESHOLD_LIGHT;
+        %tmp.310 = gte %tmp.307 %tmp.309;
+        bf %tmp.310 @_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_162_8_162_65_if_end;
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_162_8_162_65_if_true:
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_162_41_162_65_start:
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 162 43 ]
+        symbol [ distLight %tmp.311 162 43 52 ];
+        %tmp.311 = getv self :distLight;
+        %tmp.312 = lgetv %distSec.3;
+        symbol [ distSec %tmp.312 162 56 63 ];
+        %tmp.313 = add %tmp.311 %tmp.312;
+        symbol [ distLight ? 162 43 52 ];
+        putv self :distLight dup %tmp.313;
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_162_41_162_65_stop:
+        goto @_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_162_8_162_65_if_end;
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_162_8_162_65_if_end:
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 163 8 ]
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_163_8_163_65_if_stmt:
+        %tmp.314 = lgetv %pctGrade.13;
+        symbol [ pctGrade %tmp.314 163 12 20 ];
+        symbol [ THRESHOLD_STEEP %tmp.316 163 24 39 ];
+        %tmp.316 = getv ? :THRESHOLD_STEEP;
+        %tmp.317 = gte %tmp.314 %tmp.316;
+        bf %tmp.317 @_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_163_8_163_65_if_end;
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_163_8_163_65_if_true:
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_163_41_163_65_start:
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 163 43 ]
+        symbol [ distSteep %tmp.318 163 43 52 ];
+        %tmp.318 = getv self :distSteep;
+        %tmp.319 = lgetv %distSec.3;
+        symbol [ distSec %tmp.319 163 56 63 ];
+        %tmp.320 = add %tmp.318 %tmp.319;
+        symbol [ distSteep ? 163 43 52 ];
+        putv self :distSteep dup %tmp.320;
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_163_41_163_65_stop:
+        goto @_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_163_8_163_65_if_end;
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_163_8_163_65_if_end:
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 164 8 ]
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_164_8_164_56_if_stmt:
+        %tmp.321 = lgetv %pctGrade.13;
+        symbol [ pctGrade %tmp.321 164 12 20 ];
+        symbol [ maxGrade %tmp.323 164 23 31 ];
+        %tmp.323 = getv ? :maxGrade;
+        %tmp.324 = gt %tmp.321 %tmp.323;
+        bf %tmp.324 @_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_164_8_164_56_if_end;
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_164_8_164_56_if_true:
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_164_33_164_56_start:
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 164 35 ]
+        %tmp.325 = lgetv %pctGrade.13;
+        symbol [ pctGrade %tmp.325 164 46 54 ];
+        symbol [ maxGrade ? 164 35 43 ];
+        putv self :maxGrade %tmp.325;
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_164_33_164_56_stop:
+        goto @_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_164_8_164_56_if_end;
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_164_8_164_56_if_end:
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 167 8 ]
+        [ "_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_94_27_180_4_start" "_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_94_27_180_4_stop" ]
+        %value.14 = local;
+        symbol [ value %value.14 167 12 17 ];
+        %tmp.326 = lgetv %pctGrade.13;
+        symbol [ pctGrade %tmp.326 167 20 28 ];
+        symbol [ format %tmp.327 167 29 35 ];
+        %tmp.327 = getv function %tmp.326 :format;
+        symbol [ str_format %tmp.329 167 36 46 ];
+        %tmp.329 = getv ? :str_format;
+        %tmp.330 = invoke %tmp.326 %tmp.327(%tmp.329);
+        symbol [ suffix %tmp.332 167 50 56 ];
+        %tmp.332 = getv ? :suffix;
+        %tmp.333 = add %tmp.330 %tmp.332;
+        lputv %value.14 %tmp.333;
+        symbol [ value %value.14 167 12 17 ];
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 168 8 ]
+        symbol [ gradeField %tmp.335 168 8 18 ];
+        %tmp.335 = getv ? :gradeField;
+        symbol [ setData %tmp.336 168 19 26 ];
+        %tmp.336 = getv function %tmp.335 :setData;
+        %tmp.337 = lgetv %pctGrade.13;
+        symbol [ pctGrade %tmp.337 168 27 35 ];
+        invoke %tmp.335 %tmp.336(%tmp.337);
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 171 8 ]
+        symbol [ lightField %tmp.339 171 8 18 ];
+        %tmp.339 = getv ? :lightField;
+        symbol [ setData %tmp.340 171 19 26 ];
+        %tmp.340 = getv function %tmp.339 :setData;
+        symbol [ distLight %tmp.342 171 27 36 ];
+        %tmp.342 = getv ? :distLight;
+        invoke %tmp.339 %tmp.340(%tmp.342);
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 172 8 ]
+        symbol [ steepField %tmp.344 172 8 18 ];
+        %tmp.344 = getv ? :steepField;
+        symbol [ setData %tmp.345 172 19 26 ];
+        %tmp.345 = getv function %tmp.344 :setData;
+        symbol [ distSteep %tmp.347 172 27 36 ];
+        %tmp.347 = getv ? :distSteep;
+        invoke %tmp.344 %tmp.345(%tmp.347);
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 173 8 ]
+        symbol [ maxField %tmp.349 173 8 16 ];
+        %tmp.349 = getv ? :maxField;
+        symbol [ setData %tmp.350 173 17 24 ];
+        %tmp.350 = getv function %tmp.349 :setData;
+        symbol [ maxGrade %tmp.352 173 25 33 ];
+        %tmp.352 = getv ? :maxGrade;
+        invoke %tmp.349 %tmp.350(%tmp.352);
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 175 8 ]
+        symbol [ System %tmp.354 175 8 14 ];
+        %tmp.354 = getv ? :System;
+        symbol [ println %tmp.355 175 15 22 ];
+        %tmp.355 = getv function %tmp.354 :println;
+        %tmp.356 = " - max grade:  ";
+        symbol [ maxGrade %tmp.358 175 43 51 ];
+        %tmp.358 = getv ? :maxGrade;
+        symbol [ format %tmp.359 175 52 58 ];
+        %tmp.359 = getv function %tmp.358 :format;
+        %tmp.360 = "%.3f";
+        %tmp.361 = invoke %tmp.358 %tmp.359(%tmp.360);
+        %tmp.362 = add %tmp.356 %tmp.361;
+        invoke %tmp.354 %tmp.355(%tmp.362);
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 176 8 ]
+        symbol [ System %tmp.364 176 8 14 ];
+        %tmp.364 = getv ? :System;
+        symbol [ println %tmp.365 176 15 22 ];
+        %tmp.365 = getv function %tmp.364 :println;
+        %tmp.366 = " - dist 5pct:  ";
+        symbol [ distLight %tmp.368 176 43 52 ];
+        %tmp.368 = getv ? :distLight;
+        symbol [ format %tmp.369 176 53 59 ];
+        %tmp.369 = getv function %tmp.368 :format;
+        %tmp.370 = "%.3f";
+        %tmp.371 = invoke %tmp.368 %tmp.369(%tmp.370);
+        %tmp.372 = add %tmp.366 %tmp.371;
+        invoke %tmp.364 %tmp.365(%tmp.372);
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 177 8 ]
+        symbol [ System %tmp.374 177 8 14 ];
+        %tmp.374 = getv ? :System;
+        symbol [ println %tmp.375 177 15 22 ];
+        %tmp.375 = getv function %tmp.374 :println;
+        %tmp.376 = " - dist 10pct: ";
+        symbol [ distSteep %tmp.378 177 43 52 ];
+        %tmp.378 = getv ? :distSteep;
+        symbol [ format %tmp.379 177 53 59 ];
+        %tmp.379 = getv function %tmp.378 :format;
+        %tmp.380 = "%.3f";
+        %tmp.381 = invoke %tmp.378 %tmp.379(%tmp.380);
+        %tmp.382 = add %tmp.376 %tmp.381;
+        invoke %tmp.374 %tmp.375(%tmp.382);
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 179 8 ]
+        %tmp.383 = lgetv %value.14;
+        symbol [ value %tmp.383 179 15 20 ];
+        ret %tmp.383;
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_94_27_180_4_stop:
+    }
+    [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc"; @line = 182; @symbol_functiondef = [_resetAll,182,20,29]; ]
+    protected
+    function _resetAll() {
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_182_32_186_4_start:
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 183 8 ]
+        %tmp.1 = 0.0;
+        symbol [ accWinDist ? 183 8 18 ];
+        putv self :accWinDist %tmp.1;
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 184 8 ]
+        %tmp.2 = 0;
+        symbol [ bufIndex ? 184 8 16 ];
+        putv self :bufIndex %tmp.2;
+[ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 185 8 ]
+        %tmp.3 = false;
+        symbol [ bufFull ? 185 8 15 ];
+        putv self :bufFull %tmp.3;
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_182_32_186_4_stop:
+    }
+}
+[ @file = "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc"; @line = 1; ]
+<init> {
+}

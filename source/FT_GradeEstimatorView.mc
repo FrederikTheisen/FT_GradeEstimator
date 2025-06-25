@@ -136,8 +136,7 @@ class GradeEstimatorView extends WatchUi.SimpleDataField {
     }
 
         // Compute raw & EMA grade
-        var oldestIdx = bufIndex;
-        var dh = altitude - buffer[oldestIdx]["altitude"];
+        var dh = altitude - buffer[bufIndex]["altitude"];
         var grade_raw = dh / accWinDist;
         var delta = emaValue - grade_raw;
 

@@ -4,7 +4,7 @@
 <pcToLineNum>
 <entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorApp.mc" id="1" lineNum="26" parent="globals" pc="268435460" symbol="getApp"/>
 <entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorApp.mc" id="1" lineNum="27" parent="globals" pc="268435470" symbol="getApp"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" id="2" lineNum="7" parent="globals/Rez" pc="268435481" symbol="&lt;init&gt;"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B4440-00/source/Rez.mcgen" id="2" lineNum="7" parent="globals/Rez" pc="268435481" symbol="&lt;init&gt;"/>
 <entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorApp.mc" id="3" lineNum="5" parent="globals/GradeEstimatorApp" pc="268435501" symbol="&lt;init&gt;"/>
 <entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="4" lineNum="7" parent="globals/GradeEstimatorView" pc="268435513" symbol="&lt;init&gt;"/>
 <entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorApp.mc" id="5" lineNum="12" parent="globals/GradeEstimatorApp" pc="268435525" symbol="onStart"/>
@@ -171,7 +171,7 @@
 <entry endPc="268437225" name="str" stackId="1" startPc="268437151"/>
 <entry endPc="268437212" name="i" stackId="2" startPc="268437169"/>
 </localVars>
-<deviceInfo deviceVersion="de121dfa604491767422db2c3063530f8fd6465b" partNumber="006-B3843-00"/>
+<deviceInfo deviceVersion="de121dfa604491767422db2c3063530f8fd6465b" partNumber="006-B4440-00"/>
 <annotations>
 <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
 <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AppName"/>

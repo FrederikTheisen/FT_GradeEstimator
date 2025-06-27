@@ -1,3 +1,13 @@
 <strings>
     <string id="AppName">FT_Grade</string>
+    <string id="DisplayLabel_Gradient">Grade</string>
+    <string id="Label_Gradient_LinReg">LR_Gradient</string>
+    <string id="Label_Gradient_Kalman">KF_Gradient</string>
+    <string id="Label_Distance_Light">Light Climb (+5%)</string>
+    <string id="Label_Distance_Steep">Hard Climb (+10%)</string>
+    <string id="Label_Grade_Max">Maximum Grade</string>
+    <string id="Unit_Grade">%</string>
+    <string id="Unit_Distance">km</string>
+
+    <string id="Label_Grade">Grade</string>
 </strings>

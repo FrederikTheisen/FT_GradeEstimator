@@ -1,0 +1,70 @@
+{
+  "datafields" : [ {
+    "id" : 30,
+    "chart-visible" : true,
+    "activity-visible" : false,
+    "lap-visible" : false,
+    "chart-title-key" : "Label_Gradient_LinReg",
+    "label-key" : "Label_Grade",
+    "unit-label-key" : "Unit_Grade",
+    "sort-order" : 0,
+    "precision" : 1,
+    "fill-color" : "rgba(0, 153, 255, 1.0)"
+  }, {
+    "id" : 34,
+    "chart-visible" : true,
+    "activity-visible" : false,
+    "lap-visible" : false,
+    "chart-title-key" : "Label_Gradient_Kalman",
+    "label-key" : "Label_Grade",
+    "unit-label-key" : "Unit_Grade",
+    "sort-order" : 4,
+    "precision" : 1,
+    "fill-color" : "rgba(0, 153, 255, 1.0)"
+  }, {
+    "id" : 31,
+    "chart-visible" : false,
+    "activity-visible" : true,
+    "lap-visible" : false,
+    "chart-title-key" : null,
+    "label-key" : "Label_Distance_Light",
+    "unit-label-key" : "Unit_Distance",
+    "sort-order" : 1,
+    "precision" : 1,
+    "fill-color" : null
+  }, {
+    "id" : 32,
+    "chart-visible" : false,
+    "activity-visible" : true,
+    "lap-visible" : false,
+    "chart-title-key" : null,
+    "label-key" : "Label_Distance_Steep",
+    "unit-label-key" : "Unit_Distance",
+    "sort-order" : 2,
+    "precision" : 1,
+    "fill-color" : null
+  }, {
+    "id" : 33,
+    "chart-visible" : false,
+    "activity-visible" : true,
+    "lap-visible" : false,
+    "chart-title-key" : null,
+    "label-key" : "Label_Grade_Max",
+    "unit-label-key" : "Unit_Grade",
+    "sort-order" : 3,
+    "precision" : 1,
+    "fill-color" : null
+  } ],
+  "strings" : {
+    "default" : {
+      "Label_Gradient_LinReg" : "LR_Gradient",
+      "Label_Grade" : "Grade",
+      "Unit_Grade" : "%",
+      "Label_Gradient_Kalman" : "KF_Gradient",
+      "Label_Distance_Light" : "Light Climb (+5%)",
+      "Unit_Distance" : "km",
+      "Label_Distance_Steep" : "Hard Climb (+10%)",
+      "Label_Grade_Max" : "Maximum Grade"
+    }
+  }
+}

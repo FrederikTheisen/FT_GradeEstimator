@@ -1,12 +1,14 @@
 <fitContributions>
     <!-- RECORD : Record Chart Definitions -->
-    <fitField id="30" displayInChart="true" sortOrder="0" precision="1" chartTitle="@Strings.Label_Gradient_LinReg" dataLabel="@Strings.Label_Grade" unitLabel="@Strings.Unit_Grade" fillColor="#0099FF" />
-    <fitField id="34" displayInChart="true" sortOrder="4" precision="1" chartTitle="@Strings.Label_Gradient_Kalman" dataLabel="@Strings.Label_Grade" unitLabel="@Strings.Unit_Grade" fillColor="#0099FF" />
+    <fitField id="30" displayInChart="true" sortOrder="0" precision="1" chartTitle="@Strings.GC_ChartTitle_Grade" dataLabel="@Strings.GC_Label_Grade" unitLabel="@Strings.Unit_Grade" fillColor="#0099FF" />
+    <fitField id="34" displayInChart="true" sortOrder="1" precision="1" chartTitle="@Strings.GC_ChartTitle_VAM" dataLabel="@Strings.GC_Label_VAM" unitLabel="@Strings.Unit_VAM" fillColor="#0099FF" />
 
     <!-- LAP : Lap Data Definitions -->
 
     <!-- SESSION : Session Data Definitions -->
-    <fitField id="31" displayInActivitySummary="true" sortOrder="1" precision="1" dataLabel="@Strings.Label_Distance_Light" unitLabel="@Strings.Unit_Distance" />
-    <fitField id="32" displayInActivitySummary="true" sortOrder="2" precision="1" dataLabel="@Strings.Label_Distance_Steep" unitLabel="@Strings.Unit_Distance" />
-    <fitField id="33" displayInActivitySummary="true" sortOrder="3" precision="1" dataLabel="@Strings.Label_Grade_Max" unitLabel="@Strings.Unit_Grade" />
+    <fitField id="31" displayInActivitySummary="true" sortOrder="2" precision="1" dataLabel="@Strings.GC_Label_Distance_Light" unitLabel="@Strings.Unit_Distance" />
+    <fitField id="32" displayInActivitySummary="true" sortOrder="3" precision="1" dataLabel="@Strings.GC_Label_Distance_Steep" unitLabel="@Strings.Unit_Distance" />
+    <fitField id="33" displayInActivitySummary="true" sortOrder="4" precision="1" dataLabel="@Strings.GC_Label_Grade_Max" unitLabel="@Strings.Unit_Grade" />
+    <fitField id="35" displayInActivitySummary="true" sortOrder="5" precision="1" dataLabel="@Strings.GC_Label_AverageVAM" unitLabel="@Strings.Unit_VAM" />
+
 </fitContributions>

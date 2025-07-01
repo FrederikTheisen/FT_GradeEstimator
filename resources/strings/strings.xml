@@ -1,13 +1,41 @@
 <strings>
     <string id="AppName">FT_Grade</string>
-    <string id="DisplayLabel_Gradient">Grade</string>
-    <string id="Label_Gradient_LinReg">LR_Gradient</string>
-    <string id="Label_Gradient_Kalman">KF_Gradient</string>
-    <string id="Label_Distance_Light">Light Climb (+5%)</string>
-    <string id="Label_Distance_Steep">Hard Climb (+10%)</string>
-    <string id="Label_Grade_Max">Maximum Grade</string>
+    <string id="Version">0.32</string>
+
+    <string id="DisplayLabel">Grade Estimator</string>
+    <string id="DisplayLabel_Small">Grade Logger</string>
+    <string id="DisplayLabel_Wide">FT LR Grade</string>
+
+    <!-- UI labels -->
+    <string id="UI_Label_Logger_Gradient_Current">Current :</string>
+    <string id="UI_Label_Logger_Gradient_Max">Max :</string>
+    <string id="UI_Label_Logger_Distance_Steep">+10% :</string>
+    <string id="UI_Label_Logger_Distance_Light">+5% :</string>
+
+    <string id="UI_Label_Gradient_Current">Curr. Grade</string>
+    <string id="UI_Label_Gradient_Max">Max Grade</string>
+    <string id="UI_Label_Distance_Steep">Dist. +10%</string>
+    <string id="UI_Label_Distance_Light">Dist. +5%</string>
+    <string id="UI_Label_VAM_Current">Curr. VAM</string>
+    <string id="UI_Label_VAM_Average">Avg. VAM</string>
+
+    <string id="UI_Label_Samples">Sample Buffer:</string>
+
+    <!-- Garmin Connect data labels -->
+    <string id="GC_ChartTitle_Grade">FTLRGrade Gradient</string>
+    <string id="GC_ChartTitle_VAM">FTLRGrade VAM</string>
+
+    <string id="GC_Label_Grade">Grade</string>
+    <string id="GC_Label_VAM">Vertical Ascent Rate (m/h)</string>
+    <string id="GC_Label_AverageVAM">Average Ascenting VAM</string>
+    <string id="GC_Label_Gradient_LinReg">LinReg_Gradient</string>
+    <string id="GC_Label_Gradient_Kalman">KF_Gradient</string>
+    <string id="GC_Label_Distance_Light">Light Climb (+5%)</string>
+    <string id="GC_Label_Distance_Steep">Hard Climb (+10%)</string>
+    <string id="GC_Label_Grade_Max">Maximum Grade</string>
+    
+    <!-- General Labels -->
     <string id="Unit_Grade">%</string>
     <string id="Unit_Distance">km</string>
-
-    <string id="Label_Grade">Grade</string>
+    <string id="Unit_VAM">meters / hour</string>
 </strings>

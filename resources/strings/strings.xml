@@ -1,16 +1,16 @@
 <strings>
     <string id="AppName">FT_Grade</string>
-    <string id="Version">0.32</string>
+    <string id="Version">v0.40</string>
 
     <string id="DisplayLabel">Grade Estimator</string>
     <string id="DisplayLabel_Small">Grade Logger</string>
     <string id="DisplayLabel_Wide">FT LR Grade</string>
 
     <!-- UI labels -->
-    <string id="UI_Label_Logger_Gradient_Current">Current :</string>
-    <string id="UI_Label_Logger_Gradient_Max">Max :</string>
-    <string id="UI_Label_Logger_Distance_Steep">+10% :</string>
-    <string id="UI_Label_Logger_Distance_Light">+5% :</string>
+    <string id="UI_Label_Logger_Gradient_Current">Current</string>
+    <string id="UI_Label_Logger_Gradient_Max">Max</string>
+    <string id="UI_Label_Logger_Distance_Steep">+10%</string>
+    <string id="UI_Label_Logger_Distance_Light">+5%</string>
 
     <string id="UI_Label_Gradient_Current">Curr. Grade</string>
     <string id="UI_Label_Gradient_Max">Max Grade</string>

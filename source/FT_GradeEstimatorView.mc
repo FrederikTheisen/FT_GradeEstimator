@@ -21,20 +21,21 @@ class GradeEstimatorView extends WatchUi.DataField {
     const FIELD_ID_VAM_GRAPH = 34;      // grade, REC
     const FIELD_ID_VAM_AVG   = 35;      // grade, REC
     const MAX_ALT_JUMP       = 10;
+    const DIST_LOG_QUALITY   = 0.25;    // Quality threshold for distance calculation
+    const MAX_LOG_QUALITY    = 0.5;     // Quality threshold for maximum grade
 
     const buffer_str        = "|";
     const blank_str         = "-.-";
     const suffix            = "%";
     const str_format        = "%+.1f";
-    const vam_str_format        = "%d";
-
-    var vamUnit as String = "";
+    const vam_str_format    = "%d";
 
     // STATE
     var buffer as Array<Dictionary> = [];
     var rawAltitudes as Array<Float> = [];
     var bufIndex as Number     = 0;
     var accWinDist as Float    = 0.0;  // over window
+    var dh as Float            = 0.0;  // delta altitude
     var grade as Float         = 0.0;  // fraction, e.g. 0.05 = 5%
     var distLight as Float     = 0.0;  // meters at ≥5%
     var distSteep as Float     = 0.0;  // meters at ≥10%
@@ -56,6 +57,8 @@ class GradeEstimatorView extends WatchUi.DataField {
     // UI
     var shouldDrawVam as Boolean = false;
     var textColor as Number      = Graphics.COLOR_WHITE;
+    var drawCompact as Boolean   = false; // Compact view for small screens
+    var drawGraph as Boolean     = false; // Draw altitude buffer graph
 
     // STATUS STATE
     var calculating as Boolean  = false;
@@ -76,6 +79,19 @@ class GradeEstimatorView extends WatchUi.DataField {
         return "|||" + (100*grade).format(str_format) + suffix + "|||";
     }
 
+    function getProgressBar(progress as Float) as String {
+        var bar = "";
+        var numBlocks = Math.floor(progress * 10);
+        for (var i = 0; i < 10; i++) {
+            if (i < numBlocks) {
+                bar += "█"; // filled block
+            } else {
+                bar += "░"; // empty block
+            }
+        }
+        return bar;
+    }
+
     // Helper: median of three values
     function median3(a, b, c) {
         if ((a <= b && b <= c) || (c <= b && b <= a)) { return b; }
@@ -86,20 +102,12 @@ class GradeEstimatorView extends WatchUi.DataField {
     function getStatusString() as String {
         var c = "";
         if (calculating) {
-            c = "ACTIVE";
-            c += " |";
-            for (var i = 0; i < 10; i++)
-            {
-                if (i < quality) {
-                    c += "█";
-                } else {
-                    c += "░";
-                }
-            } 
-            c += "|";
+            c = "ACTIVE ";
+            c += getProgressBar(quality);
+            //c += " e/d: " + dh.format("%.1f") + "m/" + accWinDist.format("%.1f") + "m";
         } else if (bufIndex > 0) {
-            c = "BUFFERING";
-            //c += getBufferString();
+            c = "BUFFERING ";
+            c += getProgressBar(bufIndex.toFloat() / SAMPLE_WINDOW);
         }
         else {
             c = "NO DATA";
@@ -110,9 +118,7 @@ class GradeEstimatorView extends WatchUi.DataField {
     function initialize() {
         DataField.initialize();
 
-        vamUnit = WatchUi.loadResource(Rez.Strings.Unit_VAM);
-
-        // Per-second grade
+        // Graphs
         gradeField = createField(
             WatchUi.loadResource(Rez.Strings.GC_ChartTitle_Grade), FIELD_ID_GRADE,
             FitContributor.DATA_TYPE_FLOAT,
@@ -168,17 +174,121 @@ class GradeEstimatorView extends WatchUi.DataField {
         distSteep  = 0.0;
     }
 
-    // Layout overridden; drawing will be done in onUpdate dynamically
+    function drawAltitudeBufferPlot(dc as Dc) as Void {
+        // Plot area
+        var width = dc.getWidth();
+        var height = dc.getHeight();
+        var margin = 10;
+        var plotTop = height / 2;
+        var plotHeight = height - plotTop - margin;
+        var plotBottom = plotTop + plotHeight;
+        var plotLeft = margin;
+        var plotRight = width - margin;
+        var plotWidth = plotRight - plotLeft;
+
+        // Compute cumulative X values (distance)
+        var xVals = [];
+        var totalDist = 0.0;
+        var n = 0;
+        for (var i = 0; i < SAMPLE_WINDOW; i++) {
+            xVals.add(totalDist);
+            totalDist += buffer[i]["distance"];
+
+            if (buffer[i]["altitude"] != 0.0) { n++; }
+        }
+        if (n == 0) { n = 1; } // Avoid division by zero
+        var minX = 0.0;
+        var maxX = totalDist > 0 ? totalDist : 1.0;
+
+        // Compute meanX, meanY, slope, intercept as before
+        var sumX = 0.0, sumY = 0.0;
+        for (var i = 0; i < SAMPLE_WINDOW; i++) {
+            sumY += buffer[i]["altitude"];
+            sumX += xVals[i];
+        }
+        var meanX = sumX / n;
+        var meanY = sumY / n;
+
+        // Find min/max altitude in buffer for scaling
+        // var minAlt = 1e9;
+        // var maxAlt = -1e9;
+        // for (var i = 0; i < SAMPLE_WINDOW; i++) {
+        //     var alt = buffer[i]["altitude"];
+        //     if (alt < minAlt) { minAlt = alt; }
+        //     if (alt > maxAlt) { maxAlt = alt; }
+        // }
+
+        var maxDeltaH = totalDist * 0.15; // max 25% slope
+        var maxAlt = meanY + maxDeltaH / 2 + 1;
+        var minAlt = meanY - maxDeltaH / 2 - 1;
+
+        // Draw buffer as polyline using scaled X
+        dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_GREEN);
+        dc.setPenWidth(2);
+        var xrange = maxX - minX;
+        var altrange = maxAlt - minAlt;
+        for (var i = 0; i < n - 1; i++) {
+            var idx = (bufIndex + i) % SAMPLE_WINDOW;
+            var idx_p1 = (bufIndex + i + 1) % SAMPLE_WINDOW;
+            var x1 = plotLeft + ((xVals[i] - minX) / xrange) * plotWidth;
+            var x2 = plotLeft + ((xVals[i+1] - minX) / xrange) * plotWidth;
+            var y1 = plotBottom - ((buffer[idx]["altitude"] - minAlt) / altrange) * plotHeight;
+            var y2 = plotBottom - ((buffer[idx_p1]["altitude"] - minAlt) / altrange) * plotHeight;
+
+            if (x1 < plotLeft) { x1 = plotLeft; }
+            if (x2 > plotRight) { x2 = plotRight; }
+            if (y1 > plotBottom) { y1 = plotBottom; }
+            else if (y1 < plotTop) { y1 = plotTop; }
+            if (y2 > plotBottom) { y2 = plotBottom; }
+            else if (y2 < plotTop) { y2 = plotTop; }
+
+            dc.drawLine(x1, y1, x2, y2);
+        }
+
+        // Draw linear fit
+        var slope = grade;
+        var intercept = meanY - slope * meanX;
+        // Draw fit line
+        dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_YELLOW);
+        dc.setPenWidth(1);
+        for (var i = 0; i < SAMPLE_WINDOW - 1; i++) {
+            var x1 = plotLeft + ((xVals[i] - minX) / (maxX - minX)) * plotWidth;
+            var x2 = plotLeft + ((xVals[i+1] - minX) / (maxX - minX)) * plotWidth;
+            var fitY1 = intercept + slope * xVals[i];
+            var fitY2 = intercept + slope * xVals[i+1];
+            var y1 = plotBottom - ((fitY1 - minAlt) / (maxAlt - minAlt)) * plotHeight;
+            var y2 = plotBottom - ((fitY2 - minAlt) / (maxAlt - minAlt)) * plotHeight;
+            dc.drawLine(x1, y1, x2, y2);
+        }
+
+        // Draw plot area
+        dc.setColor(textColor, Graphics.COLOR_BLACK);
+        dc.setPenWidth(3);
+        dc.drawRectangle(plotLeft, plotTop, plotWidth, plotHeight);
+    }
+
     function onLayout(dc as Dc) as Void  {
         var width_view = dc.getWidth();
+        var height_view = dc.getHeight();
         var width_device = System.getDeviceSettings().screenWidth;
+        var height_device = System.getDeviceSettings().screenHeight;
 
         if (width_view < width_device - 10) {
             View.setLayout(Rez.Layouts.SmallLayout(dc));
+            drawCompact = true; // Compact labels for small views
+            drawGraph = false; // No graph in compact view
         }
         else {
-            View.setLayout(Rez.Layouts.WideLayout(dc));
-            shouldDrawVam = true;
+            drawCompact = false; // Full length labels for wide views
+
+            if (height_view < 150) { 
+                View.setLayout(Rez.Layouts.WideLayout(dc));
+                drawGraph = false; // No graph in compact view
+            }
+            else { 
+                View.setLayout(Rez.Layouts.LargeLayout(dc));
+                drawGraph = true; // Draw altitude buffer graph in wide view
+            }
         }
     }
 
@@ -224,9 +334,7 @@ class GradeEstimatorView extends WatchUi.DataField {
         }
 
         // Compute raw & EMA grade
-        var dh = altitude - buffer[bufIndex]["altitude"];
-        var grade_raw = dh / accWinDist;
-
+        dh = altitude - buffer[bufIndex]["altitude"];
         if (dh.abs() > MAX_ALT_JUMP) {
             // If altitude jump is too large, reset buffer and start over
             _resetAll();
@@ -244,9 +352,9 @@ class GradeEstimatorView extends WatchUi.DataField {
 
         // Accumulate distance in each zone
         var pctGrade = grade * 100.0;
-        if (pctGrade >= THRESHOLD_LIGHT) { distLight += speed; }
-        if (pctGrade >= THRESHOLD_STEEP) { distSteep += speed; }
-        if (pctGrade > maxGrade) { maxGrade = pctGrade; }
+        if (pctGrade >= THRESHOLD_LIGHT && quality > DIST_LOG_QUALITY) { distLight += speed; }
+        if (pctGrade >= THRESHOLD_STEEP && quality > DIST_LOG_QUALITY) { distSteep += speed; }
+        if (pctGrade > maxGrade && quality > MAX_LOG_QUALITY) { maxGrade = pctGrade; }
 
         // Format & export
         var value = pctGrade.format(str_format) + suffix;
@@ -279,6 +387,7 @@ class GradeEstimatorView extends WatchUi.DataField {
     function computeLinearRegressionSlope(samples as Array<Dictionary>) {
         var xVals = [];
         var dist = 0.0;
+        calculating = true;
 
         for (var i = 0; i < SAMPLE_WINDOW; i++) {
             var idx = (bufIndex + i) % SAMPLE_WINDOW;
@@ -305,23 +414,26 @@ class GradeEstimatorView extends WatchUi.DataField {
         }
         
         grade = (varX > 0.0) ? (covXY / varX) : 0.0;
-        var rmsd = 0.0;
+        var sse = 0.0;
         for (var i = 0; i < SAMPLE_WINDOW; i++) {
             var idx = (bufIndex + i) % SAMPLE_WINDOW;
             var measAltDelta = samples[idx]["altitude"] - meanY;
             var AltDelta = grade * (xVals[i] - meanX);
             var res = (AltDelta - measAltDelta);
 
-            rmsd += res*res;
+            sse += res*res;
         }
 
-        rmsd = rmsd / SAMPLE_WINDOW;
-        var q = 1.0 / rmsd;
-        quality = (varX > 0.0) ? 10 * (rmsd / (SAMPLE_WINDOW - 2)) : -1.0;
+        if (varX > 0.0) {
+            var sem = Math.sqrt((sse / (SAMPLE_WINDOW - 2)) / varX);
+            quality = 0.005 / (0.005 + sem); // Quality measure based on standard error of the slope
+        }
+        else {
+            quality = -1.0; // No valid data
+            calculating = false; // We don't really have any data. This should never happen.
+        }
 
-        System.println("residual: " + rmsd.format("%.3f") + " | data quality: " + quality.format("%.3f"));
-
-        calculating = true;
+        System.println("residual: " + sse.format("%.3f") + " | data quality: " + quality.format("%.3f"));
     }
 
     function computeVAM(grade as Float, speed as Float) as Float {
@@ -347,6 +459,8 @@ class GradeEstimatorView extends WatchUi.DataField {
 
     function onUpdate(dc as Dc) as Void 
     {
+        
+
         var background = View.findDrawableById("Background") as Text;
         background.setColor(getBackgroundColor());
 
@@ -356,14 +470,12 @@ class GradeEstimatorView extends WatchUi.DataField {
         setLabelColor(dc);
 
         drawDefaultView(dc);
-
-        if (shouldDrawVam) {
-            drawVAMFields(dc);
-        }
-
+        drawVAMFields(dc);
         drawStatusLabel(dc);
 
         View.onUpdate(dc);
+        
+        if (drawGraph) { drawAltitudeBufferPlot(dc); }
     }
 
     function drawDefaultView(dc as Dc) as Void {
@@ -398,25 +510,17 @@ class GradeEstimatorView extends WatchUi.DataField {
     }
 
     function drawVAMFields(dc as Dc) as Void {
-
-        var background = View.findDrawableById("Background") as Text;
-        background.setColor(getBackgroundColor());
-
-        // Set text color
-        var textColor = Graphics.COLOR_WHITE;
-        if (getBackgroundColor() == Graphics.COLOR_WHITE) { textColor = Graphics.COLOR_BLACK; } 
-
         var value_vam = View.findDrawableById("value_vam") as Text;
         var value_vam_avg = View.findDrawableById("value_vam_avg") as Text;
 
         if (value_vam != null) {
             value_vam.setColor(textColor);
-            value_vam.setText((vam).format(vam_str_format) + " m/h");
+            value_vam.setText((vam).format(vam_str_format) + (drawCompact ? "" : " m/h"));
         }
 
         if (value_vam_avg != null) {
             value_vam_avg.setColor(textColor);
-            value_vam_avg.setText((vamAvg).format(vam_str_format) + " m/h");
+            value_vam_avg.setText((vamAvg).format(vam_str_format) + (drawCompact ? "" : " m/h"));
         }
     }
 

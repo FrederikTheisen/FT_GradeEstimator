@@ -1,6 +1,6 @@
 <strings>
-    <string id="AppName">LinReg Slope Estimator</string>
-    <string id="Version">v1.0</string>
+    <string id="AppName">LinReg Grade Estimator</string>
+    <string id="Version">v1.1</string>
 
     <string id="DisplayLabel">Grade Estimator</string>
     <string id="DisplayLabel_Small">Grade Logger</string>

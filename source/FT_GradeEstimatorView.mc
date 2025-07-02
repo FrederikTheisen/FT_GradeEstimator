@@ -10,6 +10,7 @@ import Toybox.Application;
 class GradeEstimatorView extends WatchUi.DataField {
     // CONFIG
     const SAMPLE_WINDOW      = 11;       // seconds
+    const SAMPLE_MISS_THRESHOLD = 2;     // how many samples can be missed
     const EMA_ALPHA          = 0.25;    // smoothing factor
     const EMA_ALT_ALPHA      = 0.5;    // altitude effect
     const THRESHOLD_LIGHT    = 5.0;     // percent
@@ -217,12 +218,18 @@ class GradeEstimatorView extends WatchUi.DataField {
 
         if (speed == null || altitude == null) { return blank_str; }
 
-        // Reset if nearly stopped or if more than two samples missed (missing 1 sample should be rare)
-        if (speed < 1.0 || eTime > lastSample + 2.1) {
+        var sample_distance = speed * 1; // expect one second sample interval
+
+        // Reset if nearly stopped or if more than x samples missed (missing 1 sample should be rare)
+        if (speed < 1.0 || eTime > lastSample + SAMPLE_MISS_THRESHOLD) {
             _resetAll();
             gradeField.setData(0.0);
             lastSample = eTime;
             return blank_str;
+        }
+        else if (eTime > lastSample + 1.1) { // We missed one sample
+            var dt = eTime - lastSample;
+            sample_distance = speed * dt; // Adjust distance based on elapsed time
         }
 
         lastSample = eTime;
@@ -238,8 +245,8 @@ class GradeEstimatorView extends WatchUi.DataField {
         }
 
         // Update rolling window 
-        buffer[bufIndex] = { "altitude" => medianAlt, "distance" => speed };   // Replace oldest sample
-        accWinDist += speed;                                                  // Accumulate distance with current movement
+        buffer[bufIndex] = { "altitude" => medianAlt, "distance" => sample_distance };   // Replace oldest sample
+        accWinDist += sample_distance;                                                  // Accumulate distance with current movement
         bufIndex = (bufIndex + 1) % SAMPLE_WINDOW;                              // Iterate rolling buffer index
         accWinDist -= buffer[bufIndex]["distance"];
 
@@ -269,8 +276,8 @@ class GradeEstimatorView extends WatchUi.DataField {
 
         // Accumulate distance in each zone
         var pctGrade = grade * 100.0;
-        if (pctGrade >= THRESHOLD_LIGHT && quality > DIST_LOG_QUALITY) { distLight += speed; }
-        if (pctGrade >= THRESHOLD_STEEP && quality > DIST_LOG_QUALITY) { distSteep += speed; }
+        if (pctGrade >= THRESHOLD_LIGHT && quality > DIST_LOG_QUALITY) { distLight += sample_distance; }
+        if (pctGrade >= THRESHOLD_STEEP && quality > DIST_LOG_QUALITY) { distSteep += sample_distance; }
         if (pctGrade > maxGrade && quality > MAX_LOG_QUALITY) { maxGrade = pctGrade; }
 
         // Format & export

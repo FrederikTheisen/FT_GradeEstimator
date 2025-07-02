@@ -1,20 +1,19 @@
 <layouts>
     <!-- Simple Field Layout. -->
-    <layout id="LoggerLayout">
+    <layout id="WatchLayout">
         <drawable class="Background" />
-        <label id="label_data_field_name" text="@Strings.DisplayLabel_Small" x="5%" y="5%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_LEFT" font="Graphics.FONT_SYSTEM_XTINY" />
-        <label id="label_data_field_version" text="@Strings.Version" x="95%" y="5%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_RIGHT" font="Graphics.FONT_SYSTEM_XTINY" />
+        <label id="label_data_field_name" text="@Strings.DisplayLabel_Small" x="50%" y="5%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_CENTER" font="Graphics.FONT_SYSTEM_XTINY" />
+        <label id="label_data_field_version" text="@Strings.Version" x="50%" y="10%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_CENTER" font="Graphics.FONT_SYSTEM_XTINY" />
 
+        <label id="label_curr_grade" text="@Strings.UI_Label_Logger_Gradient_Current" x="45%" y="30%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_RIGHT|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_TINY" />
+        <label id="label_max_grade" text="@Strings.UI_Label_Logger_Gradient_Max" x="45%" y="47.5%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_RIGHT|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_TINY" />
+        <label id="label_vam" text="@Strings.UI_Label_VAM_Current" x="45%" y="65%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_RIGHT|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_TINY" />
+        <label id="label_vam_avg" text="@Strings.UI_Label_VAM_Average" x="45%" y="82.5%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_RIGHT|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_TINY" />
 
-        <label id="label_curr_grade" text="@Strings.UI_Label_Logger_Gradient_Current" x="5%" y="30%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_LEFT|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_TINY" />
-        <label id="label_max_grade" text="@Strings.UI_Label_Logger_Gradient_Max" x="5%" y="47.5%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_LEFT|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_TINY" />
-        <label id="label_vam" text="@Strings.UI_Label_VAM_Current" x="5%" y="65%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_LEFT|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_TINY" />
-        <label id="label_vam_avg" text="@Strings.UI_Label_VAM_Average" x="5%" y="82.5%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_LEFT|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_TINY" />
-
-        <label id="value_curr_grade" x="95%" y="30%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_RIGHT|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_TINY" />
-        <label id="value_max_grade" x="95%" y="47.5%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_RIGHT|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_TINY" />
-        <label id="value_vam" x="95%" y="65%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_RIGHT|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_TINY" />
-        <label id="value_vam_avg" x="95%" y="82.5%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_RIGHT|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_TINY" />
+        <label id="value_curr_grade" x="55%" y="30%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_LEFT|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_TINY" />
+        <label id="value_max_grade" x="55%" y="47.5%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_LEFT|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_TINY" />
+        <label id="value_vam" x="55%" y="65%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_LEFT|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_TINY" />
+        <label id="value_vam_avg" x="55%" y="82.5%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_LEFT|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_TINY" />
     </layout>
 
     <layout id="WideLayout">

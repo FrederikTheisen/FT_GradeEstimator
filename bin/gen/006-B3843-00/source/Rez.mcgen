@@ -10,32 +10,32 @@ module Rez {
     } // Drawables
 
     module Layouts {
-        function LoggerLayout(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
+        function WatchLayout(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
             var rez_cmp_local_var_dc_getHeight = dc.getHeight();
 
             var rez_cmp_local_var_dc_getWidth = dc.getWidth();
 
             var rez_cmp_local_custom_drawable_11939594661139614796 = new Background();
 
-            var rez_cmp_local_text_label_data_field_name = new WatchUi.Text({:identifier=>"label_data_field_name", :color=>Graphics.COLOR_LT_GRAY, :locX=>(rez_cmp_local_var_dc_getWidth * (5 / 100.0)), :locY=>(rez_cmp_local_var_dc_getHeight * (5 / 100.0)), :text=>$.Rez.Strings.DisplayLabel_Small, :justification=>Graphics.TEXT_JUSTIFY_LEFT, :font=>Graphics.FONT_SYSTEM_XTINY});
+            var rez_cmp_local_text_label_data_field_name = new WatchUi.Text({:identifier=>"label_data_field_name", :color=>Graphics.COLOR_LT_GRAY, :locX=>(rez_cmp_local_var_dc_getWidth * (50 / 100.0)), :locY=>(rez_cmp_local_var_dc_getHeight * (5 / 100.0)), :text=>$.Rez.Strings.DisplayLabel_Small, :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_SYSTEM_XTINY});
 
-            var rez_cmp_local_text_label_data_field_version = new WatchUi.Text({:identifier=>"label_data_field_version", :color=>Graphics.COLOR_LT_GRAY, :locX=>(rez_cmp_local_var_dc_getWidth * (95 / 100.0)), :locY=>(rez_cmp_local_var_dc_getHeight * (5 / 100.0)), :text=>$.Rez.Strings.Version, :justification=>Graphics.TEXT_JUSTIFY_RIGHT, :font=>Graphics.FONT_SYSTEM_XTINY});
+            var rez_cmp_local_text_label_data_field_version = new WatchUi.Text({:identifier=>"label_data_field_version", :color=>Graphics.COLOR_LT_GRAY, :locX=>(rez_cmp_local_var_dc_getWidth * (50 / 100.0)), :locY=>(rez_cmp_local_var_dc_getHeight * (10 / 100.0)), :text=>$.Rez.Strings.Version, :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_SYSTEM_XTINY});
 
-            var rez_cmp_local_text_label_curr_grade = new WatchUi.Text({:identifier=>"label_curr_grade", :color=>Graphics.COLOR_LT_GRAY, :locX=>(rez_cmp_local_var_dc_getWidth * (5 / 100.0)), :locY=>(rez_cmp_local_var_dc_getHeight * (30 / 100.0)), :text=>$.Rez.Strings.UI_Label_Logger_Gradient_Current, :justification=>Graphics.TEXT_JUSTIFY_LEFT|Graphics.TEXT_JUSTIFY_VCENTER, :font=>Graphics.FONT_SYSTEM_TINY});
+            var rez_cmp_local_text_label_curr_grade = new WatchUi.Text({:identifier=>"label_curr_grade", :color=>Graphics.COLOR_LT_GRAY, :locX=>(rez_cmp_local_var_dc_getWidth * (45 / 100.0)), :locY=>(rez_cmp_local_var_dc_getHeight * (30 / 100.0)), :text=>$.Rez.Strings.UI_Label_Logger_Gradient_Current, :justification=>Graphics.TEXT_JUSTIFY_RIGHT|Graphics.TEXT_JUSTIFY_VCENTER, :font=>Graphics.FONT_SYSTEM_TINY});
 
-            var rez_cmp_local_text_label_max_grade = new WatchUi.Text({:identifier=>"label_max_grade", :color=>Graphics.COLOR_LT_GRAY, :locX=>(rez_cmp_local_var_dc_getWidth * (5 / 100.0)), :locY=>(rez_cmp_local_var_dc_getHeight * (47.5 / 100.0)), :text=>$.Rez.Strings.UI_Label_Logger_Gradient_Max, :justification=>Graphics.TEXT_JUSTIFY_LEFT|Graphics.TEXT_JUSTIFY_VCENTER, :font=>Graphics.FONT_SYSTEM_TINY});
+            var rez_cmp_local_text_label_max_grade = new WatchUi.Text({:identifier=>"label_max_grade", :color=>Graphics.COLOR_LT_GRAY, :locX=>(rez_cmp_local_var_dc_getWidth * (45 / 100.0)), :locY=>(rez_cmp_local_var_dc_getHeight * (47.5 / 100.0)), :text=>$.Rez.Strings.UI_Label_Logger_Gradient_Max, :justification=>Graphics.TEXT_JUSTIFY_RIGHT|Graphics.TEXT_JUSTIFY_VCENTER, :font=>Graphics.FONT_SYSTEM_TINY});
 
-            var rez_cmp_local_text_label_vam = new WatchUi.Text({:identifier=>"label_vam", :color=>Graphics.COLOR_LT_GRAY, :locX=>(rez_cmp_local_var_dc_getWidth * (5 / 100.0)), :locY=>(rez_cmp_local_var_dc_getHeight * (65 / 100.0)), :text=>$.Rez.Strings.UI_Label_VAM_Current, :justification=>Graphics.TEXT_JUSTIFY_LEFT|Graphics.TEXT_JUSTIFY_VCENTER, :font=>Graphics.FONT_SYSTEM_TINY});
+            var rez_cmp_local_text_label_vam = new WatchUi.Text({:identifier=>"label_vam", :color=>Graphics.COLOR_LT_GRAY, :locX=>(rez_cmp_local_var_dc_getWidth * (45 / 100.0)), :locY=>(rez_cmp_local_var_dc_getHeight * (65 / 100.0)), :text=>$.Rez.Strings.UI_Label_VAM_Current, :justification=>Graphics.TEXT_JUSTIFY_RIGHT|Graphics.TEXT_JUSTIFY_VCENTER, :font=>Graphics.FONT_SYSTEM_TINY});
 
-            var rez_cmp_local_text_label_vam_avg = new WatchUi.Text({:identifier=>"label_vam_avg", :color=>Graphics.COLOR_LT_GRAY, :locX=>(rez_cmp_local_var_dc_getWidth * (5 / 100.0)), :locY=>(rez_cmp_local_var_dc_getHeight * (82.5 / 100.0)), :text=>$.Rez.Strings.UI_Label_VAM_Average, :justification=>Graphics.TEXT_JUSTIFY_LEFT|Graphics.TEXT_JUSTIFY_VCENTER, :font=>Graphics.FONT_SYSTEM_TINY});
+            var rez_cmp_local_text_label_vam_avg = new WatchUi.Text({:identifier=>"label_vam_avg", :color=>Graphics.COLOR_LT_GRAY, :locX=>(rez_cmp_local_var_dc_getWidth * (45 / 100.0)), :locY=>(rez_cmp_local_var_dc_getHeight * (82.5 / 100.0)), :text=>$.Rez.Strings.UI_Label_VAM_Average, :justification=>Graphics.TEXT_JUSTIFY_RIGHT|Graphics.TEXT_JUSTIFY_VCENTER, :font=>Graphics.FONT_SYSTEM_TINY});
 
-            var rez_cmp_local_text_value_curr_grade = new WatchUi.Text({:identifier=>"value_curr_grade", :color=>Graphics.COLOR_LT_GRAY, :locX=>(rez_cmp_local_var_dc_getWidth * (95 / 100.0)), :locY=>(rez_cmp_local_var_dc_getHeight * (30 / 100.0)), :justification=>Graphics.TEXT_JUSTIFY_RIGHT|Graphics.TEXT_JUSTIFY_VCENTER, :font=>Graphics.FONT_SYSTEM_TINY});
+            var rez_cmp_local_text_value_curr_grade = new WatchUi.Text({:identifier=>"value_curr_grade", :color=>Graphics.COLOR_LT_GRAY, :locX=>(rez_cmp_local_var_dc_getWidth * (55 / 100.0)), :locY=>(rez_cmp_local_var_dc_getHeight * (30 / 100.0)), :justification=>Graphics.TEXT_JUSTIFY_LEFT|Graphics.TEXT_JUSTIFY_VCENTER, :font=>Graphics.FONT_SYSTEM_TINY});
 
-            var rez_cmp_local_text_value_max_grade = new WatchUi.Text({:identifier=>"value_max_grade", :color=>Graphics.COLOR_LT_GRAY, :locX=>(rez_cmp_local_var_dc_getWidth * (95 / 100.0)), :locY=>(rez_cmp_local_var_dc_getHeight * (47.5 / 100.0)), :justification=>Graphics.TEXT_JUSTIFY_RIGHT|Graphics.TEXT_JUSTIFY_VCENTER, :font=>Graphics.FONT_SYSTEM_TINY});
+            var rez_cmp_local_text_value_max_grade = new WatchUi.Text({:identifier=>"value_max_grade", :color=>Graphics.COLOR_LT_GRAY, :locX=>(rez_cmp_local_var_dc_getWidth * (55 / 100.0)), :locY=>(rez_cmp_local_var_dc_getHeight * (47.5 / 100.0)), :justification=>Graphics.TEXT_JUSTIFY_LEFT|Graphics.TEXT_JUSTIFY_VCENTER, :font=>Graphics.FONT_SYSTEM_TINY});
 
-            var rez_cmp_local_text_value_vam = new WatchUi.Text({:identifier=>"value_vam", :color=>Graphics.COLOR_LT_GRAY, :locX=>(rez_cmp_local_var_dc_getWidth * (95 / 100.0)), :locY=>(rez_cmp_local_var_dc_getHeight * (65 / 100.0)), :justification=>Graphics.TEXT_JUSTIFY_RIGHT|Graphics.TEXT_JUSTIFY_VCENTER, :font=>Graphics.FONT_SYSTEM_TINY});
+            var rez_cmp_local_text_value_vam = new WatchUi.Text({:identifier=>"value_vam", :color=>Graphics.COLOR_LT_GRAY, :locX=>(rez_cmp_local_var_dc_getWidth * (55 / 100.0)), :locY=>(rez_cmp_local_var_dc_getHeight * (65 / 100.0)), :justification=>Graphics.TEXT_JUSTIFY_LEFT|Graphics.TEXT_JUSTIFY_VCENTER, :font=>Graphics.FONT_SYSTEM_TINY});
 
-            var rez_cmp_local_text_value_vam_avg = new WatchUi.Text({:identifier=>"value_vam_avg", :color=>Graphics.COLOR_LT_GRAY, :locX=>(rez_cmp_local_var_dc_getWidth * (95 / 100.0)), :locY=>(rez_cmp_local_var_dc_getHeight * (82.5 / 100.0)), :justification=>Graphics.TEXT_JUSTIFY_RIGHT|Graphics.TEXT_JUSTIFY_VCENTER, :font=>Graphics.FONT_SYSTEM_TINY});
+            var rez_cmp_local_text_value_vam_avg = new WatchUi.Text({:identifier=>"value_vam_avg", :color=>Graphics.COLOR_LT_GRAY, :locX=>(rez_cmp_local_var_dc_getWidth * (55 / 100.0)), :locY=>(rez_cmp_local_var_dc_getHeight * (82.5 / 100.0)), :justification=>Graphics.TEXT_JUSTIFY_LEFT|Graphics.TEXT_JUSTIFY_VCENTER, :font=>Graphics.FONT_SYSTEM_TINY});
 
             return [rez_cmp_local_custom_drawable_11939594661139614796, rez_cmp_local_text_label_data_field_name, rez_cmp_local_text_label_data_field_version, rez_cmp_local_text_label_curr_grade, rez_cmp_local_text_label_max_grade, rez_cmp_local_text_label_vam, rez_cmp_local_text_label_vam_avg, rez_cmp_local_text_value_curr_grade, rez_cmp_local_text_value_max_grade, rez_cmp_local_text_value_vam, rez_cmp_local_text_value_vam_avg] as Array<WatchUi.Drawable>;
         }

@@ -115,6 +115,12 @@ class GradeEstimatorView extends WatchUi.DataField {
         return c;
     }
 
+    function isWatchDevice() {
+        var layout = System.getDeviceSettings().screenShape;
+
+        return (layout == System.SCREEN_SHAPE_ROUND);
+    }
+
     function initialize() {
         DataField.initialize();
 
@@ -174,106 +180,17 @@ class GradeEstimatorView extends WatchUi.DataField {
         distSteep  = 0.0;
     }
 
-    function drawAltitudeBufferPlot(dc as Dc) as Void {
-        // Plot area
-        var width = dc.getWidth();
-        var height = dc.getHeight();
-        var margin = 10;
-        var plotTop = height / 2;
-        var plotHeight = height - plotTop - margin;
-        var plotBottom = plotTop + plotHeight;
-        var plotLeft = margin;
-        var plotRight = width - margin;
-        var plotWidth = plotRight - plotLeft;
-
-        // Compute cumulative X values (distance)
-        var xVals = [];
-        var totalDist = 0.0;
-        var n = 0;
-        for (var i = 0; i < SAMPLE_WINDOW; i++) {
-            xVals.add(totalDist);
-            totalDist += buffer[i]["distance"];
-
-            if (buffer[i]["altitude"] != 0.0) { n++; }
-        }
-        if (n == 0) { n = 1; } // Avoid division by zero
-        var minX = 0.0;
-        var maxX = totalDist > 0 ? totalDist : 1.0;
-
-        // Compute meanX, meanY, slope, intercept as before
-        var sumX = 0.0, sumY = 0.0;
-        for (var i = 0; i < SAMPLE_WINDOW; i++) {
-            sumY += buffer[i]["altitude"];
-            sumX += xVals[i];
-        }
-        var meanX = sumX / n;
-        var meanY = sumY / n;
-
-        // Find min/max altitude in buffer for scaling
-        // var minAlt = 1e9;
-        // var maxAlt = -1e9;
-        // for (var i = 0; i < SAMPLE_WINDOW; i++) {
-        //     var alt = buffer[i]["altitude"];
-        //     if (alt < minAlt) { minAlt = alt; }
-        //     if (alt > maxAlt) { maxAlt = alt; }
-        // }
-
-        var maxDeltaH = totalDist * 0.15; // max 25% slope
-        var maxAlt = meanY + maxDeltaH / 2 + 1;
-        var minAlt = meanY - maxDeltaH / 2 - 1;
-
-        // Draw buffer as polyline using scaled X
-        dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_GREEN);
-        dc.setPenWidth(2);
-        var xrange = maxX - minX;
-        var altrange = maxAlt - minAlt;
-        for (var i = 0; i < n - 1; i++) {
-            var idx = (bufIndex + i) % SAMPLE_WINDOW;
-            var idx_p1 = (bufIndex + i + 1) % SAMPLE_WINDOW;
-            var x1 = plotLeft + ((xVals[i] - minX) / xrange) * plotWidth;
-            var x2 = plotLeft + ((xVals[i+1] - minX) / xrange) * plotWidth;
-            var y1 = plotBottom - ((buffer[idx]["altitude"] - minAlt) / altrange) * plotHeight;
-            var y2 = plotBottom - ((buffer[idx_p1]["altitude"] - minAlt) / altrange) * plotHeight;
-
-            if (x1 < plotLeft) { x1 = plotLeft; }
-            if (x2 > plotRight) { x2 = plotRight; }
-            if (y1 > plotBottom) { y1 = plotBottom; }
-            else if (y1 < plotTop) { y1 = plotTop; }
-            if (y2 > plotBottom) { y2 = plotBottom; }
-            else if (y2 < plotTop) { y2 = plotTop; }
-
-            dc.drawLine(x1, y1, x2, y2);
-        }
-
-        // Draw linear fit
-        var slope = grade;
-        var intercept = meanY - slope * meanX;
-        // Draw fit line
-        dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_YELLOW);
-        dc.setPenWidth(1);
-        for (var i = 0; i < SAMPLE_WINDOW - 1; i++) {
-            var x1 = plotLeft + ((xVals[i] - minX) / (maxX - minX)) * plotWidth;
-            var x2 = plotLeft + ((xVals[i+1] - minX) / (maxX - minX)) * plotWidth;
-            var fitY1 = intercept + slope * xVals[i];
-            var fitY2 = intercept + slope * xVals[i+1];
-            var y1 = plotBottom - ((fitY1 - minAlt) / (maxAlt - minAlt)) * plotHeight;
-            var y2 = plotBottom - ((fitY2 - minAlt) / (maxAlt - minAlt)) * plotHeight;
-            dc.drawLine(x1, y1, x2, y2);
-        }
-
-        // Draw plot area
-        dc.setColor(textColor, Graphics.COLOR_BLACK);
-        dc.setPenWidth(3);
-        dc.drawRectangle(plotLeft, plotTop, plotWidth, plotHeight);
-    }
-
     function onLayout(dc as Dc) as Void  {
         var width_view = dc.getWidth();
         var height_view = dc.getHeight();
         var width_device = System.getDeviceSettings().screenWidth;
         var height_device = System.getDeviceSettings().screenHeight;
 
-        if (width_view < width_device - 10) {
+        if (isWatchDevice()) {
+            // Watch device layout
+            View.setLayout(Rez.Layouts.WatchLayout(dc));
+        }
+        else if (width_view < 125) {
             View.setLayout(Rez.Layouts.SmallLayout(dc));
             drawCompact = true; // Compact labels for small views
             drawGraph = false; // No graph in compact view
@@ -433,7 +350,7 @@ class GradeEstimatorView extends WatchUi.DataField {
             calculating = false; // We don't really have any data. This should never happen.
         }
 
-        System.println("residual: " + sse.format("%.3f") + " | data quality: " + quality.format("%.3f"));
+        // System.println("residual: " + sse.format("%.3f") + " | data quality: " + quality.format("%.3f"));
     }
 
     function computeVAM(grade as Float, speed as Float) as Float {
@@ -457,8 +374,7 @@ class GradeEstimatorView extends WatchUi.DataField {
         return vam;
     }
 
-    function onUpdate(dc as Dc) as Void 
-    {
+    function onUpdate(dc as Dc) as Void {
         
 
         var background = View.findDrawableById("Background") as Text;
@@ -543,6 +459,89 @@ class GradeEstimatorView extends WatchUi.DataField {
             statusLabel.setColor(textColor);
             statusLabel.setText(getStatusString());
         }
+    }
+
+    function drawAltitudeBufferPlot(dc as Dc) as Void {
+        // Plot area
+        var width = dc.getWidth();
+        var height = dc.getHeight();
+        var margin = 10;
+        var plotTop = height / 2;
+        var plotHeight = height - plotTop - margin;
+        var plotBottom = plotTop + plotHeight;
+        var plotLeft = margin;
+        var plotRight = width - margin;
+        var plotWidth = plotRight - plotLeft;
+
+        // Compute cumulative X values (distance)
+        var xVals = [];
+        var totalDist = 0.0;
+        var n = 0;
+        for (var i = 0; i < SAMPLE_WINDOW; i++) {
+            xVals.add(totalDist);
+            totalDist += buffer[i]["distance"];
+
+            if (buffer[i]["altitude"] != 0.0) { n++; }
+        }
+        if (n == 0) { n = 1; } // Avoid division by zero
+        var minX = 0.0;
+        var maxX = totalDist > 0 ? totalDist : 1.0;
+
+        // Compute meanX, meanY, slope, intercept as before
+        var sumX = 0.0, sumY = 0.0;
+        for (var i = 0; i < SAMPLE_WINDOW; i++) {
+            sumY += buffer[i]["altitude"];
+            sumX += xVals[i];
+        }
+        var meanX = sumX / n;
+        var meanY = sumY / n;
+        var maxDeltaH = totalDist * 0.15; // max 25% slope
+        var maxAlt = meanY + maxDeltaH / 2 + 1;
+        var minAlt = meanY - maxDeltaH / 2 - 1;
+
+        // Draw buffer as polyline using scaled X
+        dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_GREEN);
+        dc.setPenWidth(2);
+        var xrange = maxX - minX;
+        var altrange = maxAlt - minAlt;
+        for (var i = 0; i < n - 1; i++) {
+            var idx = (bufIndex + i) % SAMPLE_WINDOW;
+            var idx_p1 = (bufIndex + i + 1) % SAMPLE_WINDOW;
+            var x1 = plotLeft + ((xVals[i] - minX) / xrange) * plotWidth;
+            var x2 = plotLeft + ((xVals[i+1] - minX) / xrange) * plotWidth;
+            var y1 = plotBottom - ((buffer[idx]["altitude"] - minAlt) / altrange) * plotHeight;
+            var y2 = plotBottom - ((buffer[idx_p1]["altitude"] - minAlt) / altrange) * plotHeight;
+
+            if (x1 < plotLeft) { x1 = plotLeft; }
+            if (x2 > plotRight) { x2 = plotRight; }
+            if (y1 > plotBottom) { y1 = plotBottom; }
+            else if (y1 < plotTop) { y1 = plotTop; }
+            if (y2 > plotBottom) { y2 = plotBottom; }
+            else if (y2 < plotTop) { y2 = plotTop; }
+
+            dc.drawLine(x1, y1, x2, y2);
+        }
+
+        // Draw linear fit
+        var slope = grade;
+        var intercept = meanY - slope * meanX;
+        // Draw fit line
+        dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_YELLOW);
+        dc.setPenWidth(1);
+        for (var i = 0; i < SAMPLE_WINDOW - 1; i++) {
+            var x1 = plotLeft + ((xVals[i] - minX) / (maxX - minX)) * plotWidth;
+            var x2 = plotLeft + ((xVals[i+1] - minX) / (maxX - minX)) * plotWidth;
+            var fitY1 = intercept + slope * xVals[i];
+            var fitY2 = intercept + slope * xVals[i+1];
+            var y1 = plotBottom - ((fitY1 - minAlt) / (maxAlt - minAlt)) * plotHeight;
+            var y2 = plotBottom - ((fitY2 - minAlt) / (maxAlt - minAlt)) * plotHeight;
+            dc.drawLine(x1, y1, x2, y2);
+        }
+
+        // Draw plot area
+        dc.setColor(textColor, Graphics.COLOR_BLACK);
+        dc.setPenWidth(3);
+        dc.drawRectangle(plotLeft, plotTop, plotWidth, plotHeight);
     }
 
     hidden function _resetAll() {

@@ -217,8 +217,8 @@ class GradeEstimatorView extends WatchUi.DataField {
 
         if (speed == null || altitude == null) { return blank_str; }
 
-        // Reset if nearly stopped
-        if (speed < 1.0 || eTime > lastSample + 1.1) {
+        // Reset if nearly stopped or if more than two samples missed (missing 1 sample should be rare)
+        if (speed < 1.0 || eTime > lastSample + 2.1) {
             _resetAll();
             gradeField.setData(0.0);
             lastSample = eTime;

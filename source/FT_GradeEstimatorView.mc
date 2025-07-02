@@ -281,9 +281,9 @@ class GradeEstimatorView extends WatchUi.DataField {
         else {
             drawCompact = false; // Full length labels for wide views
 
-            if (height_view < 150) { 
+            if (height_view < (height_device / 3) - 3) { 
                 View.setLayout(Rez.Layouts.WideLayout(dc));
-                drawGraph = false; // No graph in compact view
+                drawGraph = false; // No graph in wide view
             }
             else { 
                 View.setLayout(Rez.Layouts.LargeLayout(dc));

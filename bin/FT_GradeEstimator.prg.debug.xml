@@ -5,7 +5,7 @@
 <entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorApp.mc" id="1" lineNum="26" parent="globals" pc="268435460" symbol="getApp"/>
 <entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorApp.mc" id="1" lineNum="27" parent="globals" pc="268435470" symbol="getApp"/>
 <entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/Bakground.mc" id="2" lineNum="5" parent="globals/Background" pc="268435481" symbol="&lt;init&gt;"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" id="3" lineNum="7" parent="globals/Rez" pc="268435493" symbol="&lt;init&gt;"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B4440-00/source/Rez.mcgen" id="3" lineNum="7" parent="globals/Rez" pc="268435493" symbol="&lt;init&gt;"/>
 <entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorApp.mc" id="4" lineNum="5" parent="globals/GradeEstimatorApp" pc="268435513" symbol="&lt;init&gt;"/>
 <entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="5" lineNum="10" parent="globals/GradeEstimatorView" pc="268435525" symbol="&lt;init&gt;"/>
 <entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="5" lineNum="34" parent="globals/GradeEstimatorView" pc="268435536" symbol="&lt;init&gt;"/>
@@ -109,302 +109,302 @@
 <entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="17" lineNum="279" parent="globals/GradeEstimatorView" pc="268437793" symbol="onLayout"/>
 <entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="17" lineNum="282" parent="globals/GradeEstimatorView" pc="268437804" symbol="onLayout"/>
 <entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="17" lineNum="284" parent="globals/GradeEstimatorView" pc="268437812" symbol="onLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="17" lineNum="285" parent="globals/GradeEstimatorView" pc="268437821" symbol="onLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="17" lineNum="286" parent="globals/GradeEstimatorView" pc="268437863" symbol="onLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="17" lineNum="289" parent="globals/GradeEstimatorView" pc="268437874" symbol="onLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="17" lineNum="290" parent="globals/GradeEstimatorView" pc="268437916" symbol="onLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="18" lineNum="481" parent="globals/GradeEstimatorView" pc="268437925" symbol="drawDefaultView"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="18" lineNum="482" parent="globals/GradeEstimatorView" pc="268437928" symbol="drawDefaultView"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="18" lineNum="483" parent="globals/GradeEstimatorView" pc="268437952" symbol="drawDefaultView"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="18" lineNum="484" parent="globals/GradeEstimatorView" pc="268437976" symbol="drawDefaultView"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="18" lineNum="485" parent="globals/GradeEstimatorView" pc="268438000" symbol="drawDefaultView"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="18" lineNum="487" parent="globals/GradeEstimatorView" pc="268438024" symbol="drawDefaultView"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="18" lineNum="489" parent="globals/GradeEstimatorView" pc="268438030" symbol="drawDefaultView"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="18" lineNum="490" parent="globals/GradeEstimatorView" pc="268438046" symbol="drawDefaultView"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="18" lineNum="493" parent="globals/GradeEstimatorView" pc="268438087" symbol="drawDefaultView"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="18" lineNum="495" parent="globals/GradeEstimatorView" pc="268438093" symbol="drawDefaultView"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="18" lineNum="496" parent="globals/GradeEstimatorView" pc="268438109" symbol="drawDefaultView"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="18" lineNum="499" parent="globals/GradeEstimatorView" pc="268438147" symbol="drawDefaultView"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="18" lineNum="501" parent="globals/GradeEstimatorView" pc="268438153" symbol="drawDefaultView"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="18" lineNum="502" parent="globals/GradeEstimatorView" pc="268438169" symbol="drawDefaultView"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="18" lineNum="505" parent="globals/GradeEstimatorView" pc="268438211" symbol="drawDefaultView"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="18" lineNum="507" parent="globals/GradeEstimatorView" pc="268438217" symbol="drawDefaultView"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="18" lineNum="508" parent="globals/GradeEstimatorView" pc="268438233" symbol="drawDefaultView"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="19" lineNum="548" parent="globals/GradeEstimatorView" pc="268438276" symbol="_resetAll"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="19" lineNum="549" parent="globals/GradeEstimatorView" pc="268438279" symbol="_resetAll"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="19" lineNum="550" parent="globals/GradeEstimatorView" pc="268438287" symbol="_resetAll"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="19" lineNum="551" parent="globals/GradeEstimatorView" pc="268438295" symbol="_resetAll"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="19" lineNum="552" parent="globals/GradeEstimatorView" pc="268438306" symbol="_resetAll"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="19" lineNum="554" parent="globals/GradeEstimatorView" pc="268438329" symbol="_resetAll"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="19" lineNum="555" parent="globals/GradeEstimatorView" pc="268438338" symbol="_resetAll"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="19" lineNum="556" parent="globals/GradeEstimatorView" pc="268438346" symbol="_resetAll"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="20" lineNum="82" parent="globals/GradeEstimatorView" pc="268438355" symbol="getProgressBar"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="20" lineNum="83" parent="globals/GradeEstimatorView" pc="268438358" symbol="getProgressBar"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="20" lineNum="84" parent="globals/GradeEstimatorView" pc="268438365" symbol="getProgressBar"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="20" lineNum="85" parent="globals/GradeEstimatorView" pc="268438384" symbol="getProgressBar"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="20" lineNum="86" parent="globals/GradeEstimatorView" pc="268438395" symbol="getProgressBar"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="20" lineNum="87" parent="globals/GradeEstimatorView" pc="268438403" symbol="getProgressBar"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="20" lineNum="89" parent="globals/GradeEstimatorView" pc="268438416" symbol="getProgressBar"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="20" lineNum="92" parent="globals/GradeEstimatorView" pc="268438436" symbol="getProgressBar"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="387" parent="globals/GradeEstimatorView" pc="268438439" symbol="computeLinearRegressionSlope"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="388" parent="globals/GradeEstimatorView" pc="268438442" symbol="computeLinearRegressionSlope"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="389" parent="globals/GradeEstimatorView" pc="268438446" symbol="computeLinearRegressionSlope"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="390" parent="globals/GradeEstimatorView" pc="268438449" symbol="computeLinearRegressionSlope"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="392" parent="globals/GradeEstimatorView" pc="268438457" symbol="computeLinearRegressionSlope"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="393" parent="globals/GradeEstimatorView" pc="268438468" symbol="computeLinearRegressionSlope"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="394" parent="globals/GradeEstimatorView" pc="268438481" symbol="computeLinearRegressionSlope"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="395" parent="globals/GradeEstimatorView" pc="268438497" symbol="computeLinearRegressionSlope"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="398" parent="globals/GradeEstimatorView" pc="268438519" symbol="computeLinearRegressionSlope"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="399" parent="globals/GradeEstimatorView" pc="268438525" symbol="computeLinearRegressionSlope"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="400" parent="globals/GradeEstimatorView" pc="268438536" symbol="computeLinearRegressionSlope"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="401" parent="globals/GradeEstimatorView" pc="268438549" symbol="computeLinearRegressionSlope"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="402" parent="globals/GradeEstimatorView" pc="268438565" symbol="computeLinearRegressionSlope"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="404" parent="globals/GradeEstimatorView" pc="268438585" symbol="computeLinearRegressionSlope"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="405" parent="globals/GradeEstimatorView" pc="268438592" symbol="computeLinearRegressionSlope"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="407" parent="globals/GradeEstimatorView" pc="268438599" symbol="computeLinearRegressionSlope"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="408" parent="globals/GradeEstimatorView" pc="268438605" symbol="computeLinearRegressionSlope"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="409" parent="globals/GradeEstimatorView" pc="268438616" symbol="computeLinearRegressionSlope"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="410" parent="globals/GradeEstimatorView" pc="268438629" symbol="computeLinearRegressionSlope"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="411" parent="globals/GradeEstimatorView" pc="268438639" symbol="computeLinearRegressionSlope"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="412" parent="globals/GradeEstimatorView" pc="268438655" symbol="computeLinearRegressionSlope"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="413" parent="globals/GradeEstimatorView" pc="268438665" symbol="computeLinearRegressionSlope"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="416" parent="globals/GradeEstimatorView" pc="268438685" symbol="computeLinearRegressionSlope"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="417" parent="globals/GradeEstimatorView" pc="268438708" symbol="computeLinearRegressionSlope"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="418" parent="globals/GradeEstimatorView" pc="268438711" symbol="computeLinearRegressionSlope"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="419" parent="globals/GradeEstimatorView" pc="268438722" symbol="computeLinearRegressionSlope"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="420" parent="globals/GradeEstimatorView" pc="268438735" symbol="computeLinearRegressionSlope"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="421" parent="globals/GradeEstimatorView" pc="268438751" symbol="computeLinearRegressionSlope"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="422" parent="globals/GradeEstimatorView" pc="268438767" symbol="computeLinearRegressionSlope"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="424" parent="globals/GradeEstimatorView" pc="268438774" symbol="computeLinearRegressionSlope"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="427" parent="globals/GradeEstimatorView" pc="268438794" symbol="computeLinearRegressionSlope"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="428" parent="globals/GradeEstimatorView" pc="268438801" symbol="computeLinearRegressionSlope"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="429" parent="globals/GradeEstimatorView" pc="268438823" symbol="computeLinearRegressionSlope"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="432" parent="globals/GradeEstimatorView" pc="268438847" symbol="computeLinearRegressionSlope"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="433" parent="globals/GradeEstimatorView" pc="268438859" symbol="computeLinearRegressionSlope"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="436" parent="globals/GradeEstimatorView" pc="268438867" symbol="computeLinearRegressionSlope"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="22" lineNum="527" parent="globals/GradeEstimatorView" pc="268438926" symbol="setLabelColor"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="22" lineNum="528" parent="globals/GradeEstimatorView" pc="268438929" symbol="setLabelColor"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="22" lineNum="529" parent="globals/GradeEstimatorView" pc="268438936" symbol="setLabelColor"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="22" lineNum="530" parent="globals/GradeEstimatorView" pc="268438952" symbol="setLabelColor"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="22" lineNum="533" parent="globals/GradeEstimatorView" pc="268438959" symbol="setLabelColor"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="22" lineNum="534" parent="globals/GradeEstimatorView" pc="268438980" symbol="setLabelColor"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="22" lineNum="535" parent="globals/GradeEstimatorView" pc="268438986" symbol="setLabelColor"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="23" lineNum="540" parent="globals/GradeEstimatorView" pc="268439016" symbol="drawStatusLabel"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="23" lineNum="541" parent="globals/GradeEstimatorView" pc="268439019" symbol="drawStatusLabel"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="23" lineNum="542" parent="globals/GradeEstimatorView" pc="268439043" symbol="drawStatusLabel"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="23" lineNum="543" parent="globals/GradeEstimatorView" pc="268439049" symbol="drawStatusLabel"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="23" lineNum="544" parent="globals/GradeEstimatorView" pc="268439065" symbol="drawStatusLabel"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="24" lineNum="377" parent="globals/GradeEstimatorView" pc="268439086" symbol="computeEmaGrade"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="24" lineNum="379" parent="globals/GradeEstimatorView" pc="268439089" symbol="computeEmaGrade"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="24" lineNum="380" parent="globals/GradeEstimatorView" pc="268439111" symbol="computeEmaGrade"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="24" lineNum="381" parent="globals/GradeEstimatorView" pc="268439121" symbol="computeEmaGrade"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="24" lineNum="382" parent="globals/GradeEstimatorView" pc="268439153" symbol="computeEmaGrade"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="24" lineNum="384" parent="globals/GradeEstimatorView" pc="268439172" symbol="computeEmaGrade"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="25" lineNum="102" parent="globals/GradeEstimatorView" pc="268439175" symbol="getStatusString"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="25" lineNum="103" parent="globals/GradeEstimatorView" pc="268439178" symbol="getStatusString"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="25" lineNum="104" parent="globals/GradeEstimatorView" pc="268439185" symbol="getStatusString"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="25" lineNum="105" parent="globals/GradeEstimatorView" pc="268439193" symbol="getStatusString"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="25" lineNum="106" parent="globals/GradeEstimatorView" pc="268439200" symbol="getStatusString"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="25" lineNum="108" parent="globals/GradeEstimatorView" pc="268439221" symbol="getStatusString"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="25" lineNum="109" parent="globals/GradeEstimatorView" pc="268439231" symbol="getStatusString"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="25" lineNum="110" parent="globals/GradeEstimatorView" pc="268439238" symbol="getStatusString"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="25" lineNum="113" parent="globals/GradeEstimatorView" pc="268439268" symbol="getStatusString"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="25" lineNum="115" parent="globals/GradeEstimatorView" pc="268439275" symbol="getStatusString"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="26" lineNum="78" parent="globals/GradeEstimatorView" pc="268439278" symbol="getPausedString"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="26" lineNum="79" parent="globals/GradeEstimatorView" pc="268439280" symbol="getPausedString"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="27" lineNum="96" parent="globals/GradeEstimatorView" pc="268439320" symbol="median3"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="27" lineNum="97" parent="globals/GradeEstimatorView" pc="268439322" symbol="median3"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="27" lineNum="97" parent="globals/GradeEstimatorView" pc="268439354" symbol="median3"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="27" lineNum="98" parent="globals/GradeEstimatorView" pc="268439360" symbol="median3"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="27" lineNum="98" parent="globals/GradeEstimatorView" pc="268439392" symbol="median3"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="27" lineNum="99" parent="globals/GradeEstimatorView" pc="268439398" symbol="median3"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="28" lineNum="118" parent="globals/GradeEstimatorView" pc="268439401" symbol="initialize"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="28" lineNum="119" parent="globals/GradeEstimatorView" pc="268439404" symbol="initialize"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="28" lineNum="122" parent="globals/GradeEstimatorView" pc="268439416" symbol="initialize"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="28" lineNum="127" parent="globals/GradeEstimatorView" pc="268439516" symbol="initialize"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="28" lineNum="129" parent="globals/GradeEstimatorView" pc="268439531" symbol="initialize"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="28" lineNum="134" parent="globals/GradeEstimatorView" pc="268439631" symbol="initialize"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="28" lineNum="137" parent="globals/GradeEstimatorView" pc="268439646" symbol="initialize"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="28" lineNum="142" parent="globals/GradeEstimatorView" pc="268439746" symbol="initialize"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="28" lineNum="144" parent="globals/GradeEstimatorView" pc="268439761" symbol="initialize"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="28" lineNum="149" parent="globals/GradeEstimatorView" pc="268439861" symbol="initialize"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="28" lineNum="151" parent="globals/GradeEstimatorView" pc="268439876" symbol="initialize"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="28" lineNum="156" parent="globals/GradeEstimatorView" pc="268439976" symbol="initialize"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="28" lineNum="158" parent="globals/GradeEstimatorView" pc="268439991" symbol="initialize"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="28" lineNum="163" parent="globals/GradeEstimatorView" pc="268440091" symbol="initialize"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="28" lineNum="166" parent="globals/GradeEstimatorView" pc="268440106" symbol="initialize"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="28" lineNum="167" parent="globals/GradeEstimatorView" pc="268440115" symbol="initialize"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="28" lineNum="168" parent="globals/GradeEstimatorView" pc="268440126" symbol="initialize"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="28" lineNum="170" parent="globals/GradeEstimatorView" pc="268440155" symbol="initialize"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="28" lineNum="171" parent="globals/GradeEstimatorView" pc="268440164" symbol="initialize"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="28" lineNum="172" parent="globals/GradeEstimatorView" pc="268440171" symbol="initialize"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="28" lineNum="173" parent="globals/GradeEstimatorView" pc="268440179" symbol="initialize"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="28" lineNum="174" parent="globals/GradeEstimatorView" pc="268440187" symbol="initialize"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="177" parent="globals/GradeEstimatorView" pc="268440196" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="179" parent="globals/GradeEstimatorView" pc="268440199" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="180" parent="globals/GradeEstimatorView" pc="268440208" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="181" parent="globals/GradeEstimatorView" pc="268440217" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="182" parent="globals/GradeEstimatorView" pc="268440221" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="183" parent="globals/GradeEstimatorView" pc="268440228" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="184" parent="globals/GradeEstimatorView" pc="268440238" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="185" parent="globals/GradeEstimatorView" pc="268440245" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="186" parent="globals/GradeEstimatorView" pc="268440249" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="187" parent="globals/GradeEstimatorView" pc="268440256" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="190" parent="globals/GradeEstimatorView" pc="268440263" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="191" parent="globals/GradeEstimatorView" pc="268440267" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="192" parent="globals/GradeEstimatorView" pc="268440270" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="193" parent="globals/GradeEstimatorView" pc="268440273" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="194" parent="globals/GradeEstimatorView" pc="268440284" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="195" parent="globals/GradeEstimatorView" pc="268440296" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="197" parent="globals/GradeEstimatorView" pc="268440315" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="197" parent="globals/GradeEstimatorView" pc="268440334" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="199" parent="globals/GradeEstimatorView" pc="268440354" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="199" parent="globals/GradeEstimatorView" pc="268440361" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="200" parent="globals/GradeEstimatorView" pc="268440368" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="201" parent="globals/GradeEstimatorView" pc="268440371" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="204" parent="globals/GradeEstimatorView" pc="268440390" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="205" parent="globals/GradeEstimatorView" pc="268440396" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="206" parent="globals/GradeEstimatorView" pc="268440407" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="207" parent="globals/GradeEstimatorView" pc="268440426" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="209" parent="globals/GradeEstimatorView" pc="268440446" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="210" parent="globals/GradeEstimatorView" pc="268440453" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="221" parent="globals/GradeEstimatorView" pc="268440460" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="222" parent="globals/GradeEstimatorView" pc="268440470" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="223" parent="globals/GradeEstimatorView" pc="268440483" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="226" parent="globals/GradeEstimatorView" pc="268440496" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="227" parent="globals/GradeEstimatorView" pc="268440515" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="228" parent="globals/GradeEstimatorView" pc="268440527" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="229" parent="globals/GradeEstimatorView" pc="268440534" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="230" parent="globals/GradeEstimatorView" pc="268440541" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="231" parent="globals/GradeEstimatorView" pc="268440555" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="232" parent="globals/GradeEstimatorView" pc="268440568" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="233" parent="globals/GradeEstimatorView" pc="268440584" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="234" parent="globals/GradeEstimatorView" pc="268440603" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="235" parent="globals/GradeEstimatorView" pc="268440625" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="236" parent="globals/GradeEstimatorView" pc="268440653" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="238" parent="globals/GradeEstimatorView" pc="268440681" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="238" parent="globals/GradeEstimatorView" pc="268440689" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="239" parent="globals/GradeEstimatorView" pc="268440696" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="239" parent="globals/GradeEstimatorView" pc="268440704" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="240" parent="globals/GradeEstimatorView" pc="268440711" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="240" parent="globals/GradeEstimatorView" pc="268440719" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="241" parent="globals/GradeEstimatorView" pc="268440726" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="241" parent="globals/GradeEstimatorView" pc="268440734" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="242" parent="globals/GradeEstimatorView" pc="268440741" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="242" parent="globals/GradeEstimatorView" pc="268440749" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="243" parent="globals/GradeEstimatorView" pc="268440756" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="243" parent="globals/GradeEstimatorView" pc="268440764" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="245" parent="globals/GradeEstimatorView" pc="268440771" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="249" parent="globals/GradeEstimatorView" pc="268440799" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="250" parent="globals/GradeEstimatorView" pc="268440806" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="252" parent="globals/GradeEstimatorView" pc="268440816" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="253" parent="globals/GradeEstimatorView" pc="268440836" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="254" parent="globals/GradeEstimatorView" pc="268440848" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="255" parent="globals/GradeEstimatorView" pc="268440859" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="256" parent="globals/GradeEstimatorView" pc="268440881" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="257" parent="globals/GradeEstimatorView" pc="268440906" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="258" parent="globals/GradeEstimatorView" pc="268440919" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="259" parent="globals/GradeEstimatorView" pc="268440935" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="260" parent="globals/GradeEstimatorView" pc="268440954" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="261" parent="globals/GradeEstimatorView" pc="268440973" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="265" parent="globals/GradeEstimatorView" pc="268441001" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="266" parent="globals/GradeEstimatorView" pc="268441017" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="267" parent="globals/GradeEstimatorView" pc="268441029" symbol="drawAltitudeBufferPlot"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="30" lineNum="460" parent="globals/GradeEstimatorView" pc="268441048" symbol="onUpdate"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="30" lineNum="464" parent="globals/GradeEstimatorView" pc="268441051" symbol="onUpdate"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="30" lineNum="465" parent="globals/GradeEstimatorView" pc="268441075" symbol="onUpdate"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="30" lineNum="467" parent="globals/GradeEstimatorView" pc="268441091" symbol="onUpdate"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="30" lineNum="468" parent="globals/GradeEstimatorView" pc="268441103" symbol="onUpdate"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="30" lineNum="468" parent="globals/GradeEstimatorView" pc="268441118" symbol="onUpdate"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="30" lineNum="470" parent="globals/GradeEstimatorView" pc="268441129" symbol="onUpdate"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="30" lineNum="472" parent="globals/GradeEstimatorView" pc="268441140" symbol="onUpdate"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="30" lineNum="473" parent="globals/GradeEstimatorView" pc="268441151" symbol="onUpdate"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="30" lineNum="474" parent="globals/GradeEstimatorView" pc="268441162" symbol="onUpdate"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="30" lineNum="476" parent="globals/GradeEstimatorView" pc="268441173" symbol="onUpdate"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="30" lineNum="478" parent="globals/GradeEstimatorView" pc="268441193" symbol="onUpdate"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="30" lineNum="478" parent="globals/GradeEstimatorView" pc="268441201" symbol="onUpdate"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="31" lineNum="512" parent="globals/GradeEstimatorView" pc="268441216" symbol="drawVAMFields"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="31" lineNum="513" parent="globals/GradeEstimatorView" pc="268441219" symbol="drawVAMFields"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="31" lineNum="514" parent="globals/GradeEstimatorView" pc="268441243" symbol="drawVAMFields"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="31" lineNum="516" parent="globals/GradeEstimatorView" pc="268441267" symbol="drawVAMFields"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="31" lineNum="517" parent="globals/GradeEstimatorView" pc="268441273" symbol="drawVAMFields"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="31" lineNum="518" parent="globals/GradeEstimatorView" pc="268441289" symbol="drawVAMFields"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="31" lineNum="521" parent="globals/GradeEstimatorView" pc="268441343" symbol="drawVAMFields"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="31" lineNum="522" parent="globals/GradeEstimatorView" pc="268441349" symbol="drawVAMFields"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="31" lineNum="523" parent="globals/GradeEstimatorView" pc="268441365" symbol="drawVAMFields"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="32" lineNum="67" parent="globals/GradeEstimatorView" pc="268441420" symbol="getBufferString"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="32" lineNum="68" parent="globals/GradeEstimatorView" pc="268441423" symbol="getBufferString"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="32" lineNum="69" parent="globals/GradeEstimatorView" pc="268441430" symbol="getBufferString"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="32" lineNum="70" parent="globals/GradeEstimatorView" pc="268441441" symbol="getBufferString"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="32" lineNum="70" parent="globals/GradeEstimatorView" pc="268441452" symbol="getBufferString"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="32" lineNum="71" parent="globals/GradeEstimatorView" pc="268441465" symbol="getBufferString"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="32" lineNum="73" parent="globals/GradeEstimatorView" pc="268441485" symbol="getBufferString"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="32" lineNum="75" parent="globals/GradeEstimatorView" pc="268441495" symbol="getBufferString"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" id="33" lineNum="13" parent="globals/Rez/Layouts" pc="268441498" symbol="LoggerLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" id="33" lineNum="14" parent="globals/Rez/Layouts" pc="268441509" symbol="LoggerLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" id="33" lineNum="16" parent="globals/Rez/Layouts" pc="268441518" symbol="LoggerLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" id="33" lineNum="18" parent="globals/Rez/Layouts" pc="268441527" symbol="LoggerLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" id="33" lineNum="20" parent="globals/Rez/Layouts" pc="268441551" symbol="LoggerLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" id="33" lineNum="22" parent="globals/Rez/Layouts" pc="268441671" symbol="LoggerLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" id="33" lineNum="24" parent="globals/Rez/Layouts" pc="268441790" symbol="LoggerLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" id="33" lineNum="26" parent="globals/Rez/Layouts" pc="268441910" symbol="LoggerLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" id="33" lineNum="28" parent="globals/Rez/Layouts" pc="268442030" symbol="LoggerLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" id="33" lineNum="30" parent="globals/Rez/Layouts" pc="268442150" symbol="LoggerLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" id="33" lineNum="32" parent="globals/Rez/Layouts" pc="268442270" symbol="LoggerLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" id="33" lineNum="34" parent="globals/Rez/Layouts" pc="268442365" symbol="LoggerLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" id="33" lineNum="36" parent="globals/Rez/Layouts" pc="268442460" symbol="LoggerLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" id="33" lineNum="38" parent="globals/Rez/Layouts" pc="268442555" symbol="LoggerLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" id="33" lineNum="40" parent="globals/Rez/Layouts" pc="268442650" symbol="LoggerLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" id="34" lineNum="105" parent="globals/Rez/Layouts" pc="268442710" symbol="LargeLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" id="34" lineNum="106" parent="globals/Rez/Layouts" pc="268442721" symbol="LargeLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" id="34" lineNum="108" parent="globals/Rez/Layouts" pc="268442730" symbol="LargeLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" id="34" lineNum="110" parent="globals/Rez/Layouts" pc="268442739" symbol="LargeLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" id="34" lineNum="112" parent="globals/Rez/Layouts" pc="268442763" symbol="LargeLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" id="34" lineNum="114" parent="globals/Rez/Layouts" pc="268442883" symbol="LargeLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" id="34" lineNum="116" parent="globals/Rez/Layouts" pc="268442978" symbol="LargeLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" id="34" lineNum="118" parent="globals/Rez/Layouts" pc="268443098" symbol="LargeLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" id="34" lineNum="120" parent="globals/Rez/Layouts" pc="268443218" symbol="LargeLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" id="34" lineNum="122" parent="globals/Rez/Layouts" pc="268443338" symbol="LargeLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" id="34" lineNum="124" parent="globals/Rez/Layouts" pc="268443458" symbol="LargeLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" id="34" lineNum="126" parent="globals/Rez/Layouts" pc="268443578" symbol="LargeLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" id="34" lineNum="128" parent="globals/Rez/Layouts" pc="268443698" symbol="LargeLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" id="34" lineNum="130" parent="globals/Rez/Layouts" pc="268443793" symbol="LargeLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" id="34" lineNum="132" parent="globals/Rez/Layouts" pc="268443888" symbol="LargeLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" id="34" lineNum="134" parent="globals/Rez/Layouts" pc="268443983" symbol="LargeLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" id="34" lineNum="136" parent="globals/Rez/Layouts" pc="268444078" symbol="LargeLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" id="34" lineNum="138" parent="globals/Rez/Layouts" pc="268444173" symbol="LargeLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" id="34" lineNum="140" parent="globals/Rez/Layouts" pc="268444268" symbol="LargeLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" id="35" lineNum="81" parent="globals/Rez/Layouts" pc="268444348" symbol="SmallLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" id="35" lineNum="82" parent="globals/Rez/Layouts" pc="268444359" symbol="SmallLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" id="35" lineNum="84" parent="globals/Rez/Layouts" pc="268444368" symbol="SmallLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" id="35" lineNum="86" parent="globals/Rez/Layouts" pc="268444377" symbol="SmallLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" id="35" lineNum="88" parent="globals/Rez/Layouts" pc="268444401" symbol="SmallLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" id="35" lineNum="90" parent="globals/Rez/Layouts" pc="268444521" symbol="SmallLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" id="35" lineNum="92" parent="globals/Rez/Layouts" pc="268444616" symbol="SmallLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" id="35" lineNum="94" parent="globals/Rez/Layouts" pc="268444736" symbol="SmallLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" id="35" lineNum="96" parent="globals/Rez/Layouts" pc="268444856" symbol="SmallLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" id="35" lineNum="98" parent="globals/Rez/Layouts" pc="268444951" symbol="SmallLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" id="35" lineNum="100" parent="globals/Rez/Layouts" pc="268445046" symbol="SmallLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" id="35" lineNum="102" parent="globals/Rez/Layouts" pc="268445141" symbol="SmallLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" id="36" lineNum="43" parent="globals/Rez/Layouts" pc="268445186" symbol="WideLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" id="36" lineNum="44" parent="globals/Rez/Layouts" pc="268445197" symbol="WideLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" id="36" lineNum="46" parent="globals/Rez/Layouts" pc="268445206" symbol="WideLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" id="36" lineNum="48" parent="globals/Rez/Layouts" pc="268445215" symbol="WideLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" id="36" lineNum="50" parent="globals/Rez/Layouts" pc="268445239" symbol="WideLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" id="36" lineNum="52" parent="globals/Rez/Layouts" pc="268445359" symbol="WideLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" id="36" lineNum="54" parent="globals/Rez/Layouts" pc="268445454" symbol="WideLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" id="36" lineNum="56" parent="globals/Rez/Layouts" pc="268445574" symbol="WideLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" id="36" lineNum="58" parent="globals/Rez/Layouts" pc="268445694" symbol="WideLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" id="36" lineNum="60" parent="globals/Rez/Layouts" pc="268445814" symbol="WideLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" id="36" lineNum="62" parent="globals/Rez/Layouts" pc="268445934" symbol="WideLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" id="36" lineNum="64" parent="globals/Rez/Layouts" pc="268446054" symbol="WideLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" id="36" lineNum="66" parent="globals/Rez/Layouts" pc="268446174" symbol="WideLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" id="36" lineNum="68" parent="globals/Rez/Layouts" pc="268446269" symbol="WideLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" id="36" lineNum="70" parent="globals/Rez/Layouts" pc="268446364" symbol="WideLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" id="36" lineNum="72" parent="globals/Rez/Layouts" pc="268446459" symbol="WideLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" id="36" lineNum="74" parent="globals/Rez/Layouts" pc="268446554" symbol="WideLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" id="36" lineNum="76" parent="globals/Rez/Layouts" pc="268446649" symbol="WideLayout"/>
-<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B3843-00/source/Rez.mcgen" id="36" lineNum="78" parent="globals/Rez/Layouts" pc="268446744" symbol="WideLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="17" lineNum="285" parent="globals/GradeEstimatorView" pc="268437826" symbol="onLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="17" lineNum="286" parent="globals/GradeEstimatorView" pc="268437868" symbol="onLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="17" lineNum="289" parent="globals/GradeEstimatorView" pc="268437879" symbol="onLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="17" lineNum="290" parent="globals/GradeEstimatorView" pc="268437921" symbol="onLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="18" lineNum="481" parent="globals/GradeEstimatorView" pc="268437930" symbol="drawDefaultView"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="18" lineNum="482" parent="globals/GradeEstimatorView" pc="268437933" symbol="drawDefaultView"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="18" lineNum="483" parent="globals/GradeEstimatorView" pc="268437957" symbol="drawDefaultView"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="18" lineNum="484" parent="globals/GradeEstimatorView" pc="268437981" symbol="drawDefaultView"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="18" lineNum="485" parent="globals/GradeEstimatorView" pc="268438005" symbol="drawDefaultView"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="18" lineNum="487" parent="globals/GradeEstimatorView" pc="268438029" symbol="drawDefaultView"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="18" lineNum="489" parent="globals/GradeEstimatorView" pc="268438035" symbol="drawDefaultView"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="18" lineNum="490" parent="globals/GradeEstimatorView" pc="268438051" symbol="drawDefaultView"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="18" lineNum="493" parent="globals/GradeEstimatorView" pc="268438092" symbol="drawDefaultView"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="18" lineNum="495" parent="globals/GradeEstimatorView" pc="268438098" symbol="drawDefaultView"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="18" lineNum="496" parent="globals/GradeEstimatorView" pc="268438114" symbol="drawDefaultView"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="18" lineNum="499" parent="globals/GradeEstimatorView" pc="268438152" symbol="drawDefaultView"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="18" lineNum="501" parent="globals/GradeEstimatorView" pc="268438158" symbol="drawDefaultView"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="18" lineNum="502" parent="globals/GradeEstimatorView" pc="268438174" symbol="drawDefaultView"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="18" lineNum="505" parent="globals/GradeEstimatorView" pc="268438216" symbol="drawDefaultView"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="18" lineNum="507" parent="globals/GradeEstimatorView" pc="268438222" symbol="drawDefaultView"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="18" lineNum="508" parent="globals/GradeEstimatorView" pc="268438238" symbol="drawDefaultView"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="19" lineNum="548" parent="globals/GradeEstimatorView" pc="268438281" symbol="_resetAll"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="19" lineNum="549" parent="globals/GradeEstimatorView" pc="268438284" symbol="_resetAll"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="19" lineNum="550" parent="globals/GradeEstimatorView" pc="268438292" symbol="_resetAll"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="19" lineNum="551" parent="globals/GradeEstimatorView" pc="268438300" symbol="_resetAll"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="19" lineNum="552" parent="globals/GradeEstimatorView" pc="268438311" symbol="_resetAll"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="19" lineNum="554" parent="globals/GradeEstimatorView" pc="268438334" symbol="_resetAll"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="19" lineNum="555" parent="globals/GradeEstimatorView" pc="268438343" symbol="_resetAll"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="19" lineNum="556" parent="globals/GradeEstimatorView" pc="268438351" symbol="_resetAll"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="20" lineNum="82" parent="globals/GradeEstimatorView" pc="268438360" symbol="getProgressBar"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="20" lineNum="83" parent="globals/GradeEstimatorView" pc="268438363" symbol="getProgressBar"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="20" lineNum="84" parent="globals/GradeEstimatorView" pc="268438370" symbol="getProgressBar"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="20" lineNum="85" parent="globals/GradeEstimatorView" pc="268438389" symbol="getProgressBar"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="20" lineNum="86" parent="globals/GradeEstimatorView" pc="268438400" symbol="getProgressBar"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="20" lineNum="87" parent="globals/GradeEstimatorView" pc="268438408" symbol="getProgressBar"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="20" lineNum="89" parent="globals/GradeEstimatorView" pc="268438421" symbol="getProgressBar"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="20" lineNum="92" parent="globals/GradeEstimatorView" pc="268438441" symbol="getProgressBar"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="387" parent="globals/GradeEstimatorView" pc="268438444" symbol="computeLinearRegressionSlope"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="388" parent="globals/GradeEstimatorView" pc="268438447" symbol="computeLinearRegressionSlope"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="389" parent="globals/GradeEstimatorView" pc="268438451" symbol="computeLinearRegressionSlope"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="390" parent="globals/GradeEstimatorView" pc="268438454" symbol="computeLinearRegressionSlope"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="392" parent="globals/GradeEstimatorView" pc="268438462" symbol="computeLinearRegressionSlope"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="393" parent="globals/GradeEstimatorView" pc="268438473" symbol="computeLinearRegressionSlope"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="394" parent="globals/GradeEstimatorView" pc="268438486" symbol="computeLinearRegressionSlope"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="395" parent="globals/GradeEstimatorView" pc="268438502" symbol="computeLinearRegressionSlope"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="398" parent="globals/GradeEstimatorView" pc="268438524" symbol="computeLinearRegressionSlope"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="399" parent="globals/GradeEstimatorView" pc="268438530" symbol="computeLinearRegressionSlope"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="400" parent="globals/GradeEstimatorView" pc="268438541" symbol="computeLinearRegressionSlope"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="401" parent="globals/GradeEstimatorView" pc="268438554" symbol="computeLinearRegressionSlope"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="402" parent="globals/GradeEstimatorView" pc="268438570" symbol="computeLinearRegressionSlope"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="404" parent="globals/GradeEstimatorView" pc="268438590" symbol="computeLinearRegressionSlope"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="405" parent="globals/GradeEstimatorView" pc="268438597" symbol="computeLinearRegressionSlope"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="407" parent="globals/GradeEstimatorView" pc="268438604" symbol="computeLinearRegressionSlope"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="408" parent="globals/GradeEstimatorView" pc="268438610" symbol="computeLinearRegressionSlope"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="409" parent="globals/GradeEstimatorView" pc="268438621" symbol="computeLinearRegressionSlope"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="410" parent="globals/GradeEstimatorView" pc="268438634" symbol="computeLinearRegressionSlope"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="411" parent="globals/GradeEstimatorView" pc="268438644" symbol="computeLinearRegressionSlope"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="412" parent="globals/GradeEstimatorView" pc="268438660" symbol="computeLinearRegressionSlope"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="413" parent="globals/GradeEstimatorView" pc="268438670" symbol="computeLinearRegressionSlope"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="416" parent="globals/GradeEstimatorView" pc="268438690" symbol="computeLinearRegressionSlope"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="417" parent="globals/GradeEstimatorView" pc="268438713" symbol="computeLinearRegressionSlope"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="418" parent="globals/GradeEstimatorView" pc="268438716" symbol="computeLinearRegressionSlope"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="419" parent="globals/GradeEstimatorView" pc="268438727" symbol="computeLinearRegressionSlope"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="420" parent="globals/GradeEstimatorView" pc="268438740" symbol="computeLinearRegressionSlope"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="421" parent="globals/GradeEstimatorView" pc="268438756" symbol="computeLinearRegressionSlope"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="422" parent="globals/GradeEstimatorView" pc="268438772" symbol="computeLinearRegressionSlope"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="424" parent="globals/GradeEstimatorView" pc="268438779" symbol="computeLinearRegressionSlope"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="427" parent="globals/GradeEstimatorView" pc="268438799" symbol="computeLinearRegressionSlope"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="428" parent="globals/GradeEstimatorView" pc="268438806" symbol="computeLinearRegressionSlope"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="429" parent="globals/GradeEstimatorView" pc="268438828" symbol="computeLinearRegressionSlope"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="432" parent="globals/GradeEstimatorView" pc="268438852" symbol="computeLinearRegressionSlope"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="433" parent="globals/GradeEstimatorView" pc="268438864" symbol="computeLinearRegressionSlope"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="21" lineNum="436" parent="globals/GradeEstimatorView" pc="268438872" symbol="computeLinearRegressionSlope"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="22" lineNum="527" parent="globals/GradeEstimatorView" pc="268438931" symbol="setLabelColor"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="22" lineNum="528" parent="globals/GradeEstimatorView" pc="268438934" symbol="setLabelColor"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="22" lineNum="529" parent="globals/GradeEstimatorView" pc="268438941" symbol="setLabelColor"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="22" lineNum="530" parent="globals/GradeEstimatorView" pc="268438957" symbol="setLabelColor"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="22" lineNum="533" parent="globals/GradeEstimatorView" pc="268438964" symbol="setLabelColor"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="22" lineNum="534" parent="globals/GradeEstimatorView" pc="268438985" symbol="setLabelColor"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="22" lineNum="535" parent="globals/GradeEstimatorView" pc="268438991" symbol="setLabelColor"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="23" lineNum="540" parent="globals/GradeEstimatorView" pc="268439021" symbol="drawStatusLabel"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="23" lineNum="541" parent="globals/GradeEstimatorView" pc="268439024" symbol="drawStatusLabel"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="23" lineNum="542" parent="globals/GradeEstimatorView" pc="268439048" symbol="drawStatusLabel"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="23" lineNum="543" parent="globals/GradeEstimatorView" pc="268439054" symbol="drawStatusLabel"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="23" lineNum="544" parent="globals/GradeEstimatorView" pc="268439070" symbol="drawStatusLabel"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="24" lineNum="377" parent="globals/GradeEstimatorView" pc="268439091" symbol="computeEmaGrade"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="24" lineNum="379" parent="globals/GradeEstimatorView" pc="268439094" symbol="computeEmaGrade"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="24" lineNum="380" parent="globals/GradeEstimatorView" pc="268439116" symbol="computeEmaGrade"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="24" lineNum="381" parent="globals/GradeEstimatorView" pc="268439126" symbol="computeEmaGrade"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="24" lineNum="382" parent="globals/GradeEstimatorView" pc="268439158" symbol="computeEmaGrade"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="24" lineNum="384" parent="globals/GradeEstimatorView" pc="268439177" symbol="computeEmaGrade"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="25" lineNum="102" parent="globals/GradeEstimatorView" pc="268439180" symbol="getStatusString"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="25" lineNum="103" parent="globals/GradeEstimatorView" pc="268439183" symbol="getStatusString"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="25" lineNum="104" parent="globals/GradeEstimatorView" pc="268439190" symbol="getStatusString"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="25" lineNum="105" parent="globals/GradeEstimatorView" pc="268439198" symbol="getStatusString"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="25" lineNum="106" parent="globals/GradeEstimatorView" pc="268439205" symbol="getStatusString"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="25" lineNum="108" parent="globals/GradeEstimatorView" pc="268439226" symbol="getStatusString"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="25" lineNum="109" parent="globals/GradeEstimatorView" pc="268439236" symbol="getStatusString"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="25" lineNum="110" parent="globals/GradeEstimatorView" pc="268439243" symbol="getStatusString"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="25" lineNum="113" parent="globals/GradeEstimatorView" pc="268439273" symbol="getStatusString"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="25" lineNum="115" parent="globals/GradeEstimatorView" pc="268439280" symbol="getStatusString"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="26" lineNum="78" parent="globals/GradeEstimatorView" pc="268439283" symbol="getPausedString"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="26" lineNum="79" parent="globals/GradeEstimatorView" pc="268439285" symbol="getPausedString"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="27" lineNum="96" parent="globals/GradeEstimatorView" pc="268439325" symbol="median3"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="27" lineNum="97" parent="globals/GradeEstimatorView" pc="268439327" symbol="median3"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="27" lineNum="97" parent="globals/GradeEstimatorView" pc="268439359" symbol="median3"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="27" lineNum="98" parent="globals/GradeEstimatorView" pc="268439365" symbol="median3"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="27" lineNum="98" parent="globals/GradeEstimatorView" pc="268439397" symbol="median3"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="27" lineNum="99" parent="globals/GradeEstimatorView" pc="268439403" symbol="median3"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="28" lineNum="118" parent="globals/GradeEstimatorView" pc="268439406" symbol="initialize"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="28" lineNum="119" parent="globals/GradeEstimatorView" pc="268439409" symbol="initialize"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="28" lineNum="122" parent="globals/GradeEstimatorView" pc="268439421" symbol="initialize"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="28" lineNum="127" parent="globals/GradeEstimatorView" pc="268439521" symbol="initialize"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="28" lineNum="129" parent="globals/GradeEstimatorView" pc="268439536" symbol="initialize"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="28" lineNum="134" parent="globals/GradeEstimatorView" pc="268439636" symbol="initialize"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="28" lineNum="137" parent="globals/GradeEstimatorView" pc="268439651" symbol="initialize"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="28" lineNum="142" parent="globals/GradeEstimatorView" pc="268439751" symbol="initialize"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="28" lineNum="144" parent="globals/GradeEstimatorView" pc="268439766" symbol="initialize"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="28" lineNum="149" parent="globals/GradeEstimatorView" pc="268439866" symbol="initialize"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="28" lineNum="151" parent="globals/GradeEstimatorView" pc="268439881" symbol="initialize"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="28" lineNum="156" parent="globals/GradeEstimatorView" pc="268439981" symbol="initialize"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="28" lineNum="158" parent="globals/GradeEstimatorView" pc="268439996" symbol="initialize"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="28" lineNum="163" parent="globals/GradeEstimatorView" pc="268440096" symbol="initialize"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="28" lineNum="166" parent="globals/GradeEstimatorView" pc="268440111" symbol="initialize"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="28" lineNum="167" parent="globals/GradeEstimatorView" pc="268440120" symbol="initialize"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="28" lineNum="168" parent="globals/GradeEstimatorView" pc="268440131" symbol="initialize"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="28" lineNum="170" parent="globals/GradeEstimatorView" pc="268440160" symbol="initialize"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="28" lineNum="171" parent="globals/GradeEstimatorView" pc="268440169" symbol="initialize"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="28" lineNum="172" parent="globals/GradeEstimatorView" pc="268440176" symbol="initialize"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="28" lineNum="173" parent="globals/GradeEstimatorView" pc="268440184" symbol="initialize"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="28" lineNum="174" parent="globals/GradeEstimatorView" pc="268440192" symbol="initialize"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="177" parent="globals/GradeEstimatorView" pc="268440201" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="179" parent="globals/GradeEstimatorView" pc="268440204" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="180" parent="globals/GradeEstimatorView" pc="268440213" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="181" parent="globals/GradeEstimatorView" pc="268440222" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="182" parent="globals/GradeEstimatorView" pc="268440226" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="183" parent="globals/GradeEstimatorView" pc="268440233" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="184" parent="globals/GradeEstimatorView" pc="268440243" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="185" parent="globals/GradeEstimatorView" pc="268440250" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="186" parent="globals/GradeEstimatorView" pc="268440254" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="187" parent="globals/GradeEstimatorView" pc="268440261" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="190" parent="globals/GradeEstimatorView" pc="268440268" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="191" parent="globals/GradeEstimatorView" pc="268440272" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="192" parent="globals/GradeEstimatorView" pc="268440275" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="193" parent="globals/GradeEstimatorView" pc="268440278" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="194" parent="globals/GradeEstimatorView" pc="268440289" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="195" parent="globals/GradeEstimatorView" pc="268440301" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="197" parent="globals/GradeEstimatorView" pc="268440320" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="197" parent="globals/GradeEstimatorView" pc="268440339" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="199" parent="globals/GradeEstimatorView" pc="268440359" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="199" parent="globals/GradeEstimatorView" pc="268440366" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="200" parent="globals/GradeEstimatorView" pc="268440373" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="201" parent="globals/GradeEstimatorView" pc="268440376" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="204" parent="globals/GradeEstimatorView" pc="268440395" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="205" parent="globals/GradeEstimatorView" pc="268440401" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="206" parent="globals/GradeEstimatorView" pc="268440412" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="207" parent="globals/GradeEstimatorView" pc="268440431" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="209" parent="globals/GradeEstimatorView" pc="268440451" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="210" parent="globals/GradeEstimatorView" pc="268440458" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="221" parent="globals/GradeEstimatorView" pc="268440465" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="222" parent="globals/GradeEstimatorView" pc="268440475" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="223" parent="globals/GradeEstimatorView" pc="268440488" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="226" parent="globals/GradeEstimatorView" pc="268440501" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="227" parent="globals/GradeEstimatorView" pc="268440520" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="228" parent="globals/GradeEstimatorView" pc="268440532" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="229" parent="globals/GradeEstimatorView" pc="268440539" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="230" parent="globals/GradeEstimatorView" pc="268440546" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="231" parent="globals/GradeEstimatorView" pc="268440560" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="232" parent="globals/GradeEstimatorView" pc="268440573" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="233" parent="globals/GradeEstimatorView" pc="268440589" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="234" parent="globals/GradeEstimatorView" pc="268440608" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="235" parent="globals/GradeEstimatorView" pc="268440630" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="236" parent="globals/GradeEstimatorView" pc="268440658" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="238" parent="globals/GradeEstimatorView" pc="268440686" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="238" parent="globals/GradeEstimatorView" pc="268440694" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="239" parent="globals/GradeEstimatorView" pc="268440701" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="239" parent="globals/GradeEstimatorView" pc="268440709" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="240" parent="globals/GradeEstimatorView" pc="268440716" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="240" parent="globals/GradeEstimatorView" pc="268440724" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="241" parent="globals/GradeEstimatorView" pc="268440731" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="241" parent="globals/GradeEstimatorView" pc="268440739" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="242" parent="globals/GradeEstimatorView" pc="268440746" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="242" parent="globals/GradeEstimatorView" pc="268440754" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="243" parent="globals/GradeEstimatorView" pc="268440761" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="243" parent="globals/GradeEstimatorView" pc="268440769" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="245" parent="globals/GradeEstimatorView" pc="268440776" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="249" parent="globals/GradeEstimatorView" pc="268440804" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="250" parent="globals/GradeEstimatorView" pc="268440811" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="252" parent="globals/GradeEstimatorView" pc="268440821" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="253" parent="globals/GradeEstimatorView" pc="268440841" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="254" parent="globals/GradeEstimatorView" pc="268440853" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="255" parent="globals/GradeEstimatorView" pc="268440864" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="256" parent="globals/GradeEstimatorView" pc="268440886" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="257" parent="globals/GradeEstimatorView" pc="268440911" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="258" parent="globals/GradeEstimatorView" pc="268440924" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="259" parent="globals/GradeEstimatorView" pc="268440940" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="260" parent="globals/GradeEstimatorView" pc="268440959" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="261" parent="globals/GradeEstimatorView" pc="268440978" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="265" parent="globals/GradeEstimatorView" pc="268441006" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="266" parent="globals/GradeEstimatorView" pc="268441022" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="29" lineNum="267" parent="globals/GradeEstimatorView" pc="268441034" symbol="drawAltitudeBufferPlot"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="30" lineNum="460" parent="globals/GradeEstimatorView" pc="268441053" symbol="onUpdate"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="30" lineNum="464" parent="globals/GradeEstimatorView" pc="268441056" symbol="onUpdate"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="30" lineNum="465" parent="globals/GradeEstimatorView" pc="268441080" symbol="onUpdate"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="30" lineNum="467" parent="globals/GradeEstimatorView" pc="268441096" symbol="onUpdate"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="30" lineNum="468" parent="globals/GradeEstimatorView" pc="268441108" symbol="onUpdate"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="30" lineNum="468" parent="globals/GradeEstimatorView" pc="268441123" symbol="onUpdate"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="30" lineNum="470" parent="globals/GradeEstimatorView" pc="268441134" symbol="onUpdate"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="30" lineNum="472" parent="globals/GradeEstimatorView" pc="268441145" symbol="onUpdate"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="30" lineNum="473" parent="globals/GradeEstimatorView" pc="268441156" symbol="onUpdate"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="30" lineNum="474" parent="globals/GradeEstimatorView" pc="268441167" symbol="onUpdate"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="30" lineNum="476" parent="globals/GradeEstimatorView" pc="268441178" symbol="onUpdate"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="30" lineNum="478" parent="globals/GradeEstimatorView" pc="268441198" symbol="onUpdate"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="30" lineNum="478" parent="globals/GradeEstimatorView" pc="268441206" symbol="onUpdate"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="31" lineNum="512" parent="globals/GradeEstimatorView" pc="268441221" symbol="drawVAMFields"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="31" lineNum="513" parent="globals/GradeEstimatorView" pc="268441224" symbol="drawVAMFields"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="31" lineNum="514" parent="globals/GradeEstimatorView" pc="268441248" symbol="drawVAMFields"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="31" lineNum="516" parent="globals/GradeEstimatorView" pc="268441272" symbol="drawVAMFields"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="31" lineNum="517" parent="globals/GradeEstimatorView" pc="268441278" symbol="drawVAMFields"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="31" lineNum="518" parent="globals/GradeEstimatorView" pc="268441294" symbol="drawVAMFields"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="31" lineNum="521" parent="globals/GradeEstimatorView" pc="268441348" symbol="drawVAMFields"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="31" lineNum="522" parent="globals/GradeEstimatorView" pc="268441354" symbol="drawVAMFields"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="31" lineNum="523" parent="globals/GradeEstimatorView" pc="268441370" symbol="drawVAMFields"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="32" lineNum="67" parent="globals/GradeEstimatorView" pc="268441425" symbol="getBufferString"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="32" lineNum="68" parent="globals/GradeEstimatorView" pc="268441428" symbol="getBufferString"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="32" lineNum="69" parent="globals/GradeEstimatorView" pc="268441435" symbol="getBufferString"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="32" lineNum="70" parent="globals/GradeEstimatorView" pc="268441446" symbol="getBufferString"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="32" lineNum="70" parent="globals/GradeEstimatorView" pc="268441457" symbol="getBufferString"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="32" lineNum="71" parent="globals/GradeEstimatorView" pc="268441470" symbol="getBufferString"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="32" lineNum="73" parent="globals/GradeEstimatorView" pc="268441490" symbol="getBufferString"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" id="32" lineNum="75" parent="globals/GradeEstimatorView" pc="268441500" symbol="getBufferString"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B4440-00/source/Rez.mcgen" id="33" lineNum="13" parent="globals/Rez/Layouts" pc="268441503" symbol="LoggerLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B4440-00/source/Rez.mcgen" id="33" lineNum="14" parent="globals/Rez/Layouts" pc="268441514" symbol="LoggerLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B4440-00/source/Rez.mcgen" id="33" lineNum="16" parent="globals/Rez/Layouts" pc="268441523" symbol="LoggerLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B4440-00/source/Rez.mcgen" id="33" lineNum="18" parent="globals/Rez/Layouts" pc="268441532" symbol="LoggerLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B4440-00/source/Rez.mcgen" id="33" lineNum="20" parent="globals/Rez/Layouts" pc="268441556" symbol="LoggerLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B4440-00/source/Rez.mcgen" id="33" lineNum="22" parent="globals/Rez/Layouts" pc="268441676" symbol="LoggerLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B4440-00/source/Rez.mcgen" id="33" lineNum="24" parent="globals/Rez/Layouts" pc="268441795" symbol="LoggerLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B4440-00/source/Rez.mcgen" id="33" lineNum="26" parent="globals/Rez/Layouts" pc="268441915" symbol="LoggerLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B4440-00/source/Rez.mcgen" id="33" lineNum="28" parent="globals/Rez/Layouts" pc="268442035" symbol="LoggerLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B4440-00/source/Rez.mcgen" id="33" lineNum="30" parent="globals/Rez/Layouts" pc="268442155" symbol="LoggerLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B4440-00/source/Rez.mcgen" id="33" lineNum="32" parent="globals/Rez/Layouts" pc="268442275" symbol="LoggerLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B4440-00/source/Rez.mcgen" id="33" lineNum="34" parent="globals/Rez/Layouts" pc="268442370" symbol="LoggerLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B4440-00/source/Rez.mcgen" id="33" lineNum="36" parent="globals/Rez/Layouts" pc="268442465" symbol="LoggerLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B4440-00/source/Rez.mcgen" id="33" lineNum="38" parent="globals/Rez/Layouts" pc="268442560" symbol="LoggerLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B4440-00/source/Rez.mcgen" id="33" lineNum="40" parent="globals/Rez/Layouts" pc="268442655" symbol="LoggerLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B4440-00/source/Rez.mcgen" id="34" lineNum="105" parent="globals/Rez/Layouts" pc="268442715" symbol="LargeLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B4440-00/source/Rez.mcgen" id="34" lineNum="106" parent="globals/Rez/Layouts" pc="268442726" symbol="LargeLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B4440-00/source/Rez.mcgen" id="34" lineNum="108" parent="globals/Rez/Layouts" pc="268442735" symbol="LargeLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B4440-00/source/Rez.mcgen" id="34" lineNum="110" parent="globals/Rez/Layouts" pc="268442744" symbol="LargeLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B4440-00/source/Rez.mcgen" id="34" lineNum="112" parent="globals/Rez/Layouts" pc="268442768" symbol="LargeLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B4440-00/source/Rez.mcgen" id="34" lineNum="114" parent="globals/Rez/Layouts" pc="268442888" symbol="LargeLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B4440-00/source/Rez.mcgen" id="34" lineNum="116" parent="globals/Rez/Layouts" pc="268442983" symbol="LargeLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B4440-00/source/Rez.mcgen" id="34" lineNum="118" parent="globals/Rez/Layouts" pc="268443103" symbol="LargeLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B4440-00/source/Rez.mcgen" id="34" lineNum="120" parent="globals/Rez/Layouts" pc="268443223" symbol="LargeLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B4440-00/source/Rez.mcgen" id="34" lineNum="122" parent="globals/Rez/Layouts" pc="268443343" symbol="LargeLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B4440-00/source/Rez.mcgen" id="34" lineNum="124" parent="globals/Rez/Layouts" pc="268443463" symbol="LargeLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B4440-00/source/Rez.mcgen" id="34" lineNum="126" parent="globals/Rez/Layouts" pc="268443583" symbol="LargeLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B4440-00/source/Rez.mcgen" id="34" lineNum="128" parent="globals/Rez/Layouts" pc="268443703" symbol="LargeLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B4440-00/source/Rez.mcgen" id="34" lineNum="130" parent="globals/Rez/Layouts" pc="268443798" symbol="LargeLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B4440-00/source/Rez.mcgen" id="34" lineNum="132" parent="globals/Rez/Layouts" pc="268443893" symbol="LargeLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B4440-00/source/Rez.mcgen" id="34" lineNum="134" parent="globals/Rez/Layouts" pc="268443988" symbol="LargeLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B4440-00/source/Rez.mcgen" id="34" lineNum="136" parent="globals/Rez/Layouts" pc="268444083" symbol="LargeLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B4440-00/source/Rez.mcgen" id="34" lineNum="138" parent="globals/Rez/Layouts" pc="268444178" symbol="LargeLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B4440-00/source/Rez.mcgen" id="34" lineNum="140" parent="globals/Rez/Layouts" pc="268444273" symbol="LargeLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B4440-00/source/Rez.mcgen" id="35" lineNum="81" parent="globals/Rez/Layouts" pc="268444353" symbol="SmallLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B4440-00/source/Rez.mcgen" id="35" lineNum="82" parent="globals/Rez/Layouts" pc="268444364" symbol="SmallLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B4440-00/source/Rez.mcgen" id="35" lineNum="84" parent="globals/Rez/Layouts" pc="268444373" symbol="SmallLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B4440-00/source/Rez.mcgen" id="35" lineNum="86" parent="globals/Rez/Layouts" pc="268444382" symbol="SmallLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B4440-00/source/Rez.mcgen" id="35" lineNum="88" parent="globals/Rez/Layouts" pc="268444406" symbol="SmallLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B4440-00/source/Rez.mcgen" id="35" lineNum="90" parent="globals/Rez/Layouts" pc="268444526" symbol="SmallLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B4440-00/source/Rez.mcgen" id="35" lineNum="92" parent="globals/Rez/Layouts" pc="268444621" symbol="SmallLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B4440-00/source/Rez.mcgen" id="35" lineNum="94" parent="globals/Rez/Layouts" pc="268444741" symbol="SmallLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B4440-00/source/Rez.mcgen" id="35" lineNum="96" parent="globals/Rez/Layouts" pc="268444861" symbol="SmallLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B4440-00/source/Rez.mcgen" id="35" lineNum="98" parent="globals/Rez/Layouts" pc="268444956" symbol="SmallLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B4440-00/source/Rez.mcgen" id="35" lineNum="100" parent="globals/Rez/Layouts" pc="268445051" symbol="SmallLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B4440-00/source/Rez.mcgen" id="35" lineNum="102" parent="globals/Rez/Layouts" pc="268445146" symbol="SmallLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B4440-00/source/Rez.mcgen" id="36" lineNum="43" parent="globals/Rez/Layouts" pc="268445191" symbol="WideLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B4440-00/source/Rez.mcgen" id="36" lineNum="44" parent="globals/Rez/Layouts" pc="268445202" symbol="WideLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B4440-00/source/Rez.mcgen" id="36" lineNum="46" parent="globals/Rez/Layouts" pc="268445211" symbol="WideLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B4440-00/source/Rez.mcgen" id="36" lineNum="48" parent="globals/Rez/Layouts" pc="268445220" symbol="WideLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B4440-00/source/Rez.mcgen" id="36" lineNum="50" parent="globals/Rez/Layouts" pc="268445244" symbol="WideLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B4440-00/source/Rez.mcgen" id="36" lineNum="52" parent="globals/Rez/Layouts" pc="268445364" symbol="WideLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B4440-00/source/Rez.mcgen" id="36" lineNum="54" parent="globals/Rez/Layouts" pc="268445459" symbol="WideLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B4440-00/source/Rez.mcgen" id="36" lineNum="56" parent="globals/Rez/Layouts" pc="268445579" symbol="WideLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B4440-00/source/Rez.mcgen" id="36" lineNum="58" parent="globals/Rez/Layouts" pc="268445699" symbol="WideLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B4440-00/source/Rez.mcgen" id="36" lineNum="60" parent="globals/Rez/Layouts" pc="268445819" symbol="WideLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B4440-00/source/Rez.mcgen" id="36" lineNum="62" parent="globals/Rez/Layouts" pc="268445939" symbol="WideLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B4440-00/source/Rez.mcgen" id="36" lineNum="64" parent="globals/Rez/Layouts" pc="268446059" symbol="WideLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B4440-00/source/Rez.mcgen" id="36" lineNum="66" parent="globals/Rez/Layouts" pc="268446179" symbol="WideLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B4440-00/source/Rez.mcgen" id="36" lineNum="68" parent="globals/Rez/Layouts" pc="268446274" symbol="WideLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B4440-00/source/Rez.mcgen" id="36" lineNum="70" parent="globals/Rez/Layouts" pc="268446369" symbol="WideLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B4440-00/source/Rez.mcgen" id="36" lineNum="72" parent="globals/Rez/Layouts" pc="268446464" symbol="WideLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B4440-00/source/Rez.mcgen" id="36" lineNum="74" parent="globals/Rez/Layouts" pc="268446559" symbol="WideLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B4440-00/source/Rez.mcgen" id="36" lineNum="76" parent="globals/Rez/Layouts" pc="268446654" symbol="WideLayout"/>
+<entry filename="/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/bin/gen/006-B4440-00/source/Rez.mcgen" id="36" lineNum="78" parent="globals/Rez/Layouts" pc="268446749" symbol="WideLayout"/>
 </pcToLineNum>
 <symbolTable>
 <entry id="8388639" module="true" symbol="Graphics"/>
@@ -562,174 +562,174 @@
 <entry endPc="268437676" name="medianAlt" stackId="5" startPc="268436848"/>
 <entry endPc="268437676" name="pctGrade" stackId="6" startPc="268436848"/>
 <entry endPc="268437676" name="value" stackId="7" startPc="268436848"/>
-<entry arg="true" endPc="268437924" name="dc" stackId="1" startPc="268437677"/>
-<entry endPc="268437923" name="width_view" stackId="2" startPc="268437680"/>
-<entry endPc="268437923" name="height_view" stackId="3" startPc="268437680"/>
-<entry endPc="268437923" name="width_device" stackId="4" startPc="268437680"/>
-<entry endPc="268437923" name="height_device" stackId="5" startPc="268437680"/>
-<entry arg="true" endPc="268438275" name="dc" stackId="1" startPc="268437925"/>
-<entry endPc="268438274" name="value_curr_grade" stackId="2" startPc="268437928"/>
-<entry endPc="268438274" name="value_max_grade" stackId="3" startPc="268437928"/>
-<entry endPc="268438274" name="value_light" stackId="4" startPc="268437928"/>
-<entry endPc="268438274" name="value_steep" stackId="5" startPc="268437928"/>
-<entry endPc="268438328" name="i" stackId="1" startPc="268438306"/>
-<entry arg="true" endPc="268438438" name="progress" stackId="1" startPc="268438355"/>
-<entry endPc="268438438" name="bar" stackId="2" startPc="268438358"/>
-<entry endPc="268438438" name="numBlocks" stackId="3" startPc="268438358"/>
-<entry endPc="268438435" name="i" stackId="4" startPc="268438395"/>
-<entry arg="true" endPc="268438925" name="samples" stackId="1" startPc="268438439"/>
-<entry endPc="268438924" name="xVals" stackId="2" startPc="268438442"/>
-<entry endPc="268438924" name="dist" stackId="3" startPc="268438442"/>
-<entry endPc="268438518" name="i" stackId="4" startPc="268438468"/>
-<entry endPc="268438508" name="idx" stackId="5" startPc="268438468"/>
-<entry endPc="268438924" name="sumX" stackId="6" startPc="268438442"/>
-<entry endPc="268438924" name="sumY" stackId="7" startPc="268438442"/>
-<entry endPc="268438584" name="i" stackId="8" startPc="268438536"/>
-<entry endPc="268438574" name="idx" stackId="9" startPc="268438536"/>
-<entry endPc="268438924" name="meanX" stackId="10" startPc="268438442"/>
-<entry endPc="268438924" name="meanY" stackId="11" startPc="268438442"/>
-<entry endPc="268438924" name="covXY" stackId="12" startPc="268438442"/>
-<entry endPc="268438924" name="varX" stackId="13" startPc="268438442"/>
-<entry endPc="268438684" name="i" stackId="14" startPc="268438616"/>
-<entry endPc="268438674" name="idx" stackId="15" startPc="268438616"/>
-<entry endPc="268438674" name="dx" stackId="16" startPc="268438616"/>
-<entry endPc="268438674" name="dy" stackId="17" startPc="268438616"/>
-<entry endPc="268438924" name="sse" stackId="18" startPc="268438442"/>
-<entry endPc="268438793" name="i" stackId="19" startPc="268438722"/>
-<entry endPc="268438783" name="idx" stackId="20" startPc="268438722"/>
-<entry endPc="268438783" name="measAltDelta" stackId="21" startPc="268438722"/>
-<entry endPc="268438783" name="AltDelta" stackId="22" startPc="268438722"/>
-<entry endPc="268438783" name="res" stackId="23" startPc="268438722"/>
-<entry endPc="268438843" name="sem" stackId="24" startPc="268438801"/>
-<entry arg="true" endPc="268439015" name="dc" stackId="1" startPc="268438926"/>
-<entry endPc="268439014" name="labels" stackId="2" startPc="268438929"/>
-<entry endPc="268439014" name="i" stackId="3" startPc="268438952"/>
-<entry endPc="268439004" name="label" stackId="4" startPc="268438952"/>
-<entry endPc="268439004" name="labelDrawable" stackId="5" startPc="268438952"/>
-<entry arg="true" endPc="268439085" name="dc" stackId="1" startPc="268439016"/>
-<entry endPc="268439084" name="statusLabel" stackId="2" startPc="268439019"/>
-<entry arg="true" endPc="268439174" name="altitude" stackId="1" startPc="268439086"/>
-<entry endPc="268439174" name="dh" stackId="2" startPc="268439089"/>
-<entry endPc="268439174" name="grade_raw" stackId="3" startPc="268439089"/>
-<entry endPc="268439174" name="alpha" stackId="4" startPc="268439089"/>
-<entry endPc="268439174" name="ema_grade" stackId="5" startPc="268439089"/>
-<entry endPc="268439277" name="c" stackId="1" startPc="268439178"/>
-<entry arg="true" endPc="268439400" name="a" stackId="1" startPc="268439320"/>
-<entry arg="true" endPc="268439400" name="b" stackId="2" startPc="268439320"/>
-<entry arg="true" endPc="268439400" name="c" stackId="3" startPc="268439320"/>
-<entry endPc="268440154" name="i" stackId="1" startPc="268440126"/>
-<entry arg="true" endPc="268441047" name="dc" stackId="1" startPc="268440196"/>
-<entry endPc="268441046" name="width" stackId="2" startPc="268440199"/>
-<entry endPc="268441046" name="height" stackId="3" startPc="268440199"/>
-<entry endPc="268441046" name="margin" stackId="4" startPc="268440199"/>
-<entry endPc="268441046" name="plotTop" stackId="5" startPc="268440199"/>
-<entry endPc="268441046" name="plotHeight" stackId="6" startPc="268440199"/>
-<entry endPc="268441046" name="plotBottom" stackId="7" startPc="268440199"/>
-<entry endPc="268441046" name="plotLeft" stackId="8" startPc="268440199"/>
-<entry endPc="268441046" name="plotRight" stackId="9" startPc="268440199"/>
-<entry endPc="268441046" name="plotWidth" stackId="10" startPc="268440199"/>
-<entry endPc="268441046" name="xVals" stackId="11" startPc="268440199"/>
-<entry endPc="268441046" name="totalDist" stackId="12" startPc="268440199"/>
-<entry endPc="268441046" name="n" stackId="13" startPc="268440199"/>
-<entry endPc="268440353" name="i" stackId="14" startPc="268440284"/>
-<entry endPc="268441046" name="minX" stackId="15" startPc="268440199"/>
-<entry endPc="268441046" name="maxX" stackId="16" startPc="268440199"/>
-<entry endPc="268441046" name="sumX" stackId="17" startPc="268440199"/>
-<entry endPc="268441046" name="sumY" stackId="18" startPc="268440199"/>
-<entry endPc="268440445" name="i" stackId="19" startPc="268440407"/>
-<entry endPc="268441046" name="meanX" stackId="20" startPc="268440199"/>
-<entry endPc="268441046" name="meanY" stackId="21" startPc="268440199"/>
-<entry endPc="268441046" name="maxDeltaH" stackId="22" startPc="268440199"/>
-<entry endPc="268441046" name="maxAlt" stackId="23" startPc="268440199"/>
-<entry endPc="268441046" name="minAlt" stackId="24" startPc="268440199"/>
-<entry endPc="268441046" name="xrange" stackId="25" startPc="268440199"/>
-<entry endPc="268441046" name="altrange" stackId="26" startPc="268440199"/>
-<entry endPc="268440798" name="i" stackId="27" startPc="268440555"/>
-<entry endPc="268440788" name="idx" stackId="28" startPc="268440555"/>
-<entry endPc="268440788" name="idx_p1" stackId="29" startPc="268440555"/>
-<entry endPc="268440788" name="x1" stackId="30" startPc="268440555"/>
-<entry endPc="268440788" name="x2" stackId="31" startPc="268440555"/>
-<entry endPc="268440788" name="y1" stackId="32" startPc="268440555"/>
-<entry endPc="268440788" name="y2" stackId="33" startPc="268440555"/>
-<entry endPc="268441046" name="slope" stackId="34" startPc="268440199"/>
-<entry endPc="268441046" name="intercept" stackId="35" startPc="268440199"/>
-<entry endPc="268441000" name="i" stackId="36" startPc="268440859"/>
-<entry endPc="268440990" name="x1" stackId="37" startPc="268440859"/>
-<entry endPc="268440990" name="x2" stackId="38" startPc="268440859"/>
-<entry endPc="268440990" name="fitY1" stackId="39" startPc="268440859"/>
-<entry endPc="268440990" name="fitY2" stackId="40" startPc="268440859"/>
-<entry endPc="268440990" name="y1" stackId="41" startPc="268440859"/>
-<entry endPc="268440990" name="y2" stackId="42" startPc="268440859"/>
-<entry arg="true" endPc="268441215" name="dc" stackId="1" startPc="268441048"/>
-<entry endPc="268441214" name="background" stackId="2" startPc="268441051"/>
-<entry arg="true" endPc="268441419" name="dc" stackId="1" startPc="268441216"/>
-<entry endPc="268441418" name="value_vam" stackId="2" startPc="268441219"/>
-<entry endPc="268441418" name="value_vam_avg" stackId="3" startPc="268441219"/>
-<entry endPc="268441497" name="str" stackId="1" startPc="268441423"/>
-<entry endPc="268441484" name="i" stackId="2" startPc="268441441"/>
-<entry arg="true" endPc="268442709" name="dc" stackId="1" startPc="268441498"/>
-<entry endPc="268442709" name="rez_cmp_local_var_dc_getHeight" stackId="2" startPc="268441509"/>
-<entry endPc="268442709" name="rez_cmp_local_var_dc_getWidth" stackId="3" startPc="268441509"/>
-<entry endPc="268442709" name="rez_cmp_local_custom_drawable_11939594661139614796" stackId="4" startPc="268441509"/>
-<entry endPc="268442709" name="rez_cmp_local_text_label_data_field_name" stackId="5" startPc="268441509"/>
-<entry endPc="268442709" name="rez_cmp_local_text_label_data_field_version" stackId="6" startPc="268441509"/>
-<entry endPc="268442709" name="rez_cmp_local_text_label_curr_grade" stackId="7" startPc="268441509"/>
-<entry endPc="268442709" name="rez_cmp_local_text_label_max_grade" stackId="8" startPc="268441509"/>
-<entry endPc="268442709" name="rez_cmp_local_text_label_vam" stackId="9" startPc="268441509"/>
-<entry endPc="268442709" name="rez_cmp_local_text_label_vam_avg" stackId="10" startPc="268441509"/>
-<entry endPc="268442709" name="rez_cmp_local_text_value_curr_grade" stackId="11" startPc="268441509"/>
-<entry endPc="268442709" name="rez_cmp_local_text_value_max_grade" stackId="12" startPc="268441509"/>
-<entry endPc="268442709" name="rez_cmp_local_text_value_vam" stackId="13" startPc="268441509"/>
-<entry endPc="268442709" name="rez_cmp_local_text_value_vam_avg" stackId="14" startPc="268441509"/>
-<entry arg="true" endPc="268444347" name="dc" stackId="1" startPc="268442710"/>
-<entry endPc="268444347" name="rez_cmp_local_var_dc_getHeight" stackId="2" startPc="268442721"/>
-<entry endPc="268444347" name="rez_cmp_local_var_dc_getWidth" stackId="3" startPc="268442721"/>
-<entry endPc="268444347" name="rez_cmp_local_custom_drawable_16380678501279751870" stackId="4" startPc="268442721"/>
-<entry endPc="268444347" name="rez_cmp_local_text_label_data_field_version" stackId="5" startPc="268442721"/>
-<entry endPc="268444347" name="rez_cmp_local_text_label_status" stackId="6" startPc="268442721"/>
-<entry endPc="268444347" name="rez_cmp_local_text_label_curr_grade" stackId="7" startPc="268442721"/>
-<entry endPc="268444347" name="rez_cmp_local_text_label_max_grade" stackId="8" startPc="268442721"/>
-<entry endPc="268444347" name="rez_cmp_local_text_label_light" stackId="9" startPc="268442721"/>
-<entry endPc="268444347" name="rez_cmp_local_text_label_steep" stackId="10" startPc="268442721"/>
-<entry endPc="268444347" name="rez_cmp_local_text_label_vam" stackId="11" startPc="268442721"/>
-<entry endPc="268444347" name="rez_cmp_local_text_label_vam_avg" stackId="12" startPc="268442721"/>
-<entry endPc="268444347" name="rez_cmp_local_text_value_curr_grade" stackId="13" startPc="268442721"/>
-<entry endPc="268444347" name="rez_cmp_local_text_value_max_grade" stackId="14" startPc="268442721"/>
-<entry endPc="268444347" name="rez_cmp_local_text_value_light" stackId="15" startPc="268442721"/>
-<entry endPc="268444347" name="rez_cmp_local_text_value_steep" stackId="16" startPc="268442721"/>
-<entry endPc="268444347" name="rez_cmp_local_text_value_vam" stackId="17" startPc="268442721"/>
-<entry endPc="268444347" name="rez_cmp_local_text_value_vam_avg" stackId="18" startPc="268442721"/>
-<entry arg="true" endPc="268445185" name="dc" stackId="1" startPc="268444348"/>
-<entry endPc="268445185" name="rez_cmp_local_var_dc_getHeight" stackId="2" startPc="268444359"/>
-<entry endPc="268445185" name="rez_cmp_local_var_dc_getWidth" stackId="3" startPc="268444359"/>
-<entry endPc="268445185" name="rez_cmp_local_custom_drawable_11824933295158922413" stackId="4" startPc="268444359"/>
-<entry endPc="268445185" name="rez_cmp_local_text_label_data_field_version" stackId="5" startPc="268444359"/>
-<entry endPc="268445185" name="rez_cmp_local_text_label_status" stackId="6" startPc="268444359"/>
-<entry endPc="268445185" name="rez_cmp_local_text_label_vam" stackId="7" startPc="268444359"/>
-<entry endPc="268445185" name="rez_cmp_local_text_label_vam_avg" stackId="8" startPc="268444359"/>
-<entry endPc="268445185" name="rez_cmp_local_text_value_curr_grade" stackId="9" startPc="268444359"/>
-<entry endPc="268445185" name="rez_cmp_local_text_value_vam" stackId="10" startPc="268444359"/>
-<entry endPc="268445185" name="rez_cmp_local_text_value_vam_avg" stackId="11" startPc="268444359"/>
-<entry arg="true" endPc="268446823" name="dc" stackId="1" startPc="268445186"/>
-<entry endPc="268446823" name="rez_cmp_local_var_dc_getHeight" stackId="2" startPc="268445197"/>
-<entry endPc="268446823" name="rez_cmp_local_var_dc_getWidth" stackId="3" startPc="268445197"/>
-<entry endPc="268446823" name="rez_cmp_local_custom_drawable_83741574912206153191" stackId="4" startPc="268445197"/>
-<entry endPc="268446823" name="rez_cmp_local_text_label_data_field_version" stackId="5" startPc="268445197"/>
-<entry endPc="268446823" name="rez_cmp_local_text_label_status" stackId="6" startPc="268445197"/>
-<entry endPc="268446823" name="rez_cmp_local_text_label_curr_grade" stackId="7" startPc="268445197"/>
-<entry endPc="268446823" name="rez_cmp_local_text_label_max_grade" stackId="8" startPc="268445197"/>
-<entry endPc="268446823" name="rez_cmp_local_text_label_light" stackId="9" startPc="268445197"/>
-<entry endPc="268446823" name="rez_cmp_local_text_label_steep" stackId="10" startPc="268445197"/>
-<entry endPc="268446823" name="rez_cmp_local_text_label_vam" stackId="11" startPc="268445197"/>
-<entry endPc="268446823" name="rez_cmp_local_text_label_vam_avg" stackId="12" startPc="268445197"/>
-<entry endPc="268446823" name="rez_cmp_local_text_value_curr_grade" stackId="13" startPc="268445197"/>
-<entry endPc="268446823" name="rez_cmp_local_text_value_max_grade" stackId="14" startPc="268445197"/>
-<entry endPc="268446823" name="rez_cmp_local_text_value_light" stackId="15" startPc="268445197"/>
-<entry endPc="268446823" name="rez_cmp_local_text_value_steep" stackId="16" startPc="268445197"/>
-<entry endPc="268446823" name="rez_cmp_local_text_value_vam" stackId="17" startPc="268445197"/>
-<entry endPc="268446823" name="rez_cmp_local_text_value_vam_avg" stackId="18" startPc="268445197"/>
+<entry arg="true" endPc="268437929" name="dc" stackId="1" startPc="268437677"/>
+<entry endPc="268437928" name="width_view" stackId="2" startPc="268437680"/>
+<entry endPc="268437928" name="height_view" stackId="3" startPc="268437680"/>
+<entry endPc="268437928" name="width_device" stackId="4" startPc="268437680"/>
+<entry endPc="268437928" name="height_device" stackId="5" startPc="268437680"/>
+<entry arg="true" endPc="268438280" name="dc" stackId="1" startPc="268437930"/>
+<entry endPc="268438279" name="value_curr_grade" stackId="2" startPc="268437933"/>
+<entry endPc="268438279" name="value_max_grade" stackId="3" startPc="268437933"/>
+<entry endPc="268438279" name="value_light" stackId="4" startPc="268437933"/>
+<entry endPc="268438279" name="value_steep" stackId="5" startPc="268437933"/>
+<entry endPc="268438333" name="i" stackId="1" startPc="268438311"/>
+<entry arg="true" endPc="268438443" name="progress" stackId="1" startPc="268438360"/>
+<entry endPc="268438443" name="bar" stackId="2" startPc="268438363"/>
+<entry endPc="268438443" name="numBlocks" stackId="3" startPc="268438363"/>
+<entry endPc="268438440" name="i" stackId="4" startPc="268438400"/>
+<entry arg="true" endPc="268438930" name="samples" stackId="1" startPc="268438444"/>
+<entry endPc="268438929" name="xVals" stackId="2" startPc="268438447"/>
+<entry endPc="268438929" name="dist" stackId="3" startPc="268438447"/>
+<entry endPc="268438523" name="i" stackId="4" startPc="268438473"/>
+<entry endPc="268438513" name="idx" stackId="5" startPc="268438473"/>
+<entry endPc="268438929" name="sumX" stackId="6" startPc="268438447"/>
+<entry endPc="268438929" name="sumY" stackId="7" startPc="268438447"/>
+<entry endPc="268438589" name="i" stackId="8" startPc="268438541"/>
+<entry endPc="268438579" name="idx" stackId="9" startPc="268438541"/>
+<entry endPc="268438929" name="meanX" stackId="10" startPc="268438447"/>
+<entry endPc="268438929" name="meanY" stackId="11" startPc="268438447"/>
+<entry endPc="268438929" name="covXY" stackId="12" startPc="268438447"/>
+<entry endPc="268438929" name="varX" stackId="13" startPc="268438447"/>
+<entry endPc="268438689" name="i" stackId="14" startPc="268438621"/>
+<entry endPc="268438679" name="idx" stackId="15" startPc="268438621"/>
+<entry endPc="268438679" name="dx" stackId="16" startPc="268438621"/>
+<entry endPc="268438679" name="dy" stackId="17" startPc="268438621"/>
+<entry endPc="268438929" name="sse" stackId="18" startPc="268438447"/>
+<entry endPc="268438798" name="i" stackId="19" startPc="268438727"/>
+<entry endPc="268438788" name="idx" stackId="20" startPc="268438727"/>
+<entry endPc="268438788" name="measAltDelta" stackId="21" startPc="268438727"/>
+<entry endPc="268438788" name="AltDelta" stackId="22" startPc="268438727"/>
+<entry endPc="268438788" name="res" stackId="23" startPc="268438727"/>
+<entry endPc="268438848" name="sem" stackId="24" startPc="268438806"/>
+<entry arg="true" endPc="268439020" name="dc" stackId="1" startPc="268438931"/>
+<entry endPc="268439019" name="labels" stackId="2" startPc="268438934"/>
+<entry endPc="268439019" name="i" stackId="3" startPc="268438957"/>
+<entry endPc="268439009" name="label" stackId="4" startPc="268438957"/>
+<entry endPc="268439009" name="labelDrawable" stackId="5" startPc="268438957"/>
+<entry arg="true" endPc="268439090" name="dc" stackId="1" startPc="268439021"/>
+<entry endPc="268439089" name="statusLabel" stackId="2" startPc="268439024"/>
+<entry arg="true" endPc="268439179" name="altitude" stackId="1" startPc="268439091"/>
+<entry endPc="268439179" name="dh" stackId="2" startPc="268439094"/>
+<entry endPc="268439179" name="grade_raw" stackId="3" startPc="268439094"/>
+<entry endPc="268439179" name="alpha" stackId="4" startPc="268439094"/>
+<entry endPc="268439179" name="ema_grade" stackId="5" startPc="268439094"/>
+<entry endPc="268439282" name="c" stackId="1" startPc="268439183"/>
+<entry arg="true" endPc="268439405" name="a" stackId="1" startPc="268439325"/>
+<entry arg="true" endPc="268439405" name="b" stackId="2" startPc="268439325"/>
+<entry arg="true" endPc="268439405" name="c" stackId="3" startPc="268439325"/>
+<entry endPc="268440159" name="i" stackId="1" startPc="268440131"/>
+<entry arg="true" endPc="268441052" name="dc" stackId="1" startPc="268440201"/>
+<entry endPc="268441051" name="width" stackId="2" startPc="268440204"/>
+<entry endPc="268441051" name="height" stackId="3" startPc="268440204"/>
+<entry endPc="268441051" name="margin" stackId="4" startPc="268440204"/>
+<entry endPc="268441051" name="plotTop" stackId="5" startPc="268440204"/>
+<entry endPc="268441051" name="plotHeight" stackId="6" startPc="268440204"/>
+<entry endPc="268441051" name="plotBottom" stackId="7" startPc="268440204"/>
+<entry endPc="268441051" name="plotLeft" stackId="8" startPc="268440204"/>
+<entry endPc="268441051" name="plotRight" stackId="9" startPc="268440204"/>
+<entry endPc="268441051" name="plotWidth" stackId="10" startPc="268440204"/>
+<entry endPc="268441051" name="xVals" stackId="11" startPc="268440204"/>
+<entry endPc="268441051" name="totalDist" stackId="12" startPc="268440204"/>
+<entry endPc="268441051" name="n" stackId="13" startPc="268440204"/>
+<entry endPc="268440358" name="i" stackId="14" startPc="268440289"/>
+<entry endPc="268441051" name="minX" stackId="15" startPc="268440204"/>
+<entry endPc="268441051" name="maxX" stackId="16" startPc="268440204"/>
+<entry endPc="268441051" name="sumX" stackId="17" startPc="268440204"/>
+<entry endPc="268441051" name="sumY" stackId="18" startPc="268440204"/>
+<entry endPc="268440450" name="i" stackId="19" startPc="268440412"/>
+<entry endPc="268441051" name="meanX" stackId="20" startPc="268440204"/>
+<entry endPc="268441051" name="meanY" stackId="21" startPc="268440204"/>
+<entry endPc="268441051" name="maxDeltaH" stackId="22" startPc="268440204"/>
+<entry endPc="268441051" name="maxAlt" stackId="23" startPc="268440204"/>
+<entry endPc="268441051" name="minAlt" stackId="24" startPc="268440204"/>
+<entry endPc="268441051" name="xrange" stackId="25" startPc="268440204"/>
+<entry endPc="268441051" name="altrange" stackId="26" startPc="268440204"/>
+<entry endPc="268440803" name="i" stackId="27" startPc="268440560"/>
+<entry endPc="268440793" name="idx" stackId="28" startPc="268440560"/>
+<entry endPc="268440793" name="idx_p1" stackId="29" startPc="268440560"/>
+<entry endPc="268440793" name="x1" stackId="30" startPc="268440560"/>
+<entry endPc="268440793" name="x2" stackId="31" startPc="268440560"/>
+<entry endPc="268440793" name="y1" stackId="32" startPc="268440560"/>
+<entry endPc="268440793" name="y2" stackId="33" startPc="268440560"/>
+<entry endPc="268441051" name="slope" stackId="34" startPc="268440204"/>
+<entry endPc="268441051" name="intercept" stackId="35" startPc="268440204"/>
+<entry endPc="268441005" name="i" stackId="36" startPc="268440864"/>
+<entry endPc="268440995" name="x1" stackId="37" startPc="268440864"/>
+<entry endPc="268440995" name="x2" stackId="38" startPc="268440864"/>
+<entry endPc="268440995" name="fitY1" stackId="39" startPc="268440864"/>
+<entry endPc="268440995" name="fitY2" stackId="40" startPc="268440864"/>
+<entry endPc="268440995" name="y1" stackId="41" startPc="268440864"/>
+<entry endPc="268440995" name="y2" stackId="42" startPc="268440864"/>
+<entry arg="true" endPc="268441220" name="dc" stackId="1" startPc="268441053"/>
+<entry endPc="268441219" name="background" stackId="2" startPc="268441056"/>
+<entry arg="true" endPc="268441424" name="dc" stackId="1" startPc="268441221"/>
+<entry endPc="268441423" name="value_vam" stackId="2" startPc="268441224"/>
+<entry endPc="268441423" name="value_vam_avg" stackId="3" startPc="268441224"/>
+<entry endPc="268441502" name="str" stackId="1" startPc="268441428"/>
+<entry endPc="268441489" name="i" stackId="2" startPc="268441446"/>
+<entry arg="true" endPc="268442714" name="dc" stackId="1" startPc="268441503"/>
+<entry endPc="268442714" name="rez_cmp_local_var_dc_getHeight" stackId="2" startPc="268441514"/>
+<entry endPc="268442714" name="rez_cmp_local_var_dc_getWidth" stackId="3" startPc="268441514"/>
+<entry endPc="268442714" name="rez_cmp_local_custom_drawable_11939594661139614796" stackId="4" startPc="268441514"/>
+<entry endPc="268442714" name="rez_cmp_local_text_label_data_field_name" stackId="5" startPc="268441514"/>
+<entry endPc="268442714" name="rez_cmp_local_text_label_data_field_version" stackId="6" startPc="268441514"/>
+<entry endPc="268442714" name="rez_cmp_local_text_label_curr_grade" stackId="7" startPc="268441514"/>
+<entry endPc="268442714" name="rez_cmp_local_text_label_max_grade" stackId="8" startPc="268441514"/>
+<entry endPc="268442714" name="rez_cmp_local_text_label_vam" stackId="9" startPc="268441514"/>
+<entry endPc="268442714" name="rez_cmp_local_text_label_vam_avg" stackId="10" startPc="268441514"/>
+<entry endPc="268442714" name="rez_cmp_local_text_value_curr_grade" stackId="11" startPc="268441514"/>
+<entry endPc="268442714" name="rez_cmp_local_text_value_max_grade" stackId="12" startPc="268441514"/>
+<entry endPc="268442714" name="rez_cmp_local_text_value_vam" stackId="13" startPc="268441514"/>
+<entry endPc="268442714" name="rez_cmp_local_text_value_vam_avg" stackId="14" startPc="268441514"/>
+<entry arg="true" endPc="268444352" name="dc" stackId="1" startPc="268442715"/>
+<entry endPc="268444352" name="rez_cmp_local_var_dc_getHeight" stackId="2" startPc="268442726"/>
+<entry endPc="268444352" name="rez_cmp_local_var_dc_getWidth" stackId="3" startPc="268442726"/>
+<entry endPc="268444352" name="rez_cmp_local_custom_drawable_16380678501279751870" stackId="4" startPc="268442726"/>
+<entry endPc="268444352" name="rez_cmp_local_text_label_data_field_version" stackId="5" startPc="268442726"/>
+<entry endPc="268444352" name="rez_cmp_local_text_label_status" stackId="6" startPc="268442726"/>
+<entry endPc="268444352" name="rez_cmp_local_text_label_curr_grade" stackId="7" startPc="268442726"/>
+<entry endPc="268444352" name="rez_cmp_local_text_label_max_grade" stackId="8" startPc="268442726"/>
+<entry endPc="268444352" name="rez_cmp_local_text_label_light" stackId="9" startPc="268442726"/>
+<entry endPc="268444352" name="rez_cmp_local_text_label_steep" stackId="10" startPc="268442726"/>
+<entry endPc="268444352" name="rez_cmp_local_text_label_vam" stackId="11" startPc="268442726"/>
+<entry endPc="268444352" name="rez_cmp_local_text_label_vam_avg" stackId="12" startPc="268442726"/>
+<entry endPc="268444352" name="rez_cmp_local_text_value_curr_grade" stackId="13" startPc="268442726"/>
+<entry endPc="268444352" name="rez_cmp_local_text_value_max_grade" stackId="14" startPc="268442726"/>
+<entry endPc="268444352" name="rez_cmp_local_text_value_light" stackId="15" startPc="268442726"/>
+<entry endPc="268444352" name="rez_cmp_local_text_value_steep" stackId="16" startPc="268442726"/>
+<entry endPc="268444352" name="rez_cmp_local_text_value_vam" stackId="17" startPc="268442726"/>
+<entry endPc="268444352" name="rez_cmp_local_text_value_vam_avg" stackId="18" startPc="268442726"/>
+<entry arg="true" endPc="268445190" name="dc" stackId="1" startPc="268444353"/>
+<entry endPc="268445190" name="rez_cmp_local_var_dc_getHeight" stackId="2" startPc="268444364"/>
+<entry endPc="268445190" name="rez_cmp_local_var_dc_getWidth" stackId="3" startPc="268444364"/>
+<entry endPc="268445190" name="rez_cmp_local_custom_drawable_11824933295158922413" stackId="4" startPc="268444364"/>
+<entry endPc="268445190" name="rez_cmp_local_text_label_data_field_version" stackId="5" startPc="268444364"/>
+<entry endPc="268445190" name="rez_cmp_local_text_label_status" stackId="6" startPc="268444364"/>
+<entry endPc="268445190" name="rez_cmp_local_text_label_vam" stackId="7" startPc="268444364"/>
+<entry endPc="268445190" name="rez_cmp_local_text_label_vam_avg" stackId="8" startPc="268444364"/>
+<entry endPc="268445190" name="rez_cmp_local_text_value_curr_grade" stackId="9" startPc="268444364"/>
+<entry endPc="268445190" name="rez_cmp_local_text_value_vam" stackId="10" startPc="268444364"/>
+<entry endPc="268445190" name="rez_cmp_local_text_value_vam_avg" stackId="11" startPc="268444364"/>
+<entry arg="true" endPc="268446828" name="dc" stackId="1" startPc="268445191"/>
+<entry endPc="268446828" name="rez_cmp_local_var_dc_getHeight" stackId="2" startPc="268445202"/>
+<entry endPc="268446828" name="rez_cmp_local_var_dc_getWidth" stackId="3" startPc="268445202"/>
+<entry endPc="268446828" name="rez_cmp_local_custom_drawable_83741574912206153191" stackId="4" startPc="268445202"/>
+<entry endPc="268446828" name="rez_cmp_local_text_label_data_field_version" stackId="5" startPc="268445202"/>
+<entry endPc="268446828" name="rez_cmp_local_text_label_status" stackId="6" startPc="268445202"/>
+<entry endPc="268446828" name="rez_cmp_local_text_label_curr_grade" stackId="7" startPc="268445202"/>
+<entry endPc="268446828" name="rez_cmp_local_text_label_max_grade" stackId="8" startPc="268445202"/>
+<entry endPc="268446828" name="rez_cmp_local_text_label_light" stackId="9" startPc="268445202"/>
+<entry endPc="268446828" name="rez_cmp_local_text_label_steep" stackId="10" startPc="268445202"/>
+<entry endPc="268446828" name="rez_cmp_local_text_label_vam" stackId="11" startPc="268445202"/>
+<entry endPc="268446828" name="rez_cmp_local_text_label_vam_avg" stackId="12" startPc="268445202"/>
+<entry endPc="268446828" name="rez_cmp_local_text_value_curr_grade" stackId="13" startPc="268445202"/>
+<entry endPc="268446828" name="rez_cmp_local_text_value_max_grade" stackId="14" startPc="268445202"/>
+<entry endPc="268446828" name="rez_cmp_local_text_value_light" stackId="15" startPc="268445202"/>
+<entry endPc="268446828" name="rez_cmp_local_text_value_steep" stackId="16" startPc="268445202"/>
+<entry endPc="268446828" name="rez_cmp_local_text_value_vam" stackId="17" startPc="268445202"/>
+<entry endPc="268446828" name="rez_cmp_local_text_value_vam_avg" stackId="18" startPc="268445202"/>
 </localVars>
-<deviceInfo deviceVersion="de121dfa604491767422db2c3063530f8fd6465b" partNumber="006-B3843-00"/>
+<deviceInfo deviceVersion="de121dfa604491767422db2c3063530f8fd6465b" partNumber="006-B4440-00"/>
 <annotations>
 <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
 <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="DisplayLabel_Small"/>
@@ -848,80 +848,80 @@
 <param id="info"/>
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268437924" name="onLayout" parent="GradeEstimatorView" startPc="268437677">
+<functionEntry accessMode="public" endPc="268437929" name="onLayout" parent="GradeEstimatorView" startPc="268437677">
 <param id="dc"/>
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268438275" name="drawDefaultView" parent="GradeEstimatorView" startPc="268437925">
+<functionEntry accessMode="public" endPc="268438280" name="drawDefaultView" parent="GradeEstimatorView" startPc="268437930">
 <param id="dc"/>
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="protected" endPc="268438354" name="_resetAll" parent="GradeEstimatorView" startPc="268438276">
+<functionEntry accessMode="protected" endPc="268438359" name="_resetAll" parent="GradeEstimatorView" startPc="268438281">
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268438438" name="getProgressBar" parent="GradeEstimatorView" startPc="268438355">
+<functionEntry accessMode="public" endPc="268438443" name="getProgressBar" parent="GradeEstimatorView" startPc="268438360">
 <param id="progress"/>
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268438925" name="computeLinearRegressionSlope" parent="GradeEstimatorView" startPc="268438439">
+<functionEntry accessMode="public" endPc="268438930" name="computeLinearRegressionSlope" parent="GradeEstimatorView" startPc="268438444">
 <param id="samples"/>
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268439015" name="setLabelColor" parent="GradeEstimatorView" startPc="268438926">
+<functionEntry accessMode="public" endPc="268439020" name="setLabelColor" parent="GradeEstimatorView" startPc="268438931">
 <param id="dc"/>
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268439085" name="drawStatusLabel" parent="GradeEstimatorView" startPc="268439016">
+<functionEntry accessMode="public" endPc="268439090" name="drawStatusLabel" parent="GradeEstimatorView" startPc="268439021">
 <param id="dc"/>
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268439174" name="computeEmaGrade" parent="GradeEstimatorView" startPc="268439086">
+<functionEntry accessMode="public" endPc="268439179" name="computeEmaGrade" parent="GradeEstimatorView" startPc="268439091">
 <param id="altitude"/>
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268439277" name="getStatusString" parent="GradeEstimatorView" startPc="268439175">
+<functionEntry accessMode="public" endPc="268439282" name="getStatusString" parent="GradeEstimatorView" startPc="268439180">
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268439319" name="getPausedString" parent="GradeEstimatorView" startPc="268439278">
+<functionEntry accessMode="public" endPc="268439324" name="getPausedString" parent="GradeEstimatorView" startPc="268439283">
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268439400" name="median3" parent="GradeEstimatorView" startPc="268439320">
+<functionEntry accessMode="public" endPc="268439405" name="median3" parent="GradeEstimatorView" startPc="268439325">
 <param id="a"/>
 <param id="b"/>
 <param id="c"/>
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268440195" name="initialize" parent="GradeEstimatorView" startPc="268439401">
+<functionEntry accessMode="public" endPc="268440200" name="initialize" parent="GradeEstimatorView" startPc="268439406">
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268441047" name="drawAltitudeBufferPlot" parent="GradeEstimatorView" startPc="268440196">
+<functionEntry accessMode="public" endPc="268441052" name="drawAltitudeBufferPlot" parent="GradeEstimatorView" startPc="268440201">
 <param id="dc"/>
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268441215" name="onUpdate" parent="GradeEstimatorView" startPc="268441048">
+<functionEntry accessMode="public" endPc="268441220" name="onUpdate" parent="GradeEstimatorView" startPc="268441053">
 <param id="dc"/>
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268441419" name="drawVAMFields" parent="GradeEstimatorView" startPc="268441216">
+<functionEntry accessMode="public" endPc="268441424" name="drawVAMFields" parent="GradeEstimatorView" startPc="268441221">
 <param id="dc"/>
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268441497" name="getBufferString" parent="GradeEstimatorView" startPc="268441420">
+<functionEntry accessMode="public" endPc="268441502" name="getBufferString" parent="GradeEstimatorView" startPc="268441425">
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268442709" name="LoggerLayout" parent="Layouts" startPc="268441498">
+<functionEntry accessMode="public" endPc="268442714" name="LoggerLayout" parent="Layouts" startPc="268441503">
 <param id="dc"/>
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268444347" name="LargeLayout" parent="Layouts" startPc="268442710">
+<functionEntry accessMode="public" endPc="268444352" name="LargeLayout" parent="Layouts" startPc="268442715">
 <param id="dc"/>
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268445185" name="SmallLayout" parent="Layouts" startPc="268444348">
+<functionEntry accessMode="public" endPc="268445190" name="SmallLayout" parent="Layouts" startPc="268444353">
 <param id="dc"/>
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268446823" name="WideLayout" parent="Layouts" startPc="268445186">
+<functionEntry accessMode="public" endPc="268446828" name="WideLayout" parent="Layouts" startPc="268445191">
 <param id="dc"/>
 <documentation/>
 </functionEntry>

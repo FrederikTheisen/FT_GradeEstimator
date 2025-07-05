@@ -191,7 +191,7 @@ class GradeEstimatorView extends WatchUi.DataField {
             // Watch device layout
             View.setLayout(Rez.Layouts.WatchLayout(dc));
         }
-        else if (width_view < 125) {
+        else if (width_view < width_device / 2 + 10 {
             View.setLayout(Rez.Layouts.SmallLayout(dc));
             drawCompact = true; // Compact labels for small views
             drawGraph = false; // No graph in compact view

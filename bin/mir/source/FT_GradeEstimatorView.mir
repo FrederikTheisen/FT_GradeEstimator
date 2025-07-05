@@ -1035,98 +1035,103 @@ _Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeE
 _Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_194_13_210_8_if_stmt:
         %tmp.29 = lgetv %width_view.1;
         symbol [ width_view %tmp.29 194 17 27 ];
-        %tmp.30 = 125;
-        %tmp.31 = lt %tmp.29 %tmp.30;
-        bf %tmp.31 @_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_194_13_210_8_if_else_false;
+        %tmp.30 = lgetv %width_device.3;
+        symbol [ width_device %tmp.30 194 30 42 ];
+        %tmp.31 = 2;
+        %tmp.32 = div %tmp.30 %tmp.31;
+        %tmp.33 = 10;
+        %tmp.34 = add %tmp.32 %tmp.33;
+        %tmp.35 = lt %tmp.29 %tmp.34;
+        bf %tmp.35 @_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_194_13_210_8_if_else_false;
 _Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_194_13_210_8_if_true:
-_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_194_35_198_8_start:
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_194_53_198_8_start:
 [ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 195 12 ]
-        symbol [ View %tmp.33 195 12 16 ];
-        %tmp.33 = getv ? :View;
-        symbol [ setLayout %tmp.34 195 17 26 ];
-        %tmp.34 = getv function %tmp.33 :setLayout;
-        symbol [ Rez %tmp.36 195 27 30 ];
-        %tmp.36 = getv ? :Rez;
-        symbol [ Layouts %tmp.37 195 31 38 ];
-        %tmp.37 = getv %tmp.36 :Layouts;
-        symbol [ SmallLayout %tmp.38 195 39 50 ];
-        %tmp.38 = getv function %tmp.37 :SmallLayout;
-        %tmp.39 = lgetv %dc;
-        symbol [ dc %tmp.39 195 51 53 ];
-        %tmp.40 = invoke %tmp.37 %tmp.38(%tmp.39);
-        invoke %tmp.33 %tmp.34(%tmp.40);
+        symbol [ View %tmp.37 195 12 16 ];
+        %tmp.37 = getv ? :View;
+        symbol [ setLayout %tmp.38 195 17 26 ];
+        %tmp.38 = getv function %tmp.37 :setLayout;
+        symbol [ Rez %tmp.40 195 27 30 ];
+        %tmp.40 = getv ? :Rez;
+        symbol [ Layouts %tmp.41 195 31 38 ];
+        %tmp.41 = getv %tmp.40 :Layouts;
+        symbol [ SmallLayout %tmp.42 195 39 50 ];
+        %tmp.42 = getv function %tmp.41 :SmallLayout;
+        %tmp.43 = lgetv %dc;
+        symbol [ dc %tmp.43 195 51 53 ];
+        %tmp.44 = invoke %tmp.41 %tmp.42(%tmp.43);
+        invoke %tmp.37 %tmp.38(%tmp.44);
 [ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 196 12 ]
-        %tmp.41 = true;
+        %tmp.45 = true;
         symbol [ drawCompact ? 196 12 23 ];
-        putv self :drawCompact %tmp.41;
+        putv self :drawCompact %tmp.45;
 [ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 197 12 ]
-        %tmp.42 = false;
+        %tmp.46 = false;
         symbol [ drawGraph ? 197 12 21 ];
-        putv self :drawGraph %tmp.42;
-_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_194_35_198_8_stop:
+        putv self :drawGraph %tmp.46;
+_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_194_53_198_8_stop:
         goto @_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_194_13_210_8_if_end;
 _Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_194_13_210_8_if_else_false:
 _Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_199_13_210_8_start:
 [ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 200 12 ]
-        %tmp.43 = false;
+        %tmp.47 = false;
         symbol [ drawCompact ? 200 12 23 ];
-        putv self :drawCompact %tmp.43;
+        putv self :drawCompact %tmp.47;
 [ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 202 12 ]
 _Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_202_12_209_12_if_stmt:
-        %tmp.44 = lgetv %height_view.2;
-        symbol [ height_view %tmp.44 202 16 27 ];
-        %tmp.45 = lgetv %height_device.4;
-        symbol [ height_device %tmp.45 202 31 44 ];
-        %tmp.46 = 3;
-        %tmp.47 = div %tmp.45 %tmp.46;
-        %tmp.48 = 3;
-        %tmp.49 = sub %tmp.47 %tmp.48;
-        %tmp.50 = lt %tmp.44 %tmp.49;
-        bf %tmp.50 @_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_202_12_209_12_if_else_false;
+        %tmp.48 = lgetv %height_view.2;
+        symbol [ height_view %tmp.48 202 16 27 ];
+        %tmp.49 = lgetv %height_device.4;
+        symbol [ height_device %tmp.49 202 31 44 ];
+        %tmp.50 = 3;
+        %tmp.51 = div %tmp.49 %tmp.50;
+        %tmp.52 = 3;
+        %tmp.53 = sub %tmp.51 %tmp.52;
+        %tmp.54 = lt %tmp.48 %tmp.53;
+        bf %tmp.54 @_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_202_12_209_12_if_else_false;
 _Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_202_12_209_12_if_true:
 _Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_202_55_205_12_start:
 [ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 203 16 ]
-        symbol [ View %tmp.52 203 16 20 ];
-        %tmp.52 = getv ? :View;
-        symbol [ setLayout %tmp.53 203 21 30 ];
-        %tmp.53 = getv function %tmp.52 :setLayout;
-        symbol [ Rez %tmp.55 203 31 34 ];
-        %tmp.55 = getv ? :Rez;
-        symbol [ Layouts %tmp.56 203 35 42 ];
-        %tmp.56 = getv %tmp.55 :Layouts;
-        symbol [ WideLayout %tmp.57 203 43 53 ];
-        %tmp.57 = getv function %tmp.56 :WideLayout;
-        %tmp.58 = lgetv %dc;
-        symbol [ dc %tmp.58 203 54 56 ];
-        %tmp.59 = invoke %tmp.56 %tmp.57(%tmp.58);
-        invoke %tmp.52 %tmp.53(%tmp.59);
+        symbol [ View %tmp.56 203 16 20 ];
+        %tmp.56 = getv ? :View;
+        symbol [ setLayout %tmp.57 203 21 30 ];
+        %tmp.57 = getv function %tmp.56 :setLayout;
+        symbol [ Rez %tmp.59 203 31 34 ];
+        %tmp.59 = getv ? :Rez;
+        symbol [ Layouts %tmp.60 203 35 42 ];
+        %tmp.60 = getv %tmp.59 :Layouts;
+        symbol [ WideLayout %tmp.61 203 43 53 ];
+        %tmp.61 = getv function %tmp.60 :WideLayout;
+        %tmp.62 = lgetv %dc;
+        symbol [ dc %tmp.62 203 54 56 ];
+        %tmp.63 = invoke %tmp.60 %tmp.61(%tmp.62);
+        invoke %tmp.56 %tmp.57(%tmp.63);
 [ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 204 16 ]
-        %tmp.60 = false;
+        %tmp.64 = false;
         symbol [ drawGraph ? 204 16 25 ];
-        putv self :drawGraph %tmp.60;
+        putv self :drawGraph %tmp.64;
 _Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_202_55_205_12_stop:
         goto @_Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_202_12_209_12_if_end;
 _Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_202_12_209_12_if_else_false:
 _Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_206_17_209_12_start:
 [ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 207 16 ]
-        symbol [ View %tmp.62 207 16 20 ];
-        %tmp.62 = getv ? :View;
-        symbol [ setLayout %tmp.63 207 21 30 ];
-        %tmp.63 = getv function %tmp.62 :setLayout;
-        symbol [ Rez %tmp.65 207 31 34 ];
-        %tmp.65 = getv ? :Rez;
-        symbol [ Layouts %tmp.66 207 35 42 ];
-        %tmp.66 = getv %tmp.65 :Layouts;
-        symbol [ LargeLayout %tmp.67 207 43 54 ];
-        %tmp.67 = getv function %tmp.66 :LargeLayout;
-        %tmp.68 = lgetv %dc;
-        symbol [ dc %tmp.68 207 55 57 ];
-        %tmp.69 = invoke %tmp.66 %tmp.67(%tmp.68);
-        invoke %tmp.62 %tmp.63(%tmp.69);
+        symbol [ View %tmp.66 207 16 20 ];
+        %tmp.66 = getv ? :View;
+        symbol [ setLayout %tmp.67 207 21 30 ];
+        %tmp.67 = getv function %tmp.66 :setLayout;
+        symbol [ Rez %tmp.69 207 31 34 ];
+        %tmp.69 = getv ? :Rez;
+        symbol [ Layouts %tmp.70 207 35 42 ];
+        %tmp.70 = getv %tmp.69 :Layouts;
+        symbol [ LargeLayout %tmp.71 207 43 54 ];
+        %tmp.71 = getv function %tmp.70 :LargeLayout;
+        %tmp.72 = lgetv %dc;
+        symbol [ dc %tmp.72 207 55 57 ];
+        %tmp.73 = invoke %tmp.70 %tmp.71(%tmp.72);
+        invoke %tmp.66 %tmp.67(%tmp.73);
 [ "/Users/frederiktheisen/Projects/XCodeProjects/FT_GradeEstimator/source/FT_GradeEstimatorView.mc" 208 16 ]
-        %tmp.70 = true;
+        %tmp.74 = true;
         symbol [ drawGraph ? 208 16 25 ];
-        putv self :drawGraph %tmp.70;
+        putv self :drawGraph %tmp.74;
 _Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_206_17_209_12_stop:
 _Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_202_12_209_12_if_end:
 _Users_frederiktheisen_Projects_XCodeProjects_FT_GradeEstimator_source_FT_GradeEstimatorView_mc_199_13_210_8_stop:

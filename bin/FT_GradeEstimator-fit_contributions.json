@@ -68,10 +68,10 @@
   } ],
   "strings" : {
     "default" : {
-      "GC_ChartTitle_Grade" : "FTLRGrade Gradient",
+      "GC_ChartTitle_Grade" : "LinReg Grade",
       "GC_Label_Grade" : "Grade",
       "Unit_Grade" : "%",
-      "GC_ChartTitle_VAM" : "FTLRGrade VAM",
+      "GC_ChartTitle_VAM" : "LinReg VAM",
       "GC_Label_VAM" : "Vertical Ascent Rate (m/h)",
       "Unit_VAM" : "meters / hour",
       "GC_Label_Distance_Light" : "Light Climb (+5%)",

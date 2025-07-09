@@ -2,3 +2,7 @@ FT_GradeEstimator.iq
 bin/
 AppIcon.afdesign
 *.png
+ActualGradeSampleFile.txt
+bin/FT_GradeEstimator.prg.debug.xml
+bin/FT_GradeEstimator.prg
+bin/mir/source/FT_GradeEstimatorView.mir

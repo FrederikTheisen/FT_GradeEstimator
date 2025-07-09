@@ -1,0 +1,34 @@
+<strings>
+    <string id="AppName">Estimador de Pendiente LinReg</string>
+    <string id="Version">v1.2</string>
+
+    <!-- UI labels -->
+    <string id="UI_Label_Gradient_Current">Pend. Actual</string>
+    <string id="UI_Label_Gradient_Max">Pend. Máx</string>
+    <string id="UI_Label_Distance_Steep">Dist. +10 %</string>
+    <string id="UI_Label_Distance_Light">Dist. +5 %</string>
+    <string id="UI_Label_VAM_Current">VAM Actual</string>
+    <string id="UI_Label_VAM_Average">VAM Promedio</string>
+
+    <string id="UI_Label_Status_Buffering">RECOPILACIÓN</string>
+    <string id="UI_Label_Status_Active">ACTIVO</string>
+    <string id="UI_Label_Status_NoData">SIN DATO</string>
+
+    <!-- Garmin Connect data labels -->
+    <string id="GC_ChartTitle_Grade">Pendiente LinReg</string>
+    <string id="GC_ChartTitle_VAM">VAM LinReg</string>
+
+    <string id="GC_Label_Grade">Pendiente</string>
+    <string id="GC_Label_VAM">Velocidad de Ascenso (m/h)</string>
+    <string id="GC_Label_AverageVAM">VAM Prom. en Ascensos</string>
+    <string id="GC_Label_Gradient_LinReg">Pendiente_LinReg</string>
+    <string id="GC_Label_Gradient_Kalman">Pendiente_KF</string>
+    <string id="GC_Label_Distance_Light">Subida Ligera (+5 %)</string>
+    <string id="GC_Label_Distance_Steep">Subida Fuerte (+10 %)</string>
+    <string id="GC_Label_Grade_Max">Pendiente Máxima</string>
+
+    <!-- General Labels -->
+    <string id="Unit_Grade">%</string>
+    <string id="Unit_Distance">km</string>
+    <string id="Unit_VAM">metros / hora</string>
+</strings>

@@ -1,0 +1,34 @@
+<strings>
+    <string id="AppName">Estimateur de Pente LinReg</string>
+    <string id="Version">v1.2</string>
+
+    <!-- UI labels -->
+    <string id="UI_Label_Gradient_Current">Pente Actuelle</string>
+    <string id="UI_Label_Gradient_Max">Pente Max</string>
+    <string id="UI_Label_Distance_Steep">Dist. +10%</string>
+    <string id="UI_Label_Distance_Light">Dist. +5%</string>
+    <string id="UI_Label_VAM_Current">VAM Actuel</string>
+    <string id="UI_Label_VAM_Average">VAM Moyenne</string>
+
+    <string id="UI_Label_Status_Buffering">COLLECTIONNER</string>
+    <string id="UI_Label_Status_Active">ACTIF</string>
+    <string id="UI_Label_Status_NoData">AUCUNE DONNÉE</string>
+
+    <!-- Garmin Connect data labels -->
+    <string id="GC_ChartTitle_Grade">Pente LinReg</string>
+    <string id="GC_ChartTitle_VAM">VAM LinReg</string>
+
+    <string id="GC_Label_Grade">Pente</string>
+    <string id="GC_Label_VAM">Vitesse Ascensionnelle (m/h)</string>
+    <string id="GC_Label_AverageVAM">VAM Moyenne (ascensions)</string>
+    <string id="GC_Label_Gradient_LinReg">Pente_LinReg</string>
+    <string id="GC_Label_Gradient_Kalman">Pente_KF</string>
+    <string id="GC_Label_Distance_Light">Montée Légère (+5%)</string>
+    <string id="GC_Label_Distance_Steep">Montée Difficile (+10%)</string>
+    <string id="GC_Label_Grade_Max">Pente Maximale</string>
+
+    <!-- General Labels -->
+    <string id="Unit_Grade">%</string>
+    <string id="Unit_Distance">km</string>
+    <string id="Unit_VAM">mètres / heure</string>
+</strings>

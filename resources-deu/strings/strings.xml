@@ -1,0 +1,34 @@
+<strings>
+    <string id="AppName">LinReg Steigungs-Schätzer</string>
+    <string id="Version">v1.2</string>
+
+    <!-- UI labels -->
+    <string id="UI_Label_Gradient_Current">Aktuelle Steigung</string>
+    <string id="UI_Label_Gradient_Max">Max. Steigung</string>
+    <string id="UI_Label_Distance_Steep">Dist. +10%</string>
+    <string id="UI_Label_Distance_Light">Dist. +5%</string>
+    <string id="UI_Label_VAM_Current">Aktuelle VAM</string>
+    <string id="UI_Label_VAM_Average">Ø VAM</string>
+
+    <string id="UI_Label_Status_Buffering">DATEN SAMMELN</string>
+    <string id="UI_Label_Status_Active">AKTIV</string>
+    <string id="UI_Label_Status_NoData">KEINE DATEN</string>
+
+    <!-- Garmin Connect data labels -->
+    <string id="GC_ChartTitle_Grade">LinReg Steigung</string>
+    <string id="GC_ChartTitle_VAM">LinReg VAM</string>
+
+    <string id="GC_Label_Grade">Steigung</string>
+    <string id="GC_Label_VAM">Vertikale Geschwindigkeit (m/h)</string>
+    <string id="GC_Label_AverageVAM">Ø VAM (Aufstieg)</string>
+    <string id="GC_Label_Gradient_LinReg">Steigung_LinReg</string>
+    <string id="GC_Label_Gradient_Kalman">Steigung_KF</string>
+    <string id="GC_Label_Distance_Light">Leichte Steigung (+5%)</string>
+    <string id="GC_Label_Distance_Steep">Starke Steigung (+10%)</string>
+    <string id="GC_Label_Grade_Max">Maximale Steigung</string>
+
+    <!-- General Labels -->
+    <string id="Unit_Grade">%</string>
+    <string id="Unit_Distance">km</string>
+    <string id="Unit_VAM">Meter / Stunde</string>
+</strings>

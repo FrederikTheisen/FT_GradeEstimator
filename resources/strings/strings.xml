@@ -21,8 +21,6 @@
     <string id="GC_Label_Grade">Grade</string>
     <string id="GC_Label_VAM">Vertical Ascent Rate (m/h)</string>
     <string id="GC_Label_AverageVAM">Average Ascenting VAM</string>
-    <string id="GC_Label_Gradient_LinReg">LinReg_Gradient</string>
-    <string id="GC_Label_Gradient_Kalman">KF_Gradient</string>
     <string id="GC_Label_Distance_Light">Light Climb (+5%)</string>
     <string id="GC_Label_Distance_Steep">Hard Climb (+10%)</string>
     <string id="GC_Label_Grade_Max">Maximum Grade</string>

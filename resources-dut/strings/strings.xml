@@ -1,0 +1,33 @@
+<strings>
+    <string id="AppName">LinReg Helling Schatter</string>
+    <string id="Version">v1.2</string>
+
+    <!-- UI labels -->
+    <string id="UI_Label_Gradient_Current">Huidige Helling</string>
+    <string id="UI_Label_Gradient_Max">Max Helling</string>
+    <string id="UI_Label_Distance_Steep">Afst. +10%</string>
+    <string id="UI_Label_Distance_Light">Afst. +5%</string>
+    <string id="UI_Label_VAM_Current">Huidige VAM</string>
+    <string id="UI_Label_VAM_Average">Gemiddelde VAM</string>
+
+    <string id="UI_Label_Status_Buffering">BUFFEREN</string>
+    <string id="UI_Label_Status_Active">ACTIEF</string>
+    <string id="UI_Label_Status_NoData">GEEN GEGEVENS</string>
+
+    <!-- Garmin Connect data labels -->
+    <string id="GC_ChartTitle_Grade">LinReg Helling</string>
+    <string id="GC_ChartTitle_VAM">LinReg VAM</string>
+
+    <string id="GC_Label_Grade">Helling</string>
+    <string id="GC_Label_VAM">Stijgsnelheid (m/u)</string>
+    <string id="GC_Label_AverageVAM">Gemiddelde VAM</string>
+    <string id="GC_Label_Gradient_LinReg">Helling_LinReg</string>
+    <string id="GC_Label_Distance_Light">Lichte Klim (+5%)</string>
+    <string id="GC_Label_Distance_Steep">Steile Klim (+10%)</string>
+    <string id="GC_Label_Grade_Max">Maximale Helling</string>
+
+    <!-- General Labels -->
+    <string id="Unit_Grade">%</string>
+    <string id="Unit_Distance">km</string>
+    <string id="Unit_VAM">meter / uur</string>
+</strings>

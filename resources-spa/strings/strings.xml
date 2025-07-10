@@ -21,8 +21,6 @@
     <string id="GC_Label_Grade">Pendiente</string>
     <string id="GC_Label_VAM">Velocidad de Ascenso (m/h)</string>
     <string id="GC_Label_AverageVAM">VAM Prom. en Ascensos</string>
-    <string id="GC_Label_Gradient_LinReg">Pendiente_LinReg</string>
-    <string id="GC_Label_Gradient_Kalman">Pendiente_KF</string>
     <string id="GC_Label_Distance_Light">Subida Ligera (+5 %)</string>
     <string id="GC_Label_Distance_Steep">Subida Fuerte (+10 %)</string>
     <string id="GC_Label_Grade_Max">Pendiente Máxima</string>

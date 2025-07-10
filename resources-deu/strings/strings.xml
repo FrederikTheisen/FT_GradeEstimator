@@ -19,10 +19,8 @@
     <string id="GC_ChartTitle_VAM">LinReg VAM</string>
 
     <string id="GC_Label_Grade">Steigung</string>
-    <string id="GC_Label_VAM">Vertikale Geschwindigkeit (m/h)</string>
+    <string id="GC_Label_VAM">"Vertikale Geschw. (m/h)</string>
     <string id="GC_Label_AverageVAM">Ø VAM (Aufstieg)</string>
-    <string id="GC_Label_Gradient_LinReg">Steigung_LinReg</string>
-    <string id="GC_Label_Gradient_Kalman">Steigung_KF</string>
     <string id="GC_Label_Distance_Light">Leichte Steigung (+5%)</string>
     <string id="GC_Label_Distance_Steep">Starke Steigung (+10%)</string>
     <string id="GC_Label_Grade_Max">Maximale Steigung</string>

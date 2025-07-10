@@ -21,7 +21,6 @@
     <string id="GC_Label_Grade">Helling</string>
     <string id="GC_Label_VAM">Stijgsnelheid (m/u)</string>
     <string id="GC_Label_AverageVAM">Gemiddelde VAM</string>
-    <string id="GC_Label_Gradient_LinReg">Helling_LinReg</string>
     <string id="GC_Label_Distance_Light">Lichte Klim (+5%)</string>
     <string id="GC_Label_Distance_Steep">Steile Klim (+10%)</string>
     <string id="GC_Label_Grade_Max">Maximale Helling</string>

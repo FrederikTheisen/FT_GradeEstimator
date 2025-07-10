@@ -15,8 +15,8 @@
     <string id="UI_Label_Status_NoData">SIN DATO</string>
 
     <!-- Garmin Connect data labels -->
-    <string id="GC_ChartTitle_Grade">Pendiente LinReg</string>
-    <string id="GC_ChartTitle_VAM">VAM LinReg</string>
+    <string id="GC_ChartTitle_Grade">Pendiente AGP</string>
+    <string id="GC_ChartTitle_VAM">VAM AGP</string>
 
     <string id="GC_Label_Grade">Pendiente</string>
     <string id="GC_Label_VAM">Velocidad de Ascenso (m/h)</string>

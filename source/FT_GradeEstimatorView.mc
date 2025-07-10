@@ -21,7 +21,7 @@ class GradeEstimatorView extends WatchUi.DataField {
     const FIELD_ID_VAM_GRAPH = 34;      // grade, REC
     const FIELD_ID_VAM_AVG   = 35;      // grade, REC
     const MAX_ALT_JUMP       = 10;
-    const DIST_LOG_QUALITY   = 0.25;    // Quality threshold for distance calculation
+    const DIST_LOG_QUALITY   = 0.33;    // Quality threshold for distance calculation
     const MAX_LOG_QUALITY    = 0.5;     // Quality threshold for maximum grade
 
     const buffer_str        = "|";
@@ -231,8 +231,6 @@ class GradeEstimatorView extends WatchUi.DataField {
 
         if (speed == null || altitude == null) { return blank_str; }
 
-        System.println(eTime + "," + info.elapsedDistance + ","  + speed + "," + altitude + "," + gradeWindowSize + "," + grade);
-
         var sample_distance = speed * 1; // expect one second sample interval
 
         // Reset if nearly stopped or if more than x samples missed (missing 1 sample should be rare)
@@ -261,6 +259,7 @@ class GradeEstimatorView extends WatchUi.DataField {
 
         if (prevMedianAlt != null && (medianAlt - prevMedianAlt).abs() > MAX_ALT_JUMP) {
             // If the altitude jumped too much, reset the buffer
+            System.println("Altitude jump detected: " + (medianAlt - prevMedianAlt).abs() + " m, resetting buffer.");
             _resetAll(true);
             gradeField.setData(0.0);
             lastSample = eTime;
@@ -285,11 +284,6 @@ class GradeEstimatorView extends WatchUi.DataField {
         }
 
         // --- Adaptive window selection (new logic) ---
-        // Clamp window size between 6 and 20, and not more than numValid
-        if (gradeWindowSize < MIN_GRADE_WINDOW) { gradeWindowSize = MIN_GRADE_WINDOW; }
-        if (gradeWindowSize > MAX_GRADE_WINDOW) { gradeWindowSize = MAX_GRADE_WINDOW; }
-        if (gradeWindowSize > numValid) { gradeWindowSize = numValid; }
-
         // Compute main grade with current window size
         var mainGrade = computeWindowSlope(buffer, bufIndex, gradeWindowSize, SAMPLE_WINDOW);
         // Compute min grade with window size 6 (if enough samples)
@@ -329,6 +323,8 @@ class GradeEstimatorView extends WatchUi.DataField {
         computeVAM(grade, speed);
 
         prevMedianAlt = medianAlt;
+
+        System.println(eTime + "," + info.elapsedDistance + ","  + speed + "," + altitude + "," + gradeWindowSize + "," + grade + "," + quality );
 
         return blank_str;
     }
@@ -572,7 +568,8 @@ class GradeEstimatorView extends WatchUi.DataField {
 
             // --- Draw buffer as polyline ---
             dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
-            dc.setPenWidth(2);
+            dc.setPenWidth(4);
+            dc.setClip(plotLeft, plotTop, plotWidth, plotHeight);
             for (var j = 0; j < sampleCount - 1; j++) {
                 var x1 = plotLeft + ((validDistances[j] - minX) / xrange) * plotWidth;
                 var x2 = plotLeft + ((validDistances[j+1] - minX) / xrange) * plotWidth;
@@ -581,7 +578,7 @@ class GradeEstimatorView extends WatchUi.DataField {
                 dc.drawLine(x1, y1, x2, y2);
             }
 
-            dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
+            dc.setColor(textColor, Graphics.COLOR_TRANSPARENT);
             dc.drawText(plotLeft + plotWidth / 2, plotBottom - 15, Graphics.FONT_SYSTEM_XTINY, "← " + xrange.format("%.1f") + "m →", Graphics.TEXT_JUSTIFY_CENTER);
             dc.drawText(plotLeft + 3, plotTop + 3, Graphics.FONT_SYSTEM_XTINY, "↕ " + yrange.format("%.1f") + "m", Graphics.TEXT_JUSTIFY_LEFT);
 
@@ -613,7 +610,13 @@ class GradeEstimatorView extends WatchUi.DataField {
                 var py1 = plotBottom - ((yStart - minY) / yrange) * plotHeight;
                 var py2 = plotBottom - ((yEnd - minY) / yrange) * plotHeight;
 
-                dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_TRANSPARENT);
+                if (quality > 0.75) {
+                    dc.setColor(Graphics.COLOR_DK_GREEN, Graphics.COLOR_TRANSPARENT);
+                } else if (quality > 0.5) {
+                    dc.setColor(Graphics.COLOR_ORANGE, Graphics.COLOR_TRANSPARENT);
+                } else {
+                    dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_TRANSPARENT);
+                }
                 dc.setPenWidth(2);
                 dc.drawLine(px1, py1, px2, py2);
 
@@ -624,6 +627,7 @@ class GradeEstimatorView extends WatchUi.DataField {
         // --- Draw plot area border ---
         dc.setColor(textColor, Graphics.COLOR_BLACK);
         dc.setPenWidth(2);
+        dc.clearClip();
         dc.drawRectangle(plotLeft, plotTop, plotWidth, plotHeight);
     }
 

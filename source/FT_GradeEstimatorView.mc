@@ -8,9 +8,9 @@ import Toybox.Application;
 
 class GradeEstimatorView extends WatchUi.DataField {
     // CONFIG
-    const SAMPLE_WINDOW         = 30;       // buffer size (longer buffer)
+    const SAMPLE_WINDOW         = 35;       // buffer size (longer buffer)
     const MIN_GRADE_WINDOW      = 5;        // minimum samples for grade calc
-    const MAX_GRADE_WINDOW     = 20;       // maximum samples for grade calc
+    const MAX_GRADE_WINDOW     = 30;       // maximum samples for grade calc
     const SAMPLE_MISS_THRESHOLD = 2;     // how many samples can be missed
     const THRESHOLD_LIGHT    = 0.05;     // percent
     const THRESHOLD_STEEP    = 0.10;    // percent

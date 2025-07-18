@@ -17,6 +17,8 @@
     <string id="GC_ChartTitle_Grade">AGP Helling</string>
     <string id="GC_ChartTitle_VAM">AGP VAM</string>
 
+    <string id="GC_Lap_AvgGrade">Gemiddelde Helling</string>
+
     <string id="GC_Label_Grade">Helling</string>
     <string id="GC_Label_VAM">Stijgsnelheid (m/u)</string>
     <string id="GC_Label_AverageVAM">Gemiddelde VAM</string>

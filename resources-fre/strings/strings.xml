@@ -5,7 +5,7 @@
     <string id="UI_Label_Gradient_Current">Pente Actuelle</string>
     <string id="UI_Label_Gradient_Max">Pente Max</string>
     <string id="UI_Label_Distance_Steep">Dist. Difficile</string>
-    <string id="UI_Label_Distance_Light">Dist.</string>
+    <string id="UI_Label_Distance_Light">Dist. Légère</string>
     <string id="UI_Label_VAM_Current">VAM Actuelle</string>
     <string id="UI_Label_VAM_Average">VAM Moyenne</string>
 
@@ -16,6 +16,8 @@
     <!-- Garmin Connect data labels -->
     <string id="GC_ChartTitle_Grade">Pente AGP</string>
     <string id="GC_ChartTitle_VAM">VAM AGP</string>
+
+    <string id="GC_Lap_AvgGrade">Pente Moyenne</string>
 
     <string id="GC_Label_Grade">Pente</string>
     <string id="GC_Label_VAM">Vitesse Ascensionnelle (m/h)</string>

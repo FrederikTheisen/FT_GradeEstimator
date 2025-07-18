@@ -17,6 +17,8 @@
     <string id="GC_ChartTitle_Grade">Pendiente AGP</string>
     <string id="GC_ChartTitle_VAM">VAM AGP</string>
 
+    <string id="GC_Lap_AvgGrade">Pendiente Prom.</string>
+
     <string id="GC_Label_Grade">Pendiente</string>
     <string id="GC_Label_VAM">Velocidad de Ascenso (m/h)</string>
     <string id="GC_Label_AverageVAM">VAM Prom. en Ascensos</string>

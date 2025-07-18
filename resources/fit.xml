@@ -1,9 +1,10 @@
 <fitContributions>
     <!-- RECORD : Record Chart Definitions -->
     <fitField id="30" displayInChart="true" sortOrder="0" precision="1" chartTitle="@Strings.GC_ChartTitle_Grade" dataLabel="@Strings.GC_Label_Grade" unitLabel="@Strings.Unit_Grade" fillColor="#0099FF" />
-    <fitField id="34" displayInChart="true" sortOrder="1" precision="1" chartTitle="@Strings.GC_ChartTitle_VAM" dataLabel="@Strings.GC_Label_VAM" unitLabel="@Strings.Unit_VAM" fillColor="#0099FF" />
+    <fitField id="34" displayInChart="true" sortOrder="1" precision="1" chartTitle="@Strings.GC_ChartTitle_VAM" dataLabel="@Strings.GC_Label_VAM" unitLabel="@Strings.Unit_VAM" fillColor="#00ffa6ff" />
 
     <!-- LAP : Lap Data Definitions -->
+    <fitField id="36" displayInActivityLaps="true" displayInChart="true" sortOrder="6" precision="1" chartTitle="@Strings.GC_Lap_AvgGrade" dataLabel="@Strings.GC_Lap_AvgGrade" unitLabel="@Strings.Unit_Grade" fillColor="#0099FF" />
 
     <!-- SESSION : Session Data Definitions -->
     <fitField id="31" displayInActivitySummary="true" sortOrder="2" precision="1" dataLabel="@Strings.GC_Label_Distance_Light" unitLabel="@Strings.Unit_Distance" />

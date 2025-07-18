@@ -50,6 +50,7 @@ class GradeEstimatorView extends WatchUi.DataField {
     var vam as Float           = 0.0;  // VAM in m/h
     var vamAvg as Float        = 0.0;  // Average VAM in m/h
     var numValid               = 0;
+    var lastMaxGradeUpdateTime as Number = 0; // Last time max grade was updated
 
     var sumAscentVam as Float   = 0.0; // Sum of ascenting VAM (+5%)
     var samplesAscent as Number = 0; // Number of samples with ascenting VAM
@@ -105,13 +106,18 @@ class GradeEstimatorView extends WatchUi.DataField {
         return icon;
     }
 
-    function getUpdatingValueAnnotatedString(isupdating as Boolean, s as String, annotation as String or Null) as String {
+    function getUpdatingValueAnnotatedString(isupdating as Boolean, s as String, annotation as String or Null, position as Number or Null, blinking as Boolean) as String {
         // Return input string with annotation indicating the value is currently being updated
         if (annotation == null) { annotation = update_annotation; } // Default annotation if none provided
+        if (position == null) { position = 0; } // Default position is at the start
 
         if (isupdating && calculating) {
             var t = (Time.now().value()) % 2;
-            if (t == 0) { return annotation + s + annotation; }
+            if (t == 0 || !blinking) { 
+                if (position == -1) { return annotation + s; }
+                else if (position == 0) { return annotation + s + annotation; }
+                else { return s + annotation; }
+            }
             else { return s; }
             
         } else { return s; } // Can't be updating if not calculating
@@ -148,6 +154,7 @@ class GradeEstimatorView extends WatchUi.DataField {
     function shouldAccSteepDist() as Boolean { return (grade >= THRESHOLD_STEEP && quality >= DIST_LOG_QUALITY); }
     function shouldAccAvgVAM() as Boolean {  return (grade >= THRESHOLD_LIGHT && quality >= DIST_LOG_QUALITY); }
     function shouldCalcMaxGrade() as Boolean { return (quality >= MAX_LOG_QUALITY); }
+    function isMaxGradeUpdateRecent() as Boolean { return (Time.now().value() - lastMaxGradeUpdateTime < 20); }
 
     function initialize() {
         DataField.initialize();
@@ -352,7 +359,10 @@ class GradeEstimatorView extends WatchUi.DataField {
         // Accumulate distance in each zone
         if (shouldAccLightDist()) { distLight += sample_distance; }
         if (shouldAccSteepDist()) { distSteep += sample_distance; }
-        if (grade > maxGrade && shouldCalcMaxGrade()) { maxGrade = grade; }
+        if (grade > maxGrade && shouldCalcMaxGrade()) { 
+            maxGrade = grade;
+            lastMaxGradeUpdateTime = Time.now().value(); // Update last max grade update time
+        }
 
         // Export
         gradeField.setData(grade * 100);
@@ -497,34 +507,35 @@ class GradeEstimatorView extends WatchUi.DataField {
         var label_light = View.findDrawableById("label_light") as Text;
         var label_steep = View.findDrawableById("label_steep") as Text;
         
-        if (value_curr_grade != null)
-        {
+        if (value_curr_grade != null) {
             if (calculating) { value_curr_grade.setColor(textColor); }
             else { value_curr_grade.setColor(Graphics.COLOR_LT_GRAY); } // Set gray color if not active
 
             value_curr_grade.setText((100 * grade).format(str_format) + suffix);
         }
 
-        if (value_max_grade != null)
-        {
+        if (value_max_grade != null) {
             value_max_grade.setColor(textColor);
-            value_max_grade.setText((100*maxGrade).format(str_format) + suffix);
+            var str = (100*maxGrade).format(str_format) + suffix;
+            value_max_grade.setText(getUpdatingValueAnnotatedString(isMaxGradeUpdateRecent(), str, " !!", 1, false));
         }
 
-        if (value_light != null)
-        {
-            if (calculating && grade > THRESHOLD_LIGHT) { value_light.setColor(textColor); }
-            else { value_light.setColor(Graphics.COLOR_DK_GRAY); } // Set gray color if not active
+        if (value_light != null) {
+            // if (calculating && grade > THRESHOLD_LIGHT) { value_light.setColor(textColor); }
+            // else { value_light.setColor(Graphics.COLOR_DK_GRAY); } // Set gray color if not active
 
-            value_light.setText((distLight/1000).format("%.1f") + " km");
+            value_light.setColor(textColor);
+            var str = (distLight/1000).format("%.1f") + " km";
+            value_light.setText(getUpdatingValueAnnotatedString(shouldAccLightDist(), str, " + ", 0, false));
         }
 
-        if (value_steep != null)
-        {
-            if (calculating && grade > THRESHOLD_STEEP) { value_steep.setColor(textColor); }
-            else { value_steep.setColor(Graphics.COLOR_DK_GRAY); } // Set gray color if not active
+        if (value_steep != null) {
+            // if (calculating && grade > THRESHOLD_STEEP) { value_steep.setColor(textColor); }
+            // else { value_steep.setColor(Graphics.COLOR_DK_GRAY); } // Set gray color if not active
 
-            value_steep.setText((distSteep/1000).format("%.1f") + " km");
+            value_steep.setColor(textColor); 
+            var str = (distSteep/1000).format("%.1f") + " km";
+            value_steep.setText(getUpdatingValueAnnotatedString(shouldAccSteepDist(), str, " + ", 0, false));
         }
 
         if (label_light != null) {
@@ -543,15 +554,18 @@ class GradeEstimatorView extends WatchUi.DataField {
         var value_vam_avg = View.findDrawableById("value_vam_avg") as Text;
 
         if (value_vam != null) {
-            value_vam.setColor(textColor);
+            if (calculating) { value_vam.setColor(textColor); }
+            else { value_vam.setColor(Graphics.COLOR_LT_GRAY); } // Set gray color if not active
             value_vam.setText((vam).format(vam_str_format) + (drawCompact ? "" : " m/h"));
         }
 
         if (value_vam_avg != null) {
-            if (grade > THRESHOLD_LIGHT) { value_vam_avg.setColor(textColor); }
-            else { value_vam_avg.setColor(Graphics.COLOR_DK_GRAY); } // Set gray color if grade under climb threshold
+            // if (grade > THRESHOLD_LIGHT) { value_vam_avg.setColor(textColor); }
+            // else { value_vam_avg.setColor(Graphics.COLOR_DK_GRAY); } // Set gray color if grade under climb threshold
 
-            value_vam_avg.setText((vamAvg).format(vam_str_format) + (drawCompact ? "" : " m/h"));
+            value_vam_avg.setColor(textColor);
+            var str = (vamAvg).format(vam_str_format) + (drawCompact ? "" : " m/h");
+            value_vam_avg.setText(getUpdatingValueAnnotatedString(shouldAccAvgVAM(), str, "!! ", -1, false));
         }
     }
 

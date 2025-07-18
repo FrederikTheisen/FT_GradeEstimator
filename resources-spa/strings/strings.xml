@@ -1,12 +1,11 @@
 <strings>
     <string id="AppName">Estimador de Pendiente LinReg</string>
-    <string id="Version">v1.2</string>
 
     <!-- UI labels -->
     <string id="UI_Label_Gradient_Current">Pend. Actual</string>
     <string id="UI_Label_Gradient_Max">Pend. Máx</string>
-    <string id="UI_Label_Distance_Steep">Dist. +10 %</string>
-    <string id="UI_Label_Distance_Light">Dist. +5 %</string>
+    <string id="UI_Label_Distance_Steep">Dist.</string>
+    <string id="UI_Label_Distance_Light">Dist.</string>
     <string id="UI_Label_VAM_Current">VAM Actual</string>
     <string id="UI_Label_VAM_Average">VAM Promedio</string>
 
@@ -21,8 +20,8 @@
     <string id="GC_Label_Grade">Pendiente</string>
     <string id="GC_Label_VAM">Velocidad de Ascenso (m/h)</string>
     <string id="GC_Label_AverageVAM">VAM Prom. en Ascensos</string>
-    <string id="GC_Label_Distance_Light">Subida Ligera (+5 %)</string>
-    <string id="GC_Label_Distance_Steep">Subida Fuerte (+10 %)</string>
+    <string id="GC_Label_Distance_Light">Subida Ligera</string>
+    <string id="GC_Label_Distance_Steep">Subida Fuerte</string>
     <string id="GC_Label_Grade_Max">Pendiente Máxima</string>
 
     <!-- General Labels -->

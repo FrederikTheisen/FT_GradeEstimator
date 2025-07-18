@@ -1,12 +1,11 @@
 <strings>
     <string id="AppName">LinReg Helling Schatter</string>
-    <string id="Version">v1.2</string>
 
     <!-- UI labels -->
     <string id="UI_Label_Gradient_Current">Huidige Helling</string>
     <string id="UI_Label_Gradient_Max">Max Helling</string>
-    <string id="UI_Label_Distance_Steep">Afst. +10%</string>
-    <string id="UI_Label_Distance_Light">Afst. +5%</string>
+    <string id="UI_Label_Distance_Steep">Afst.</string>
+    <string id="UI_Label_Distance_Light">Afst.</string>
     <string id="UI_Label_VAM_Current">VAM Nu</string>
     <string id="UI_Label_VAM_Average">VAM Gem.</string>
 
@@ -21,8 +20,8 @@
     <string id="GC_Label_Grade">Helling</string>
     <string id="GC_Label_VAM">Stijgsnelheid (m/u)</string>
     <string id="GC_Label_AverageVAM">Gemiddelde VAM</string>
-    <string id="GC_Label_Distance_Light">Lichte Klim (+5%)</string>
-    <string id="GC_Label_Distance_Steep">Steile Klim (+10%)</string>
+    <string id="GC_Label_Distance_Light">Lichte Klim</string>
+    <string id="GC_Label_Distance_Steep">Steile Klim</string>
     <string id="GC_Label_Grade_Max">Maximale Helling</string>
 
     <!-- General Labels -->

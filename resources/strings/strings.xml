@@ -5,8 +5,8 @@
     <!-- UI labels -->
     <string id="UI_Label_Gradient_Current">Curr. Grade</string>
     <string id="UI_Label_Gradient_Max">Max Grade</string>
-    <string id="UI_Label_Distance_Steep">Dist. +10%</string>
-    <string id="UI_Label_Distance_Light">Dist. +5%</string>
+    <string id="UI_Label_Distance_Steep">Hard Climb</string>
+    <string id="UI_Label_Distance_Light">Light Climb</string>
     <string id="UI_Label_VAM_Current">Curr. VAM</string>
     <string id="UI_Label_VAM_Average">Avg. VAM</string>
 
@@ -21,12 +21,22 @@
     <string id="GC_Label_Grade">Grade</string>
     <string id="GC_Label_VAM">Vertical Ascent Rate (m/h)</string>
     <string id="GC_Label_AverageVAM">Average Ascenting VAM</string>
-    <string id="GC_Label_Distance_Light">Light Climb (+5%)</string>
-    <string id="GC_Label_Distance_Steep">Hard Climb (+10%)</string>
+    <string id="GC_Label_Distance_Light">Light Climb</string>
+    <string id="GC_Label_Distance_Steep">Hard Climb</string>
     <string id="GC_Label_Grade_Max">Maximum Grade</string>
     
     <!-- General Labels -->
     <string id="Unit_Grade">%</string>
     <string id="Unit_Distance">km</string>
     <string id="Unit_VAM">meters / hour</string>
+
+    <!-- Settings -->
+    <string id="buffer_length">Sample Buffer Length</string>
+    <string id="buffer_fit_max">Grade Fitting Maximum Samples</string>
+    <string id="buffer_fit_min">Grade Fitting Minimum Samples (>= 3)</string>
+    <string id="threshold_log_dist">Distance Logging Fit Quality Threshold (0.0-1.0)</string>
+    <string id="threshold_log_max">Maximum Grade Logging Fit Quality Threshold (0.0-1.0)</string>
+    <string id="threshold_light">Grade Threshold Light Climb (0-100%)</string>
+    <string id="threshold_steep">Grade Threshold Hard Climb (0-100%)</string>
+    <string id="save_smooth">Save Smoothed Grade Data</string>
 </strings>

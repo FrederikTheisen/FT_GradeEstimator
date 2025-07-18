@@ -1,0 +1,47 @@
+<resources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://developer.garmin.com/downloads/connect-iq/resources.xsd">
+
+    <properties>
+        <property id="buffer_length" type="number">35</property>
+        <property id="buffer_fit_max" type="number">30</property>
+        <property id="buffer_fit_min" type="number">5</property>
+        <property id="threshold_log_dist" type="float">0.33</property>
+        <property id="threshold_log_max" type="float">0.50</property>
+        <property id="threshold_light" type="float">4</property>
+        <property id="threshold_steep" type="float">8</property>
+        <property id="save_smooth" type="boolean">false</property>
+    </properties>
+
+    <settings>
+        <setting propertyKey="@Properties.buffer_length" title="@Strings.buffer_length">
+            <settingConfig type="numeric" />
+        </setting>
+
+        <setting propertyKey="@Properties.buffer_fit_max" title="@Strings.buffer_fit_max">
+            <settingConfig type="numeric" />
+        </setting>
+
+        <setting propertyKey="@Properties.buffer_fit_min" title="@Strings.buffer_fit_min">
+            <settingConfig type="numeric" />
+        </setting>
+
+        <setting propertyKey="@Properties.threshold_log_dist" title="@Strings.threshold_log_dist">
+            <settingConfig type="numeric" />
+        </setting>
+
+        <setting propertyKey="@Properties.threshold_log_max" title="@Strings.threshold_log_max">
+            <settingConfig type="numeric" />
+        </setting>
+
+        <setting propertyKey="@Properties.threshold_light" title="@Strings.threshold_light">
+            <settingConfig type="numeric" />
+        </setting>
+
+        <setting propertyKey="@Properties.threshold_steep" title="@Strings.threshold_steep">
+            <settingConfig type="numeric" />
+        </setting>
+
+        <setting propertyKey="@Properties.save_smooth" title="@Strings.save_smooth">
+            <settingConfig type="boolean" />
+        </setting>
+    </settings>
+</resources>

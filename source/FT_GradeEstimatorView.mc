@@ -116,7 +116,7 @@ class GradeEstimatorView extends WatchUi.DataField {
 
         if (isupdating && calculating) {
             var t = (Time.now().value()) % 2;
-            //if (annotation.length() > 1) { annotation = annotation.toCharArray()[t.toNumber()].toString(); }
+            // if (blinking && annotation.length() > 1 && t == 0) { annotation = annotation.substring(0,1); }
             if (t == 0 || !blinking) { 
                 if (position == -1) { return annotation + s; }
                 else if (position == 0) { return annotation + s + annotation; }
@@ -141,7 +141,7 @@ class GradeEstimatorView extends WatchUi.DataField {
             c = str_active + " ";
             var progress = Math.sqrt((gradeWindowSize.toFloat() - MIN_GRADE_WINDOW + 1) / (MAX_GRADE_WINDOW - MIN_GRADE_WINDOW + 1));
             c += getProgressBar(progress, barlength);
-            c += " |" + gradeWindowSize.format("%d") + "s";
+            c += " " + gradeWindowSize.format("%d") + "s";
             if (!drawCompact) { c += "|" + numValid.format("%d") + "s";}
         } else if (bufIndex > 0) {
             c = str_buffering + " ";
@@ -150,6 +150,7 @@ class GradeEstimatorView extends WatchUi.DataField {
         else {
             c = str_no_data + " ";
             c += getRotatingIcon();
+            c += " " + MIN_GRADE_WINDOW.format("%d") + "s|" + MAX_GRADE_WINDOW.format("%d") + "s|" + SAMPLE_WINDOW.format("%d") + "s";
         }
         return c;
     }
@@ -539,19 +540,19 @@ class GradeEstimatorView extends WatchUi.DataField {
             value_max_grade.setColor(textColor);
 
             var str = (100*maxGrade).format(str_format) + suffix;
-            value_max_grade.setText(getUpdatingValueAnnotatedString(isMaxGradeUpdateRecent(), str, "██", 1, false));
+            value_max_grade.setText(getUpdatingValueAnnotatedString(isMaxGradeUpdateRecent(), str, "█", 1, false));
         }
 
         if (value_light != null) {
             value_light.setColor(textColor);
             var str = (distLight/1000).format("%.1f") + "km";
-            value_light.setText(getUpdatingValueAnnotatedString(shouldAccLightDist(), str, " ↑", 0, false));
+            value_light.setText(getUpdatingValueAnnotatedString(shouldAccLightDist(), str, "↑", 0, false));
         }
 
         if (value_steep != null) {
             value_steep.setColor(textColor); 
             var str = (distSteep/1000).format("%.1f") + "km";
-            value_steep.setText(getUpdatingValueAnnotatedString(shouldAccSteepDist(), str, " ↑", 0, false));
+            value_steep.setText(getUpdatingValueAnnotatedString(shouldAccSteepDist(), str, "↑", 0, false));
         }
 
         if (label_light != null) {

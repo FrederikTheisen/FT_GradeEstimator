@@ -158,7 +158,7 @@ class GradeEstimatorView extends WatchUi.DataField {
     function shouldAccLightDist() as Boolean { return (grade >= THRESHOLD_LIGHT && quality >= DIST_LOG_QUALITY); }
     function shouldAccSteepDist() as Boolean { return (grade >= THRESHOLD_STEEP && quality >= DIST_LOG_QUALITY); }
     function shouldAccAvgVAM() as Boolean {  return (grade >= THRESHOLD_LIGHT && quality >= DIST_LOG_QUALITY); }
-    function shouldCalcMaxGrade() as Boolean { return (quality >= MAX_LOG_QUALITY); }
+    function shouldCalcMaxGrade() as Boolean { return (quality >= MAX_LOG_QUALITY && gradeWindowSize > MIN_GRADE_WINDOW); }
     function isMaxGradeUpdateRecent() as Boolean { return (Time.now().value() - lastMaxGradeUpdateTime < 20); }
 
     function initialize() {
@@ -540,7 +540,7 @@ class GradeEstimatorView extends WatchUi.DataField {
             value_max_grade.setColor(textColor);
 
             var str = (100*maxGrade).format(str_format) + suffix;
-            value_max_grade.setText(getUpdatingValueAnnotatedString(isMaxGradeUpdateRecent(), str, "█", 1, false));
+            value_max_grade.setText(getUpdatingValueAnnotatedString(isMaxGradeUpdateRecent(), str, " !!", 1, false));
         }
 
         if (value_light != null) {

@@ -621,10 +621,10 @@ class GradeEstimatorView extends WatchUi.DataField {
         // --- Plot area setup ---
         var width = dc.getWidth();
         var height = dc.getHeight();
-        var margin = 10;
+        var margin = 3;
         var plotLeft = margin;
         var plotRight = width - margin;
-        var plotTop = height / 2;
+        var plotTop = height / 2 + 3;
         var plotHeight = height - plotTop - margin;
         var plotBottom = plotTop + plotHeight;
         var plotWidth = plotRight - plotLeft;

@@ -533,7 +533,9 @@ class GradeEstimatorView extends WatchUi.DataField {
             if (calculating) { value_curr_grade.setColor(textColor); }
             else { value_curr_grade.setColor(Graphics.COLOR_LT_GRAY); } // Set gray color if not active
 
-            value_curr_grade.setText((100 * grade).format(str_format) + suffix);
+            var print_grade = 100*grade;
+            if (print_grade.abs() < 0.05) { value_curr_grade.setText("0.0" + suffix); }
+            else { value_curr_grade.setText(print_grade.format(str_format) + suffix); }
         }
 
         if (value_max_grade != null) {
@@ -545,13 +547,13 @@ class GradeEstimatorView extends WatchUi.DataField {
 
         if (value_light != null) {
             value_light.setColor(textColor);
-            var str = (distLight/1000).format("%.1f") + "km";
+            var str = (distLight/1000).format("%.1f") + " km";
             value_light.setText(getUpdatingValueAnnotatedString(shouldAccLightDist(), str, "↑", 0, false));
         }
 
         if (value_steep != null) {
             value_steep.setColor(textColor); 
-            var str = (distSteep/1000).format("%.1f") + "km";
+            var str = (distSteep/1000).format("%.1f") + " km";
             value_steep.setText(getUpdatingValueAnnotatedString(shouldAccSteepDist(), str, "↑", 0, false));
         }
 
@@ -573,7 +575,7 @@ class GradeEstimatorView extends WatchUi.DataField {
         if (value_vam != null) {
             if (calculating) { value_vam.setColor(textColor); }
             else { value_vam.setColor(Graphics.COLOR_LT_GRAY); } // Set gray color if not active
-            value_vam.setText((vam).format(vam_str_format) + (drawCompact ? "" : "m/h"));
+            value_vam.setText((vam).format(vam_str_format) + (drawCompact ? "" : " m/h"));
         }
 
         if (value_vam_avg != null) {
@@ -581,7 +583,7 @@ class GradeEstimatorView extends WatchUi.DataField {
             // else { value_vam_avg.setColor(Graphics.COLOR_DK_GRAY); } // Set gray color if grade under climb threshold
 
             value_vam_avg.setColor(textColor);
-            var str = (vamAvg).format(vam_str_format) + (drawCompact ? "" : "m/h");
+            var str = (vamAvg).format(vam_str_format) + (drawCompact ? "" : " m/h");
             value_vam_avg.setText(getUpdatingValueAnnotatedString(shouldAccAvgVAM(), str, "", -1, false));
         }
     }

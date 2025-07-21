@@ -30,4 +30,14 @@
     <string id="Unit_Grade">%</string>
     <string id="Unit_Distance">km</string>
     <string id="Unit_VAM">meter / uur</string>
+
+    <!-- Settings -->
+    <string id="buffer_length">Buffergrootte (seconden)</string>
+    <string id="buffer_fit_max">Max. samples voor hellingfit</string>
+    <string id="buffer_fit_min">Min. samples voor hellingfit (≥ 3)</string>
+    <string id="threshold_log_dist">Min. fit-kwaliteit voor afstand (0.0-1.0)</string>
+    <string id="threshold_log_max">Min. fit-kwaliteit voor max. helling (0.0-1.0)</string>
+    <string id="threshold_light">Drempel lichte klim (%)</string>
+    <string id="threshold_steep">Drempel zware klim (%)</string>
+    <string id="save_smooth">Geglatte hellingsdata opslaan</string>
 </strings>

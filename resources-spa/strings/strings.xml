@@ -30,4 +30,13 @@
     <string id="Unit_Grade">%</string>
     <string id="Unit_Distance">km</string>
     <string id="Unit_VAM">metros / hora</string>
+
+    <string id="buffer_length">Tamaño de búfer (seg.)</string>
+    <string id="buffer_fit_max">Muestras máx. para ajuste</string>
+    <string id="buffer_fit_min">Muestras mín. para ajuste (≥ 3)</string>
+    <string id="threshold_log_dist">Calidad min. para registrar dist. (0.0-1.0)</string>
+    <string id="threshold_log_max">Calidad min. para registrar máx. (%) (0.0-1.0)</string>
+    <string id="threshold_light">Umbral “suave” (%)</string>
+    <string id="threshold_steep">Umbral “fuerte” (%)</string>
+    <string id="save_smooth">Registrar pendiente suavizada</string>
 </strings>

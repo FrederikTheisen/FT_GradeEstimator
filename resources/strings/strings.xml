@@ -1,6 +1,6 @@
 <strings>
     <string id="AppName">LinReg Grade Estimator</string>
-    <string id="Version">v1.3</string>
+    <string id="Version">v1.3.1</string>
 
     <!-- UI labels -->
     <string id="UI_Label_Gradient_Current">Curr. Grade</string>
@@ -33,12 +33,12 @@
     <string id="Unit_VAM">meters / hour</string>
 
     <!-- Settings -->
-    <string id="buffer_length">Sample Buffer Length</string>
-    <string id="buffer_fit_max">Grade Fitting Maximum Samples</string>
-    <string id="buffer_fit_min">Grade Fitting Minimum Samples (>= 3)</string>
-    <string id="threshold_log_dist">Distance Logging Fit Quality Threshold (0.0-1.0)</string>
-    <string id="threshold_log_max">Maximum Grade Logging Fit Quality Threshold (0.0-1.0)</string>
-    <string id="threshold_light">Grade Threshold Light Climb (0-100%)</string>
-    <string id="threshold_steep">Grade Threshold Hard Climb (0-100%)</string>
-    <string id="save_smooth">Save Smoothed Grade Data</string>
+    <string id="buffer_length">Sample Buffer Size (seconds)</string>
+    <string id="buffer_fit_max">Max Samples for Grade Fit</string>
+    <string id="buffer_fit_min">Min Samples for Grade Fit (≥3)</string>
+    <string id="threshold_log_dist">Min Fit Quality to Log Distance (0.0-1.0)</string>
+    <string id="threshold_log_max">Min Fit Quality to Log Max Grade (0.0-1.0)</string>
+    <string id="threshold_light">“Light” Climb Threshold (%)</string>
+    <string id="threshold_steep">“Hard” Climb Threshold (%)</string>
+    <string id="save_smooth">Enable Smoothed Grade Logging</string>
 </strings>

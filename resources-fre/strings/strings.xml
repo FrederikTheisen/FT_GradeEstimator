@@ -30,4 +30,13 @@
     <string id="Unit_Grade">%</string>
     <string id="Unit_Distance">km</string>
     <string id="Unit_VAM">mètres / heure</string>
+
+    <string id="buffer_length">Taille du tampon (s)</string>
+    <string id="buffer_fit_max">Échantillons max pour pente</string>
+    <string id="buffer_fit_min">Échantillons min pour pente (≥ 3)</string>
+    <string id="threshold_log_dist">Qualité min pour journaliser dist. (0.0-1.0)</string>
+    <string id="threshold_log_max">Qualité min pour journaliser pente max (0.0-1.0)</string>
+    <string id="threshold_light">Seuil pente “légère” (%)</string>
+    <string id="threshold_steep">Seuil pente “difficile” (%)</string>
+    <string id="save_smooth">Enregistrer pente lissée</string>
 </strings>

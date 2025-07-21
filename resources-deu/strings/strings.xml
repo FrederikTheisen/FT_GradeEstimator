@@ -30,4 +30,14 @@
     <string id="Unit_Grade">%</string>
     <string id="Unit_Distance">km</string>
     <string id="Unit_VAM">Meter / Stunde</string>
+
+    <!-- Settings -->
+    <string id="buffer_length">Puffergröße (Sek.)</string>
+    <string id="buffer_fit_max">Max. Proben für Steigungsfit</string>
+    <string id="buffer_fit_min">Min. Proben für Steigungsfit (≥ 3)</string>
+    <string id="threshold_log_dist">Mindest-Fit-Qualität Distanz (0.0-1.0)</string>
+    <string id="threshold_log_max">Mindest-Fit-Qualität Max. Steigung (0.0-1.0)</string>
+    <string id="threshold_light">“Leichte” Steigungsschwelle (%)</string>
+    <string id="threshold_steep">“Schwere” Steigungsschwelle (%)</string>
+    <string id="save_smooth">Glättungsdaten protokollieren</string>
 </strings>

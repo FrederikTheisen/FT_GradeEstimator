@@ -306,9 +306,12 @@ class GradeEstimatorView extends WatchUi.DataField {
     }
 
     function updateLayoutDependentStrings() {
-        if (layout == LAYOUT_SMALL) {
+        if (layout == LAYOUT_SMALL && small_layout_draw_style != 2) {
             label_light_str = WatchUi.loadResource(Rez.Strings.UI_Label_Distance_Climb) + " (" + (THRESHOLD_LIGHT * 100).format("%.1f") + "%)";
-            label_steep_str = WatchUi.loadResource(Rez.Strings.UI_Label_Distance_Climb) + " (" + (THRESHOLD_STEEP * 100).format("%.1f") + "%)";
+            label_steep_str = ">" + (THRESHOLD_STEEP * 100).format("%.1f");
+        }
+        else if (layout == LAYOUT_SMALL && small_layout_draw_style == 2) {
+            label_light_str = WatchUi.loadResource(Rez.Strings.UI_Label_Distance_Climb);
         }
         else {
             label_light_str = WatchUi.loadResource(Rez.Strings.UI_Label_Distance_Light) + " (" + (THRESHOLD_LIGHT * 100).format("%.1f") + "%)";

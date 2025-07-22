@@ -6,7 +6,7 @@
     <string id="UI_Label_Gradient_Max">Pente Max</string>
     <string id="UI_Label_Distance_Steep">Dist. Difficile</string>
     <string id="UI_Label_Distance_Light">Dist. Légère</string>
-    <string id="UI_Label_Distance_Climb">Escalade</string>
+    <string id="UI_Label_Distance_Climb">Montée</string>
     <string id="UI_Label_VAM_Current">VAM Actuelle</string>
     <string id="UI_Label_VAM_Average">VAM Moyenne</string>
 

@@ -165,29 +165,7 @@ class GradeEstimatorView extends WatchUi.DataField {
         DataField.initialize();
 
         // Read Settings
-        SAMPLE_WINDOW = Application.Properties.getValue("buffer_length");
-        MIN_GRADE_WINDOW = Application.Properties.getValue("buffer_fit_min");
-        MAX_GRADE_WINDOW = Application.Properties.getValue("buffer_fit_max");
-        DIST_LOG_QUALITY = Application.Properties.getValue("threshold_log_dist");
-        MAX_LOG_QUALITY = Application.Properties.getValue("threshold_log_max");
-        LOG_SMOOTHED_GRADE = Application.Properties.getValue("save_smooth");
-        THRESHOLD_LIGHT = Application.Properties.getValue("threshold_light") / 100.0;
-        THRESHOLD_STEEP = Application.Properties.getValue("threshold_steep") / 100.0;
-
-        // Ensure minimum window size
-        if (MIN_GRADE_WINDOW < 3) {
-            MIN_GRADE_WINDOW = 3; 
-        }
-
-        // Ensure max window is at least min window
-        if (MAX_GRADE_WINDOW < MIN_GRADE_WINDOW) {
-            MAX_GRADE_WINDOW = MIN_GRADE_WINDOW; 
-        }
-
-        // Ensure buffer is at least as large as max grade window
-        if (SAMPLE_WINDOW < MAX_GRADE_WINDOW) {
-            SAMPLE_WINDOW = MAX_GRADE_WINDOW; // Ensure buffer is at least as large as max grade window
-        }
+        updateSettings();
 
         // Initialize strings
         str_buffering = WatchUi.loadResource(Rez.Strings.UI_Label_Status_Buffering);
@@ -256,6 +234,41 @@ class GradeEstimatorView extends WatchUi.DataField {
         grade      = 0.0;
         distLight  = 0.0;
         distSteep  = 0.0;
+    }
+
+    public function updateSettings() {
+        System.println("UPDATE SETTINGS");
+
+        // Read Settings
+        SAMPLE_WINDOW = Application.Properties.getValue("buffer_length");
+        MIN_GRADE_WINDOW = Application.Properties.getValue("buffer_fit_min");
+        MAX_GRADE_WINDOW = Application.Properties.getValue("buffer_fit_max");
+        DIST_LOG_QUALITY = Application.Properties.getValue("threshold_log_dist");
+        MAX_LOG_QUALITY = Application.Properties.getValue("threshold_log_max");
+        LOG_SMOOTHED_GRADE = Application.Properties.getValue("save_smooth");
+        THRESHOLD_LIGHT = Application.Properties.getValue("threshold_light") / 100.0;
+        THRESHOLD_STEEP = Application.Properties.getValue("threshold_steep") / 100.0;
+
+        // Ensure minimum window size
+        if (MIN_GRADE_WINDOW < 3) {
+            MIN_GRADE_WINDOW = 3; 
+        }
+
+        // Ensure max window is at least min window
+        if (MAX_GRADE_WINDOW < MIN_GRADE_WINDOW) {
+            MAX_GRADE_WINDOW = MIN_GRADE_WINDOW; 
+        }
+
+        // Ensure buffer is at least as large as max grade window
+        if (SAMPLE_WINDOW < MAX_GRADE_WINDOW) {
+            SAMPLE_WINDOW = MAX_GRADE_WINDOW; // Ensure buffer is at least as large as max grade window
+        }
+
+        buffer = [];
+        for (var i = 0; i < SAMPLE_WINDOW; i++) {
+            buffer.add({ "altitude" => 0.0, "distance" => 0.0 });
+        }
+        _resetAll(true);
     }
 
     function onLayout(dc as Dc) as Void  {
@@ -628,7 +641,7 @@ class GradeEstimatorView extends WatchUi.DataField {
         var plotHeight = height - plotTop - margin;
         var plotBottom = plotTop + plotHeight;
         var plotWidth = plotRight - plotLeft;
-        var offset = (System.getDeviceSettings().screenHeight * 0.035).toNumber();
+        var offset = (System.getDeviceSettings().screenHeight * 0.035 + 2).toNumber();
 
         // --- Recalculate valid buffer (oldest to newest) ---
         var sampleCount = numValid;

@@ -4,6 +4,8 @@ import Toybox.WatchUi;
 
 class GradeEstimatorApp extends Application.AppBase {
 
+    var view as GradeEstimatorView or Null;
+
     function initialize() {
         AppBase.initialize();
     }
@@ -16,11 +18,18 @@ class GradeEstimatorApp extends Application.AppBase {
     function onStop(state as Dictionary?) as Void {
     }
 
-    // Return the initial view of your application here
-    function getInitialView()  {
-        return [ new GradeEstimatorView() ];
+    function onSettingsChanged() as Void {
+        AppBase.onSettingsChanged();
+
+        view.updateSettings();
     }
 
+    // Return the initial view of your application here
+    function getInitialView()  {
+        view = new GradeEstimatorView();
+
+        return [ view ];
+    }
 }
 
 function getApp() as GradeEstimatorApp {

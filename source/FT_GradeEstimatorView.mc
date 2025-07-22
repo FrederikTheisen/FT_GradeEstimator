@@ -11,7 +11,7 @@ class GradeEstimatorView extends WatchUi.DataField {
     var SAMPLE_WINDOW         = 35;   // buffer size (longer buffer)
     var MIN_GRADE_WINDOW      = 5;    // minimum samples for grade calc
     var MAX_GRADE_WINDOW     = 30;    // maximum samples for grade calc
-    const SAMPLE_MISS_THRESHOLD = 2;    // how many samples can be missed
+    const SAMPLE_MISS_THRESHOLD = 5;    // how many samples can be missed
     var THRESHOLD_LIGHT    = 0.05;    // percent
     var THRESHOLD_STEEP    = 0.10;    // percent
     const FIELD_ID_GRADE     = 30;      // grade, REC
@@ -307,7 +307,7 @@ class GradeEstimatorView extends WatchUi.DataField {
             lastSample = eTime;
             return blank_str;
         }
-        else if (eTime > lastSample + 1.1) { // We missed one sample
+        else if (eTime > lastSample + 1.1) { // We missed one sample, implement compensation
             var dt = eTime - lastSample;
             sample_distance = speed * dt; // Adjust distance based on elapsed time
         }

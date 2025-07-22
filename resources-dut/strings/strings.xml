@@ -1,5 +1,5 @@
 <strings>
-    <string id="AppName">LinReg Helling Schatter</string>
+    <string id="AppName">Adaptive Helling Pro</string>
 
     <!-- UI labels -->
     <string id="UI_Label_Gradient_Current">Huidige Helling</string>

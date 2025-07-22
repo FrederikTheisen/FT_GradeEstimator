@@ -1,5 +1,5 @@
 <strings>
-    <string id="AppName">LinReg Steigungs-Schätzer</string>
+    <string id="AppName">Adaptive Steigung Pro</string>
 
     <!-- UI labels -->
     <string id="UI_Label_Gradient_Current">Aktuelle Steigung</string>

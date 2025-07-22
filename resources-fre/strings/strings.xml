@@ -1,5 +1,5 @@
 <strings>
-    <string id="AppName">Estimateur de Pente LinReg</string>
+    <string id="AppName">Pente Adaptive Pro</string>
 
     <!-- UI labels -->
     <string id="UI_Label_Gradient_Current">Pente Actuelle</string>

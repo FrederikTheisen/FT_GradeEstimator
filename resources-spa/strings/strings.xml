@@ -1,5 +1,5 @@
 <strings>
-    <string id="AppName">Estimador de Pendiente LinReg</string>
+    <string id="AppName">Pendiente Adaptativa Pro</string>
 
     <!-- UI labels -->
     <string id="UI_Label_Gradient_Current">Pend. Actual</string>

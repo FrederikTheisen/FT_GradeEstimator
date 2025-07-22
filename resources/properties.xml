@@ -9,39 +9,50 @@
         <property id="threshold_light" type="float">4</property>
         <property id="threshold_steep" type="float">8</property>
         <property id="save_smooth" type="boolean">false</property>
+        <property id="small_field_data" type="number">0</property>
     </properties>
 
     <settings>
-        <setting propertyKey="@Properties.buffer_length" title="@Strings.buffer_length">
-            <settingConfig type="numeric" />
-        </setting>
+        <group id="group_sample_buffer" title="Sample Buffer Settings" description="Settings to adjust the altitude sample buffer size and how many samples are used for fitting the gradient.">
+            <setting propertyKey="@Properties.buffer_length" title="@Strings.buffer_length">
+                <settingConfig type="numeric" />
+            </setting>
+            <setting propertyKey="@Properties.buffer_fit_max" title="@Strings.buffer_fit_max">
+                <settingConfig type="numeric" />
+            </setting>
+            <setting propertyKey="@Properties.buffer_fit_min" title="@Strings.buffer_fit_min">
+                <settingConfig type="numeric" />
+            </setting>
+        </group>
 
-        <setting propertyKey="@Properties.buffer_fit_max" title="@Strings.buffer_fit_max">
-            <settingConfig type="numeric" />
-        </setting>
+        <group id="group_log_thresholds" title="Linear Fit Quality Thresholds" description="Minimum quality of linear fit for registering values.">
+            <setting propertyKey="@Properties.threshold_log_dist" title="@Strings.threshold_log_dist">
+                <settingConfig type="numeric" />
+            </setting>
+            <setting propertyKey="@Properties.threshold_log_max" title="@Strings.threshold_log_max">
+                <settingConfig type="numeric" />
+            </setting>
+        </group>
 
-        <setting propertyKey="@Properties.buffer_fit_min" title="@Strings.buffer_fit_min">
-            <settingConfig type="numeric" />
-        </setting>
-
-        <setting propertyKey="@Properties.threshold_log_dist" title="@Strings.threshold_log_dist">
-            <settingConfig type="numeric" />
-        </setting>
-
-        <setting propertyKey="@Properties.threshold_log_max" title="@Strings.threshold_log_max">
-            <settingConfig type="numeric" />
-        </setting>
-
-        <setting propertyKey="@Properties.threshold_light" title="@Strings.threshold_light">
-            <settingConfig type="numeric" />
-        </setting>
-
-        <setting propertyKey="@Properties.threshold_steep" title="@Strings.threshold_steep">
-            <settingConfig type="numeric" />
-        </setting>
-
-        <setting propertyKey="@Properties.save_smooth" title="@Strings.save_smooth">
-            <settingConfig type="boolean" />
-        </setting>
+        <group id="group_climb_thresholds" title="Climbing Classification Gradients" description="Gradients considered light and hard climbing. The light climbing grade is used as threshold for calculating average ascending VAM.">
+            <setting propertyKey="@Properties.threshold_light" title="@Strings.threshold_light">
+                <settingConfig type="numeric" />
+            </setting>
+            <setting propertyKey="@Properties.threshold_steep" title="@Strings.threshold_steep">
+                <settingConfig type="numeric" />
+            </setting>
+        </group>
+        
+        <group id="group_misc" title="Other Settings">
+            <setting propertyKey="@Properties.small_field_data" title="@Strings.small_field_data" prompt="@Strings.small_field_data">
+                <settingConfig type="list">
+                    <listEntry value="0">@Strings.small_field_data_vam</listEntry>
+                    <listEntry value="1">@Strings.small_field_data_dist</listEntry>
+                </settingConfig>
+            </setting>
+            <setting propertyKey="@Properties.save_smooth" title="@Strings.save_smooth">
+                <settingConfig type="boolean" />
+            </setting>
+        </group>
     </settings>
 </resources>

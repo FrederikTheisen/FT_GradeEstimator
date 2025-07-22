@@ -41,4 +41,7 @@
     <string id="threshold_light">“Light” Climb Threshold (%)</string>
     <string id="threshold_steep">“Hard” Climb Threshold (%)</string>
     <string id="save_smooth">Enable Smoothed Grade Logging</string>
+    <string id="small_field_data">Small Layout Data Display</string>
+    <string id="small_field_data_vam">Display VAM</string>
+    <string id="small_field_data_dist">Display Distances</string>
 </strings>

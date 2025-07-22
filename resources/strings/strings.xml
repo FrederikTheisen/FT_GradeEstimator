@@ -7,6 +7,7 @@
     <string id="UI_Label_Gradient_Max">Max Grade</string>
     <string id="UI_Label_Distance_Steep">Hard Climb</string>
     <string id="UI_Label_Distance_Light">Light Climb</string>
+    <string id="UI_Label_Distance_Climb">Climb</string>
     <string id="UI_Label_VAM_Current">Curr. VAM</string>
     <string id="UI_Label_VAM_Average">Avg. VAM</string>
 
@@ -43,7 +44,8 @@
     <string id="save_smooth">Enable Smoothed Grade Logging</string>
     <string id="small_field_data">Small Layout Data Display</string>
     <string id="small_field_data_vam">Display VAM</string>
-    <string id="small_field_data_dist">Display Distances</string>
+    <string id="small_field_data_dist">Display Climbing Distances</string>
+    <string id="small_field_data_climbmax">Display Climb Distance and Max Gradient</string>
 
     <string id="group_title_buffer">Sample Buffer Settings</string>
     <string id="group_desc_buffer">Settings to adjust the altitude sample buffer size and how many samples are used for fitting the gradient.</string>

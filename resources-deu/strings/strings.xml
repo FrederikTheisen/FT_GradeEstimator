@@ -6,6 +6,7 @@
     <string id="UI_Label_Gradient_Max">Max. Steigung</string>
     <string id="UI_Label_Distance_Steep">Dist. Starke</string>
     <string id="UI_Label_Distance_Light">Dist. Leichte</string>
+    <string id="UI_Label_Distance_Climb">Anstieg</string>
     <string id="UI_Label_VAM_Current">Aktuelle VAM</string>
     <string id="UI_Label_VAM_Average">Ø VAM</string>
 

@@ -48,6 +48,7 @@
                 <settingConfig type="list">
                     <listEntry value="0">@Strings.small_field_data_vam</listEntry>
                     <listEntry value="1">@Strings.small_field_data_dist</listEntry>
+                    <listEntry value="2">@Strings.small_field_data_climbmax</listEntry>
                 </settingConfig>
             </setting>
             <setting propertyKey="@Properties.save_smooth" title="@Strings.save_smooth">

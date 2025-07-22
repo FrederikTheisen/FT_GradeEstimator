@@ -39,4 +39,19 @@
     <string id="threshold_light">Seuil pente “légère” (%)</string>
     <string id="threshold_steep">Seuil pente “difficile” (%)</string>
     <string id="save_smooth">Enregistrer pente lissée</string>
+    <string id="small_field_data">Affichage compact des données</string>
+    <string id="small_field_data_vam">Afficher le VAM</string>
+    <string id="small_field_data_dist">Afficher les distances</string>
+
+    <string id="group_title_buffer">Paramètres du tampon d’échantillons</string>
+    <string id="group_desc_buffer">Paramètres permettant d’ajuster la taille du tampon des altitudes et le nombre d’échantillons utilisés pour ajuster la pente.</string>
+
+    <string id="group_title_log">Seuils de qualité d’ajustement linéaire</string>
+    <string id="group_desc_log">Qualité minimale de l’ajustement linéaire requise pour enregistrer les valeurs.</string>
+
+    <string id="group_title_climb">Classification des pentes en montée</string>
+    <string id="group_desc_climb">Pentes considérées comme faibles ou fortes. La pente légère sert de seuil pour calculer le VAM moyen en montée.</string>
+
+    <string id="group_title_misc">Autres paramètres</string>
+    <string id="group_desc_misc"></string>
 </strings>

@@ -44,4 +44,16 @@
     <string id="small_field_data">Small Layout Data Display</string>
     <string id="small_field_data_vam">Display VAM</string>
     <string id="small_field_data_dist">Display Distances</string>
+
+    <string id="group_title_buffer">Sample Buffer Settings</string>
+    <string id="group_desc_buffer">Settings to adjust the altitude sample buffer size and how many samples are used for fitting the gradient.</string>
+
+    <string id="group_title_log">Linear Fit Quality Thresholds</string>
+    <string id="group_desc_log">Minimum quality of linear fit for registering values.</string>
+
+    <string id="group_title_climb">Climbing Classification Gradients</string>
+    <string id="group_desc_climb">Gradients considered light and hard climbing. The light climbing grade is used as threshold for calculating average ascending VAM.</string>
+
+    <string id="group_title_misc">Other Settings</string>
+    <string id="group_desc_misc"></string>
 </strings>

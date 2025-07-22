@@ -39,4 +39,19 @@
     <string id="threshold_light">Umbral “suave” (%)</string>
     <string id="threshold_steep">Umbral “fuerte” (%)</string>
     <string id="save_smooth">Registrar pendiente suavizada</string>
+    <string id="small_field_data">Visualización compacta de datos</string>
+    <string id="small_field_data_vam">Mostrar VAM</string>
+    <string id="small_field_data_dist">Mostrar distancias</string>
+
+    <string id="group_title_buffer">Configuración del búfer de muestras</string>
+    <string id="group_desc_buffer">Ajustes para definir el tamaño del búfer de altitud y la cantidad de muestras usadas para calcular el gradiente.</string>
+
+    <string id="group_title_log">Umbrales de calidad del ajuste lineal</string>
+    <string id="group_desc_log">Calidad mínima del ajuste lineal para registrar los valores.</string>
+
+    <string id="group_title_climb">Clasificación de pendientes de subida</string>
+    <string id="group_desc_climb">Pendientes consideradas suaves o fuertes. El umbral de pendiente ligera se usa para calcular el VAM medio en ascenso.</string>
+
+    <string id="group_title_misc">Otros ajustes</string>
+    <string id="group_desc_misc"></string>
 </strings>

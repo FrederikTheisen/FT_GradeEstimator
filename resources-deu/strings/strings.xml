@@ -40,4 +40,19 @@
     <string id="threshold_light">“Leichte” Steigungsschwelle (%)</string>
     <string id="threshold_steep">“Schwere” Steigungsschwelle (%)</string>
     <string id="save_smooth">Glättungsdaten protokollieren</string>
+    <string id="small_field_data">Kompakte Datenanzeige</string>
+    <string id="small_field_data_vam">VAM anzeigen</string>
+    <string id="small_field_data_dist">Distanzen anzeigen</string>
+
+    <string id="group_title_buffer">Puffereinstellungen</string>
+    <string id="group_desc_buffer">Einstellungen zur Anpassung der Höhe-Datenpuffergröße und der Anzahl an Stichproben für die Steigungsberechnung.</string>
+
+    <string id="group_title_log">Schwellenwerte für Fit-Qualität</string>
+    <string id="group_desc_log">Minimale Fit-Qualität für die Erfassung von Werten.</string>
+
+    <string id="group_title_climb">Anstiegs-Klassifikationen</string>
+    <string id="group_desc_climb">Steigungen, die als leicht oder steil gelten. Die leichte Steigung dient als Schwelle für die Berechnung des durchschnittlichen VAM beim Anstieg.</string>
+
+    <string id="group_title_misc">Weitere Einstellungen</string>
+    <string id="group_desc_misc"></string>
 </strings>

@@ -40,4 +40,19 @@
     <string id="threshold_light">Drempel lichte klim (%)</string>
     <string id="threshold_steep">Drempel zware klim (%)</string>
     <string id="save_smooth">Geglatte hellingsdata opslaan</string>
+    <string id="small_field_data">Compacte gegevensweergave</string>
+    <string id="small_field_data_vam">VAM tonen</string>
+    <string id="small_field_data_dist">Afstanden tonen</string>
+
+    <string id="group_title_buffer">Instellingen samplebuffer</string>
+    <string id="group_desc_buffer">Instellingen voor de grootte van de hoogtebuffer en het aantal metingen dat wordt gebruikt om het stijgingspercentage te berekenen.</string>
+
+    <string id="group_title_log">Lineaire fit kwaliteitsdrempels</string>
+    <string id="group_desc_log">Minimale kwaliteit van lineaire fit om waarden op te slaan.</string>
+
+    <string id="group_title_climb">Klimclassificatie hellingsgraden</string>
+    <string id="group_desc_climb">Hellingsgraden die als licht of zwaar klimmen worden beschouwd. De drempel voor licht klimmen wordt gebruikt voor het berekenen van gemiddelde stijg-VAM.</string>
+
+    <string id="group_title_misc">Overige instellingen</string>
+    <string id="group_desc_misc"></string>
 </strings>

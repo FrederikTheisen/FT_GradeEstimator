@@ -13,7 +13,7 @@
     </properties>
 
     <settings>
-        <group id="group_sample_buffer" title="Sample Buffer Settings" description="Settings to adjust the altitude sample buffer size and how many samples are used for fitting the gradient.">
+        <group id="group_sample_buffer" title="@Strings.group_title_buffer" description="@Strings.group_desc_buffer">
             <setting propertyKey="@Properties.buffer_length" title="@Strings.buffer_length">
                 <settingConfig type="numeric" />
             </setting>
@@ -25,7 +25,7 @@
             </setting>
         </group>
 
-        <group id="group_log_thresholds" title="Linear Fit Quality Thresholds" description="Minimum quality of linear fit for registering values.">
+        <group id="group_log_thresholds" title="@Strings.group_title_log" description="@Strings.group_desc_log">
             <setting propertyKey="@Properties.threshold_log_dist" title="@Strings.threshold_log_dist">
                 <settingConfig type="numeric" />
             </setting>
@@ -34,7 +34,7 @@
             </setting>
         </group>
 
-        <group id="group_climb_thresholds" title="Climbing Classification Gradients" description="Gradients considered light and hard climbing. The light climbing grade is used as threshold for calculating average ascending VAM.">
+        <group id="group_climb_thresholds" title="@Strings.group_title_climb" description="@Strings.group_desc_climb">
             <setting propertyKey="@Properties.threshold_light" title="@Strings.threshold_light">
                 <settingConfig type="numeric" />
             </setting>
@@ -43,7 +43,7 @@
             </setting>
         </group>
         
-        <group id="group_misc" title="Other Settings">
+        <group id="group_misc" title="@Strings.group_title_misc" description="@Strings.group_desc_misc">
             <setting propertyKey="@Properties.small_field_data" title="@Strings.small_field_data" prompt="@Strings.small_field_data">
                 <settingConfig type="list">
                     <listEntry value="0">@Strings.small_field_data_vam</listEntry>

@@ -2,17 +2,19 @@
     <string id="AppName">Adaptive Steigung Pro</string>
 
     <!-- UI labels -->
-    <string id="UI_Label_Gradient_Current">Aktuelle Steigung</string>
-    <string id="UI_Label_Gradient_Max">Max. Steigung</string>
-    <string id="UI_Label_Distance_Steep">Dist. Starke</string>
-    <string id="UI_Label_Distance_Light">Dist. Leichte</string>
-    <string id="UI_Label_Distance_Climb">Anstieg</string>
-    <string id="UI_Label_VAM_Current">Aktuelle VAM</string>
+    <string id="UI_Label_Gradient_Current">Steigung</string>
+    <string id="UI_Label_Gradient_Max">Max. Stg.</string>
+    <string id="UI_Label_Distance_Steep">Dist. </string>
+    <string id="UI_Label_Distance_Light">Dist. Anstieg</string>
+    <string id="UI_Label_Distance_Climb">Dist. Anstieg</string>
+    <string id="UI_Label_VAM_Current">VAM</string>
     <string id="UI_Label_VAM_Average">Ø VAM</string>
+
+    <string id="UI_Label_RampasInhumanas"> Rampas Inhumanas</string>
 
     <string id="UI_Label_Status_Buffering">DATEN SAMMELN</string>
     <string id="UI_Label_Status_Active">AKTIV</string>
-    <string id="UI_Label_Status_NoData">KEINE DATEN</string>
+    <string id="UI_Label_Status_NoData">KEIN DAT.</string>
 
     <!-- Garmin Connect data labels -->
     <string id="GC_ChartTitle_Grade">AGP Steigung</string>
@@ -22,7 +24,7 @@
 
     <string id="GC_Label_Grade">Steigung</string>
     <string id="GC_Label_VAM">"Vertikale Geschw. (m/h)</string>
-    <string id="GC_Label_AverageVAM">Ø VAM (Aufstieg)</string>
+    <string id="GC_Label_AverageVAM">Ø VAM (Anstiegs)</string>
     <string id="GC_Label_Distance_Light">Leichte Steigung</string>
     <string id="GC_Label_Distance_Steep">Starke Steigung</string>
     <string id="GC_Label_Grade_Max">Maximale Steigung</string>
@@ -42,8 +44,8 @@
     <string id="threshold_steep">“Schwere” Steigungsschwelle (%)</string>
     <string id="save_smooth">Glättungsdaten protokollieren</string>
     <string id="small_field_data">Kompakte Datenanzeige</string>
-    <string id="small_field_data_vam">VAM anzeigen</string>
-    <string id="small_field_data_dist">Distanzen anzeigen</string>
+    <string id="small_field_data_vam">VAM</string>
+    <string id="small_field_data_dist">Anstiegs Distanzen</string>
 
     <string id="group_title_buffer">Puffereinstellungen</string>
     <string id="group_desc_buffer">Einstellungen zur Anpassung der Höhe-Datenpuffergröße und der Anzahl an Stichproben für die Steigungsberechnung.</string>

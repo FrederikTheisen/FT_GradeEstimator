@@ -3,16 +3,16 @@
 
     <!-- UI labels -->
     <string id="UI_Label_Gradient_Current">Huidige Helling</string>
-    <string id="UI_Label_Gradient_Max">Max Helling</string>
+    <string id="UI_Label_Gradient_Max">Max. Stg.</string>
     <string id="UI_Label_Distance_Steep">Afst.</string>
-    <string id="UI_Label_Distance_Light">Afst.</string>
-    <string id="UI_Label_Distance_Climb">Klim</string>
+    <string id="UI_Label_Distance_Light">Afst. Klim</string>
+    <string id="UI_Label_Distance_Climb">Afst. Klim</string>
     <string id="UI_Label_VAM_Current">VAM Nu</string>
     <string id="UI_Label_VAM_Average">VAM Gem.</string>
 
     <string id="UI_Label_Status_Buffering">BUFFEREN</string>
     <string id="UI_Label_Status_Active">ACTIEF</string>
-    <string id="UI_Label_Status_NoData">GEEN GEGEVENS</string>
+    <string id="UI_Label_Status_NoData">GEEN DATA</string>
 
     <!-- Garmin Connect data labels -->
     <string id="GC_ChartTitle_Grade">AGP Helling</string>
@@ -42,8 +42,8 @@
     <string id="threshold_steep">Drempel zware klim (%)</string>
     <string id="save_smooth">Geglatte hellingsdata opslaan</string>
     <string id="small_field_data">Compacte gegevensweergave</string>
-    <string id="small_field_data_vam">VAM tonen</string>
-    <string id="small_field_data_dist">Afstanden tonen</string>
+    <string id="small_field_data_vam">VAM</string>
+    <string id="small_field_data_dist">Klim Afstanden</string>
 
     <string id="group_title_buffer">Instellingen samplebuffer</string>
     <string id="group_desc_buffer">Instellingen voor de grootte van de hoogtebuffer en het aantal metingen dat wordt gebruikt om het stijgingspercentage te berekenen.</string>
@@ -54,6 +54,6 @@
     <string id="group_title_climb">Klimclassificatie hellingsgraden</string>
     <string id="group_desc_climb">Hellingsgraden die als licht of zwaar klimmen worden beschouwd. De drempel voor licht klimmen wordt gebruikt voor het berekenen van gemiddelde stijg-VAM.</string>
 
-    <string id="group_title_misc">Overige instellingen</string>
+    <string id="group_title_misc">Overige Instellingen</string>
     <string id="group_desc_misc"></string>
 </strings>

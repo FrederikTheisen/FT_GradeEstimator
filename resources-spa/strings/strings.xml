@@ -4,11 +4,11 @@
     <!-- UI labels -->
     <string id="UI_Label_Gradient_Current">Pend. Actual</string>
     <string id="UI_Label_Gradient_Max">Pend. Máx</string>
-    <string id="UI_Label_Distance_Steep">Dist.</string>
-    <string id="UI_Label_Distance_Light">Dist.</string>
-    <string id="UI_Label_Distance_Climb">Subida</string>
+    <string id="UI_Label_Distance_Steep">Dist. Subida</string>
+    <string id="UI_Label_Distance_Light">Dist. Subida</string>
+    <string id="UI_Label_Distance_Climb">Dist. Subida</string>
     <string id="UI_Label_VAM_Current">VAM Actual</string>
-    <string id="UI_Label_VAM_Average">VAM Promedio</string>
+    <string id="UI_Label_VAM_Average">VAM Prom.</string>
 
     <string id="UI_Label_Status_Buffering">RECOPILACIÓN</string>
     <string id="UI_Label_Status_Active">ACTIVO</string>
@@ -21,7 +21,7 @@
     <string id="GC_Lap_AvgGrade">Pendiente Prom.</string>
 
     <string id="GC_Label_Grade">Pendiente</string>
-    <string id="GC_Label_VAM">Velocidad de Ascenso (m/h)</string>
+    <string id="GC_Label_VAM">Velocidad de Ascenso</string>
     <string id="GC_Label_AverageVAM">VAM Prom. en Ascensos</string>
     <string id="GC_Label_Distance_Light">Subida Ligera</string>
     <string id="GC_Label_Distance_Steep">Subida Fuerte</string>
@@ -41,8 +41,8 @@
     <string id="threshold_steep">Umbral “fuerte” (%)</string>
     <string id="save_smooth">Registrar pendiente suavizada</string>
     <string id="small_field_data">Visualización compacta de datos</string>
-    <string id="small_field_data_vam">Mostrar VAM</string>
-    <string id="small_field_data_dist">Mostrar distancias</string>
+    <string id="small_field_data_vam">VAM</string>
+    <string id="small_field_data_dist">Distancias Subida</string>
 
     <string id="group_title_buffer">Configuración del búfer de muestras</string>
     <string id="group_desc_buffer">Ajustes para definir el tamaño del búfer de altitud y la cantidad de muestras usadas para calcular el gradiente.</string>

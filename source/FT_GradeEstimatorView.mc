@@ -26,12 +26,18 @@ class GradeEstimatorView extends WatchUi.DataField {
     var MAX_LOG_QUALITY    = 0.5;     // Quality threshold for maximum grade
     var LOG_SMOOTHED_GRADE = false; // Use smoothed grade for logging
     enum { LAYOUT_SMALL, LAYOUT_WIDE, LAYOUT_LARGE }
+    enum { UNIT_DIST_LONG, UNIT_DIST_SHORT, UNIT_VAM }
 
     const blank_str         = "-.-";
     const suffix            = "%";
-    const str_format        = "%+.1f";
+    var str_format        = "%+.1f";
     const vam_str_format    = "%d";
     const update_annotation = "+";
+    var filled_square     = "█";
+    var empty_square      = "░";
+
+    var unit_distance     = " km";
+    var unit_vam          = " m/h";
 
     var str_buffering as String = "";
     var str_active as String = "";
@@ -67,12 +73,12 @@ class GradeEstimatorView extends WatchUi.DataField {
 
     // UI
     var textColor as Number               = Graphics.COLOR_WHITE;
-    var drawCompact as Boolean            = false; // Compact view for small screens
-    var drawGraph as Boolean              = false; // Draw altitude buffer graph
-    var label_light_str as String         = "Dist. "; // Label for light distance
-    var label_steep_str as String         = "Dist. "; // Label for steep distance
+    var label_light_str as String         = "---"; // Label for light distance
+    var label_steep_str as String         = "---"; // Label for steep distance
     var small_layout_draw_style as Number = 0;
     var layout as Number                  = 0;
+    var isExploreUnit as Boolean          = false; 
+    var isMetric                          = true;
 
     // STATUS STATE
     var calculating as Boolean  = false;
@@ -83,9 +89,9 @@ class GradeEstimatorView extends WatchUi.DataField {
         var numBlocks = Math.floor(progress * length);
         for (var i = 0; i < length; i++) {
             if (i < numBlocks) {
-                bar += "█"; // filled block
+                bar += filled_square; // filled block
             } else {
-                bar += "░"; // empty block
+                bar += empty_square; // empty block
             }
         }
         return bar;
@@ -104,9 +110,9 @@ class GradeEstimatorView extends WatchUi.DataField {
         var icon = "";
         for (var i = 0; i < barLength; i++) {
             if (i == pos) {
-                icon += "█";
+                icon += filled_square;
             } else {
-                icon += "░";
+                icon += empty_square;
             }
         }
         return icon;
@@ -114,7 +120,7 @@ class GradeEstimatorView extends WatchUi.DataField {
 
     function getUpdatingValueAnnotatedString(isupdating as Boolean, s as String, annotation as String or Null, position as Number or Null, blinking as Boolean) as String {
         // Return input string with annotation indicating the value is currently being updated
-        if (drawCompact) { return s; }
+        if (drawCompact() || isExploreUnit) { return s; }
         if (annotation == null) { annotation = update_annotation; } // Default annotation if none provided
         if (position == null) { position = 0; } // Default position is at the start
 
@@ -146,13 +152,16 @@ class GradeEstimatorView extends WatchUi.DataField {
             var progress = Math.sqrt((gradeWindowSize.toFloat() - MIN_GRADE_WINDOW + 1) / (MAX_GRADE_WINDOW - MIN_GRADE_WINDOW + 1));
             c += getProgressBar(progress, barlength);
             c += " " + gradeWindowSize.format("%d") + "s";
-            if (!drawCompact) { c += "|" + numValid.format("%d") + "s";}
+            if (!drawCompact()) { c += "|" + numValid.format("%d") + "s";}
         } else if (bufIndex > 0) {
             c = str_buffering + " ";
             c += getProgressBar(bufIndex.toFloat() / MIN_GRADE_WINDOW, 19 - str_buffering.length());
         }
         else {
             c = str_no_data + " ";
+
+            if (drawCompact()) { c = ""; }
+
             c += getRotatingIcon();
             c += " " + MIN_GRADE_WINDOW.format("%d") + "s|" + MAX_GRADE_WINDOW.format("%d") + "s|" + SAMPLE_WINDOW.format("%d") + "s";
         }
@@ -165,8 +174,47 @@ class GradeEstimatorView extends WatchUi.DataField {
     function shouldCalcMaxGrade() as Boolean { return (quality >= MAX_LOG_QUALITY && gradeWindowSize > MIN_GRADE_WINDOW); }
     function isMaxGradeUpdateRecent() as Boolean { return (Time.now().value() - lastMaxGradeUpdateTime < 20); }
 
+    function drawCompact() as Boolean { return layout == LAYOUT_SMALL; }
+    function drawGraph() as Boolean { return layout == LAYOUT_LARGE; }
+    function drawCompactUnits() as Boolean { return (drawCompact() || isExploreUnit); }
+
+    function getUnitString(unit as Number) as String {
+        var out = "";
+
+        if (isMetric) {
+            switch (unit) {
+                case UNIT_DIST_LONG: out = "km"; break;
+                case UNIT_DIST_SHORT: out = "m"; break;
+                case UNIT_VAM: out = "m/h"; break;
+                default: break;
+            }
+        }
+        else {
+            switch (unit) {
+                case UNIT_DIST_LONG: out = "mi"; break;
+                case UNIT_DIST_SHORT: out = "ft"; break;
+                case UNIT_VAM: out = "ft/h"; break;
+                default: break;
+            }
+        }
+
+        if (drawCompact()) { return ""; }
+        else if (isExploreUnit) { return out; }
+        else { return " " + out;}
+    }
+
+    function getValueInLocalUnit(value as Float, type as Number) as Float {
+        if (isMetric) { return value; }
+        else {
+            if (type == UNIT_DIST_LONG) { return value * 0.62; }
+            else { return value * 3.28;}
+        }
+    }
+
     function initialize() {
         DataField.initialize();
+
+        isMetric = System.getDeviceSettings().distanceUnits == System.UNIT_METRIC;
 
         // Read Settings
         updateSettings();
@@ -240,24 +288,12 @@ class GradeEstimatorView extends WatchUi.DataField {
         var width_device = System.getDeviceSettings().screenWidth;
         var height_device = System.getDeviceSettings().screenHeight;
 
-        if (width_view < width_device / 2 + 10) {
-            layout = LAYOUT_SMALL;
-            drawCompact = true; // Compact labels for small views
-            drawGraph = false; // No graph in compact view
-        }
-        else {
-            drawCompact = false; // Full length labels for wide views
+        if (height_device == 400 && width_device == 240) { isExploreUnit = true; }
 
-            if (height_view < (height_device / 3) - 3) { 
-                layout = LAYOUT_WIDE;
-                View.setLayout(Rez.Layouts.WideLayout(dc));
-                drawGraph = false; // No graph in wide view
-            }
-            else { 
-                View.setLayout(Rez.Layouts.LargeLayout(dc));
-                layout = LAYOUT_LARGE;
-                drawGraph = true; // Draw altitude buffer graph in wide view
-            }
+        if (width_view < width_device / 2 + 10) { layout = LAYOUT_SMALL; }
+        else {
+            if (height_view < (height_device / 3) - 3) { layout = LAYOUT_WIDE; }
+            else { layout = LAYOUT_LARGE; }
         }
     }
 
@@ -275,6 +311,10 @@ class GradeEstimatorView extends WatchUi.DataField {
         THRESHOLD_STEEP = Application.Properties.getValue("threshold_steep") / 100.0;
 
         small_layout_draw_style = Application.Properties.getValue("small_field_data");
+
+        // Ensure the buffer is not too large or small
+        if (SAMPLE_WINDOW > 180) { SAMPLE_WINDOW = 180; }
+        else if (SAMPLE_WINDOW < 10) { SAMPLE_WINDOW = 10; }
 
         // Ensure minimum window size
         if (MIN_GRADE_WINDOW < 3) {
@@ -307,15 +347,30 @@ class GradeEstimatorView extends WatchUi.DataField {
 
     function updateLayoutDependentStrings() {
         if (layout == LAYOUT_SMALL && small_layout_draw_style != 2) {
-            label_light_str = WatchUi.loadResource(Rez.Strings.UI_Label_Distance_Climb) + " (" + (THRESHOLD_LIGHT * 100).format("%.1f") + "%)";
-            label_steep_str = ">" + (THRESHOLD_STEEP * 100).format("%.1f");
+            label_light_str = WatchUi.loadResource(Rez.Strings.UI_Label_Distance_Climb);
+            label_steep_str = ">" + (THRESHOLD_STEEP * 100).format("%.1f") + "%";
         }
         else if (layout == LAYOUT_SMALL && small_layout_draw_style == 2) {
             label_light_str = WatchUi.loadResource(Rez.Strings.UI_Label_Distance_Climb);
         }
         else {
-            label_light_str = WatchUi.loadResource(Rez.Strings.UI_Label_Distance_Light) + " (" + (THRESHOLD_LIGHT * 100).format("%.1f") + "%)";
-            label_steep_str = WatchUi.loadResource(Rez.Strings.UI_Label_Distance_Steep) + " (" + (THRESHOLD_STEEP * 100).format("%.1f") + "%)";
+            label_light_str = WatchUi.loadResource(Rez.Strings.UI_Label_Distance_Light) + " >" + (THRESHOLD_LIGHT * 100).format("%.1f") + "%";
+            label_steep_str = WatchUi.loadResource(Rez.Strings.UI_Label_Distance_Steep) + " >" + (THRESHOLD_STEEP * 100).format("%.1f") + "%";
+
+            if (THRESHOLD_STEEP >= 0.099 && !isExploreUnit) { label_steep_str = WatchUi.loadResource(Rez.Strings.UI_Label_RampasInhumanas) + "(+" + (THRESHOLD_STEEP * 100).format("%.1f") + "%)";}
+            else if (isExploreUnit) {
+                label_light_str = WatchUi.loadResource(Rez.Strings.UI_Label_Distance_Climb) + " >" + (THRESHOLD_LIGHT * 100).format("%.1f") + "%";
+                label_steep_str = WatchUi.loadResource(Rez.Strings.UI_Label_Distance_Climb) + " >" + (THRESHOLD_STEEP * 100).format("%.1f") + "%";
+            }
+        }
+
+        if (isExploreUnit) { // Fonts are too wide or not available
+            filled_square = "|";
+            empty_square = ".";
+            str_format = "%.1f";
+
+            unit_distance = "km";
+            unit_vam = "m/h";
         }
     }
 
@@ -324,10 +379,15 @@ class GradeEstimatorView extends WatchUi.DataField {
 
         switch (layout) {
             default:
-            case LAYOUT_SMALL: View.setLayout(Rez.Layouts.SmallLayout(dc)); break;
+            case LAYOUT_SMALL:
+                if (!isExploreUnit) { View.setLayout(Rez.Layouts.SmallLayout(dc)); }
+                else { View.setLayout(Rez.Layouts.SmallLayoutExplore(dc)); } 
+                break;
             case LAYOUT_WIDE: View.setLayout(Rez.Layouts.WideLayout(dc)); break;
             case LAYOUT_LARGE: View.setLayout(Rez.Layouts.LargeLayout(dc)); break;
         }
+
+        updateLayoutDependentStrings();
     }
 
     function onTimerLap() as Void {
@@ -501,7 +561,6 @@ class GradeEstimatorView extends WatchUi.DataField {
         }
     }
 
-    // Helper: compute slope for a window of the buffer
     function computeWindowSlope(samples as Array<Dictionary>, bufIndex as Number, windowSize as Number, bufferLen as Number) as Float {
         var xVals = [];
         var dist = 0.0;
@@ -557,7 +616,7 @@ class GradeEstimatorView extends WatchUi.DataField {
         textColor = Graphics.COLOR_WHITE;
         if (getBackgroundColor() == Graphics.COLOR_WHITE) { textColor = Graphics.COLOR_BLACK;}
 
-        if (drawCompact) { // Determine which small fields to show
+        if (drawCompact()) { // Determine which small fields to show
             setCompactVisible(dc);
         }
 
@@ -569,7 +628,7 @@ class GradeEstimatorView extends WatchUi.DataField {
 
         View.onUpdate(dc);
         
-        if (drawGraph) { drawAltitudeBufferPlot(dc); }
+        if (drawGraph()) { drawAltitudeBufferPlot(dc); }
     }
 
     function drawDefaultView(dc as Dc) as Void {
@@ -581,7 +640,7 @@ class GradeEstimatorView extends WatchUi.DataField {
         var label_steep = View.findDrawableById("label_steep") as Text;
         
         if (value_curr_grade != null) {
-            if (calculating) { value_curr_grade.setColor(textColor); }
+            if (calculating || !drawCompact()) { value_curr_grade.setColor(textColor); }
             else { value_curr_grade.setColor(Graphics.COLOR_LT_GRAY); } // Set gray color if not active
 
             var print_grade = 100*grade;
@@ -592,19 +651,20 @@ class GradeEstimatorView extends WatchUi.DataField {
         if (value_max_grade != null) {
             value_max_grade.setColor(textColor);
 
-            var str = (100*maxGrade).format(str_format) + suffix;
+            var str = (100*maxGrade).format(str_format);
+            if (!drawCompact()) { str += suffix; } 
             value_max_grade.setText(getUpdatingValueAnnotatedString(isMaxGradeUpdateRecent(), str, " !!", 1, false));
         }
 
         if (value_light != null) {
             value_light.setColor(textColor);
-            var str = (distLight/1000).format("%.1f") + " km";
+            var str = getValueInLocalUnit(distLight/1000, UNIT_DIST_LONG).format("%.1f") + getUnitString(UNIT_DIST_LONG);
             value_light.setText(getUpdatingValueAnnotatedString(shouldAccLightDist(), str, "↑", 0, false));
         }
 
         if (value_steep != null) {
             value_steep.setColor(textColor); 
-            var str = (distSteep/1000).format("%.1f") + " km";
+            var str = getValueInLocalUnit(distSteep/1000, UNIT_DIST_LONG).format("%.1f") + getUnitString(UNIT_DIST_LONG);
             value_steep.setText(getUpdatingValueAnnotatedString(shouldAccSteepDist(), str, "↑", 0, false));
         }
 
@@ -624,17 +684,14 @@ class GradeEstimatorView extends WatchUi.DataField {
         var value_vam_avg = View.findDrawableById("value_vam_avg") as Text;
 
         if (value_vam != null) {
-            if (calculating) { value_vam.setColor(textColor); }
-            else { value_vam.setColor(Graphics.COLOR_LT_GRAY); } // Set gray color if not active
-            value_vam.setText((vam).format(vam_str_format) + (drawCompact ? "" : " m/h"));
+            value_vam.setColor(textColor);
+            var str = getValueInLocalUnit(vam, UNIT_VAM).format(vam_str_format) + getUnitString(UNIT_VAM);
+            value_vam.setText(str);
         }
 
         if (value_vam_avg != null) {
-            // if (grade > THRESHOLD_LIGHT) { value_vam_avg.setColor(textColor); }
-            // else { value_vam_avg.setColor(Graphics.COLOR_DK_GRAY); } // Set gray color if grade under climb threshold
-
             value_vam_avg.setColor(textColor);
-            var str = (vamAvg).format(vam_str_format) + (drawCompact ? "" : " m/h");
+            var str = getValueInLocalUnit(vamAvg, UNIT_VAM).format(vam_str_format) + getUnitString(UNIT_VAM);
             value_vam_avg.setText(getUpdatingValueAnnotatedString(shouldAccAvgVAM(), str, "", -1, false));
         }
     }
@@ -770,8 +827,8 @@ class GradeEstimatorView extends WatchUi.DataField {
             }
 
             dc.setColor(textColor, Graphics.COLOR_TRANSPARENT);
-            dc.drawText(plotLeft + plotWidth / 2, plotBottom - offset, Graphics.FONT_SYSTEM_TINY, "← " + xrange.format("%.1f") + "m →", Graphics.TEXT_JUSTIFY_CENTER);
-            dc.drawText(plotLeft + 3, plotTop + 3, Graphics.FONT_SYSTEM_TINY, "↕ " + yrange.format("%.1f") + "m", Graphics.TEXT_JUSTIFY_LEFT);
+            dc.drawText(plotLeft + plotWidth / 2, plotBottom - offset, Graphics.FONT_SYSTEM_TINY, "← " + getValueInLocalUnit(xrange, UNIT_DIST_SHORT).format("%.1f") + getUnitString(UNIT_DIST_SHORT) + " →", Graphics.TEXT_JUSTIFY_CENTER);
+            dc.drawText(plotLeft + 3, plotTop + 3, Graphics.FONT_SYSTEM_TINY, "↕ " + getValueInLocalUnit(yrange, UNIT_DIST_SHORT).format("%.1f") + getUnitString(UNIT_DIST_SHORT), Graphics.TEXT_JUSTIFY_LEFT);
 
             if (calculating) {
                 // --- Draw regression line through the mean point with correct slope ---
@@ -811,7 +868,7 @@ class GradeEstimatorView extends WatchUi.DataField {
                 dc.setPenWidth(3);
                 dc.drawLine(px1, py1, px2, py2);
 
-                dc.drawText(plotLeft + plotWidth - 7, plotBottom - offset, Graphics.FONT_SYSTEM_TINY, "← " + (xEnd - xStart).format("%.1f") + "m", Graphics.TEXT_JUSTIFY_RIGHT);
+                dc.drawText(plotLeft + plotWidth - 7, plotBottom - offset, Graphics.FONT_SYSTEM_TINY, "← " + getValueInLocalUnit(xEnd - xStart, UNIT_DIST_SHORT).format("%.1f") + getUnitString(UNIT_DIST_SHORT), Graphics.TEXT_JUSTIFY_RIGHT);
             }
         }
 

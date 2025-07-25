@@ -417,7 +417,7 @@ class GradeEstimatorView extends WatchUi.DataField {
         // Reset if nearly stopped or if more than x samples missed (missing 1 sample should be rare)
         if (speed < 1.0 || eTime > lastSample + SAMPLE_MISS_THRESHOLD) {
             _resetAll(false);
-            gradeField.setData(0.0);
+            //gradeField.setData(0.0);
             lastSample = eTime;
             return blank_str;
         }
@@ -442,7 +442,7 @@ class GradeEstimatorView extends WatchUi.DataField {
             // If the altitude jumped too much, reset the buffer
             System.println("Altitude jump detected: " + (medianAlt - prevMedianAlt).abs() + " m, resetting buffer.");
             _resetAll(true);
-            gradeField.setData(0.0);
+            //gradeField.setData(0.0);
             lastSample = eTime;
             return blank_str;
         }
@@ -460,7 +460,7 @@ class GradeEstimatorView extends WatchUi.DataField {
         }
 
         if (accWinDist < 5 || numValid < MIN_GRADE_WINDOW) {
-            gradeField.setData(0.0);
+            //gradeField.setData(0.0);
             return blank_str;
         }
 
@@ -569,7 +569,7 @@ class GradeEstimatorView extends WatchUi.DataField {
             quality = 0.005 / (0.005 + sem); // Quality measure based on standard error of the slope
         }
         else {
-            quality = -1.0; // No valid data
+            quality = 0.0; // No valid data
             calculating = false; // We don't really have any data. This should never happen.
         }
     }

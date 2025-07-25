@@ -202,8 +202,8 @@ class GradeEstimatorView extends WatchUi.DataField {
             }
         }
 
-        if (drawCompact()) { return ""; }
-        else if (isExploreUnit) { return out; }
+        if (drawCompact() && (unit == UNIT_VAM || isExploreUnit)) { return ""; }
+        else if (isExploreUnit || drawCompact()) { return out; }
         else { return " " + out;}
     }
 
@@ -498,7 +498,7 @@ class GradeEstimatorView extends WatchUi.DataField {
         lap_average_grade_sum += grade;
         lap_average_grade_count++;
 
-        var pre_alpha = (gradeWindowSize.toFloat() - MIN_GRADE_WINDOW) / (MAX_GRADE_WINDOW - MIN_GRADE_WINDOW);
+        var pre_alpha = (gradeWindowSize.toFloat()) / (MAX_GRADE_WINDOW);
         var alpha = EWA_ALPHA * quality * quality * pre_alpha;
         ewa_grade = (1 - alpha) * ewa_grade + alpha * grade;
 
@@ -665,7 +665,7 @@ class GradeEstimatorView extends WatchUi.DataField {
             value_max_grade.setColor(textColor);
 
             var str = (100*maxGrade).format(str_format);
-            if (!drawCompact()) { str += suffix; } 
+            if (!drawCompact() || !isExploreUnit) { str += suffix; } 
             value_max_grade.setText(getUpdatingValueAnnotatedString(isMaxGradeUpdateRecent(), str, " !!", 1, false));
         }
 

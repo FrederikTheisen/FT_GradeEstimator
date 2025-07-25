@@ -22,11 +22,14 @@ class GradeEstimatorView extends WatchUi.DataField {
     const FIELD_ID_VAM_AVG   = 35;      // grade, REC
     const FIELD_ID_LAP_AVG   = 36;      // avg grade for laps
     const MAX_ALT_JUMP       = 10;
+    const EWA_ALPHA          = 1;
     var DIST_LOG_QUALITY   = 0.33;    // Quality threshold for distance calculation
     var MAX_LOG_QUALITY    = 0.5;     // Quality threshold for maximum grade
     var LOG_SMOOTHED_GRADE = false; // Use smoothed grade for logging
+    const RAMPAS_INHUMANAS_THRESHOLD = 0.15;
     enum { LAYOUT_SMALL, LAYOUT_WIDE, LAYOUT_LARGE }
     enum { UNIT_DIST_LONG, UNIT_DIST_SHORT, UNIT_VAM }
+    const old_partnums      = ["006-B3121-00", "006-B3122-00", "006-B2713-00", "006-B3570-00", "006-B3095-00", "006-B4169-00"];
 
     const blank_str         = "-.-";
     const suffix            = "%";
@@ -50,6 +53,7 @@ class GradeEstimatorView extends WatchUi.DataField {
     var bufIndex as Number     = 0;
     var accWinDist as Float    = 0.0;  // over window
     var grade as Float         = 0.0;  // fraction, e.g. 0.05 = 5%
+    var ewa_grade as Float    = 0.0;
     var distLight as Float     = 0.0;  // meters at ≥5%
     var distSteep as Float     = 0.0;  // meters at ≥10%
     var maxGrade as Float      = 0.0;  // maximum grade encountered
@@ -171,7 +175,7 @@ class GradeEstimatorView extends WatchUi.DataField {
     function shouldAccLightDist() as Boolean { return (grade >= THRESHOLD_LIGHT && quality >= DIST_LOG_QUALITY); }
     function shouldAccSteepDist() as Boolean { return (grade >= THRESHOLD_STEEP && quality >= DIST_LOG_QUALITY); }
     function shouldAccAvgVAM() as Boolean {  return (grade >= THRESHOLD_LIGHT && quality >= DIST_LOG_QUALITY); }
-    function shouldCalcMaxGrade() as Boolean { return (quality >= MAX_LOG_QUALITY && gradeWindowSize > MIN_GRADE_WINDOW); }
+    function shouldCalcMaxGrade() as Boolean { return (quality >= MAX_LOG_QUALITY && (gradeWindowSize > MIN_GRADE_WINDOW || gradeWindowSize == MAX_GRADE_WINDOW)); }
     function isMaxGradeUpdateRecent() as Boolean { return (Time.now().value() - lastMaxGradeUpdateTime < 20); }
 
     function drawCompact() as Boolean { return layout == LAYOUT_SMALL; }
@@ -287,8 +291,9 @@ class GradeEstimatorView extends WatchUi.DataField {
         var height_view = dc.getHeight();
         var width_device = System.getDeviceSettings().screenWidth;
         var height_device = System.getDeviceSettings().screenHeight;
+        var partnum = System.getDeviceSettings().partNumber;
 
-        if (height_device == 400 && width_device == 240) { isExploreUnit = true; }
+        if (old_partnums.indexOf(partnum) > -1) { isExploreUnit = true; }
 
         if (width_view < width_device / 2 + 10) { layout = LAYOUT_SMALL; }
         else {
@@ -298,8 +303,6 @@ class GradeEstimatorView extends WatchUi.DataField {
     }
 
     public function updateSettings() {
-        System.println("UPDATE SETTINGS");
-
         // Read Settings
         SAMPLE_WINDOW = Application.Properties.getValue("buffer_length");
         MIN_GRADE_WINDOW = Application.Properties.getValue("buffer_fit_min");
@@ -357,7 +360,7 @@ class GradeEstimatorView extends WatchUi.DataField {
             label_light_str = WatchUi.loadResource(Rez.Strings.UI_Label_Distance_Light) + " >" + (THRESHOLD_LIGHT * 100).format("%.1f") + "%";
             label_steep_str = WatchUi.loadResource(Rez.Strings.UI_Label_Distance_Steep) + " >" + (THRESHOLD_STEEP * 100).format("%.1f") + "%";
 
-            if (THRESHOLD_STEEP >= 0.099 && !isExploreUnit) { label_steep_str = WatchUi.loadResource(Rez.Strings.UI_Label_RampasInhumanas) + "(+" + (THRESHOLD_STEEP * 100).format("%.1f") + "%)";}
+            if (THRESHOLD_STEEP >= RAMPAS_INHUMANAS_THRESHOLD && !isExploreUnit) { label_steep_str = WatchUi.loadResource(Rez.Strings.UI_Label_RampasInhumanas) + "(+" + (THRESHOLD_STEEP * 100).format("%.1f") + "%)";}
             else if (isExploreUnit) {
                 label_light_str = WatchUi.loadResource(Rez.Strings.UI_Label_Distance_Climb) + " >" + (THRESHOLD_LIGHT * 100).format("%.1f") + "%";
                 label_steep_str = WatchUi.loadResource(Rez.Strings.UI_Label_Distance_Climb) + " >" + (THRESHOLD_STEEP * 100).format("%.1f") + "%";
@@ -383,16 +386,20 @@ class GradeEstimatorView extends WatchUi.DataField {
                 if (!isExploreUnit) { View.setLayout(Rez.Layouts.SmallLayout(dc)); }
                 else { View.setLayout(Rez.Layouts.SmallLayoutExplore(dc)); } 
                 break;
-            case LAYOUT_WIDE: View.setLayout(Rez.Layouts.WideLayout(dc)); break;
-            case LAYOUT_LARGE: View.setLayout(Rez.Layouts.LargeLayout(dc)); break;
+            case LAYOUT_WIDE: 
+                if (!isExploreUnit) { View.setLayout(Rez.Layouts.WideLayout(dc)); } 
+                else { View.setLayout(Rez.Layouts.WideLayoutExplore(dc)); } 
+                break;
+            case LAYOUT_LARGE: 
+                if (!isExploreUnit) { View.setLayout(Rez.Layouts.LargeLayout(dc)); }
+                else {  View.setLayout(Rez.Layouts.LargeLayoutExplore(dc)); } 
+                break;
         }
 
         updateLayoutDependentStrings();
     }
 
     function onTimerLap() as Void {
-        System.println("LAP EVENT");
-
         lap_average_grade_sum = 0.0;
         lap_average_grade_count = 0;
     }
@@ -465,13 +472,12 @@ class GradeEstimatorView extends WatchUi.DataField {
         
         // Compare and adjust window size for next call
         var gradeDiff = (mainGrade - minGrade).abs();
-        if (gradeDiff > 0.03)       { gradeWindowSize -= 4; }
-        else if (gradeDiff > 0.02)  { gradeWindowSize -= 3; }
+        if (gradeDiff > 0.02)  { gradeWindowSize -= 3; }
         else if (gradeDiff > 0.015) { gradeWindowSize -= 2; }
         else if (gradeDiff > 0.01)  { gradeWindowSize -= 1; } 
         else if (gradeDiff < 0.005 && gradeWindowSize <= MAX_GRADE_WINDOW / 2) 
                                     { gradeWindowSize += 1; }
-        else if (gradeDiff < 0.0025) { gradeWindowSize += 1; }
+        else if (gradeDiff < 0.0025){ gradeWindowSize += 1; }
 
         // Clamp window size between min and max, and not more than numValid
         if (gradeWindowSize < MIN_GRADE_WINDOW) { gradeWindowSize = MIN_GRADE_WINDOW; }
@@ -492,8 +498,15 @@ class GradeEstimatorView extends WatchUi.DataField {
         lap_average_grade_sum += grade;
         lap_average_grade_count++;
 
+        var pre_alpha = (gradeWindowSize.toFloat() - MIN_GRADE_WINDOW) / (MAX_GRADE_WINDOW - MIN_GRADE_WINDOW);
+        var alpha = EWA_ALPHA * quality * quality * pre_alpha;
+        ewa_grade = (1 - alpha) * ewa_grade + alpha * grade;
+
+        System.println(grade + "," + ewa_grade);
+
         // Export
-        gradeField.setData(grade * 100);
+        if (LOG_SMOOTHED_GRADE) { gradeField.setData(ewa_grade * 100); }
+        else { gradeField.setData(grade * 100); }
 
         // Update session summary fields
         lightField.setData(distLight / 1000.0);
@@ -505,7 +518,7 @@ class GradeEstimatorView extends WatchUi.DataField {
 
         prevMedianAlt = medianAlt;
 
-        System.println(eTime + "," + info.elapsedDistance + ","  + speed + "," + altitude + "," + gradeWindowSize + "," + grade + "," + quality );
+        //System.println(eTime + "," + info.elapsedDistance + ","  + speed + "," + altitude + "," + gradeWindowSize + "," + grade + "," + quality + "," + info.rawAmbientPressure + "," + info.ambientPressure);
 
         return blank_str;
     }

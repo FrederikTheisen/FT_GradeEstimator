@@ -57,7 +57,7 @@ class GradeEstimatorView extends WatchUi.DataField {
     var distLight as Float     = 0.0;  // meters at ≥5%
     var distSteep as Float     = 0.0;  // meters at ≥10%
     var maxGrade as Float      = 0.0;  // maximum grade encountered
-    var lastSample as Number   = 0;
+    var lastSample as Float    = 0.0;
     var vam as Float           = 0.0;  // VAM in m/h
     var vamAvg as Float        = 0.0;  // Average VAM in m/h
     var numValid               = 0;
@@ -408,11 +408,14 @@ class GradeEstimatorView extends WatchUi.DataField {
         // Assume exactly 1 Hz
         var speed    = (info has :currentSpeed) ? info.currentSpeed : null;
         var altitude = (info has :altitude) ? info.altitude : null;
-        var eTime = (info has :elapsedTime) ? info.elapsedTime / 1000 : 0;
+        var eTime = (info has :elapsedTime) ? info.elapsedTime / 1000.0 : 0.0; 
 
         if (speed == null || altitude == null) { return blank_str; }
 
-        var sample_distance = speed * 1; // expect one second sample interval
+        var dt = eTime - lastSample;
+        var sample_distance = speed * dt; // expect one second sample interval
+
+        // System.println(dt + "," + speed + "," + altitude);
 
         // Reset if nearly stopped or if more than x samples missed (missing 1 sample should be rare)
         if (speed < 1.0 || eTime > lastSample + SAMPLE_MISS_THRESHOLD) {
@@ -420,10 +423,6 @@ class GradeEstimatorView extends WatchUi.DataField {
             //gradeField.setData(0.0);
             lastSample = eTime;
             return blank_str;
-        }
-        else if (eTime > lastSample + 1.1) { // We missed one sample, implement compensation
-            var dt = eTime - lastSample;
-            sample_distance = speed * dt; // Adjust distance based on elapsed time
         }
 
         lastSample = eTime;
@@ -502,7 +501,7 @@ class GradeEstimatorView extends WatchUi.DataField {
         var alpha = EWA_ALPHA * quality * quality * pre_alpha;
         ewa_grade = (1 - alpha) * ewa_grade + alpha * grade;
 
-        System.println(grade + "," + ewa_grade);
+        //System.println(grade + "," + ewa_grade);
 
         // Export
         if (LOG_SMOOTHED_GRADE) { gradeField.setData(ewa_grade * 100); }

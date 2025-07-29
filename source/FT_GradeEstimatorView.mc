@@ -418,7 +418,7 @@ class GradeEstimatorView extends WatchUi.DataField {
         // System.println(dt + "," + speed + "," + altitude);
 
         // Reset if nearly stopped, if more than x samples missed or if timer is not running
-        if (speed < 0.5 || dt > SAMPLE_MISS_THRESHOLD || dt < 0.01) {
+        if (sample_distance < 0.33 || dt > SAMPLE_MISS_THRESHOLD) {
             _resetAll(false);
             //gradeField.setData(0.0);
             lastSample = eTime;

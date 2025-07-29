@@ -30,6 +30,7 @@ class GradeEstimatorView extends WatchUi.DataField {
     enum { LAYOUT_SMALL, LAYOUT_WIDE, LAYOUT_LARGE }
     enum { UNIT_DIST_LONG, UNIT_DIST_SHORT, UNIT_VAM }
     const old_partnums      = ["006-B3121-00", "006-B3122-00", "006-B2713-00", "006-B3570-00", "006-B3095-00", "006-B4169-00"];
+    const MAX_ALLOWED_GRADE = 0.3; 
 
     const blank_str         = "-.-";
     const suffix            = "%";
@@ -485,6 +486,8 @@ class GradeEstimatorView extends WatchUi.DataField {
 
         // Use the main grade window for regression and display
         computeLinearRegressionSlope(buffer, bufIndex, gradeWindowSize);
+        if (grade > MAX_ALLOWED_GRADE) { grade = MAX_ALLOWED_GRADE;}
+        else if (grade < -MAX_ALLOWED_GRADE) { grade = -MAX_ALLOWED_GRADE; }
 
         // Accumulate distance in each zone
         if (shouldAccLightDist()) { distLight += sample_distance; }

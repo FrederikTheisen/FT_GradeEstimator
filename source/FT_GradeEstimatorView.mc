@@ -406,24 +406,23 @@ class GradeEstimatorView extends WatchUi.DataField {
     }
 
     function compute(info) {
-        // Assume exactly 1 Hz
         var speed    = (info has :currentSpeed) ? info.currentSpeed : null;
         var altitude = (info has :altitude) ? info.altitude : null;
         var eTime = (info has :elapsedTime) ? info.elapsedTime / 1000.0 : 0.0; 
 
-        if (speed == null || altitude == null) { return blank_str; }
+        if (speed == null || altitude == null) { return; }
 
         var dt = eTime - lastSample;
         var sample_distance = speed * dt; // expect one second sample interval
 
         // System.println(dt + "," + speed + "," + altitude);
 
-        // Reset if nearly stopped or if more than x samples missed (missing 1 sample should be rare)
-        if (speed < 1.0 || eTime > lastSample + SAMPLE_MISS_THRESHOLD) {
+        // Reset if nearly stopped, if more than x samples missed or if timer is not running
+        if (speed < 0.5 || dt > SAMPLE_MISS_THRESHOLD || dt < 0.01) {
             _resetAll(false);
             //gradeField.setData(0.0);
             lastSample = eTime;
-            return blank_str;
+            return;
         }
 
         lastSample = eTime;
@@ -444,13 +443,13 @@ class GradeEstimatorView extends WatchUi.DataField {
             _resetAll(true);
             //gradeField.setData(0.0);
             lastSample = eTime;
-            return blank_str;
+            return;
         }
 
         // Update rolling window
-        buffer[bufIndex] = { "altitude" => medianAlt, "distance" => sample_distance };   // Replace oldest sample
-        accWinDist += sample_distance;                                                  // Accumulate distance with current movement
-        bufIndex = (bufIndex + 1) % SAMPLE_WINDOW;                              // Iterate rolling buffer index
+        buffer[bufIndex] = { "altitude" => medianAlt, "distance" => sample_distance }; // Replace oldest sample
+        accWinDist += sample_distance; // Accumulate distance with current movement
+        bufIndex = (bufIndex + 1) % SAMPLE_WINDOW; // Iterate rolling buffer index
         accWinDist -= buffer[bufIndex]["distance"];
 
         // Track how many valid samples are in the buffer
@@ -461,7 +460,7 @@ class GradeEstimatorView extends WatchUi.DataField {
 
         if (accWinDist < 5 || numValid < MIN_GRADE_WINDOW) {
             //gradeField.setData(0.0);
-            return blank_str;
+            return;
         }
 
         // --- Adaptive window selection (new logic) ---
@@ -521,8 +520,6 @@ class GradeEstimatorView extends WatchUi.DataField {
         prevMedianAlt = medianAlt;
 
         //System.println(eTime + "," + info.elapsedDistance + ","  + speed + "," + altitude + "," + gradeWindowSize + "," + grade + "," + quality + "," + info.rawAmbientPressure + "," + info.ambientPressure);
-
-        return blank_str;
     }
 
     function computeLinearRegressionSlope(samples as Array<Dictionary>, bufIndex as Number, windowSize as Number) {

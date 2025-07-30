@@ -4,10 +4,10 @@
         <property id="buffer_length" type="number">35</property>
         <property id="buffer_fit_max" type="number">30</property>
         <property id="buffer_fit_min" type="number">7</property>
-        <property id="threshold_log_dist" type="float">0.2</property>
-        <property id="threshold_log_max" type="float">0.50</property>
-        <property id="threshold_light" type="float">4</property>
-        <property id="threshold_steep" type="float">10</property>
+        <property id="threshold_log_dist" type="float">0.1</property>
+        <property id="threshold_log_max" type="float">0.66</property>
+        <property id="threshold_light" type="float">3.5</property>
+        <property id="threshold_steep" type="float">8</property>
         <property id="save_smooth" type="boolean">false</property>
         <property id="small_field_data" type="number">2</property>
     </properties>

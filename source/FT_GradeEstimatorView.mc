@@ -64,6 +64,7 @@ class GradeEstimatorView extends WatchUi.DataField {
     var vamAvg as Float        = 0.0;  // Average VAM in m/h
     var numValid               = 0;
     var lastMaxGradeUpdateTime as Number = 0; // Last time max grade was updated
+    var prevSpeed as Float     = 0.0;
 
     var sumAscentVam as Float   = 0.0; // Sum of ascenting VAM (+5%)
     var samplesAscent as Number = 0; // Number of samples with ascenting VAM
@@ -509,7 +510,7 @@ class GradeEstimatorView extends WatchUi.DataField {
         //System.println(grade + "," + ewa_grade);
 
         // Export
-        if (LOG_SMOOTHED_GRADE) { gradeField.setData(ewa_grade * 100); }
+        if (LOG_SMOOTHED_GRADE) { binnedGradeLogging(sample_distance); }
         else { gradeField.setData(grade * 100); }
 
         // Update session summary fields
@@ -918,5 +919,6 @@ class GradeEstimatorView extends WatchUi.DataField {
         calculating = false;
         gradeWindowSize = MIN_GRADE_WINDOW; // Reset adaptive window size
         prevMedianAlt = null; // Reset previous median altitude
+        prevSpeed = 0.0;
     }
 }

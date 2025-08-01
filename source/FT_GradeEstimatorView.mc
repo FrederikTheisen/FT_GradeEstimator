@@ -31,6 +31,7 @@ class GradeEstimatorView extends WatchUi.DataField {
     enum { UNIT_DIST_LONG, UNIT_DIST_SHORT, UNIT_VAM }
     const old_partnums      = ["006-B3121-00", "006-B3122-00", "006-B2713-00", "006-B3570-00", "006-B3095-00", "006-B4169-00"];
     const MAX_ALLOWED_GRADE = 0.3; 
+    var GRADE_BIN_DIST       = 100.0;
 
     const blank_str         = "-.-";
     const suffix            = "%";
@@ -66,6 +67,10 @@ class GradeEstimatorView extends WatchUi.DataField {
 
     var sumAscentVam as Float   = 0.0; // Sum of ascenting VAM (+5%)
     var samplesAscent as Number = 0; // Number of samples with ascenting VAM
+
+    var binAccDist as Float = 0.0; 
+    var binAccGrade as Float = 0.0;
+    var binCount as Number = 0;
 
     var lap_average_grade_sum as Float = 0.0;
     var lap_average_grade_count as Number = 0;
@@ -617,6 +622,20 @@ class GradeEstimatorView extends WatchUi.DataField {
         vamAvgField.setData(vamAvg);
 
         return vam;
+    }
+
+    function binnedGradeLogging(sample_distance as Float) as Void {
+        binAccDist += sample_distance;
+        binAccGrade += grade;
+        binCount++;
+        
+        if (binAccDist >= GRADE_BIN_DIST) {
+            var avgBinGrade = binAccGrade / binCount;
+            gradeField.setData(avgBinGrade * 100);
+            binAccGrade = 0.0;
+            binAccDist = 0.0;
+            binCount = 0;
+        }
     }
 
     function onUpdate(dc as Dc) as Void {

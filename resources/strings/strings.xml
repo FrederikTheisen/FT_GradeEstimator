@@ -1,6 +1,6 @@
 <strings>
     <string id="AppName">Adaptive Grade Pro</string>
-    <string id="Version">v1.5.1</string>
+    <string id="Version">v1.5.2</string>
 
     <!-- UI labels -->
     <string id="UI_Label_Gradient_Current">Curr. Grade</string>
@@ -43,7 +43,7 @@
     <string id="threshold_log_max">Min Fit Quality to Log Max Grade (0.0-1.0)</string>
     <string id="threshold_light">“Light” Climb Threshold (%)</string>
     <string id="threshold_steep">“Hard” Climb Threshold (%)</string>
-    <string id="save_smooth">Enable Smoothed Grade Logging</string>
+    <string id="save_smooth">Enable Binned Grade Logging</string>
     <string id="small_field_data">Small Layout Data Display</string>
     <string id="small_field_data_vam">VAM</string>
     <string id="small_field_data_dist">Climbing Distances</string>

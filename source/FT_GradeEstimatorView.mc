@@ -428,14 +428,12 @@ class GradeEstimatorView extends WatchUi.DataField {
         lastSample = eTime;
 
         // Median filter for altitude using only real raw values
-        rawAltitudes.add(altitude);
-        if (rawAltitudes.size() > 3) { rawAltitudes = rawAltitudes.slice(1, rawAltitudes.size()); }
-        var medianAlt;
-        if (rawAltitudes.size() == 3) {
-            medianAlt = median3(rawAltitudes[0], rawAltitudes[1], rawAltitudes[2]);
-        } else {
-            medianAlt = altitude;
-        }
+        // rawAltitudes.add(altitude);
+        // if (rawAltitudes.size() > 3) { rawAltitudes = rawAltitudes.slice(1, rawAltitudes.size()); }
+        var medianAlt = altitude;
+        // if (rawAltitudes.size() == 3) {
+        //     medianAlt = median3(rawAltitudes[0], rawAltitudes[1], rawAltitudes[2]);
+        // } 
 
         if (prevMedianAlt != null && (medianAlt - prevMedianAlt).abs() > MAX_ALT_JUMP) {
             // If the altitude jumped too much, reset the buffer
@@ -473,10 +471,10 @@ class GradeEstimatorView extends WatchUi.DataField {
         var gradeDiff = (mainGrade - minGrade).abs();
         if (gradeDiff > 0.02)  { gradeWindowSize -= 3; }
         else if (gradeDiff > 0.015) { gradeWindowSize -= 2; }
-        else if (gradeDiff > 0.01)  { gradeWindowSize -= 1; } 
-        else if (gradeDiff < 0.005 && gradeWindowSize <= MAX_GRADE_WINDOW / 2) 
+        else if (gradeDiff > 0.0075)  { gradeWindowSize -= 1; } 
+        else if (gradeDiff < 0.004 && gradeWindowSize <= MAX_GRADE_WINDOW / 2) 
                                     { gradeWindowSize += 1; }
-        else if (gradeDiff < 0.0025){ gradeWindowSize += 1; }
+        else if (gradeDiff < 0.002){ gradeWindowSize += 1; }
 
         // Clamp window size between min and max, and not more than numValid
         if (gradeWindowSize < MIN_GRADE_WINDOW) { gradeWindowSize = MIN_GRADE_WINDOW; }

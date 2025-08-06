@@ -31,7 +31,7 @@ class GradeEstimatorView extends WatchUi.DataField {
     enum { UNIT_DIST_LONG, UNIT_DIST_SHORT, UNIT_VAM }
     const old_partnums      = ["006-B3121-00", "006-B3122-00", "006-B2713-00", "006-B3570-00", "006-B3095-00", "006-B4169-00"];
     const MAX_ALLOWED_GRADE = 0.3; 
-    var GRADE_BIN_DIST       = 100.0;
+    var GRADE_BIN_DIST       = 50.0;
 
     const blank_str         = "-.-";
     const suffix            = "%";
@@ -507,8 +507,6 @@ class GradeEstimatorView extends WatchUi.DataField {
         var alpha = EWA_ALPHA * quality * quality * pre_alpha;
         ewa_grade = (1 - alpha) * ewa_grade + alpha * grade;
 
-        //System.println(grade + "," + ewa_grade);
-
         // Export
         if (LOG_SMOOTHED_GRADE) { binnedGradeLogging(sample_distance); }
         else { gradeField.setData(grade * 100); }
@@ -522,8 +520,6 @@ class GradeEstimatorView extends WatchUi.DataField {
         computeVAM(grade, speed);
 
         prevMedianAlt = medianAlt;
-
-        //System.println(eTime + "," + info.elapsedDistance + ","  + speed + "," + altitude + "," + gradeWindowSize + "," + grade + "," + quality + "," + info.rawAmbientPressure + "," + info.ambientPressure);
     }
 
     function computeLinearRegressionSlope(samples as Array<Dictionary>, bufIndex as Number, windowSize as Number) {
@@ -900,6 +896,9 @@ class GradeEstimatorView extends WatchUi.DataField {
 
                 dc.drawText(plotLeft + plotWidth - 7, plotBottom - offset, Graphics.FONT_SYSTEM_TINY, "← " + getValueInLocalUnit(xEnd - xStart, UNIT_DIST_SHORT).format("%.1f") + getUnitString(UNIT_DIST_SHORT), Graphics.TEXT_JUSTIFY_RIGHT);
             }
+        }
+        else {
+            dc.drawText(plotLeft + plotWidth / 2, plotBottom - plotHeight / 2 + 2, Graphics.FONT_SYSTEM_TINY, "NO DATA AVAILABLE", Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER);
         }
 
         // --- Draw plot area border ---

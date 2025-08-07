@@ -898,7 +898,7 @@ class GradeEstimatorView extends WatchUi.DataField {
             }
         }
         else {
-            dc.drawText(plotLeft + plotWidth / 2, plotBottom - plotHeight / 2 + 2, Graphics.FONT_SYSTEM_TINY, "NO DATA AVAILABLE", Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER);
+            dc.drawText(plotLeft + plotWidth / 2, plotBottom - plotHeight / 2 + 2, Graphics.FONT_SYSTEM_TINY, WatchUi.loadResource(Rez.Strings.UI_Label_Graph_NoData), Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER);
         }
 
         // --- Draw plot area border ---

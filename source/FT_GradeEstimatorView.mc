@@ -8,7 +8,7 @@ import Toybox.Application;
 
 class GradeEstimatorView extends WatchUi.DataField {
     // CONFIG
-    var SAMPLE_WINDOW         = 35;   // buffer size (longer buffer)
+    var SAMPLE_WINDOW as Number         = 35;   // buffer size (longer buffer)
     var MIN_GRADE_WINDOW      = 5;    // minimum samples for grade calc
     var MAX_GRADE_WINDOW     = 30;    // maximum samples for grade calc
     const SAMPLE_MISS_THRESHOLD = 5;    // how many samples can be missed
@@ -75,6 +75,8 @@ class GradeEstimatorView extends WatchUi.DataField {
 
     var lap_average_grade_sum as Float = 0.0;
     var lap_average_grade_count as Number = 0;
+
+    var climbTracker; // Instance of ClimbTracker to manage climbs
 
     // Adaptive window state
     var gradeWindowSize as Number = 10; // Start at 10, will be clamped between 6 and 20
@@ -291,6 +293,8 @@ class GradeEstimatorView extends WatchUi.DataField {
         grade      = 0.0;
         distLight  = 0.0;
         distSteep  = 0.0;
+
+        climbTracker = new ClimbTracker(THRESHOLD_LIGHT);
     }
 
     function determineLayout(dc as Dc) as Void {
@@ -311,14 +315,38 @@ class GradeEstimatorView extends WatchUi.DataField {
 
     public function updateSettings() {
         // Read Settings
-        SAMPLE_WINDOW = Application.Properties.getValue("buffer_length");
-        MIN_GRADE_WINDOW = Application.Properties.getValue("buffer_fit_min");
-        MAX_GRADE_WINDOW = Application.Properties.getValue("buffer_fit_max");
-        DIST_LOG_QUALITY = Application.Properties.getValue("threshold_log_dist");
-        MAX_LOG_QUALITY = Application.Properties.getValue("threshold_log_max");
-        LOG_SMOOTHED_GRADE = Application.Properties.getValue("save_smooth");
-        THRESHOLD_LIGHT = Application.Properties.getValue("threshold_light") / 100.0;
-        THRESHOLD_STEEP = Application.Properties.getValue("threshold_steep") / 100.0;
+        // Read and validate settings from properties
+        var bufferLen = Application.Properties.getValue("buffer_length");
+        if (bufferLen instanceof Number) { SAMPLE_WINDOW = bufferLen; }
+        else { SAMPLE_WINDOW = 35; }
+
+        var minWin = Application.Properties.getValue("buffer_fit_min");
+        if (minWin instanceof Number) { MIN_GRADE_WINDOW = minWin; }
+        else { MIN_GRADE_WINDOW = 5; }
+
+        var maxWin = Application.Properties.getValue("buffer_fit_max");
+        if (maxWin instanceof Number) { MAX_GRADE_WINDOW = maxWin; }
+        else { MAX_GRADE_WINDOW = 30; }
+
+        var distQuality = Application.Properties.getValue("threshold_log_dist");
+        if (distQuality instanceof Float) { DIST_LOG_QUALITY = distQuality; }
+        else { DIST_LOG_QUALITY = 0.33; }
+
+        var maxQuality = Application.Properties.getValue("threshold_log_max");
+        if (maxQuality instanceof Float) { MAX_LOG_QUALITY = maxQuality; }
+        else { MAX_LOG_QUALITY = 0.5; }
+
+        var saveSmooth = Application.Properties.getValue("save_smooth");
+        if (saveSmooth instanceof Boolean) { LOG_SMOOTHED_GRADE = saveSmooth; }
+        else { LOG_SMOOTHED_GRADE = false; }
+
+        var thresholdLight = Application.Properties.getValue("threshold_light");
+        if (thresholdLight instanceof Float) { THRESHOLD_LIGHT = thresholdLight / 100.0; }
+        else { THRESHOLD_LIGHT = 0.05; }
+
+        var thresholdSteep = Application.Properties.getValue("threshold_steep");
+        if (thresholdSteep instanceof Float) { THRESHOLD_STEEP = thresholdSteep / 100.0; }
+        else { THRESHOLD_STEEP = 0.10; }
 
         small_layout_draw_style = Application.Properties.getValue("small_field_data");
 
@@ -406,9 +434,20 @@ class GradeEstimatorView extends WatchUi.DataField {
         updateLayoutDependentStrings();
     }
 
+    function onTimerStart() as Void {
+        System.println("Timer Start");
+    }
+
     function onTimerLap() as Void {
         lap_average_grade_sum = 0.0;
         lap_average_grade_count = 0;
+    }
+
+    function onTimerStop() as Void {
+        System.println("GradeEstimatorView.onTimerStop() called, saving climb if active");
+        if (climbTracker.isClimbActive()) {
+            climbTracker.saveClimb();
+        }
     }
 
     function compute(info) {
@@ -445,7 +484,6 @@ class GradeEstimatorView extends WatchUi.DataField {
             // If the altitude jumped too much, reset the buffer
             System.println("Altitude jump detected: " + (medianAlt - prevMedianAlt).abs() + " m, resetting buffer.");
             _resetAll(true);
-            //gradeField.setData(0.0);
             lastSample = eTime;
             return;
         }
@@ -462,10 +500,7 @@ class GradeEstimatorView extends WatchUi.DataField {
             if (buffer[i]["altitude"] != 0.0) { numValid++; }
         }
 
-        if (accWinDist < 5 || numValid < MIN_GRADE_WINDOW) {
-            //gradeField.setData(0.0);
-            return;
-        }
+        if (accWinDist < 5 || numValid < MIN_GRADE_WINDOW) { return; }
 
         // --- Adaptive window selection (new logic) ---
         // Compute main grade with current window size
@@ -518,6 +553,8 @@ class GradeEstimatorView extends WatchUi.DataField {
         lapAvgGradeField.setData(100 * lap_average_grade_sum / lap_average_grade_count);
 
         computeVAM(grade, speed);
+
+        //climbTracker.update(medianAlt, sample_distance, grade, eTime);
 
         prevMedianAlt = medianAlt;
     }
@@ -633,6 +670,10 @@ class GradeEstimatorView extends WatchUi.DataField {
             binAccDist = 0.0;
             binCount = 0;
         }
+    }
+
+    function computeGradeHistogram() as Void {
+        
     }
 
     function onUpdate(dc as Dc) as Void {
@@ -798,6 +839,7 @@ class GradeEstimatorView extends WatchUi.DataField {
         var plotBottom = plotTop + plotHeight;
         var plotWidth = plotRight - plotLeft;
         var offset = (System.getDeviceSettings().screenHeight * 0.035 + 2).toNumber();
+        if (isExploreUnit) { offset += 8; }
 
         // --- Recalculate valid buffer (oldest to newest) ---
         var sampleCount = numValid;

@@ -232,7 +232,11 @@ class GradeEstimatorView extends WatchUi.DataField {
         // Read Settings
         updateSettings();
 
-        // Graphs
+        initializeFields();
+    }
+
+    function initializeFields() {
+        System.println("Initializing fields");
         gradeField = createField(
             WatchUi.loadResource(Rez.Strings.GC_ChartTitle_Grade), FIELD_ID_GRADE,
             FitContributor.DATA_TYPE_FLOAT,
@@ -435,10 +439,13 @@ class GradeEstimatorView extends WatchUi.DataField {
     }
 
     function onTimerStart() as Void {
-        System.println("Timer Start");
+        System.println("GradeEstimatorView.onTimerStart() called");
+
+        initializeFields();
     }
 
     function onTimerLap() as Void {
+        System.println("GradeEstimatorView.onTimerLap() called, resetting lap averages");
         lap_average_grade_sum = 0.0;
         lap_average_grade_count = 0;
     }
@@ -537,10 +544,6 @@ class GradeEstimatorView extends WatchUi.DataField {
 
         lap_average_grade_sum += grade;
         lap_average_grade_count++;
-
-        var pre_alpha = (gradeWindowSize.toFloat()) / (MAX_GRADE_WINDOW);
-        var alpha = EWA_ALPHA * quality * quality * pre_alpha;
-        ewa_grade = (1 - alpha) * ewa_grade + alpha * grade;
 
         // Export
         if (LOG_SMOOTHED_GRADE) { binnedGradeLogging(sample_distance); }

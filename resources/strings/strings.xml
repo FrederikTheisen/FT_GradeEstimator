@@ -41,8 +41,8 @@
     <string id="buffer_length">Sample Buffer Size (seconds)</string>
     <string id="buffer_fit_max">Max Samples for Grade Fit</string>
     <string id="buffer_fit_min">Min Samples for Grade Fit (≥3)</string>
-    <string id="threshold_log_dist">Min Fit Quality to Log Distance (0.0-1.0)</string>
-    <string id="threshold_log_max">Min Fit Quality to Log Max Grade (0.0-1.0)</string>
+    <string id="threshold_log_dist">Climbing Distance (0.0-1.0)</string>
+    <string id="threshold_log_max">Max Grade (0.0-1.0)</string>
     <string id="threshold_light">“Light” Climb Threshold (%)</string>
     <string id="threshold_steep">“Hard” Climb Threshold (%)</string>
     <string id="save_smooth">Enable Binned Grade Logging</string>

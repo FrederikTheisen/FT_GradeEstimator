@@ -232,24 +232,17 @@ class GradeEstimatorView extends WatchUi.DataField {
         // Read Settings
         updateSettings();
 
-        initializeFields();
-    }
-
-    function initializeFields() {
-        System.println("Initializing fields");
         gradeField = createField(
             WatchUi.loadResource(Rez.Strings.GC_ChartTitle_Grade), FIELD_ID_GRADE,
             FitContributor.DATA_TYPE_FLOAT,
             {:mesgType=>FitContributor.MESG_TYPE_RECORD, :units=>WatchUi.loadResource(Rez.Strings.Unit_Grade) }
         );
-        gradeField.setData(0.0);
 
         vamField = createField(
             WatchUi.loadResource(Rez.Strings.GC_ChartTitle_VAM), FIELD_ID_VAM_GRAPH,
             FitContributor.DATA_TYPE_FLOAT,
             {:mesgType=>FitContributor.MESG_TYPE_RECORD, :units=>WatchUi.loadResource(Rez.Strings.Unit_VAM) }
         );
-        vamField.setData(0.0);
 
         // Session totals
         lightField = createField(
@@ -257,28 +250,24 @@ class GradeEstimatorView extends WatchUi.DataField {
             FitContributor.DATA_TYPE_FLOAT,
             {:mesgType=>FitContributor.MESG_TYPE_SESSION, :units=>WatchUi.loadResource(Rez.Strings.Unit_Distance)}
         );
-        lightField.setData(0.0);
 
         steepField = createField(
             WatchUi.loadResource(Rez.Strings.GC_Label_Distance_Steep), FIELD_ID_STEEP,
             FitContributor.DATA_TYPE_FLOAT,
             {:mesgType=>FitContributor.MESG_TYPE_SESSION, :units=>WatchUi.loadResource(Rez.Strings.Unit_Distance)}
         );
-        steepField.setData(0.0);
 
         maxField = createField(
             WatchUi.loadResource(Rez.Strings.GC_Label_Grade_Max), FIELD_ID_MAXGRADE,
             FitContributor.DATA_TYPE_FLOAT,
             {:mesgType=>FitContributor.MESG_TYPE_SESSION, :units=>WatchUi.loadResource(Rez.Strings.Unit_Grade)}
         );
-        maxField.setData(0.0);
 
         vamAvgField = createField(
             WatchUi.loadResource(Rez.Strings.GC_Label_AverageVAM), FIELD_ID_VAM_AVG,
             FitContributor.DATA_TYPE_FLOAT,
             {:mesgType=>FitContributor.MESG_TYPE_SESSION, :units=>WatchUi.loadResource(Rez.Strings.Unit_VAM)}
         );
-        vamAvgField.setData(0.0);
 
         // Lap Fields
         lapAvgGradeField = createField(
@@ -286,6 +275,20 @@ class GradeEstimatorView extends WatchUi.DataField {
             FitContributor.DATA_TYPE_FLOAT,
             {:mesgType=>FitContributor.MESG_TYPE_LAP, :units=>WatchUi.loadResource(Rez.Strings.Unit_Grade)}
         );
+
+        initializeFields();
+    }
+
+    function initializeFields() {
+        System.println("GradeEstimatorView.initializeFields() called");
+
+        gradeField.setData(0.0);
+        vamField.setData(0.0);
+        lightField.setData(0.0);
+        steepField.setData(0.0);
+        maxField.setData(0.0);
+        vamAvgField.setData(0.0);
+        lapAvgGradeField.setData(0.0);
 
         // Initialize rolling buffer
         buffer = [];
@@ -302,6 +305,7 @@ class GradeEstimatorView extends WatchUi.DataField {
     }
 
     function determineLayout(dc as Dc) as Void {
+        System.println("GradeEstimatorView.determineLayout() called");
         var width_view = dc.getWidth();
         var height_view = dc.getHeight();
         var width_device = System.getDeviceSettings().screenWidth;
@@ -318,6 +322,7 @@ class GradeEstimatorView extends WatchUi.DataField {
     }
 
     public function updateSettings() {
+        System.println("GradeEstimatorView.updateSettings() called");
         // Read Settings
         // Read and validate settings from properties
         var bufferLen = Application.Properties.getValue("buffer_length");

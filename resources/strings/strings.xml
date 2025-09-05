@@ -1,6 +1,6 @@
 <strings>
-    <string id="AppName">Adaptive Grade Pro</string>
-    <string id="Version">v1.5.3</string>
+    <string id="AppName">Adaptive Grade</string>
+    <string id="Version">v1.5.4</string>
 
     <!-- UI labels -->
     <string id="UI_Label_Gradient_Current">Curr. Grade</string>

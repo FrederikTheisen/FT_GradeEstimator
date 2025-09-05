@@ -1,5 +1,5 @@
 <strings>
-    <string id="AppName">Adaptive Steigung Pro</string>
+    <string id="AppName">Adaptive Steigung</string>
 
     <!-- UI labels -->
     <string id="UI_Label_Gradient_Current">Steigung</string>

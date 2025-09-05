@@ -53,7 +53,6 @@ class GradeEstimatorView extends WatchUi.DataField {
     var rawAltitudes as Array<Float> = [];
     var prevMedianAlt as Float or Null = null; // Previous median altitude for jump detection
     var bufIndex as Number     = 0;
-    var accWinDist as Float    = 0.0;  // over window
     var grade as Float         = 0.0;  // fraction, e.g. 0.05 = 5%
     var ewa_grade as Float    = 0.0;
     var distLight as Float     = 0.0;  // meters at ≥5%
@@ -96,6 +95,8 @@ class GradeEstimatorView extends WatchUi.DataField {
     // STATUS STATE
     var calculating as Boolean  = false;
     var quality as Float        = 0.0;
+
+    var DEBUG as Boolean       = false;
 
     function getProgressBar(progress as Float, length as Number) as String {
         var bar = "";
@@ -225,6 +226,7 @@ class GradeEstimatorView extends WatchUi.DataField {
     }
 
     function initialize() {
+        System.println("AdaptiveGrade.initialize()");
         DataField.initialize();
 
         isMetric = System.getDeviceSettings().distanceUnits == System.UNIT_METRIC;
@@ -280,7 +282,7 @@ class GradeEstimatorView extends WatchUi.DataField {
     }
 
     function initializeFields() {
-        System.println("GradeEstimatorView.initializeFields() called");
+        System.println("AdaptiveGrade.initializeFields()");
 
         gradeField.setData(0.0);
         vamField.setData(0.0);
@@ -305,7 +307,7 @@ class GradeEstimatorView extends WatchUi.DataField {
     }
 
     function determineLayout(dc as Dc) as Void {
-        System.println("GradeEstimatorView.determineLayout() called");
+        System.println("AdaptiveGrade.determineLayout()");
         var width_view = dc.getWidth();
         var height_view = dc.getHeight();
         var width_device = System.getDeviceSettings().screenWidth;
@@ -319,10 +321,13 @@ class GradeEstimatorView extends WatchUi.DataField {
             if (height_view < (height_device / 3) - 3) { layout = LAYOUT_WIDE; }
             else { layout = LAYOUT_LARGE; }
         }
+
+        System.println("  Layout determined: " + layout); 
+        System.println("  " + width_view + "x" + height_view + " on " + width_device + "x" + height_device + " device, partnum " + partnum + ", isExploreUnit=" + isExploreUnit);
     }
 
     public function updateSettings() {
-        System.println("GradeEstimatorView.updateSettings() called");
+        System.println("AdaptiveGrade.updateSettings()");
         // Read Settings
         // Read and validate settings from properties
         var bufferLen = Application.Properties.getValue("buffer_length");
@@ -357,26 +362,19 @@ class GradeEstimatorView extends WatchUi.DataField {
         if (thresholdSteep instanceof Float) { THRESHOLD_STEEP = thresholdSteep / 100.0; }
         else { THRESHOLD_STEEP = 0.10; }
 
+        var debugEnabled = Application.Properties.getValue("debug_enabled");
+        if (debugEnabled instanceof Boolean) { DEBUG = debugEnabled; }
+
         small_layout_draw_style = Application.Properties.getValue("small_field_data");
+        if (!(small_layout_draw_style instanceof Number)) { small_layout_draw_style = 0; }
 
         // Ensure the buffer is not too large or small
         if (SAMPLE_WINDOW > 180) { SAMPLE_WINDOW = 180; }
         else if (SAMPLE_WINDOW < 10) { SAMPLE_WINDOW = 10; }
 
-        // Ensure minimum window size
-        if (MIN_GRADE_WINDOW < 3) {
-            MIN_GRADE_WINDOW = 3; 
-        }
-
-        // Ensure max window is at least min window
-        if (MAX_GRADE_WINDOW < MIN_GRADE_WINDOW) {
-            MAX_GRADE_WINDOW = MIN_GRADE_WINDOW; 
-        }
-
-        // Ensure buffer is at least as large as max grade window
-        if (SAMPLE_WINDOW < MAX_GRADE_WINDOW) {
-            SAMPLE_WINDOW = MAX_GRADE_WINDOW; // Ensure buffer is at least as large as max grade window
-        }
+        if (MIN_GRADE_WINDOW < 3) { MIN_GRADE_WINDOW = 3; }
+        if (MAX_GRADE_WINDOW < MIN_GRADE_WINDOW) { MAX_GRADE_WINDOW = MIN_GRADE_WINDOW; }
+        if (SAMPLE_WINDOW < MAX_GRADE_WINDOW) { SAMPLE_WINDOW = MAX_GRADE_WINDOW; }
 
         // Initialize strings
         str_buffering = WatchUi.loadResource(Rez.Strings.UI_Label_Status_Buffering);
@@ -390,9 +388,22 @@ class GradeEstimatorView extends WatchUi.DataField {
             buffer.add({ "altitude" => 0.0, "distance" => 0.0 });
         }
         _resetAll(true);
+
+        System.println("AdaptiveGrade Settings Changed:");
+        System.println("  SAMPLE_WINDOW = " + SAMPLE_WINDOW);
+        System.println("  MIN_GRADE_WINDOW = " + MIN_GRADE_WINDOW);
+        System.println("  MAX_GRADE_WINDOW = " + MAX_GRADE_WINDOW);
+        System.println("  DIST_LOG_QUALITY = " + DIST_LOG_QUALITY);
+        System.println("  MAX_LOG_QUALITY = " + MAX_LOG_QUALITY);
+        System.println("  LOG_SMOOTHED_GRADE = " + LOG_SMOOTHED_GRADE);
+        System.println("  THRESHOLD_LIGHT = " + (THRESHOLD_LIGHT * 100).format("%.1f") + "%");
+        System.println("  THRESHOLD_STEEP = " + (THRESHOLD_STEEP * 100).format("%.1f") + "%");
+        System.println("  small_layout_draw_style = " + small_layout_draw_style);
+        System.println("  DEBUG = " + DEBUG);
     }
 
     function updateLayoutDependentStrings() {
+        System.println("AdaptiveGrade.updateLayoutDependentStrings()");
         if (layout == LAYOUT_SMALL && small_layout_draw_style != 2) {
             label_light_str = WatchUi.loadResource(Rez.Strings.UI_Label_Distance_Climb);
             label_steep_str = ">" + (THRESHOLD_STEEP * 100).format("%.1f") + "%";
@@ -444,42 +455,49 @@ class GradeEstimatorView extends WatchUi.DataField {
     }
 
     function onTimerStart() as Void {
-        System.println("GradeEstimatorView.onTimerStart() called");
+        System.println("AdaptiveGrade.onTimerStart()");
 
         initializeFields();
     }
 
     function onTimerLap() as Void {
-        System.println("GradeEstimatorView.onTimerLap() called, resetting lap averages");
+        System.println("AdaptiveGrade.onTimerLap()");
+        
         lap_average_grade_sum = 0.0;
         lap_average_grade_count = 0;
     }
 
     function onTimerStop() as Void {
-        System.println("GradeEstimatorView.onTimerStop() called, saving climb if active");
+        System.println("AdaptiveGrade.onTimerStop()");
+        
         if (climbTracker.isClimbActive()) {
             climbTracker.saveClimb();
         }
     }
 
-    function compute(info) {
+    function compute(info  as Activity.Info) as Number {
+        if (info == null) { 
+            if (DEBUG) { System.println("AdaptiveGrade.compute() info is null"); }
+            return 0; 
+        }
         var speed    = (info has :currentSpeed) ? info.currentSpeed : null;
         var altitude = (info has :altitude) ? info.altitude : null;
         var eTime = (info has :elapsedTime) ? info.elapsedTime / 1000.0 : 0.0; 
 
-        if (speed == null || altitude == null) { return; }
+        if (speed == null || altitude == null || !(eTime instanceof Float)) {
+            if (DEBUG) { System.println("AdaptiveGrade.compute() missing data: spd:" + speed + " alt:" + altitude + " t:" + eTime); }
+            return 0; 
+        }
 
         var dt = eTime - lastSample;
         var sample_distance = speed * dt; // expect one second sample interval
 
-        // System.println(dt + "," + speed + "," + altitude);
-
         // Reset if nearly stopped, if more than x samples missed or if timer is not running
         if (sample_distance < 0.33 || dt > SAMPLE_MISS_THRESHOLD) {
+            if (DEBUG) { System.println("AdaptiveGrade.compute() stop or sample gap detected: spd: " + speed.format("%.2f") + " dt: " + dt.format("%.2f")); }
             _resetAll(false);
-            //gradeField.setData(0.0);
             lastSample = eTime;
-            return;
+            return 0;
         }
 
         lastSample = eTime;
@@ -494,17 +512,15 @@ class GradeEstimatorView extends WatchUi.DataField {
 
         if (prevMedianAlt != null && (medianAlt - prevMedianAlt).abs() > MAX_ALT_JUMP) {
             // If the altitude jumped too much, reset the buffer
-            System.println("Altitude jump detected: " + (medianAlt - prevMedianAlt).abs() + " m, resetting buffer.");
+            if (DEBUG) { System.println("AdaptiveGrade.compute() altitude jump detected: " + (medianAlt - prevMedianAlt).abs().format("%.1f") + " m, resetting buffer."); }
             _resetAll(true);
             lastSample = eTime;
-            return;
+            return 0;
         }
 
         // Update rolling window
         buffer[bufIndex] = { "altitude" => medianAlt, "distance" => sample_distance }; // Replace oldest sample
-        accWinDist += sample_distance; // Accumulate distance with current movement
         bufIndex = (bufIndex + 1) % SAMPLE_WINDOW; // Iterate rolling buffer index
-        accWinDist -= buffer[bufIndex]["distance"];
 
         // Track how many valid samples are in the buffer
         numValid = 0;
@@ -512,7 +528,12 @@ class GradeEstimatorView extends WatchUi.DataField {
             if (buffer[i]["altitude"] != 0.0) { numValid++; }
         }
 
-        if (accWinDist < 5 || numValid < MIN_GRADE_WINDOW) { return; }
+        if (numValid < MIN_GRADE_WINDOW) { 
+            if (DEBUG) { System.println("AdaptiveGrade.compute() buffer too short: " + numValid + " / " + MIN_GRADE_WINDOW); }
+            return 0; 
+        }
+
+        if (DEBUG) { System.println("AdaptiveGrade.compute() window:" + gradeWindowSize + " buffer:" + numValid + " alt=" + medianAlt.format("%.1f") + " d=" + sample_distance.format("%.1f")); }
 
         // --- Adaptive window selection (new logic) ---
         // Compute main grade with current window size
@@ -565,6 +586,8 @@ class GradeEstimatorView extends WatchUi.DataField {
         //climbTracker.update(medianAlt, sample_distance, grade, eTime);
 
         prevMedianAlt = medianAlt;
+
+        return 1;
     }
 
     function computeLinearRegressionSlope(samples as Array<Dictionary>, bufIndex as Number, windowSize as Number) {
@@ -959,7 +982,6 @@ class GradeEstimatorView extends WatchUi.DataField {
     }
 
     hidden function _resetAll(deleteAll as Boolean) as Void {
-        accWinDist   = 0.0;
         bufIndex = 0;
         for (var i = 0; i < SAMPLE_WINDOW; i++) {
             buffer[i] = { "altitude" => 0.0, "distance" => 0.0 }; 

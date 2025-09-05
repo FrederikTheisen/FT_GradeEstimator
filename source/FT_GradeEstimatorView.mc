@@ -160,7 +160,7 @@ class GradeEstimatorView extends WatchUi.DataField {
 
     function getStatusString() as String {
         var c = "";
-        var barlength = drawCompact ? 10 : 13;
+        var barlength = (drawCompact ? 10 : 13) as Number;
         if (calculating) {
             c = str_active + " ";
             var progress = Math.sqrt((gradeWindowSize.toFloat() - MIN_GRADE_WINDOW + 1) / (MAX_GRADE_WINDOW - MIN_GRADE_WINDOW + 1));
@@ -295,7 +295,7 @@ class GradeEstimatorView extends WatchUi.DataField {
         // Initialize rolling buffer
         buffer = [];
         for (var i = 0; i < SAMPLE_WINDOW; i++) {
-            buffer.add({ "altitude" => 0.0, "distance" => 0.0 });
+            buffer.add({ "altitude" => -1000.0, "distance" => 0.0 });
         }
         rawAltitudes = [];
         _resetAll(true);
@@ -385,7 +385,7 @@ class GradeEstimatorView extends WatchUi.DataField {
 
         buffer = [];
         for (var i = 0; i < SAMPLE_WINDOW; i++) {
-            buffer.add({ "altitude" => 0.0, "distance" => 0.0 });
+            buffer.add({ "altitude" => -1000.0, "distance" => 0.0 });
         }
         _resetAll(true);
 
@@ -525,7 +525,7 @@ class GradeEstimatorView extends WatchUi.DataField {
         // Track how many valid samples are in the buffer
         numValid = 0;
         for (var i = 0; i < SAMPLE_WINDOW; i++) {
-            if (buffer[i]["altitude"] != 0.0) { numValid++; }
+            if (buffer[i]["altitude"] > -500.0) { numValid++; }
         }
 
         if (numValid < MIN_GRADE_WINDOW) { 
@@ -984,7 +984,7 @@ class GradeEstimatorView extends WatchUi.DataField {
     hidden function _resetAll(deleteAll as Boolean) as Void {
         bufIndex = 0;
         for (var i = 0; i < SAMPLE_WINDOW; i++) {
-            buffer[i] = { "altitude" => 0.0, "distance" => 0.0 }; 
+            buffer[i] = { "altitude" => -1000.0, "distance" => 0.0 }; 
         }
         rawAltitudes = [];
         calculating = false;

@@ -456,8 +456,6 @@ class GradeEstimatorView extends WatchUi.DataField {
 
     function onTimerStart() as Void {
         System.println("AdaptiveGrade.onTimerStart()");
-
-        initializeFields();
     }
 
     function onTimerLap() as Void {
@@ -467,12 +465,20 @@ class GradeEstimatorView extends WatchUi.DataField {
         lap_average_grade_count = 0;
     }
 
-    function onTimerStop() as Void {
-        System.println("AdaptiveGrade.onTimerStop()");
-        
+    function onTimerReset() as Void {
+        System.println("AdaptiveGrade.onTimerReset()");
+
+        initializeFields();
+
         if (climbTracker.isClimbActive()) {
             climbTracker.saveClimb();
         }
+    }
+
+    function onTimerStop() as Void {
+        System.println("AdaptiveGrade.onTimerStop()");
+        
+        
     }
 
     function compute(info  as Activity.Info) as Number {

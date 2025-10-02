@@ -8,8 +8,8 @@
         <property id="threshold_log_max" type="float">0.66</property>
         <property id="threshold_light" type="float">3.5</property>
         <property id="threshold_steep" type="float">8</property>
-    <property id="save_smooth" type="boolean">false</property>
-    <property id="debug_enabled" type="boolean">false</property>
+        <property id="save_smooth" type="boolean">false</property>
+        <property id="debug_enabled" type="boolean">false</property>
         <property id="small_field_data" type="number">2</property>
     </properties>
 

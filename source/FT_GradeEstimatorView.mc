@@ -789,12 +789,19 @@ class GradeEstimatorView extends WatchUi.DataField {
 
     function drawVAMFields(dc as Dc) as Void {
         var value_vam = View.findDrawableById("value_vam") as Text;
+        var value_vam_right = View.findDrawableById("value_vam_right") as Text;
         var value_vam_avg = View.findDrawableById("value_vam_avg") as Text;
 
         if (value_vam != null) {
             value_vam.setColor(textColor);
             var str = getValueInLocalUnit(vam, UNIT_VAM).format(vam_str_format) + getUnitString(UNIT_VAM);
             value_vam.setText(str);
+        }
+
+        if (value_vam_right != null) {
+            value_vam_right.setColor(textColor);
+            var str = getValueInLocalUnit(vam, UNIT_VAM).format(vam_str_format) + getUnitString(UNIT_VAM);
+            value_vam_right.setText(str);
         }
 
         if (value_vam_avg != null) {
@@ -811,20 +818,20 @@ class GradeEstimatorView extends WatchUi.DataField {
         switch (small_layout_draw_style) {
             default:
             case 0: // VAM
-                hddn = ["value_max_grade", "label_max_grade", "value_light", "value_steep", "label_light", "label_steep"];
+                hddn = ["value_max_grade", "label_max_grade", "value_light", "value_steep", "label_light", "label_steep", "label_vam_right", "value_vam_right"];
                 vis = ["label_vam", "label_vam_avg", "value_vam", "value_vam_avg"];
                 break;
             case 1: // Dist
-                hddn = ["label_vam", "label_vam_avg", "value_vam", "value_vam_avg", "value_max_grade", "label_max_grade"];
+                hddn = ["label_vam", "label_vam_avg", "value_vam", "value_vam_avg", "value_max_grade", "label_max_grade", "label_vam_right", "value_vam_right"];
                 vis = ["value_light", "value_steep", "label_light", "label_steep"];
                 break;
             case 2: // Climb + Max
-                hddn = ["value_steep", "label_steep", "label_vam", "label_vam_avg", "value_vam", "value_vam_avg"];
+                hddn = ["value_steep", "label_steep", "label_vam", "label_vam_avg", "value_vam", "value_vam_avg", "label_vam_right", "value_vam_right"];
                 vis = ["label_light", "value_light", "label_max_grade", "value_max_grade"];
                 break;
             case 3: // Climb + VAM
-                hddn = ["value_steep", "label_steep", "label_max_grade", "label_vam_avg", "value_vam", "value_vam_avg"];
-                vis = ["label_light", "value_light", "label_vam", "value_max_grade"];
+                hddn = ["value_steep", "label_steep", "label_max_grade", "label_vam_avg", "value_max_grade", "value_vam_avg", "label_vam", "value_vam"];
+                vis = ["label_light", "value_light", "label_vam_right", "value_vam_right" ];
                 break;
         }
 
@@ -844,7 +851,7 @@ class GradeEstimatorView extends WatchUi.DataField {
     }
 
     function setLabelColor(dc as Dc) as Void {
-        var labels = ["label_curr_grade", "label_max_grade", "label_light", "label_steep", "label_vam", "label_vam_avg"];
+        var labels = ["label_curr_grade", "label_max_grade", "label_light", "label_steep", "label_vam", "label_vam_avg", "label_vam_right"];
         for (var i = 0; i < labels.size(); i++) {
             var label = labels[i];
 

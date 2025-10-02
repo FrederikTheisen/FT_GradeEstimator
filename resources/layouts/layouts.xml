@@ -27,6 +27,7 @@
         <label id="label_status" x="2.5%" y="10%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_LEFT|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_XTINY" />
 
         <label id="label_vam" text="@Strings.UI_Label_VAM_Current" x="1.5%" y="73%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_LEFT|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_XTINY" />
+        <label id="label_vam_right" text="@Strings.UI_Label_VAM_Current" x="98.5%" y="73%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_RIGHT|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_XTINY" />
         <label id="label_vam_avg" text="@Strings.UI_Label_VAM_Average" x="98.5%" y="73%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_RIGHT|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_XTINY" />
         <label id="label_light" text="@Strings.UI_Label_Distance_Light" x="1.5%" y="73%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_LEFT|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_XTINY" />
         <label id="label_steep" text="@Strings.UI_Label_Distance_Steep" x="98.5%" y="73%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_RIGHT|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_XTINY" />
@@ -35,6 +36,7 @@
         <label id="value_curr_grade" x="50%" y="43%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_NUMBER_MEDIUM" />
         
         <label id="value_vam" x="1.5%" y="92%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_LEFT|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_SMALL" />
+        <label id="value_vam_right" x="98.5%" y="92%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_RIGHT|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_SMALL" />
         <label id="value_vam_avg" x="98.5%" y="92%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_RIGHT|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_SMALL" />
         <label id="value_light" x="1.5%" y="92%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_LEFT|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_MEDIUM" />
         <label id="value_steep" x="98.5%" y="92%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_RIGHT|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_MEDIUM" />
@@ -70,6 +72,7 @@
         <label id="label_status" x="2.5%" y="8%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_LEFT|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_XTINY" />
 
         <label id="label_vam" text="@Strings.UI_Label_VAM_Current" x="1.5%" y="71%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_LEFT|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_XTINY" />
+        <label id="label_vam_right" text="@Strings.UI_Label_VAM_Current" x="98.5%" y="73%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_RIGHT|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_XTINY" />
         <label id="label_vam_avg" text="@Strings.UI_Label_VAM_Average" x="98.5%" y="71%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_RIGHT|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_XTINY" />
         <label id="label_light" text="@Strings.UI_Label_Distance_Light" x="1.5%" y="71%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_LEFT|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_XTINY" />
         <label id="label_steep" text="@Strings.UI_Label_Distance_Steep" x="98.5%" y="71%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_RIGHT|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_XTINY" />
@@ -78,6 +81,7 @@
         <label id="value_curr_grade" x="50%" y="46%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_NUMBER_MEDIUM" />
         
         <label id="value_vam" x="1.5%" y="90%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_LEFT|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_SMALL" />
+        <label id="value_vam_right" x="98.5%" y="92%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_RIGHT|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_SMALL" />
         <label id="value_vam_avg" x="98.5%" y="90%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_RIGHT|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_SMALL" />
         <label id="value_light" x="1.5%" y="90%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_LEFT|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_SMALL" />
         <label id="value_steep" x="98.5%" y="90%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_RIGHT|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_SMALL" />

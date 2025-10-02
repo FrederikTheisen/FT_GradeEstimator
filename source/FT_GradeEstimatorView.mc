@@ -410,11 +410,11 @@ class GradeEstimatorView extends WatchUi.DataField {
 
     function updateLayoutDependentStrings() {
         if (DEBUG) { System.println("AdaptiveGrade.updateLayoutDependentStrings()"); }
-        if (layout == LAYOUT_SMALL && small_layout_draw_style != 2) {
+        if (layout == LAYOUT_SMALL && small_layout_draw_style < 2) {
             label_light_str = WatchUi.loadResource(Rez.Strings.UI_Label_Distance_Climb);
             label_steep_str = ">" + (THRESHOLD_STEEP * 100).format("%.1f") + "%";
         }
-        else if (layout == LAYOUT_SMALL && small_layout_draw_style == 2) {
+        else if (layout == LAYOUT_SMALL && small_layout_draw_style >= 2) {
             label_light_str = WatchUi.loadResource(Rez.Strings.UI_Label_Distance_Climb);
         }
         else {
@@ -821,6 +821,10 @@ class GradeEstimatorView extends WatchUi.DataField {
             case 2: // Climb + Max
                 hddn = ["value_steep", "label_steep", "label_vam", "label_vam_avg", "value_vam", "value_vam_avg"];
                 vis = ["label_light", "value_light", "label_max_grade", "value_max_grade"];
+                break;
+            case 3: // Climb + VAM
+                hddn = ["value_steep", "label_steep", "label_max_grade", "label_vam_avg", "value_vam", "value_vam_avg"];
+                vis = ["label_light", "value_light", "label_vam", "value_max_grade"];
                 break;
         }
 

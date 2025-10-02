@@ -49,6 +49,7 @@
     <string id="small_field_data_vam">VAM</string>
     <string id="small_field_data_dist">Anstiegs Distanzen</string>
     <string id="small_field_data_climbmax">Anstiegs Distanzen und Maximale Steigung</string>
+    <string id="small_field_data_climbvam">Anstiegs Distanzen und VAM</string>
 
 
     <string id="group_title_buffer">Puffereinstellungen</string>

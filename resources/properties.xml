@@ -50,6 +50,7 @@
                     <listEntry value="0">@Strings.small_field_data_vam</listEntry>
                     <listEntry value="1">@Strings.small_field_data_dist</listEntry>
                     <listEntry value="2">@Strings.small_field_data_climbmax</listEntry>
+                    <listEntry value="3">@Strings.small_field_data_climbvam</listEntry>
                 </settingConfig>
             </setting>
             <setting propertyKey="@Properties.save_smooth" title="@Strings.save_smooth">

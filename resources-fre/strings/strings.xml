@@ -43,9 +43,10 @@
     <string id="threshold_steep">Seuil pente “difficile” (%)</string>
     <string id="save_smooth">Enregistrer pente lissée</string>
     <string id="small_field_data">Affichage compact des données</string>
-    <string id="small_field_data_vam">VAM</string>
+    <string id="small_field_data_vam"></string>
     <string id="small_field_data_dist">Distances Montée</string>
     <string id="small_field_data_climbmax">Distances Montée et Pente Maximale</string>
+    <string id="small_field_data_climbvam">Distances Montée et VAM</string>
 
 
     <string id="group_title_buffer">Paramètres du tampon d'échantillons</string>

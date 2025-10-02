@@ -30,6 +30,7 @@ class GradeEstimatorView extends WatchUi.DataField {
     enum { LAYOUT_SMALL, LAYOUT_WIDE, LAYOUT_LARGE }
     enum { UNIT_DIST_LONG, UNIT_DIST_SHORT, UNIT_VAM }
     const old_partnums      = ["006-B3121-00", "006-B3122-00", "006-B2713-00", "006-B3570-00", "006-B3095-00", "006-B4169-00"];
+    const x50_partnum       = ["006-B4634-00", "006-B4440-00", "006-B4633-00"];
     const MAX_ALLOWED_GRADE = 0.3; 
     var GRADE_BIN_DIST       = 50.0;
 
@@ -90,6 +91,7 @@ class GradeEstimatorView extends WatchUi.DataField {
     var small_layout_draw_style as Number = 0;
     var layout as Number                  = 0;
     var isExploreUnit as Boolean          = false; 
+    var isx50Unit as Boolean              = false;
     var isMetric                          = true;
 
     // STATUS STATE
@@ -213,6 +215,7 @@ class GradeEstimatorView extends WatchUi.DataField {
         }
 
         if (drawCompact() && (unit == UNIT_VAM || isExploreUnit)) { return ""; }
+        else if (unit == UNIT_VAM && isx50Unit) { return out; }
         else if (isExploreUnit || drawCompact()) { return out; }
         else { return " " + out;}
     }
@@ -307,7 +310,7 @@ class GradeEstimatorView extends WatchUi.DataField {
     }
 
     function determineLayout(dc as Dc) as Void {
-        System.println("AdaptiveGrade.determineLayout()");
+        if (DEBUG) { System.println("AdaptiveGrade.determineLayout()"); }
         var width_view = dc.getWidth();
         var height_view = dc.getHeight();
         var width_device = System.getDeviceSettings().screenWidth;
@@ -315,6 +318,7 @@ class GradeEstimatorView extends WatchUi.DataField {
         var partnum = System.getDeviceSettings().partNumber;
 
         if (old_partnums.indexOf(partnum) > -1) { isExploreUnit = true; }
+        else if (x50_partnum.indexOf(partnum) > -1) { isx50Unit = true; }
 
         if (width_view < width_device / 2 + 10) { layout = LAYOUT_SMALL; }
         else {
@@ -322,8 +326,10 @@ class GradeEstimatorView extends WatchUi.DataField {
             else { layout = LAYOUT_LARGE; }
         }
 
-        System.println("  Layout determined: " + layout); 
-        System.println("  " + width_view + "x" + height_view + " on " + width_device + "x" + height_device + " device, partnum " + partnum + ", isExploreUnit=" + isExploreUnit);
+        if (DEBUG) { 
+            System.println("  Layout determined: " + layout); 
+            System.println("  " + width_view + "x" + height_view + " on " + width_device + "x" + height_device + " device, partnum " + partnum + ", isExploreUnit=" + isExploreUnit);
+        }
     }
 
     public function updateSettings() {
@@ -403,7 +409,7 @@ class GradeEstimatorView extends WatchUi.DataField {
     }
 
     function updateLayoutDependentStrings() {
-        System.println("AdaptiveGrade.updateLayoutDependentStrings()");
+        if (DEBUG) { System.println("AdaptiveGrade.updateLayoutDependentStrings()"); }
         if (layout == LAYOUT_SMALL && small_layout_draw_style != 2) {
             label_light_str = WatchUi.loadResource(Rez.Strings.UI_Label_Distance_Climb);
             label_steep_str = ">" + (THRESHOLD_STEEP * 100).format("%.1f") + "%";
@@ -477,8 +483,6 @@ class GradeEstimatorView extends WatchUi.DataField {
 
     function onTimerStop() as Void {
         System.println("AdaptiveGrade.onTimerStop()");
-        
-        
     }
 
     function compute(info  as Activity.Info) as Number {
@@ -755,7 +759,7 @@ class GradeEstimatorView extends WatchUi.DataField {
         if (value_max_grade != null) {
             value_max_grade.setColor(textColor);
 
-            var str = (100*maxGrade).format(str_format);
+            var str = (100*maxGrade).format("%.1f");
             if (!drawCompact() || !isExploreUnit) { str += suffix; } 
             value_max_grade.setText(getUpdatingValueAnnotatedString(isMaxGradeUpdateRecent(), str, " !!", 1, false));
         }

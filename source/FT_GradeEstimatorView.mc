@@ -94,7 +94,6 @@ class GradeEstimatorView extends WatchUi.DataField {
     var small_layout_draw_style as Number = 0;
     var layout as Number                  = 0;
     var graphmode as Number               = 1;
-    var switchGraphMode as Boolean        = true;
     var isExploreUnit as Boolean          = false; 
     var isx50Unit as Boolean              = false;
     var isMetric                          = true;
@@ -336,7 +335,7 @@ class GradeEstimatorView extends WatchUi.DataField {
         if (width_view < width_device / 2 + 10) { layout = LAYOUT_SMALL; }
         else {
             if (height_view < (height_device / 3) - 3) { layout = LAYOUT_WIDE; }
-            else if (height_view > height_device - 2) { layout = LAYOUT_FULLSCREEN; graphmode = GRAPHMODE_BOTH;}
+            else if (height_view > height_device - 2) { layout = LAYOUT_FULLSCREEN; }
             else { layout = LAYOUT_LARGE; }
         }
 
@@ -502,13 +501,10 @@ class GradeEstimatorView extends WatchUi.DataField {
         }
     }
 
-    function onTap(clickEvent as WatchUi.ClickEvent) {
-        // Only toggle if not full screen
-        if (layout != LAYOUT_FULLSCREEN) {
-            if (graphmode == GRAPHMODE_BUFFER) { graphmode = GRAPHMODE_HISTOGRAM; }
-            else { graphmode = GRAPHMODE_BUFFER; }
-        }
-        return true; // Event handled
+    function handleTap(clickEvent as WatchUi.ClickEvent) as Boolean {
+        graphmode = (graphmode + 1) % 3;
+        WatchUi.requestUpdate();
+        return true;
     }
 
     function onTimerStop() as Void {
@@ -627,12 +623,10 @@ class GradeEstimatorView extends WatchUi.DataField {
 
         histogram.addData(grade * 100, quality);
 
-        if (histogram.shouldUpdate()) { histogram.compute(); }
-
-        // Switch graph mode every 5 seconds...
-        if (eTime.toNumber() % 5 == 0 && switchGraphMode) {
-            if (graphmode == GRAPHMODE_BUFFER) { graphmode = GRAPHMODE_HISTOGRAM; }
-            else if (graphmode == GRAPHMODE_HISTOGRAM) { graphmode = GRAPHMODE_BUFFER; }
+        if (histogram.shouldUpdate()) { histogram.compute(); 
+            System.println("Histogram 1%: " + histogram.getHighGrade(1));
+            System.println("Histogram 5%: " + histogram.getHighGrade(5));
+            System.println("Histogram 10%: " + histogram.getHighGrade(10));
         }
 
         prevMedianAlt = medianAlt;
@@ -773,8 +767,13 @@ class GradeEstimatorView extends WatchUi.DataField {
         View.onUpdate(dc);
         
         if (drawGraph()) { 
-            if (graphmode == GRAPHMODE_BOTH || graphmode == GRAPHMODE_HISTOGRAM) { drawHistogramPlot(dc); }
-            if (graphmode == GRAPHMODE_BOTH || graphmode == GRAPHMODE_BUFFER) { drawAltitudeBufferPlot(dc); }
+
+            if (graphmode == GRAPHMODE_BOTH || layout == LAYOUT_FULLSCREEN) { 
+                drawHistogramPlot(dc); 
+                drawAltitudeBufferPlot(dc); 
+            }
+            else if (graphmode == GRAPHMODE_BUFFER) { drawAltitudeBufferPlot(dc);  }
+            else if (graphmode == GRAPHMODE_HISTOGRAM) { drawHistogramPlot(dc);  }
         }
     }
 
@@ -938,7 +937,7 @@ class GradeEstimatorView extends WatchUi.DataField {
         }
 
         var plotBottom = plotTop + plotHeight;
-        var plotWidth = plotRight - plotLeft;
+        var plotWidth = plotRight - plotLeft + 1;
         var offset = (System.getDeviceSettings().screenHeight * 0.035 + 2).toNumber();
         if (isExploreUnit) { offset += 8; }
 
@@ -996,7 +995,7 @@ class GradeEstimatorView extends WatchUi.DataField {
             }
 
             dc.setColor(textColor, Graphics.COLOR_TRANSPARENT);
-            dc.drawText(plotLeft + plotWidth / 2, plotBottom - offset, Graphics.FONT_SYSTEM_TINY, "← " + getValueInLocalUnit(xrange, UNIT_DIST_SHORT).format("%.1f") + getUnitString(UNIT_DIST_SHORT) + " →", Graphics.TEXT_JUSTIFY_CENTER);
+            dc.drawText(plotLeft + plotWidth / 2, plotTop + 3, Graphics.FONT_SYSTEM_TINY, "← " + getValueInLocalUnit(xrange, UNIT_DIST_SHORT).format("%.1f") + getUnitString(UNIT_DIST_SHORT) + " →", Graphics.TEXT_JUSTIFY_CENTER);
             dc.drawText(plotLeft + 3, plotTop + 3, Graphics.FONT_SYSTEM_TINY, "↕ " + getValueInLocalUnit(yrange, UNIT_DIST_SHORT).format("%.1f") + getUnitString(UNIT_DIST_SHORT), Graphics.TEXT_JUSTIFY_LEFT);
 
             if (calculating) {
@@ -1037,7 +1036,7 @@ class GradeEstimatorView extends WatchUi.DataField {
                 dc.setPenWidth(3);
                 dc.drawLine(px1, py1, px2, py2);
 
-                dc.drawText(plotLeft + plotWidth - 7, plotBottom - offset, Graphics.FONT_SYSTEM_TINY, "← " + getValueInLocalUnit(xEnd - xStart, UNIT_DIST_SHORT).format("%.1f") + getUnitString(UNIT_DIST_SHORT), Graphics.TEXT_JUSTIFY_RIGHT);
+                dc.drawText(plotLeft + plotWidth - 7, plotTop + 3, Graphics.FONT_SYSTEM_TINY, "← " + getValueInLocalUnit(xEnd - xStart, UNIT_DIST_SHORT).format("%.1f") + getUnitString(UNIT_DIST_SHORT), Graphics.TEXT_JUSTIFY_RIGHT);
             }
         }
         else {
@@ -1066,7 +1065,7 @@ class GradeEstimatorView extends WatchUi.DataField {
         }
 
         var plotBottom = plotTop + plotHeight;
-        var plotWidth = plotRight - plotLeft;
+        var plotWidth = plotRight - plotLeft + 1;
         var offset = (System.getDeviceSettings().screenHeight * 0.035 + 2).toNumber();
         if (isExploreUnit) { offset += 8; }
 
@@ -1079,6 +1078,11 @@ class GradeEstimatorView extends WatchUi.DataField {
                 if (values[i] > maxVal) { maxVal = values[i]; }
             }
             maxVal *= 1.1; // Add 10% headroom
+
+            var tickGrades = 1;
+            if (range[1] - range[0] >= 35) { tickGrades = 10; }
+            else if (range[1] - range[0] >= 18) { tickGrades = 5; }
+            else if (range[1] - range[0] >= 10) { tickGrades = 2; }
 
             // --- Draw histogram as vertical bars ---
             dc.setColor(Graphics.COLOR_DK_GRAY, Graphics.COLOR_TRANSPARENT);
@@ -1093,17 +1097,17 @@ class GradeEstimatorView extends WatchUi.DataField {
                 var y1 = plotBottom;
                 var y2 = plotBottom - values[j] / maxVal * plotHeight;
 
-                if (grade.toNumber() % 5 == 0) {
+                if (grade.toNumber() % tickGrades == 0 && j != 0) {
 
-                    dc.setColor(Graphics.COLOR_DK_GRAY, Graphics.COLOR_TRANSPARENT);
+                    dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
                     dc.drawLine(x1, plotBottom, x1, plotTop);
 
                     dc.setColor(textColor, Graphics.COLOR_TRANSPARENT);
                     dc.drawText(x1 + 1, plotBottom + 9, Graphics.FONT_SYSTEM_TINY, grade.format("%.0f") + "%", Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER);
                 }
 
-                if (j == currBin) { dc.setColor(textColor, Graphics.COLOR_TRANSPARENT); }
-                else { dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT); }
+                if (j == currBin) { dc.setColor(Graphics.COLOR_DK_RED, Graphics.COLOR_TRANSPARENT); }
+                else { dc.setColor(Graphics.COLOR_DK_GRAY, Graphics.COLOR_TRANSPARENT); }
 
                 dc.fillRectangle(x1 + 1, y2, x2 - x1, y1 - y2);
             }
@@ -1113,7 +1117,7 @@ class GradeEstimatorView extends WatchUi.DataField {
         }
 
         // --- Draw plot area border ---
-        dc.setColor(textColor, Graphics.COLOR_BLACK);
+        dc.setColor(textColor, Graphics.COLOR_TRANSPARENT);
         dc.setPenWidth(2);
         dc.drawRectangle(plotLeft, plotTop, plotWidth, plotHeight);
     }

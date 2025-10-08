@@ -28,7 +28,23 @@ class GradeEstimatorApp extends Application.AppBase {
     function getInitialView()  {
         view = new GradeEstimatorView();
 
-        return [ view ];
+        var inputDelegate = new GradeEstimatorInputDelegate(view);
+
+        return [ view, inputDelegate ];
+    }
+}
+
+class GradeEstimatorInputDelegate extends WatchUi.InputDelegate {
+    hidden var dataField as GradeEstimatorView;
+
+    function initialize(field as GradeEstimatorView) {
+        InputDelegate.initialize();
+        dataField = field;
+    }
+
+    function onTap(clickEvent as WatchUi.ClickEvent) as Boolean {
+        if (dataField == null) { return false; }
+        return dataField.handleTap(clickEvent);
     }
 }
 

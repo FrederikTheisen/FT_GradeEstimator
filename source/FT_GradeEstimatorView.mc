@@ -388,6 +388,9 @@ class GradeEstimatorView extends WatchUi.DataField {
         small_layout_draw_style = Application.Properties.getValue("small_field_data");
         if (!(small_layout_draw_style instanceof Number)) { small_layout_draw_style = 0; }
 
+        graphmode = Application.Properties.getValue("graphmode");
+        if (!(graphmode instanceof Number)) { graphmode = GRAPHMODE_BUFFER; }
+
         // Ensure the buffer is not too large or small
         if (SAMPLE_WINDOW > 180) { SAMPLE_WINDOW = 180; }
         else if (SAMPLE_WINDOW < 10) { SAMPLE_WINDOW = 10; }
@@ -770,8 +773,8 @@ class GradeEstimatorView extends WatchUi.DataField {
         View.onUpdate(dc);
         
         if (drawGraph()) { 
-            if (graphmode == GRAPHMODE_BOTH || graphmode == GRAPHMODE_BUFFER) { drawAltitudeBufferPlot(dc); }
             if (graphmode == GRAPHMODE_BOTH || graphmode == GRAPHMODE_HISTOGRAM) { drawHistogramPlot(dc); }
+            if (graphmode == GRAPHMODE_BOTH || graphmode == GRAPHMODE_BUFFER) { drawAltitudeBufferPlot(dc); }
         }
     }
 

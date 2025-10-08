@@ -54,13 +54,13 @@
                     <listEntry value="3">@Strings.small_field_data_climbvam</listEntry>
                 </settingConfig>
             </setting>
-            <setting propertyKey="@Properties.graphmode" title="@Strings.graphmode" prompt="@Strings.graphmode">
+            <!-- <setting propertyKey="@Properties.graphmode" title="@Strings.graphmode" prompt="@Strings.graphmode">
                 <settingConfig type="list">
                     <listEntry value="0">@Strings.graphmode_both</listEntry>
                     <listEntry value="1">@Strings.graphmode_buffer</listEntry>
                     <listEntry value="2">@Strings.graphmode_histogram</listEntry>
                 </settingConfig>
-            </setting>
+            </setting> -->
             <setting propertyKey="@Properties.save_smooth" title="@Strings.save_smooth">
                 <settingConfig type="boolean" />
             </setting>

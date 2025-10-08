@@ -27,7 +27,7 @@ class Histogram {
         self.bins = [];
         for (var i = minBin; i < maxBin; i += binSize) { self.bins.add(0); }
         self.numBins = bins.size();
-        self.totalCount = 1; // Avoid division by zero
+        self.totalCount = 0;
     }
 
     function addData(grade as Float, quality as Float) {
@@ -75,6 +75,8 @@ class Histogram {
 
     //! Compute and store the histogram statistics
     function compute() {
+        if (self.totalCount == 0) { return; }
+
         computedSampledBinRange = getSampledBinRange();
 
         if (computedSampledBinRange[0] > 21) { computedSampledBinRange[0] = 21; }
@@ -130,5 +132,43 @@ class Histogram {
             self.bins[i] = 0;
         }
         self.totalCount = 0;
+    }
+
+    //! Return the grade at which `percent` of the samples are at or above that grade.
+    //! Uses linear interpolation within the enclosing bin. Percent is expressed 0-100.
+    public function getHighGrade(percent as Float) as Float {
+        if (self.totalCount == 0) { return 0.0; }
+
+        var pct = percent;
+
+        // If out of bounds, return extremes of sampled range converted to grades
+        if (pct <= 0.0) { return self.getGradeForBin(computedSampledBinRange[1]); }
+        if (pct >= 100.0) { return self.getGradeForBin(computedSampledBinRange[0]); }
+
+        var total = self.totalCount;
+        var target = total * (pct / 100.0);
+        var cumulative = 0.0;
+
+        for (var i = self.numBins - 1; i >= 0; i--) {
+            var binCount = self.bins[i].toFloat();
+            if (binCount <= 0.0) { continue; }
+
+            var cumulativeAbove = cumulative;
+            cumulative += binCount;
+
+            if (cumulative >= target) {
+                var binLower = self.minBin + i * self.binSize;
+                var binUpper = binLower + self.binSize;
+
+                var countNeeded = target - cumulativeAbove;
+                if (countNeeded < 0.0) { countNeeded = 0.0; }
+                else if (countNeeded > binCount) { countNeeded = binCount; }
+
+                var fractionInBin = countNeeded / binCount;
+                return binUpper - fractionInBin * self.binSize;
+            }
+        }
+
+        return self.minBin;
     }
 }

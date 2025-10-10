@@ -3,7 +3,7 @@ import Toybox.Lang;
 class Histogram {
     const minBin = -25.0; // Minimum value for bins
     const maxBin = 25.0;  // Maximum value for bins
-    const minQuality = 0.33; // Minimum quality to consider a data point
+    const minQuality = 0.5; // Minimum quality to consider a data point
     
     private var bins = [];
     private var binSize as Float;
@@ -142,8 +142,9 @@ class Histogram {
         var pct = percent;
 
         // If out of bounds, return extremes of sampled range converted to grades
-        if (pct <= 0.0) { return self.getGradeForBin(computedSampledBinRange[1]); }
-        if (pct >= 100.0) { return self.getGradeForBin(computedSampledBinRange[0]); }
+        var range = getSampledBinRange();
+        if (pct <= 0.0) { return self.getGradeForBin(range[1]); }
+        if (pct >= 100.0) { return self.getGradeForBin(range[0]); }
 
         var total = self.totalCount;
         var target = total * (pct / 100.0);
@@ -171,4 +172,13 @@ class Histogram {
 
         return self.minBin;
     }
+
+    public function getHighGradeForTime(seconds as Float) as Float {
+        if (self.totalCount == 0) { return 0.0; }
+
+        var percent = (seconds.toFloat() / totalCount) * 100.0;
+
+        return getHighGrade(percent);
+    }
+
 }

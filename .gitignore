@@ -8,3 +8,6 @@ bin/FT_GradeEstimator.prg
 bin/mir/source/FT_GradeEstimatorView.mir
 GarminHeroImage.afdesign
 .DS_Store
+AppIcon.afdesign
+AppIcon.afdesign~lock~
+GarminHeroImage.afdesign~lock~

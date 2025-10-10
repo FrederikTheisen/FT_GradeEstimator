@@ -11,7 +11,7 @@
         <property id="save_smooth" type="boolean">false</property>
         <property id="debug_enabled" type="boolean">false</property>
         <property id="small_field_data" type="number">2</property>
-        <property id="graphmode" type="number">1</property>
+        <property id="graphmode" type="number">0</property>
     </properties>
 
     <settings>

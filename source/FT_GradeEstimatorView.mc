@@ -21,6 +21,9 @@ class GradeEstimatorView extends WatchUi.DataField {
     const FIELD_ID_VAM_GRAPH = 34;      // grade, REC
     const FIELD_ID_VAM_AVG   = 35;      // grade, REC
     const FIELD_ID_LAP_AVG   = 36;      // avg grade for laps
+    const FIELD_ID_MAXGRADE10S = 37;   // max grade sustained for 10s
+    const FIELD_ID_MAXGRADE1MIN = 38;  // max grade sustained for 1min
+    const FIELD_ID_MAXGRADE30MIN = 39; // max grade sustained for 30min
     const MAX_ALT_JUMP       = 10;
     const EWA_ALPHA          = 1;
     var DIST_LOG_QUALITY   = 0.33;    // Quality threshold for distance calculation
@@ -85,7 +88,7 @@ class GradeEstimatorView extends WatchUi.DataField {
     var gradeWindowSize as Number = 10; // Start at 10, will be clamped between 6 and 20
 
     // FIT FIELDS
-    var vamField, vamAvgField, gradeField, lightField, steepField, maxField, lapAvgGradeField;
+    var vamField, vamAvgField, gradeField, lightField, steepField, maxField, lapAvgGradeField, maxGrade10sField, maxGrade1minField, maxGrade30minField;
 
     // UI
     var textColor as Number               = Graphics.COLOR_WHITE;
@@ -97,6 +100,7 @@ class GradeEstimatorView extends WatchUi.DataField {
     var isExploreUnit as Boolean          = false; 
     var isx50Unit as Boolean              = false;
     var isMetric                          = true;
+    var view_dimensions as Array<Number>  = [0,0];
 
     // STATUS STATE
     var calculating as Boolean  = false;
@@ -250,20 +254,20 @@ class GradeEstimatorView extends WatchUi.DataField {
         vamField = createField(
             WatchUi.loadResource(Rez.Strings.GC_ChartTitle_VAM), FIELD_ID_VAM_GRAPH,
             FitContributor.DATA_TYPE_FLOAT,
-            {:mesgType=>FitContributor.MESG_TYPE_RECORD, :units=>WatchUi.loadResource(Rez.Strings.Unit_VAM) }
+            {:mesgType=>FitContributor.MESG_TYPE_RECORD, :units=>getUnitString(UNIT_VAM) }
         );
 
         // Session totals
         lightField = createField(
             WatchUi.loadResource(Rez.Strings.GC_Label_Distance_Light), FIELD_ID_LIGHT,
             FitContributor.DATA_TYPE_FLOAT,
-            {:mesgType=>FitContributor.MESG_TYPE_SESSION, :units=>WatchUi.loadResource(Rez.Strings.Unit_Distance)}
+            {:mesgType=>FitContributor.MESG_TYPE_SESSION, :units=>getUnitString(UNIT_DIST_LONG) }
         );
 
         steepField = createField(
             WatchUi.loadResource(Rez.Strings.GC_Label_Distance_Steep), FIELD_ID_STEEP,
             FitContributor.DATA_TYPE_FLOAT,
-            {:mesgType=>FitContributor.MESG_TYPE_SESSION, :units=>WatchUi.loadResource(Rez.Strings.Unit_Distance)}
+            {:mesgType=>FitContributor.MESG_TYPE_SESSION, :units=>getUnitString(UNIT_DIST_LONG) }
         );
 
         maxField = createField(
@@ -275,7 +279,25 @@ class GradeEstimatorView extends WatchUi.DataField {
         vamAvgField = createField(
             WatchUi.loadResource(Rez.Strings.GC_Label_AverageVAM), FIELD_ID_VAM_AVG,
             FitContributor.DATA_TYPE_FLOAT,
-            {:mesgType=>FitContributor.MESG_TYPE_SESSION, :units=>WatchUi.loadResource(Rez.Strings.Unit_VAM)}
+            {:mesgType=>FitContributor.MESG_TYPE_SESSION, :units=>getUnitString(UNIT_VAM) }
+        );
+
+        maxGrade10sField = createField(
+            WatchUi.loadResource(Rez.Strings.GC_Label_10sGrade), FIELD_ID_MAXGRADE10S,
+            FitContributor.DATA_TYPE_FLOAT,
+            {:mesgType=>FitContributor.MESG_TYPE_SESSION, :units=>WatchUi.loadResource(Rez.Strings.Unit_Grade)}
+        );
+
+        maxGrade1minField = createField(
+            WatchUi.loadResource(Rez.Strings.GC_Label_1minGrade), FIELD_ID_MAXGRADE1MIN,
+            FitContributor.DATA_TYPE_FLOAT,
+            {:mesgType=>FitContributor.MESG_TYPE_SESSION, :units=>WatchUi.loadResource(Rez.Strings.Unit_Grade)}
+        );
+
+        maxGrade30minField = createField(
+            WatchUi.loadResource(Rez.Strings.GC_Label_30minGrade), FIELD_ID_MAXGRADE30MIN,
+            FitContributor.DATA_TYPE_FLOAT,
+            {:mesgType=>FitContributor.MESG_TYPE_SESSION, :units=>WatchUi.loadResource(Rez.Strings.Unit_Grade)}
         );
 
         // Lap Fields
@@ -298,6 +320,9 @@ class GradeEstimatorView extends WatchUi.DataField {
         maxField.setData(0.0);
         vamAvgField.setData(0.0);
         lapAvgGradeField.setData(0.0);
+        maxGrade10sField.setData(0.0);
+        maxGrade1minField.setData(0.0);
+        maxGrade30minField.setData(0.0);
 
         // Initialize rolling buffer
         buffer = [];
@@ -321,6 +346,7 @@ class GradeEstimatorView extends WatchUi.DataField {
         histogram = new Histogram(1.0);
     }
 
+    // TODO implement very narrow layout for 850 device (60 pixels high)
     function determineLayout(dc as Dc) as Void {
         if (DEBUG) { System.println("AdaptiveGrade.determineLayout()"); }
         var width_view = dc.getWidth();
@@ -329,12 +355,17 @@ class GradeEstimatorView extends WatchUi.DataField {
         var height_device = System.getDeviceSettings().screenHeight;
         var partnum = System.getDeviceSettings().partNumber;
 
+        view_dimensions = [width_view, height_view];
+
         if (old_partnums.indexOf(partnum) > -1) { isExploreUnit = true; }
         else if (x50_partnum.indexOf(partnum) > -1) { isx50Unit = true; }
 
+        var unitFactor = 1.0;
+        if (isx50Unit) { unitFactor = 1.5; }
+
         if (width_view < width_device / 2 + 10) { layout = LAYOUT_SMALL; }
         else {
-            if (height_view < (height_device / 3) - 3) { layout = LAYOUT_WIDE; }
+            if (height_view < 110 * unitFactor) { layout = LAYOUT_WIDE; }
             else if (height_view > height_device - 2) { layout = LAYOUT_FULLSCREEN; }
             else { layout = LAYOUT_LARGE; }
         }
@@ -421,6 +452,7 @@ class GradeEstimatorView extends WatchUi.DataField {
         System.println("  THRESHOLD_LIGHT = " + (THRESHOLD_LIGHT * 100).format("%.1f") + "%");
         System.println("  THRESHOLD_STEEP = " + (THRESHOLD_STEEP * 100).format("%.1f") + "%");
         System.println("  small_layout_draw_style = " + small_layout_draw_style);
+        System.println("  graphmode = " + graphmode);
         System.println("  DEBUG = " + DEBUG);
     }
 
@@ -473,7 +505,7 @@ class GradeEstimatorView extends WatchUi.DataField {
                 break;
             case LAYOUT_FULLSCREEN:
                 if (!isExploreUnit) { View.setLayout(Rez.Layouts.FullScreenLayout(dc)); }
-                //else { View.setLayout(Rez.Layouts.FullScreenLayoutExplore(dc)); }
+                else { View.setLayout(Rez.Layouts.FullScreenLayoutExplore(dc)); }
                 break;
         }
 
@@ -502,6 +534,11 @@ class GradeEstimatorView extends WatchUi.DataField {
     }
 
     function handleTap(clickEvent as WatchUi.ClickEvent) as Boolean {
+        if (DEBUG) { System.println("AdaptiveGrade.handleTap()"); }
+        if (layout != LAYOUT_LARGE) { return false; }
+        else if (clickEvent.getCoordinates()[1] < view_dimensions[1] / 2 - 5) { return false; } // Only if tapping in the lower half
+
+        if (DEBUG) { System.println("AdaptiveGrade.handleTap() => true"); }
         graphmode = (graphmode + 1) % 3;
         WatchUi.requestUpdate();
         return true;
@@ -509,6 +546,18 @@ class GradeEstimatorView extends WatchUi.DataField {
 
     function onTimerStop() as Void {
         System.println("AdaptiveGrade.onTimerStop()");
+
+        writeSessionFields();
+    }
+
+    function writeSessionFields() as Void {
+        lightField.setData(getValueInLocalUnit(distLight / 1000.0, UNIT_DIST_LONG));
+        steepField.setData(getValueInLocalUnit(distSteep / 1000.0, UNIT_DIST_LONG));
+        maxField.setData(maxGrade * 100.0);
+        vamAvgField.setData(getValueInLocalUnit(vamAvg, UNIT_VAM));
+        maxGrade10sField.setData(histogram.getHighGradeForTime(10));
+        maxGrade1minField.setData(histogram.getHighGradeForTime(60));
+        maxGrade30minField.setData(histogram.getHighGradeForTime(1800));
     }
 
     function compute(info  as Activity.Info) as Number {
@@ -596,38 +645,27 @@ class GradeEstimatorView extends WatchUi.DataField {
         if (grade > MAX_ALLOWED_GRADE) { grade = MAX_ALLOWED_GRADE;}
         else if (grade < -MAX_ALLOWED_GRADE) { grade = -MAX_ALLOWED_GRADE; }
 
-        // Accumulate distance in each zone
+        computeVAM(grade, speed);
+
+        histogram.addData(grade * 100, quality);
+        if (histogram.shouldUpdate()) { histogram.compute(); }
+
+        // Accumulate distance in each zone if above threshold and quality is good enough
         if (shouldAccLightDist()) { distLight += sample_distance; }
         if (shouldAccSteepDist()) { distSteep += sample_distance; }
         if (grade > maxGrade && shouldCalcMaxGrade()) { 
             maxGrade = grade;
-            lastMaxGradeUpdateTime = Time.now().value(); // Update last max grade update time
+            lastMaxGradeUpdateTime = Time.now().value(); // Update last max grade update time. For UI indication only.
         }
 
+        // Calculate average lap grade (time spent at grade)
         lap_average_grade_sum += grade;
         lap_average_grade_count++;
-
-        // Export
-        if (LOG_SMOOTHED_GRADE) { binnedGradeLogging(sample_distance); }
-        else { gradeField.setData(grade * 100); }
-
-        // Update session summary fields
-        lightField.setData(distLight / 1000.0);
-        steepField.setData(distSteep / 1000.0);
-        maxField.setData(maxGrade * 100);
         lapAvgGradeField.setData(100 * lap_average_grade_sum / lap_average_grade_count);
 
-        computeVAM(grade, speed);
-
-        //climbTracker.update(medianAlt, sample_distance, grade, eTime);
-
-        histogram.addData(grade * 100, quality);
-
-        if (histogram.shouldUpdate()) { histogram.compute(); 
-            System.println("Histogram 1%: " + histogram.getHighGrade(1));
-            System.println("Histogram 5%: " + histogram.getHighGrade(5));
-            System.println("Histogram 10%: " + histogram.getHighGrade(10));
-        }
+        // Log current grade
+        if (LOG_SMOOTHED_GRADE) { binnedGradeLogging(sample_distance); }
+        else { gradeField.setData(grade * 100); }
 
         prevMedianAlt = medianAlt;
 
@@ -918,9 +956,9 @@ class GradeEstimatorView extends WatchUi.DataField {
     }
 
     function drawAltitudeBufferPlot(dc as Dc) as Void {
+        var width = view_dimensions[0];
+        var height = view_dimensions[1];
         // --- Plot area setup ---
-        var width = dc.getWidth();
-        var height = dc.getHeight();
         var margin = 3;
         var plotLeft = margin;
         var plotRight = width - margin;
@@ -1051,8 +1089,9 @@ class GradeEstimatorView extends WatchUi.DataField {
     }
 
     function drawHistogramPlot(dc as Dc) as Void {
-        var width = dc.getWidth();
-        var height = dc.getHeight();
+        var width = view_dimensions[0];
+        var height = view_dimensions[1];
+        // --- Plot area setup ---
         var margin = 3;
         var plotLeft = margin;
         var plotRight = width - margin;

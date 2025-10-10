@@ -1,5 +1,5 @@
 <strings>
-    <string id="AppName">Adaptive Steigung</string>
+    <string id="AppName">Adaptive Steigung Plus</string>
 
     <!-- UI labels -->
     <string id="UI_Label_Gradient_Current">Steigung</string>
@@ -30,6 +30,9 @@
     <string id="GC_Label_Distance_Light">Leichte Steigung</string>
     <string id="GC_Label_Distance_Steep">Starke Steigung</string>
     <string id="GC_Label_Grade_Max">Maximale Steigung</string>
+    <string id="GC_Label_10sGrade">Max-Steigung gehalten für 10 Sek</string>
+    <string id="GC_Label_1minGrade">1 Min Max-Steigung</string>
+    <string id="GC_Label_30minGrade">30 Min Max-Steigung</string>
 
     <!-- General Labels -->
     <string id="Unit_Grade">%</string>
@@ -50,7 +53,10 @@
     <string id="small_field_data_dist">Anstiegs Distanzen</string>
     <string id="small_field_data_climbmax">Anstiegs Distanzen und Maximale Steigung</string>
     <string id="small_field_data_climbvam">Anstiegs Distanzen und VAM</string>
-
+    <string id="graphmode">Diagramm-Anzeigemodus</string>
+    <string id="graphmode_both">Höhe + Histogramm</string>
+    <string id="graphmode_buffer">Höhenpuffer</string>
+    <string id="graphmode_histogram">Histogrammwerte</string>
 
     <string id="group_title_buffer">Puffereinstellungen</string>
     <string id="group_desc_buffer">Einstellungen zur Anpassung der Höhe-Datenpuffergröße und der Anzahl an Stichproben für die Steigungsberechnung.</string>

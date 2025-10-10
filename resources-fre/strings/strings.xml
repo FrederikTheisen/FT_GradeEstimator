@@ -1,5 +1,5 @@
 <strings>
-    <string id="AppName">Pente Adaptive</string>
+    <string id="AppName">Pente Adaptive Plus</string>
 
     <!-- UI labels -->
     <string id="UI_Label_Gradient_Current">Pente Actu.</string>
@@ -28,6 +28,9 @@
     <string id="GC_Label_Distance_Light">Montée Légère</string>
     <string id="GC_Label_Distance_Steep">Montée Difficile</string>
     <string id="GC_Label_Grade_Max">Pente Maximale</string>
+    <string id="GC_Label_10sGrade">Pente max maintenue pendant 10 s</string>
+    <string id="GC_Label_1minGrade">1 min pente max</string>
+    <string id="GC_Label_30minGrade">30 min pente max</string>
 
     <!-- General Labels -->
     <string id="Unit_Grade">%</string>
@@ -43,10 +46,14 @@
     <string id="threshold_steep">Seuil pente “difficile” (%)</string>
     <string id="save_smooth">Enregistrer pente lissée</string>
     <string id="small_field_data">Affichage compact des données</string>
-    <string id="small_field_data_vam"></string>
+    <string id="small_field_data_vam">VAM</string>
     <string id="small_field_data_dist">Distances Montée</string>
     <string id="small_field_data_climbmax">Distances Montée et Pente Maximale</string>
     <string id="small_field_data_climbvam">Distances Montée et VAM</string>
+    <string id="graphmode">Mode d'affichage du graphique</string>
+    <string id="graphmode_both">Altitude + Histogramme</string>
+    <string id="graphmode_buffer">Tampon d'altitude</string>
+    <string id="graphmode_histogram">Stats histogramme</string>
 
 
     <string id="group_title_buffer">Paramètres du tampon d'échantillons</string>

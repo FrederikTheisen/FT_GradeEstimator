@@ -1,5 +1,5 @@
 <strings>
-    <string id="AppName">Adaptive Helling</string>
+    <string id="AppName">Adaptive Helling Plus</string>
 
     <!-- UI labels -->
     <string id="UI_Label_Gradient_Current">Huidige Helling</string>
@@ -28,6 +28,9 @@
     <string id="GC_Label_Distance_Light">Lichte Klim</string>
     <string id="GC_Label_Distance_Steep">Steile Klim</string>
     <string id="GC_Label_Grade_Max">Maximale Helling</string>
+    <string id="GC_Label_10sGrade">Max helling volgehouden 10 sec</string>
+    <string id="GC_Label_1minGrade">1 min max helling</string>
+    <string id="GC_Label_30minGrade">30 min max helling</string>
 
     <!-- General Labels -->
     <string id="Unit_Grade">%</string>
@@ -46,6 +49,12 @@
     <string id="small_field_data">Compacte gegevensweergave</string>
     <string id="small_field_data_vam">VAM</string>
     <string id="small_field_data_dist">Klim Afstanden</string>
+    <string id="small_field_data_climbmax">Klim Afstand en Max Helling</string>
+    <string id="small_field_data_climbvam">Klim Afstand en VAM</string>
+    <string id="graphmode">Diagramweergavemodus</string>
+    <string id="graphmode_both">Hoogte + Histogram</string>
+    <string id="graphmode_buffer">Hoogtebuffer</string>
+    <string id="graphmode_histogram">Histogramgegevens</string>
 
     <string id="group_title_buffer">Instellingen samplebuffer</string>
     <string id="group_desc_buffer">Instellingen voor de grootte van de hoogtebuffer en het aantal metingen dat wordt gebruikt om het stijgingspercentage te berekenen.</string>

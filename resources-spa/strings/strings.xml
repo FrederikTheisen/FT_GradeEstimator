@@ -1,5 +1,5 @@
 <strings>
-    <string id="AppName">Pendiente Adaptativa</string>
+    <string id="AppName">Pendiente Adaptativa Plus</string>
 
     <!-- UI labels -->
     <string id="UI_Label_Gradient_Current">Pend. Actual</string>
@@ -28,6 +28,9 @@
     <string id="GC_Label_Distance_Light">Subida Ligera</string>
     <string id="GC_Label_Distance_Steep">Subida Fuerte</string>
     <string id="GC_Label_Grade_Max">Pendiente Máxima</string>
+    <string id="GC_Label_10sGrade">Pendiente máx mantenida 10 s</string>
+    <string id="GC_Label_1minGrade">1 min pendiente máx</string>
+    <string id="GC_Label_30minGrade">30 min pendiente máx</string>
 
     <!-- General Labels -->
     <string id="Unit_Grade">%</string>
@@ -45,6 +48,12 @@
     <string id="small_field_data">Visualización compacta de datos</string>
     <string id="small_field_data_vam">VAM</string>
     <string id="small_field_data_dist">Distancias Subida</string>
+    <string id="small_field_data_climbmax">Distancia Subida y Pendiente Máx.</string>
+    <string id="small_field_data_climbvam">Distancia Subida y VAM</string>
+    <string id="graphmode">Modo de visualización de gráficos</string>
+    <string id="graphmode_both">Altitud + Histograma</string>
+    <string id="graphmode_buffer">Búfer de altitud</string>
+    <string id="graphmode_histogram">Estadísticas histograma</string>
 
     <string id="group_title_buffer">Configuración del búfer de muestras</string>
     <string id="group_desc_buffer">Ajustes para definir el tamaño del búfer de altitud y la cantidad de muestras usadas para calcular el gradiente.</string>

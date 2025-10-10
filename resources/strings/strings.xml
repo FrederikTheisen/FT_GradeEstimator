@@ -1,6 +1,6 @@
 <strings>
-    <string id="AppName">Adaptive Grade</string>
-    <string id="Version">v1.6</string>
+    <string id="AppName">Adaptive Grade Plus</string>
+    <string id="Version">v2.0</string>
 
     <!-- UI labels -->
     <string id="UI_Label_Gradient_Current">Curr. Grade</string>
@@ -31,6 +31,9 @@
     <string id="GC_Label_Distance_Light">Light Climb</string>
     <string id="GC_Label_Distance_Steep">Hard Climb</string>
     <string id="GC_Label_Grade_Max">Maximum Grade</string>
+    <string id="GC_Label_10sGrade">Max grade sustained for 10 sec</string>
+    <string id="GC_Label_1minGrade">1 min max grade</string>
+    <string id="GC_Label_30minGrade">30 min max grade</string>
     
     <!-- General Labels -->
     <string id="Unit_Grade">%</string>
@@ -53,9 +56,9 @@
     <string id="small_field_data_climbvam">Climb Distance and VAM</string>
 
     <string id="graphmode">Graph Display Mode</string>
-    <string id="graphmode_both">Both Graphs</string>
-    <string id="graphmode_buffer">Altitude Graph Only</string>
-    <string id="graphmode_histogram">Histogram Only</string>
+    <string id="graphmode_both">Altitude + Histogram</string>
+    <string id="graphmode_buffer">Altitude Buffer</string>
+    <string id="graphmode_histogram">Histogram Stats</string>
 
     <string id="group_title_buffer">Sample Buffer Settings</string>
     <string id="group_desc_buffer">Settings to adjust the altitude sample buffer size and how many samples are used for fitting the gradient.</string>

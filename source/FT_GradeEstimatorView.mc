@@ -1023,7 +1023,7 @@ class GradeEstimatorView extends WatchUi.DataField {
             }
 
             // --- Draw buffer as polyline ---
-            dc.setColor(textColor, Graphics.COLOR_TRANSPARENT);
+            dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
             dc.setPenWidth(6);
             dc.setClip(plotLeft, plotTop, plotWidth, plotHeight);
             for (var j = 0; j < sampleCount - 1; j++) {
@@ -1143,15 +1143,15 @@ class GradeEstimatorView extends WatchUi.DataField {
 
                 if (grade.toNumber() % tickGrades == 0 && j != 0) {
 
-                    dc.setColor(Graphics.COLOR_DK_GRAY, Graphics.COLOR_TRANSPARENT);
+                    dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
                     dc.drawLine(x1, plotBottom, x1, plotTop);
 
                     dc.setColor(textColor, Graphics.COLOR_TRANSPARENT);
                     dc.drawText(x1 + 1, plotBottom + offset, Graphics.FONT_SYSTEM_TINY, grade.format("%.0f") + "%", Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER);
                 }
 
-                if (j == currBin) { dc.setColor(Graphics.COLOR_ORANGE, Graphics.COLOR_TRANSPARENT); }
-                else { dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT); }
+                if (j == currBin) { dc.setColor(Graphics.COLOR_DK_RED, Graphics.COLOR_TRANSPARENT); }
+                else { dc.setColor(Graphics.COLOR_DK_GRAY, Graphics.COLOR_TRANSPARENT); }
 
                 dc.fillRectangle(x1 + 1, y2, x2 - x1, y1 - y2);
             }

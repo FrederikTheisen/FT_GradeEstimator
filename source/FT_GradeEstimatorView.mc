@@ -170,7 +170,7 @@ class GradeEstimatorView extends WatchUi.DataField {
 
     function getStatusString() as String {
         var c = "";
-        var barlength = (drawCompact ? 10 : 13) as Number;
+        var barlength = (drawCompact() ? 9 : 13) as Number;
         if (calculating) {
             c = str_active + " ";
             var progress = Math.sqrt((gradeWindowSize.toFloat() - MIN_GRADE_WINDOW + 1) / (MAX_GRADE_WINDOW - MIN_GRADE_WINDOW + 1));
@@ -179,7 +179,7 @@ class GradeEstimatorView extends WatchUi.DataField {
             if (!drawCompact()) { c += "|" + numValid.format("%d") + "s";}
         } else if (bufIndex > 0) {
             c = str_buffering + " ";
-            c += getProgressBar(bufIndex.toFloat() / MIN_GRADE_WINDOW, 19 - str_buffering.length());
+            c += getProgressBar(bufIndex.toFloat() / MIN_GRADE_WINDOW, 17 - str_buffering.length());
         }
         else {
             c = str_no_data + " ";
@@ -495,13 +495,15 @@ class GradeEstimatorView extends WatchUi.DataField {
                 if (!isExploreUnit) { View.setLayout(Rez.Layouts.SmallLayout(dc)); }
                 else { View.setLayout(Rez.Layouts.SmallLayoutExplore(dc)); } 
                 break;
-            case LAYOUT_WIDE: 
-                if (!isExploreUnit) { View.setLayout(Rez.Layouts.WideLayout(dc)); } 
-                else { View.setLayout(Rez.Layouts.WideLayoutExplore(dc)); } 
+            case LAYOUT_WIDE:
+                if (isx50Unit) { View.setLayout(Rez.Layouts.WideLayoutX50(dc)); }
+                else if (isExploreUnit) { View.setLayout(Rez.Layouts.WideLayoutExplore(dc)); }
+                else { View.setLayout(Rez.Layouts.WideLayout(dc)); } 
                 break;
-            case LAYOUT_LARGE: 
-                if (!isExploreUnit) { View.setLayout(Rez.Layouts.LargeLayout(dc)); }
-                else {  View.setLayout(Rez.Layouts.LargeLayoutExplore(dc)); } 
+            case LAYOUT_LARGE:
+                if (isx50Unit) { View.setLayout(Rez.Layouts.LargeLayoutX50(dc)); }
+                else if (isExploreUnit) { View.setLayout(Rez.Layouts.LargeLayoutExplore(dc)); }
+                else { View.setLayout(Rez.Layouts.LargeLayout(dc)); }
                 break;
             case LAYOUT_FULLSCREEN:
                 if (!isExploreUnit) { View.setLayout(Rez.Layouts.FullScreenLayout(dc)); }
@@ -972,12 +974,12 @@ class GradeEstimatorView extends WatchUi.DataField {
         else if (graphmode == GRAPHMODE_BOTH) { // Draw plots on top of each other... ehh
             plotTop = height / 2 + 3;
             plotHeight = height - plotTop - margin - 12;
+
+            if (isx50Unit) { plotHeight -= 8; } // More space needed for X50 units
         }
 
         var plotBottom = plotTop + plotHeight;
         var plotWidth = plotRight - plotLeft + 1;
-        var offset = (System.getDeviceSettings().screenHeight * 0.035 + 2).toNumber();
-        if (isExploreUnit) { offset += 8; }
 
         // --- Recalculate valid buffer (oldest to newest) ---
         var sampleCount = numValid;
@@ -1021,7 +1023,7 @@ class GradeEstimatorView extends WatchUi.DataField {
             }
 
             // --- Draw buffer as polyline ---
-            dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
+            dc.setColor(textColor, Graphics.COLOR_TRANSPARENT);
             dc.setPenWidth(6);
             dc.setClip(plotLeft, plotTop, plotWidth, plotHeight);
             for (var j = 0; j < sampleCount - 1; j++) {
@@ -1098,6 +1100,8 @@ class GradeEstimatorView extends WatchUi.DataField {
         var plotTop = height / 2 + 3;
         var plotHeight = height - plotTop - margin - 12;
 
+        if (isx50Unit) { plotHeight -= 8; } // More space needed for X50 units
+
         if (layout == LAYOUT_FULLSCREEN) { 
             plotTop = height * 0.60f + margin;
             plotHeight = height * 0.38f - margin - 12;  
@@ -1105,8 +1109,9 @@ class GradeEstimatorView extends WatchUi.DataField {
 
         var plotBottom = plotTop + plotHeight;
         var plotWidth = plotRight - plotLeft + 1;
-        var offset = (System.getDeviceSettings().screenHeight * 0.035 + 2).toNumber();
-        if (isExploreUnit) { offset += 8; }
+        var offset = 9;
+        if (isExploreUnit) { offset -= 2; }
+        else if (isx50Unit) { offset += 6; }
 
         if (histogram.computed) {
             var range = histogram.computedSampledBinRange; // [min, max] of the histogram bins indexes
@@ -1138,15 +1143,15 @@ class GradeEstimatorView extends WatchUi.DataField {
 
                 if (grade.toNumber() % tickGrades == 0 && j != 0) {
 
-                    dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
+                    dc.setColor(Graphics.COLOR_DK_GRAY, Graphics.COLOR_TRANSPARENT);
                     dc.drawLine(x1, plotBottom, x1, plotTop);
 
                     dc.setColor(textColor, Graphics.COLOR_TRANSPARENT);
-                    dc.drawText(x1 + 1, plotBottom + 9, Graphics.FONT_SYSTEM_TINY, grade.format("%.0f") + "%", Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER);
+                    dc.drawText(x1 + 1, plotBottom + offset, Graphics.FONT_SYSTEM_TINY, grade.format("%.0f") + "%", Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER);
                 }
 
-                if (j == currBin) { dc.setColor(Graphics.COLOR_DK_RED, Graphics.COLOR_TRANSPARENT); }
-                else { dc.setColor(Graphics.COLOR_DK_GRAY, Graphics.COLOR_TRANSPARENT); }
+                if (j == currBin) { dc.setColor(Graphics.COLOR_ORANGE, Graphics.COLOR_TRANSPARENT); }
+                else { dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT); }
 
                 dc.fillRectangle(x1 + 1, y2, x2 - x1, y1 - y2);
             }

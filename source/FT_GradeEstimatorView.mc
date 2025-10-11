@@ -33,8 +33,8 @@ class GradeEstimatorView extends WatchUi.DataField {
     enum { LAYOUT_SMALL, LAYOUT_WIDE, LAYOUT_LARGE, LAYOUT_FULLSCREEN }
     enum { UNIT_DIST_LONG, UNIT_DIST_SHORT, UNIT_VAM }
     enum { GRAPHMODE_BOTH, GRAPHMODE_BUFFER, GRAPHMODE_HISTOGRAM }
-    const old_partnums      = ["006-B3121-00", "006-B3122-00", "006-B2713-00", "006-B3570-00", "006-B3095-00", "006-B4169-00"];
-    const x50_partnum       = ["006-B4634-00", "006-B4440-00", "006-B4633-00"];
+    const x30_partnums      = ["006-B3121-00", "006-B3122-00", "006-B2713-00", "006-B3570-00", "006-B3095-00", "006-B4169-00"];
+    const x50_partnums      = ["006-B4634-00", "006-B4440-00", "006-B4633-00"];
     const MAX_ALLOWED_GRADE = 0.3; 
     var GRADE_BIN_DIST       = 50.0;
 
@@ -95,8 +95,8 @@ class GradeEstimatorView extends WatchUi.DataField {
     var small_layout_draw_style as Number = 0;
     var layout as Number                  = 0;
     var graphmode as Number               = 1;
-    var isExploreUnit as Boolean          = false; 
-    var isx50Unit as Boolean              = false;
+    var isX30Unit as Boolean              = false; 
+    var isX50Unit as Boolean              = false;
     var isMetric                          = true;
     var view_dimensions as Array<Number>  = [0,0];
 
@@ -142,7 +142,7 @@ class GradeEstimatorView extends WatchUi.DataField {
 
     function getUpdatingValueAnnotatedString(isupdating as Boolean, s as String, annotation as String or Null, position as Number or Null, blinking as Boolean) as String {
         // Return input string with annotation indicating the value is currently being updated
-        if (drawCompact() || isExploreUnit) { return s; }
+        if (drawCompact() || isX30Unit) { return s; }
         if (annotation == null) { annotation = update_annotation; } // Default annotation if none provided
         if (position == null) { position = 0; } // Default position is at the start
 
@@ -198,7 +198,7 @@ class GradeEstimatorView extends WatchUi.DataField {
 
     function drawCompact() as Boolean { return layout == LAYOUT_SMALL; }
     function drawGraph() as Boolean { return layout >= LAYOUT_LARGE; }
-    function drawCompactUnits() as Boolean { return (drawCompact() || isExploreUnit); }
+    function drawCompactUnits() as Boolean { return (drawCompact() || isX30Unit); }
 
     function getUnitString(unit as Number) as String {
         var out = "";
@@ -220,9 +220,9 @@ class GradeEstimatorView extends WatchUi.DataField {
             }
         }
 
-        if (drawCompact() && (unit == UNIT_VAM || isExploreUnit)) { return ""; }
-        else if (unit == UNIT_VAM && isx50Unit) { return out; }
-        else if (isExploreUnit || drawCompact()) { return out; }
+        if (drawCompact() && (unit == UNIT_VAM || isX30Unit)) { return ""; }
+        else if (unit == UNIT_VAM && isX50Unit) { return out; }
+        else if (isX30Unit || drawCompact()) { return out; }
         else { return " " + out;}
     }
 
@@ -351,13 +351,15 @@ class GradeEstimatorView extends WatchUi.DataField {
         var height_device = System.getDeviceSettings().screenHeight;
         var partnum = System.getDeviceSettings().partNumber;
 
+        System.println("  Partnum: " + partnum);
+
         view_dimensions = [width_view, height_view];
 
-        if (old_partnums.indexOf(partnum) > -1) { isExploreUnit = true; }
-        else if (x50_partnum.indexOf(partnum) > -1) { isx50Unit = true; }
+        if (x30_partnums.indexOf(partnum) > -1) { isX30Unit = true; }
+        else if (x50_partnums.indexOf(partnum) > -1) { isX50Unit = true; }
 
         var unitFactor = 1.0;
-        if (isx50Unit) { unitFactor = 1.5; }
+        if (isX50Unit) { unitFactor = 1.5; }
 
         if (width_view < width_device / 2 + 10) { layout = LAYOUT_SMALL; }
         else {
@@ -368,7 +370,7 @@ class GradeEstimatorView extends WatchUi.DataField {
 
         if (DEBUG) { 
             System.println("  Layout determined: " + layout); 
-            System.println("  " + width_view + "x" + height_view + " on " + width_device + "x" + height_device + " device, partnum " + partnum + ", isExploreUnit=" + isExploreUnit);
+            System.println("  " + width_view + "x" + height_view + " on " + width_device + "x" + height_device + " device, partnum " + partnum + ", isExploreUnit=" + isX30Unit);
         }
     }
 
@@ -465,14 +467,14 @@ class GradeEstimatorView extends WatchUi.DataField {
             label_light_str = WatchUi.loadResource(Rez.Strings.UI_Label_Distance_Light) + " >" + (THRESHOLD_LIGHT * 100).format("%.1f") + "%";
             label_steep_str = WatchUi.loadResource(Rez.Strings.UI_Label_Distance_Steep) + " >" + (THRESHOLD_STEEP * 100).format("%.1f") + "%";
 
-            if (THRESHOLD_STEEP >= RAMPAS_INHUMANAS_THRESHOLD && !isExploreUnit) { label_steep_str = WatchUi.loadResource(Rez.Strings.UI_Label_RampasInhumanas) + "(+" + (THRESHOLD_STEEP * 100).format("%.1f") + "%)";}
-            else if (isExploreUnit) {
+            if (THRESHOLD_STEEP >= RAMPAS_INHUMANAS_THRESHOLD && !isX30Unit) { label_steep_str = WatchUi.loadResource(Rez.Strings.UI_Label_RampasInhumanas) + "(+" + (THRESHOLD_STEEP * 100).format("%.1f") + "%)";}
+            else if (isX30Unit) {
                 label_light_str = WatchUi.loadResource(Rez.Strings.UI_Label_Distance_Climb) + " >" + (THRESHOLD_LIGHT * 100).format("%.1f") + "%";
                 label_steep_str = WatchUi.loadResource(Rez.Strings.UI_Label_Distance_Climb) + " >" + (THRESHOLD_STEEP * 100).format("%.1f") + "%";
             }
         }
 
-        if (isExploreUnit) { // Fonts are too wide or not available
+        if (isX30Unit) { // Fonts are too wide or not available
             filled_square = "|";
             empty_square = ".";
             str_format = "%.1f";
@@ -487,24 +489,10 @@ class GradeEstimatorView extends WatchUi.DataField {
 
         switch (layout) {
             default:
-            case LAYOUT_SMALL:
-                if (!isExploreUnit) { View.setLayout(Rez.Layouts.SmallLayout(dc)); }
-                else { View.setLayout(Rez.Layouts.SmallLayoutExplore(dc)); } 
-                break;
-            case LAYOUT_WIDE:
-                if (isx50Unit) { View.setLayout(Rez.Layouts.WideLayoutX50(dc)); }
-                else if (isExploreUnit) { View.setLayout(Rez.Layouts.WideLayoutExplore(dc)); }
-                else { View.setLayout(Rez.Layouts.WideLayout(dc)); } 
-                break;
-            case LAYOUT_LARGE:
-                if (isx50Unit) { View.setLayout(Rez.Layouts.LargeLayoutX50(dc)); }
-                else if (isExploreUnit) { View.setLayout(Rez.Layouts.LargeLayoutExplore(dc)); }
-                else { View.setLayout(Rez.Layouts.LargeLayout(dc)); }
-                break;
-            case LAYOUT_FULLSCREEN:
-                if (!isExploreUnit) { View.setLayout(Rez.Layouts.FullScreenLayout(dc)); }
-                else { View.setLayout(Rez.Layouts.FullScreenLayoutExplore(dc)); }
-                break;
+            case LAYOUT_SMALL: View.setLayout(Rez.Layouts.SmallLayout(dc)); break;
+            case LAYOUT_WIDE: View.setLayout(Rez.Layouts.WideLayout(dc)); break;
+            case LAYOUT_LARGE: View.setLayout(Rez.Layouts.LargeLayout(dc)); break;
+            case LAYOUT_FULLSCREEN: View.setLayout(Rez.Layouts.FullScreenLayout(dc)); break;
         }
 
         updateLayoutDependentStrings();
@@ -830,7 +818,7 @@ class GradeEstimatorView extends WatchUi.DataField {
             value_max_grade.setColor(textColor);
 
             var str = (100*maxGrade).format("%.1f");
-            if (!drawCompact() || !isExploreUnit) { str += suffix; } 
+            if (!drawCompact() || !isX30Unit) { str += suffix; } 
             value_max_grade.setText(getUpdatingValueAnnotatedString(isMaxGradeUpdateRecent(), str, " !!", 1, false));
         }
 
@@ -967,7 +955,7 @@ class GradeEstimatorView extends WatchUi.DataField {
             plotTop = height / 2 + 3;
             plotHeight = height - plotTop - margin - 12;
 
-            if (isx50Unit) { plotHeight -= 8; } // More space needed for X50 units
+            if (isX50Unit) { plotHeight -= 8; } // More space needed for X50 units
         }
 
         var plotBottom = plotTop + plotHeight;
@@ -1092,7 +1080,7 @@ class GradeEstimatorView extends WatchUi.DataField {
         var plotTop = height / 2 + 3;
         var plotHeight = height - plotTop - margin - 12;
 
-        if (isx50Unit) { plotHeight -= 8; } // More space needed for X50 units
+        if (isX50Unit) { plotHeight -= 8; } // More space needed for X50 units
 
         if (layout == LAYOUT_FULLSCREEN) { 
             plotTop = height * 0.60f + margin;
@@ -1102,8 +1090,8 @@ class GradeEstimatorView extends WatchUi.DataField {
         var plotBottom = plotTop + plotHeight;
         var plotWidth = plotRight - plotLeft + 1;
         var offset = 9;
-        if (isExploreUnit) { offset -= 2; }
-        else if (isx50Unit) { offset += 6; }
+        if (isX30Unit) { offset -= 2; }
+        else if (isX50Unit) { offset += 6; }
 
         if (histogram.computed) {
             var range = histogram.computedSampledBinRange; // [min, max] of the histogram bins indexes

@@ -30,7 +30,7 @@
     <string id="GC_Label_Distance_Light">Leichte Steigung</string>
     <string id="GC_Label_Distance_Steep">Starke Steigung</string>
     <string id="GC_Label_Grade_Max">Maximale Steigung</string>
-    <string id="GC_Label_10sGrade">Max-Steigung gehalten für 10 Sek</string>
+    <string id="GC_Label_10sGrade">Max-Steigung für 10 Sek</string>
     <string id="GC_Label_1minGrade">1 Min Max-Steigung</string>
     <string id="GC_Label_30minGrade">30 Min Max-Steigung</string>
 

@@ -28,7 +28,7 @@
     <string id="GC_Label_Distance_Light">Montée Légère</string>
     <string id="GC_Label_Distance_Steep">Montée Difficile</string>
     <string id="GC_Label_Grade_Max">Pente Maximale</string>
-    <string id="GC_Label_10sGrade">Pente max maintenue pendant 10 s</string>
+    <string id="GC_Label_10sGrade">Pente max pendant 10 s</string>
     <string id="GC_Label_1minGrade">1 min pente max</string>
     <string id="GC_Label_30minGrade">30 min pente max</string>
 

@@ -80,8 +80,6 @@ class GradeEstimatorView extends WatchUi.DataField {
     var lap_average_grade_sum as Float = 0.0;
     var lap_average_grade_count as Number = 0;
 
-    var climbTracker; // Instance of ClimbTracker to manage climbs
-
     var histogram; // Instance of Histogram to track grade distribution
 
     // Adaptive window state
@@ -335,8 +333,6 @@ class GradeEstimatorView extends WatchUi.DataField {
         distLight  = 0.0;
         distSteep  = 0.0;
 
-        climbTracker = new ClimbTracker(THRESHOLD_LIGHT);
-
         initializeGradeHistogram();
     }
 
@@ -529,10 +525,6 @@ class GradeEstimatorView extends WatchUi.DataField {
         System.println("AdaptiveGrade.onTimerReset()");
 
         initializeFields();
-
-        if (climbTracker.isClimbActive()) {
-            climbTracker.saveClimb();
-        }
     }
 
     function handleTap(clickEvent as WatchUi.ClickEvent) as Boolean {

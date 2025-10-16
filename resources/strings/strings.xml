@@ -1,6 +1,6 @@
 <strings>
     <string id="AppName">Adaptive Grade Plus</string>
-    <string id="Version">v2.0</string>
+    <string id="Version">v2.1</string>
 
     <!-- UI labels -->
     <string id="UI_Label_Gradient_Current">Curr. Grade</string>
@@ -61,13 +61,13 @@
     <string id="graphmode_histogram">Histogram Stats</string>
 
     <string id="group_title_buffer">Sample Buffer Settings</string>
-    <string id="group_desc_buffer">Settings to adjust the altitude sample buffer size and how many samples are used for fitting the gradient.</string>
+    <string id="group_desc_buffer">Adjust altitude buffer size and fit sample count.</string>
 
     <string id="group_title_log">Linear Fit Quality Thresholds</string>
-    <string id="group_desc_log">Minimum quality of linear fit for registering values.</string>
+    <string id="group_desc_log">Minimum linear fit quality to log values.</string>
 
     <string id="group_title_climb">Climbing Classification Gradients</string>
-    <string id="group_desc_climb">Gradients considered light and hard climbing. The light climbing grade is used as threshold for calculating average ascending VAM.</string>
+    <string id="group_desc_climb">Set light/hard climb grades; light grade is VAM threshold.</string>
 
     <string id="group_title_misc">Other Settings</string>
     <string id="group_desc_misc"></string>

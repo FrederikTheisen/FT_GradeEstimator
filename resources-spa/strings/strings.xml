@@ -56,13 +56,13 @@
     <string id="graphmode_histogram">Estadísticas histograma</string>
 
     <string id="group_title_buffer">Configuración del búfer de muestras</string>
-    <string id="group_desc_buffer">Ajustes para definir el tamaño del búfer de altitud y la cantidad de muestras usadas para calcular el gradiente.</string>
+    <string id="group_desc_buffer">Tamaño de búfer y muestras para el ajuste.</string>
 
     <string id="group_title_log">Umbrales de calidad del ajuste lineal</string>
-    <string id="group_desc_log">Calidad mínima del ajuste lineal para registrar los valores.</string>
+    <string id="group_desc_log">Calidad mínima del ajuste para registrar.</string>
 
     <string id="group_title_climb">Clasificación de pendientes de subida</string>
-    <string id="group_desc_climb">Pendientes consideradas suaves o fuertes. El umbral de pendiente ligera se usa para calcular el VAM medio en ascenso.</string>
+    <string id="group_desc_climb">Umbrales suave/fuerte; el suave define VAM medio.</string>
 
     <string id="group_title_misc">Otros ajustes</string>
     <string id="group_desc_misc"></string>

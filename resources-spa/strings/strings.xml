@@ -17,25 +17,22 @@
     <string id="UI_Label_Graph_NoData">Sin datos para mostrar</string>
 
     <!-- Garmin Connect data labels -->
-    <string id="GC_ChartTitle_Grade">Pendiente AGP</string>
-    <string id="GC_ChartTitle_VAM">VAM AGP</string>
+    <string id="GC_ChartTitle_Grade">Pendiente</string>
 
     <string id="GC_Lap_AvgGrade">Pendiente Prom.</string>
 
     <string id="GC_Label_Grade">Pendiente</string>
-    <string id="GC_Label_VAM">Velocidad de Ascenso</string>
-    <string id="GC_Label_AverageVAM">VAM Prom. en Ascensos</string>
-    <string id="GC_Label_Distance_Light">Subida Ligera</string>
-    <string id="GC_Label_Distance_Steep">Subida Fuerte</string>
+    <string id="GC_ClimbDist">Subida Ligera/Fuerte</string>
     <string id="GC_Label_Grade_Max">Pendiente Máxima</string>
-    <string id="GC_Label_10sGrade">Pendiente máx mantenida 10 s</string>
-    <string id="GC_Label_1minGrade">1 min pendiente máx</string>
-    <string id="GC_Label_30minGrade">30 min pendiente máx</string>
+    <string id="GC_MaxGrdTime">Pendiente máx 10s/60s/30min</string>
 
     <!-- General Labels -->
     <string id="Unit_Grade">%</string>
     <string id="Unit_Distance">km</string>
     <string id="Unit_VAM">metros / hora</string>
+
+    <!-- Settings -->
+    <string id="enable_logging">Activar registro Fit</string>
 
     <string id="buffer_length">Tamaño de búfer (seg.)</string>
     <string id="buffer_fit_max">Muestras máx. para ajuste</string>
@@ -44,7 +41,6 @@
     <string id="threshold_log_max">Calidad min. para registrar máx. (%) (0.0-1.0)</string>
     <string id="threshold_light">Umbral “suave” (%)</string>
     <string id="threshold_steep">Umbral “fuerte” (%)</string>
-    <string id="save_smooth">Registrar pendiente suavizada</string>
     <string id="small_field_data">Visualización compacta de datos</string>
     <string id="small_field_data_vam">VAM</string>
     <string id="small_field_data_dist">Distancias Subida</string>

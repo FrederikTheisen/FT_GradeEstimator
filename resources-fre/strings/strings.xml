@@ -17,25 +17,22 @@
     <string id="UI_Label_Graph_NoData">Pas de données à afficher</string>
 
     <!-- Garmin Connect data labels -->
-    <string id="GC_ChartTitle_Grade">Pente AGP</string>
-    <string id="GC_ChartTitle_VAM">VAM AGP</string>
+    <string id="GC_ChartTitle_Grade">Pente</string>
 
     <string id="GC_Lap_AvgGrade">Pente Moyenne</string>
 
     <string id="GC_Label_Grade">Pente</string>
-    <string id="GC_Label_VAM">Vitesse Ascensionnelle (m/h)</string>
-    <string id="GC_Label_AverageVAM">VAM Moyenne (ascensions)</string>
-    <string id="GC_Label_Distance_Light">Montée Légère</string>
-    <string id="GC_Label_Distance_Steep">Montée Difficile</string>
+    <string id="GC_ClimbDist">Montée Légère/Difficile</string>
     <string id="GC_Label_Grade_Max">Pente Maximale</string>
-    <string id="GC_Label_10sGrade">Pente max pendant 10 s</string>
-    <string id="GC_Label_1minGrade">1 min pente max</string>
-    <string id="GC_Label_30minGrade">30 min pente max</string>
+    <string id="GC_MaxGrdTime">Pente max pendant 10s/60s/30m</string>
 
     <!-- General Labels -->
     <string id="Unit_Grade">%</string>
     <string id="Unit_Distance">km</string>
     <string id="Unit_VAM">mètres / heure</string>
+
+    <!-- Settings -->
+    <string id="enable_logging">Activer le journal Fit</string>
 
     <string id="buffer_length">Taille du tampon (s)</string>
     <string id="buffer_fit_max">Échantillons max pour pente</string>
@@ -44,7 +41,6 @@
     <string id="threshold_log_max">Qualité min pour journaliser pente max (0.0-1.0)</string>
     <string id="threshold_light">Seuil pente “légère” (%)</string>
     <string id="threshold_steep">Seuil pente “difficile” (%)</string>
-    <string id="save_smooth">Enregistrer pente lissée</string>
     <string id="small_field_data">Affichage compact des données</string>
     <string id="small_field_data_vam">VAM</string>
     <string id="small_field_data_dist">Distances Montée</string>
@@ -57,10 +53,10 @@
 
 
     <string id="group_title_buffer">Paramètres du tampon d'échantillons</string>
-    <string id="group_desc_buffer">Ajuster taille du tampon et nb d’échantillons.</string>
+    <string id="group_desc_buffer">Ajuster taille du tampon et nb d'échantillons.</string>
 
     <string id="group_title_log">Seuils de qualité d'ajustement linéaire</string>
-    <string id="group_desc_log">Qualité d’ajustement minimale pour journaliser.</string>
+    <string id="group_desc_log">Qualité d'ajustement minimale pour journaliser.</string>
 
     <string id="group_title_climb">Classification des pentes en montée</string>
     <string id="group_desc_climb">Seuils faible/forte; la faible règle le VAM moyen.</string>

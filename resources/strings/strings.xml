@@ -1,6 +1,6 @@
 <strings>
     <string id="AppName">Adaptive Grade Plus</string>
-    <string id="Version">v2.1</string>
+    <string id="Version">v2.2</string>
 
     <!-- UI labels -->
     <string id="UI_Label_Gradient_Current">Curr. Grade</string>
@@ -20,20 +20,14 @@
     <string id="UI_Label_Graph_NoData">No data to display</string>
 
     <!-- Garmin Connect data labels -->
-    <string id="GC_ChartTitle_Grade">AGP Grade</string>
-    <string id="GC_ChartTitle_VAM">AGP VAM</string>
+    <string id="GC_ChartTitle_Grade">Grade</string>
 
-    <string id="GC_Lap_AvgGrade">Avg. Grade</string>
+    <string id="GC_Lap_AvgGrade">Lap Avg. Grade</string>
 
     <string id="GC_Label_Grade">Grade</string>
-    <string id="GC_Label_VAM">Vertical Ascent Rate</string>
-    <string id="GC_Label_AverageVAM">Average Ascenting VAM</string>
-    <string id="GC_Label_Distance_Light">Light Climb</string>
-    <string id="GC_Label_Distance_Steep">Hard Climb</string>
+    <string id="GC_ClimbDist">Climb dist light/hard</string>
     <string id="GC_Label_Grade_Max">Maximum Grade</string>
-    <string id="GC_Label_10sGrade">Max grade sustained for 10 sec</string>
-    <string id="GC_Label_1minGrade">1 min max grade</string>
-    <string id="GC_Label_30minGrade">30 min max grade</string>
+    <string id="GC_MaxGrdTime">Max grade held for 10s/60s/30m</string>
     
     <!-- General Labels -->
     <string id="Unit_Grade">%</string>
@@ -41,6 +35,8 @@
     <string id="Unit_VAM">m/h</string>
 
     <!-- Settings -->
+    <string id="enable_logging">Enable Fit Logging</string>
+
     <string id="buffer_length">Sample Buffer Size (seconds)</string>
     <string id="buffer_fit_max">Max Samples for Grade Fit</string>
     <string id="buffer_fit_min">Min Samples for Grade Fit (≥3)</string>
@@ -48,7 +44,6 @@
     <string id="threshold_log_max">Max Grade (0.0-1.0)</string>
     <string id="threshold_light">“Light” Climb Threshold (%)</string>
     <string id="threshold_steep">“Hard” Climb Threshold (%)</string>
-    <string id="save_smooth">Enable Binned Grade Logging</string>
     <string id="small_field_data">Small Layout Data Display</string>
     <string id="small_field_data_vam">VAM</string>
     <string id="small_field_data_dist">Climbing Distances</string>

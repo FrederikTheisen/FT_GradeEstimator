@@ -763,12 +763,12 @@ class GradeEstimatorView extends WatchUi.DataField {
     }
 
     function drawDefaultView(dc as Dc) as Void {
-        var value_curr_grade = View.findDrawableById("value_curr_grade") as Text;
-        var value_max_grade = View.findDrawableById("value_max_grade") as Text;
-        var value_light = View.findDrawableById("value_light") as Text;
-        var value_steep = View.findDrawableById("value_steep") as Text;
-        var label_light = View.findDrawableById("label_light") as Text;
-        var label_steep = View.findDrawableById("label_steep") as Text;
+        var value_curr_grade = View.findDrawableById("v1") as Text;
+        var value_max_grade = View.findDrawableById("v2") as Text;
+        var value_light = View.findDrawableById("v3") as Text;
+        var value_steep = View.findDrawableById("v4") as Text;
+        var label_light = View.findDrawableById("l5") as Text;
+        var label_steep = View.findDrawableById("l6") as Text;
         
         if (value_curr_grade != null) {
             if (calculating || !drawCompact()) { value_curr_grade.setColor(color_black); }
@@ -811,9 +811,9 @@ class GradeEstimatorView extends WatchUi.DataField {
     }
 
     function drawVAMFields(dc as Dc) as Void {
-        var value_vam = View.findDrawableById("value_vam") as Text;
-        var value_vam_right = View.findDrawableById("value_vam_right") as Text;
-        var value_vam_avg = View.findDrawableById("value_vam_avg") as Text;
+        var value_vam = View.findDrawableById("v5") as Text;
+        var value_vam_right = View.findDrawableById("v7") as Text;
+        var value_vam_avg = View.findDrawableById("v6") as Text;
 
         if (value_vam != null) {
             value_vam.setColor(color_black);
@@ -841,20 +841,20 @@ class GradeEstimatorView extends WatchUi.DataField {
         switch (small_layout_draw_style) {
             default:
             case 0: // VAM
-                hddn = ["value_max_grade", "label_max_grade", "value_light", "value_steep", "label_light", "label_steep", "label_vam_right", "value_vam_right"];
-                vis = ["label_vam", "label_vam_avg", "value_vam", "value_vam_avg"];
+                hddn = ["v2", "l4", "v3", "v4", "l5", "l6", "l9", "v7"];
+                vis = ["l7", "l8", "v5", "v6"];
                 break;
             case 1: // Dist
-                hddn = ["label_vam", "label_vam_avg", "value_vam", "value_vam_avg", "value_max_grade", "label_max_grade", "label_vam_right", "value_vam_right"];
-                vis = ["value_light", "value_steep", "label_light", "label_steep"];
+                hddn = ["l7", "l8", "v5", "v6", "v2", "l4", "l9", "v7"];
+                vis = ["v3", "v4", "l5", "l6"];
                 break;
             case 2: // Climb + Max
-                hddn = ["value_steep", "label_steep", "label_vam", "label_vam_avg", "value_vam", "value_vam_avg", "label_vam_right", "value_vam_right"];
-                vis = ["label_light", "value_light", "label_max_grade", "value_max_grade"];
+                hddn = ["v4", "l6", "l7", "l8", "v5", "v6", "l9", "v7"];
+                vis = ["l5", "v3", "l4", "v2"];
                 break;
             case 3: // Climb + VAM
-                hddn = ["value_steep", "label_steep", "label_max_grade", "label_vam_avg", "value_max_grade", "value_vam_avg", "label_vam", "value_vam"];
-                vis = ["label_light", "value_light", "label_vam_right", "value_vam_right" ];
+                hddn = ["v4", "l6", "l4", "l8", "v2", "v6", "l7", "v5"];
+                vis = ["l5", "v3", "l9", "v7" ];
                 break;
         }
 
@@ -874,7 +874,7 @@ class GradeEstimatorView extends WatchUi.DataField {
     }
 
     function setLabelColor(dc as Dc) as Void {
-        var labels = ["label_curr_grade", "label_max_grade", "label_light", "label_steep", "label_vam", "label_vam_avg", "label_vam_right"];
+        var labels = ["l3", "l4", "l5", "l6", "l7", "l8", "l9"];
         for (var i = 0; i < labels.size(); i++) {
             var label = labels[i];
 
@@ -887,7 +887,7 @@ class GradeEstimatorView extends WatchUi.DataField {
     }
 
     function drawStatusLabel(dc as Dc) as Void {
-        var statusLabel = View.findDrawableById("label_status") as Text;
+        var statusLabel = View.findDrawableById("l2") as Text;
 
         var statusColor = color_black;
 

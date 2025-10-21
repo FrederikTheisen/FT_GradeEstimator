@@ -1,18 +1,18 @@
 import Toybox.Lang;
 
 class Histogram {
-    const minBin = -25.0; // Minimum value for bins
-    const maxBin = 25.0;  // Maximum value for bins
-    const minQuality = 0.5; // Minimum quality to consider a data point
+    var minBin = -25.0; // Minimum value for bins
+    //const maxBin = 25.0;  // Maximum value for bins
+    var minQuality = 0.5; // Minimum quality to consider a data point
     
-    private var bins = [];
+    private var bins as Array<Number> = [] as Array<Number>;
     private var binSize as Float;
     private var numBins as Number;
     private var totalCount as Number = 0;
 
     public var computed as Boolean = false;
-    public var computedSampledBinRange as Array = [0.0, 0.0];
-    public var computedHistogramForRange as Array = [];
+    public var computedSampledBinRange as Array<Number> = [0, 0];
+    public var computedHistogramForRange as Array<Float> = [];
 
     public function shouldUpdate() as Boolean {
         if (totalCount < 100) { return true; }
@@ -22,10 +22,11 @@ class Histogram {
         else { return (totalCount % 16 == 0); }
     }
 
-    function initialize(binSize as Float) {
-        self.binSize = binSize;
-        self.bins = [];
-        for (var i = minBin; i < maxBin; i += binSize) { self.bins.add(0); }
+    function initialize(minQ as Float) {
+        self.binSize = 1.0;
+        self.minQuality = minQ;
+        self.bins = [] as Array<Number>;
+        for (var i = self.minBin; i < 25; i += binSize) { self.bins.add(0); }
         self.numBins = bins.size();
         self.totalCount = 0;
     }
@@ -142,7 +143,7 @@ class Histogram {
         var pct = percent;
 
         // If out of bounds, return extremes of sampled range converted to grades
-        var range = getSampledBinRange();
+        var range = computedSampledBinRange;
         if (pct <= 0.0) { return self.getGradeForBin(range[1]); }
         if (pct >= 100.0) { return self.getGradeForBin(range[0]); }
 

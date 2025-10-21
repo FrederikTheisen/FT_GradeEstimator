@@ -4,7 +4,7 @@ import Toybox.Time;
 import Toybox.WatchUi;
 import Toybox.FitContributor;
 import Toybox.Graphics;
-import Toybox.Application;
+//import Toybox.Application;
 
 class GradeEstimatorView extends WatchUi.DataField {
     // CONFIG
@@ -38,7 +38,7 @@ class GradeEstimatorView extends WatchUi.DataField {
 
     // STATE
     // Buffer of samples: [ [altitude, distance], ... ]
-    var buffer as Array = [];
+    var buffer as Array<Array<Float>> = [];
     var prevAltitude as Float or Null = null; // Previous median altitude for jump detection
     var bufIndex as Number     = 0;
     var grade as Float         = 0.0;  // fraction, e.g. 0.05 = 5%
@@ -68,7 +68,8 @@ class GradeEstimatorView extends WatchUi.DataField {
     var gradeWindowSize as Number = 10; // Start at 10, will be clamped between 6 and 20
 
     // FIT FIELDS
-    var vamField, vamAvgField, gradeField, lightField, steepField, maxField, lapAvgGradeField, maxGrade10sField, maxGrade1minField, maxGrade30minField;
+    var LOGGING_ENALBED as Boolean = true;
+    var gradeField, climbDistField, maxField, lapAvgGradeField, maxGradeForTimeField;
 
     // UI
     var label_light_str as String         = "---"; // Label for light distance
@@ -87,6 +88,30 @@ class GradeEstimatorView extends WatchUi.DataField {
     // STATUS STATE
     var calculating as Boolean  = false;
     var quality as Float        = 0.0;
+
+    // Cached UI drawables (populated in onLayout)
+    var backgroundDrawable; // Background drawable
+    // Values
+    var value_curr_grade; // v1
+    var value_max_grade;  // v2
+    var value_light;      // v3
+    var value_steep;      // v4
+    var value_vam;        // v5
+    var value_vam_avg;    // v6
+    var value_vam_right;  // v7
+    // Labels
+    var label_status;     // l2
+    var label_curr;       // l3
+    var label_max;        // l4
+    var label_light;      // l5
+    var label_steep;      // l6
+    var label_vam_left;   // l7
+    var label_vam_avg;    // l8
+    var label_vam_right;  // l9
+
+    // Pre-built visibility sets for compact layouts (by style index 0..3)
+    var compactHiddenByStyle as Array<Array<WatchUi.Drawable or Null>> = [];
+    var compactVisibleByStyle as Array<Array<WatchUi.Drawable or Null>> = [];
 
     function getProgressBar(progress as Float, length as Number) as String {
         var bar = "";
@@ -141,13 +166,6 @@ class GradeEstimatorView extends WatchUi.DataField {
         } else { return s; } // Can't be updating if not calculating
     }
 
-    // Helper: median of three values
-    function median3(a, b, c) {
-        if ((a <= b && b <= c) || (c <= b && b <= a)) { return b; }
-        if ((b <= a && a <= c) || (c <= a && a <= b)) { return a; }
-        return c;
-    }
-
     function getStatusString() as String {
         var c = "";
         var barlength = (drawCompact() ? 9 : 13) as Number;
@@ -176,11 +194,9 @@ class GradeEstimatorView extends WatchUi.DataField {
     function shouldAccSteepDist() as Boolean { return (grade >= THRESHOLD_STEEP && quality >= DIST_LOG_QUALITY); }
     function shouldAccAvgVAM() as Boolean {  return (grade >= THRESHOLD_LIGHT && quality >= DIST_LOG_QUALITY); }
     function shouldCalcMaxGrade() as Boolean { return (quality >= MAX_LOG_QUALITY && (gradeWindowSize > MIN_GRADE_WINDOW || gradeWindowSize == MAX_GRADE_WINDOW)); }
-    function isMaxGradeUpdateRecent() as Boolean { return (Time.now().value() - lastMaxGradeUpdateTime < 20); }
+    function isMaxGradeUpdateRecent() as Boolean { return (Time.now().value() - lastMaxGradeUpdateTime < 30); }
 
     function drawCompact() as Boolean { return layout == LAYOUT_SMALL; }
-    function drawGraph() as Boolean { return layout == LAYOUT_SMALL_NARROW || layout == LAYOUT_LARGE || layout == LAYOUT_FULLSCREEN; }
-    function drawCompactUnits() as Boolean { return (drawCompact() || isX30Unit); }
 
     function getUnitString(unit as Number) as String {
         var out = "";
@@ -222,105 +238,60 @@ class GradeEstimatorView extends WatchUi.DataField {
 
         isMetric = System.getDeviceSettings().distanceUnits == System.UNIT_METRIC;
 
+        initializeFields();
+
         // Read Settings
         updateSettings();
-
-        gradeField = createField(
-            WatchUi.loadResource(Rez.Strings.GC_ChartTitle_Grade), 30,
-            FitContributor.DATA_TYPE_FLOAT,
-            {:mesgType=>FitContributor.MESG_TYPE_RECORD, :units=>WatchUi.loadResource(Rez.Strings.Unit_Grade) }
-        );
-
-        vamField = createField(
-            WatchUi.loadResource(Rez.Strings.GC_ChartTitle_VAM), 34,
-            FitContributor.DATA_TYPE_FLOAT,
-            {:mesgType=>FitContributor.MESG_TYPE_RECORD, :units=>getUnitString(UNIT_VAM) }
-        );
-
-        // Session totals
-        lightField = createField(
-            WatchUi.loadResource(Rez.Strings.GC_Label_Distance_Light), 31,
-            FitContributor.DATA_TYPE_FLOAT,
-            {:mesgType=>FitContributor.MESG_TYPE_SESSION, :units=>getUnitString(UNIT_DIST_LONG) }
-        );
-
-        steepField = createField(
-            WatchUi.loadResource(Rez.Strings.GC_Label_Distance_Steep), 32,
-            FitContributor.DATA_TYPE_FLOAT,
-            {:mesgType=>FitContributor.MESG_TYPE_SESSION, :units=>getUnitString(UNIT_DIST_LONG) }
-        );
-
-        maxField = createField(
-            WatchUi.loadResource(Rez.Strings.GC_Label_Grade_Max), 33,
-            FitContributor.DATA_TYPE_FLOAT,
-            {:mesgType=>FitContributor.MESG_TYPE_SESSION, :units=>WatchUi.loadResource(Rez.Strings.Unit_Grade)}
-        );
-
-        vamAvgField = createField(
-            WatchUi.loadResource(Rez.Strings.GC_Label_AverageVAM), 35,
-            FitContributor.DATA_TYPE_FLOAT,
-            {:mesgType=>FitContributor.MESG_TYPE_SESSION, :units=>getUnitString(UNIT_VAM) }
-        );
-
-        maxGrade10sField = createField(
-            WatchUi.loadResource(Rez.Strings.GC_Label_10sGrade), 37,
-            FitContributor.DATA_TYPE_FLOAT,
-            {:mesgType=>FitContributor.MESG_TYPE_SESSION, :units=>WatchUi.loadResource(Rez.Strings.Unit_Grade)}
-        );
-
-        maxGrade1minField = createField(
-            WatchUi.loadResource(Rez.Strings.GC_Label_1minGrade), 38,
-            FitContributor.DATA_TYPE_FLOAT,
-            {:mesgType=>FitContributor.MESG_TYPE_SESSION, :units=>WatchUi.loadResource(Rez.Strings.Unit_Grade)}
-        );
-
-        maxGrade30minField = createField(
-            WatchUi.loadResource(Rez.Strings.GC_Label_30minGrade), 39,
-            FitContributor.DATA_TYPE_FLOAT,
-            {:mesgType=>FitContributor.MESG_TYPE_SESSION, :units=>WatchUi.loadResource(Rez.Strings.Unit_Grade)}
-        );
-
-        // Lap Fields
-        lapAvgGradeField = createField(
-            WatchUi.loadResource(Rez.Strings.GC_Lap_AvgGrade), 36,
-            FitContributor.DATA_TYPE_FLOAT,
-            {:mesgType=>FitContributor.MESG_TYPE_LAP, :units=>WatchUi.loadResource(Rez.Strings.Unit_Grade)}
-        );
-
-        initializeFields();
-    }
-
-    function initializeFields() {
-        //System.println("AdaptiveGrade.initializeFields()");
-
-        gradeField.setData(0.0);
-        vamField.setData(0.0);
-        lightField.setData(0.0);
-        steepField.setData(0.0);
-        maxField.setData(0.0);
-        vamAvgField.setData(0.0);
-        lapAvgGradeField.setData(0.0);
-        maxGrade10sField.setData(0.0);
-        maxGrade1minField.setData(0.0);
-        maxGrade30minField.setData(0.0);
-
-        // Initialize rolling buffer
-        buffer = [];
-        for (var i = 0; i < SAMPLE_WINDOW; i++) {
-            buffer.add([-1000.0, 0.0]);
-        }
-        _resetAll(true);
-        grade      = 0.0;
-        distLight  = 0.0;
-        distSteep  = 0.0;
 
         initializeGradeHistogram();
     }
 
-    function initializeGradeHistogram() {
-        //System.println("AdaptiveGrade.initializeGradeHistogram()");
+    function initializeFields() {
+        if (!LOGGING_ENALBED) { return; }
 
-        histogram = new Histogram(1.0);
+        if (gradeField == null) {
+            gradeField = createField(
+                WatchUi.loadResource(Rez.Strings.GC_ChartTitle_Grade), 30,
+                FitContributor.DATA_TYPE_FLOAT,
+                {:mesgType=>FitContributor.MESG_TYPE_RECORD, :units=>WatchUi.loadResource(Rez.Strings.Unit_Grade) }
+            );
+
+            // Session totals
+            climbDistField = createField(
+                WatchUi.loadResource(Rez.Strings.GC_ClimbDist), 31,
+                FitContributor.DATA_TYPE_STRING,
+                {:mesgType=>FitContributor.MESG_TYPE_SESSION, :units=>getUnitString(UNIT_DIST_LONG), :count=>10 }
+            );
+
+            maxField = createField(
+                WatchUi.loadResource(Rez.Strings.GC_Label_Grade_Max), 33,
+                FitContributor.DATA_TYPE_FLOAT,
+                {:mesgType=>FitContributor.MESG_TYPE_SESSION, :units=>WatchUi.loadResource(Rez.Strings.Unit_Grade)}
+            );
+
+            maxGradeForTimeField = createField(
+                WatchUi.loadResource(Rez.Strings.GC_MaxGrdTime), 37,
+                FitContributor.DATA_TYPE_STRING,
+                {:mesgType=>FitContributor.MESG_TYPE_SESSION, :units=>WatchUi.loadResource(Rez.Strings.Unit_Grade), :count=>16}
+            );
+
+            // Lap Fields
+            lapAvgGradeField = createField(
+                WatchUi.loadResource(Rez.Strings.GC_Lap_AvgGrade), 36,
+                FitContributor.DATA_TYPE_FLOAT,
+                {:mesgType=>FitContributor.MESG_TYPE_LAP, :units=>WatchUi.loadResource(Rez.Strings.Unit_Grade)}
+            );
+        }
+
+        gradeField.setData(0.0);
+        climbDistField.setData("0.0/0.0");
+        maxField.setData(0.0);
+        lapAvgGradeField.setData(0.0);
+        maxGradeForTimeField.setData("NA/NA/NA");
+    }
+
+    function initializeGradeHistogram() {
+        histogram = new Histogram(MAX_LOG_QUALITY);
     }
 
     function determineLayout(dc as Dc) as Void {
@@ -351,6 +322,10 @@ class GradeEstimatorView extends WatchUi.DataField {
         //System.println("AdaptiveGrade.updateSettings()");
         // Read Settings
         // Read and validate settings from properties
+        var loggingEnabled = Application.Properties.getValue("enable_logging");
+        if (loggingEnabled instanceof Boolean) { LOGGING_ENALBED = loggingEnabled; }
+        else { LOGGING_ENALBED = true; }
+
         var bufferLen = Application.Properties.getValue("buffer_length");
         if (bufferLen instanceof Number) { SAMPLE_WINDOW = bufferLen; }
         else { SAMPLE_WINDOW = 35; }
@@ -409,6 +384,10 @@ class GradeEstimatorView extends WatchUi.DataField {
             buffer.add([-1000.0, 0.0]);
         }
         _resetAll(true);
+
+        if (LOGGING_ENALBED) {
+            initializeFields();
+        }
     }
 
     function updateLayoutDependentStrings() {
@@ -453,24 +432,68 @@ class GradeEstimatorView extends WatchUi.DataField {
         }
 
         updateLayoutDependentStrings();
+
+        // Cache drawable references for this layout
+        backgroundDrawable = View.findDrawableById("Background");
+
+        value_curr_grade = View.findDrawableById("v1") as Text;
+        value_max_grade  = View.findDrawableById("v2") as Text;
+        value_light      = View.findDrawableById("v3") as Text;
+        value_steep      = View.findDrawableById("v4") as Text;
+        value_vam        = View.findDrawableById("v5") as Text;
+        value_vam_avg    = View.findDrawableById("v6") as Text;
+        value_vam_right  = View.findDrawableById("v7") as Text;
+
+        label_status     = View.findDrawableById("l2") as Text;
+        label_curr       = View.findDrawableById("l3") as Text;
+        label_max        = View.findDrawableById("l4") as Text;
+        label_light      = View.findDrawableById("l5") as Text;
+        label_steep      = View.findDrawableById("l6") as Text;
+        label_vam_left   = View.findDrawableById("l7") as Text;
+        label_vam_avg    = View.findDrawableById("l8") as Text;
+        label_vam_right  = View.findDrawableById("l9") as Text;
+
+        // Build compact visibility arrays once per layout
+        compactHiddenByStyle = [];
+        compactVisibleByStyle = [];
+
+        // Style 0: VAM
+        compactHiddenByStyle.add([value_max_grade, label_max, value_light, value_steep, label_light, label_steep, label_vam_right, value_vam_right]);
+        compactVisibleByStyle.add([label_vam_left, label_vam_avg, value_vam, value_vam_avg]);
+
+        // Style 1: Dist
+        compactHiddenByStyle.add([label_vam_left, label_vam_avg, value_vam, value_vam_avg, value_max_grade, label_max, label_vam_right, value_vam_right]);
+        compactVisibleByStyle.add([value_light, value_steep, label_light, label_steep]);
+
+        // Style 2: Climb + Max
+        compactHiddenByStyle.add([value_steep, label_steep, label_vam_left, label_vam_avg, value_vam, value_vam_avg, label_vam_right, value_vam_right]);
+        compactVisibleByStyle.add([label_light, value_light, label_max, value_max_grade]);
+
+        // Style 3: Climb + VAM
+        compactHiddenByStyle.add([value_steep, label_steep, label_max, label_vam_avg, value_max_grade, value_vam_avg, label_vam_left, value_vam]);
+        compactVisibleByStyle.add([label_light, value_light, label_vam_right, value_vam_right]);
     }
 
     function onTimerLap() as Void {
-        //System.println("AdaptiveGrade.onTimerLap()");
+        System.println("AdaptiveGrade.onTimerLap()");
         
         lap_average_grade_sum = 0.0;
         lap_average_grade_count = 0;
     }
 
     function onTimerReset() as Void {
-        //System.println("AdaptiveGrade.onTimerReset()");
+        System.println("AdaptiveGrade.onTimerReset()");
 
         initializeFields();
+        initializeGradeHistogram();
+
+        _resetAll(true);
+        grade      = 0.0;
+        distLight  = 0.0;
+        distSteep  = 0.0;
     }
 
     function handleTap(clickEvent as WatchUi.ClickEvent) as Boolean {
-        //if (DEBUG) { System.println("AdaptiveGrade.handleTap()"); }
-
         var shouldToggleGraph = false;
 
         if (layout == LAYOUT_LARGE) {
@@ -492,38 +515,76 @@ class GradeEstimatorView extends WatchUi.DataField {
         return false;
     }
 
-    function onTimerStop() as Void {
-        //System.println("AdaptiveGrade.onTimerStop()");
+    function onTimerPause() as Void {
+        System.println("AdaptiveGrade.onTimerPause()");
 
         writeSessionFields();
     }
 
-    function writeSessionFields() as Void {
-        lightField.setData(getValueInLocalUnit(distLight / 1000.0, UNIT_DIST_LONG));
-        steepField.setData(getValueInLocalUnit(distSteep / 1000.0, UNIT_DIST_LONG));
-        maxField.setData(maxGrade * 100.0);
-        vamAvgField.setData(getValueInLocalUnit(vamAvg, UNIT_VAM));
-        maxGrade10sField.setData(histogram.getHighGradeForTime(10));
-        maxGrade1minField.setData(histogram.getHighGradeForTime(60));
-        maxGrade30minField.setData(histogram.getHighGradeForTime(1800));
+    function onTimerStop() as Void {
+        System.println("AdaptiveGrade.onTimerStop()");
+
+        writeSessionFields();
     }
 
-    function compute(info  as Activity.Info) as Number {
-        if (info == null) {  return 0; }
+    function writeRecordFields() as Void {
+        if (!LOGGING_ENALBED) { return; }
 
+        gradeField.setData(grade * 100.0);
+    }
+
+    function writeLapFields() as Void {
+        if (!LOGGING_ENALBED) { return; }
+
+        if (lap_average_grade_count > 0) {
+            lapAvgGradeField.setData(100 * lap_average_grade_sum / lap_average_grade_count);
+        } else {
+            lapAvgGradeField.setData(0.0);
+        }
+    }
+
+    function writeSessionFields() as Void {
+        if (!LOGGING_ENALBED) { return; }
+        System.println("Writing session fields...");
+
+        // Construct and save climb distance field data
+        var climbDistString = "";
+
+        var _light = getValueInLocalUnit(distLight / 1000.0, UNIT_DIST_LONG);
+        var _steep = getValueInLocalUnit(distSteep / 1000.0, UNIT_DIST_LONG);
+
+        if (_light >= 100.0) { climbDistString = _light.format("%.0f") + "/" + _steep.format("%.0f"); }
+        else { climbDistString = _light.format("%.1f") + "/" + _steep.format("%.1f");}
+        
+        climbDistField.setData(climbDistString); 
+        try { climbDistField.setData(climbDistString); } catch (ex) { }
+        
+        // Save max grade field
+        maxField.setData(maxGrade * 100.0);
+
+        // Only do histogram calculation occasionally to save CPU
+        if (true) {
+            var maxGrdTime = histogram.getHighGradeForTime(10).format("%.1f");
+            maxGrdTime += "/" + histogram.getHighGradeForTime(60).format("%.1f");
+            maxGrdTime += "/" + histogram.getHighGradeForTime(1800).format("%.1f");
+
+            maxGradeForTimeField.setData(maxGrdTime);
+            try { maxGradeForTimeField.setData(maxGrdTime); } catch (ex) { }
+        }
+    }
+
+    function compute(info as Activity.Info) as Number {
         var speed    = (info has :currentSpeed) ? info.currentSpeed : null;
         var altitude = (info has :altitude) ? info.altitude : null;
         var eTime = (info has :elapsedTime) ? info.elapsedTime / 1000.0 : 0.0; 
 
-        if (speed == null || altitude == null || !(eTime instanceof Float)) {
-            return 0; 
-        }
+        if (speed == null || altitude == null || !(eTime instanceof Float)) { return 0; }
 
         var dt = eTime - lastSample;
         var sample_distance = speed * dt; // expect one second sample interval
 
-        // Reset if nearly stopped, if more than x samples missed or if timer is not running
-        if (sample_distance < 0.33 || dt > 5) {
+        // Reset if nearly stopped, if more than 5 samples missed or if timer is not running
+        if (sample_distance < 0.1 || dt > 5) {
             _resetAll(false);
             lastSample = eTime;
             return 0;
@@ -597,18 +658,17 @@ class GradeEstimatorView extends WatchUi.DataField {
         // Calculate average lap grade (time spent at grade)
         lap_average_grade_sum += grade;
         lap_average_grade_count++;
-        lapAvgGradeField.setData(100 * lap_average_grade_sum / lap_average_grade_count);
 
-        // Log current grade
-        if (LOG_SMOOTHED_GRADE) { binnedGradeLogging(sample_distance); }
-        else { gradeField.setData(grade * 100); }
+        // Write to FIT fields
+        writeRecordFields();
+        writeLapFields();
 
         prevAltitude = altitude;
 
         return 1;
     }
 
-    function computeLinearRegressionSlope(samples as Array, bufIndex as Number, windowSize as Number) {
+    function computeLinearRegressionSlope(samples as Array<Array<Float>>, bufIndex as Number, windowSize as Number) {
         var xVals = [];
         var dist = 0.0;
         calculating = true;
@@ -659,7 +719,7 @@ class GradeEstimatorView extends WatchUi.DataField {
         }
     }
 
-    function computeWindowSlope(samples as Array, bufIndex as Number, windowSize as Number, bufferLen as Number) as Float {
+    function computeWindowSlope(samples as Array<Array<Float>>, bufIndex as Number, windowSize as Number, bufferLen as Number) as Float {
         var xVals = [];
         var dist = 0.0;
         for (var i = 0; i < windowSize; i++) {
@@ -701,29 +761,11 @@ class GradeEstimatorView extends WatchUi.DataField {
             vamAvg = sumAscentVam / samplesAscent;
         }
 
-        vamField.setData(vam);
-        vamAvgField.setData(vamAvg);
-
         return vam;
     }
 
-    function binnedGradeLogging(sample_distance as Float) as Void {
-        binAccDist += sample_distance;
-        binAccGrade += grade;
-        binCount++;
-        
-        if (binAccDist >= GRADE_BIN_DIST) {
-            var avgBinGrade = binAccGrade / binCount;
-            gradeField.setData(avgBinGrade * 100);
-            binAccGrade = 0.0;
-            binAccDist = 0.0;
-            binCount = 0;
-        }
-    }
-
     function onUpdate(dc as Dc) as Void {
-        var background = View.findDrawableById("Background") as Text;
-        background.setColor(getBackgroundColor());
+        if (backgroundDrawable != null) { backgroundDrawable.setColor(getBackgroundColor()); }
 
         updateColorScheme(getBackgroundColor() == Graphics.COLOR_BLACK);
 
@@ -739,7 +781,7 @@ class GradeEstimatorView extends WatchUi.DataField {
 
         View.onUpdate(dc);
         
-        if (drawGraph()) { 
+        if (layout == LAYOUT_SMALL_NARROW || layout == LAYOUT_LARGE || layout == LAYOUT_FULLSCREEN) { 
             if (layout == LAYOUT_SMALL_NARROW) { drawHistogramPlot(dc); }
             else if (layout == LAYOUT_FULLSCREEN || graphmode == GRAPHMODE_BOTH) { 
                 drawHistogramPlot(dc); 
@@ -763,12 +805,6 @@ class GradeEstimatorView extends WatchUi.DataField {
     }
 
     function drawDefaultView(dc as Dc) as Void {
-        var value_curr_grade = View.findDrawableById("v1") as Text;
-        var value_max_grade = View.findDrawableById("v2") as Text;
-        var value_light = View.findDrawableById("v3") as Text;
-        var value_steep = View.findDrawableById("v4") as Text;
-        var label_light = View.findDrawableById("l5") as Text;
-        var label_steep = View.findDrawableById("l6") as Text;
         
         if (value_curr_grade != null) {
             if (calculating || !drawCompact()) { value_curr_grade.setColor(color_black); }
@@ -811,9 +847,7 @@ class GradeEstimatorView extends WatchUi.DataField {
     }
 
     function drawVAMFields(dc as Dc) as Void {
-        var value_vam = View.findDrawableById("v5") as Text;
-        var value_vam_right = View.findDrawableById("v7") as Text;
-        var value_vam_avg = View.findDrawableById("v6") as Text;
+        // Use cached fields directly
 
         if (value_vam != null) {
             value_vam.setColor(color_black);
@@ -835,65 +869,36 @@ class GradeEstimatorView extends WatchUi.DataField {
     }
 
     function setCompactVisible(dc as Dc) as Void {
-        var hddn = [];
-        var vis = [];
+        if (small_layout_draw_style < 0 || small_layout_draw_style >= compactHiddenByStyle.size()) { return; }
 
-        switch (small_layout_draw_style) {
-            default:
-            case 0: // VAM
-                hddn = ["v2", "l4", "v3", "v4", "l5", "l6", "l9", "v7"];
-                vis = ["l7", "l8", "v5", "v6"];
-                break;
-            case 1: // Dist
-                hddn = ["l7", "l8", "v5", "v6", "v2", "l4", "l9", "v7"];
-                vis = ["v3", "v4", "l5", "l6"];
-                break;
-            case 2: // Climb + Max
-                hddn = ["v4", "l6", "l7", "l8", "v5", "v6", "l9", "v7"];
-                vis = ["l5", "v3", "l4", "v2"];
-                break;
-            case 3: // Climb + VAM
-                hddn = ["v4", "l6", "l4", "l8", "v2", "v6", "l7", "v5"];
-                vis = ["l5", "v3", "l9", "v7" ];
-                break;
-        }
+        var hddn = compactHiddenByStyle[small_layout_draw_style];
+        var vis = compactVisibleByStyle[small_layout_draw_style];
 
         for (var i = 0; i < hddn.size(); i++) {
-            var labelDrawable = View.findDrawableById(hddn[i]) as Text;
-            if (labelDrawable != null) {
-                labelDrawable.setVisible(false);
-            }
+            var d = hddn[i];
+            if (d != null) { d.setVisible(false); }
         }
 
-        for (var i = 0; i < vis.size(); i++) {
-            var labelDrawable = View.findDrawableById(vis[i]) as Text;
-            if (labelDrawable != null) {
-                labelDrawable.setVisible(true);
-            }
+        for (var j = 0; j < vis.size(); j++) {
+            var v = vis[j];
+            if (v != null) { v.setVisible(true); }
         }
     }
 
     function setLabelColor(dc as Dc) as Void {
-        var labels = ["l3", "l4", "l5", "l6", "l7", "l8", "l9"];
+        var labels = [label_curr, label_max, label_light, label_steep, label_vam_left, label_vam_avg, label_vam_right];
         for (var i = 0; i < labels.size(); i++) {
-            var label = labels[i];
-
-            // Find the labels by ID and set its color
-            var labelDrawable = View.findDrawableById(label) as Text;
-            if (labelDrawable != null) {
-                labelDrawable.setColor(color_black);
-            }
+            var labelDrawable = labels[i] as Text;
+            if (labelDrawable != null) { labelDrawable.setColor(color_black); }
         }
     }
 
     function drawStatusLabel(dc as Dc) as Void {
-        var statusLabel = View.findDrawableById("l2") as Text;
-
         var statusColor = color_black;
 
-        if (statusLabel != null) {
-            statusLabel.setColor(statusColor);
-            statusLabel.setText(getStatusString());
+        if (label_status != null) {
+            label_status.setColor(statusColor);
+            label_status.setText(getStatusString());
         }
     }
 
@@ -908,8 +913,14 @@ class GradeEstimatorView extends WatchUi.DataField {
         var plotHeight = height - plotTop - margin;
 
         if (layout == LAYOUT_FULLSCREEN) { 
-            plotTop = height * 0.20f;
-            plotHeight = height * 0.40f - margin;
+            // For x30 units, leave more space for top labels by shrinking graphs
+            if (isX30Unit) {
+                plotTop = height * 0.30f;
+                plotHeight = height * 0.36;
+            } else {
+                plotTop = height * 0.20f;
+                plotHeight = height * 0.40f;
+            }
         }
         else if (graphmode == GRAPHMODE_BOTH) { // Draw plots on top of each other... ehh
             plotTop = height / 2 + 3;
@@ -1024,7 +1035,7 @@ class GradeEstimatorView extends WatchUi.DataField {
         }
 
         // --- Draw plot area border ---
-        dc.setColor(color_black, Graphics.COLOR_BLACK);
+        dc.setColor(color_black, Graphics.COLOR_TRANSPARENT);
         dc.setPenWidth(2);
         dc.clearClip();
         dc.drawRectangle(plotLeft, plotTop, plotWidth, plotHeight);
@@ -1044,8 +1055,14 @@ class GradeEstimatorView extends WatchUi.DataField {
         if (isX50Unit) { plotHeight -= 8; } // More space needed for X50 units
 
         if (layout == LAYOUT_FULLSCREEN) { 
-            plotTop = height * 0.60f + margin;
-            plotHeight = height * 0.38f - margin - 12;  
+            // For x30 units, align with reduced altitude plot height and extra top space
+            if (isX30Unit) {
+                plotTop = height * 0.66f + margin;
+                plotHeight = height * 0.32f - margin - 12;  
+            } else {
+                plotTop = height * 0.60f + margin;
+                plotHeight = height * 0.38f - margin - 12;  
+            }
         }
         else if (layout == LAYOUT_SMALL_NARROW) {
             plotTop = margin;
@@ -1060,8 +1077,8 @@ class GradeEstimatorView extends WatchUi.DataField {
         else if (isX50Unit) { offset += 6; }
 
         if (histogram.computed) {
-            var range = histogram.computedSampledBinRange; // [min, max] of the histogram bins indexes
-            var values = histogram.computedHistogramForRange; // Array of normalized counts (0.0 to 1.0)
+            var range = histogram.computedSampledBinRange as Array<Number>; // [min, max] of the histogram bins indexes
+            var values = histogram.computedHistogramForRange as Array<Float>; // Array of normalized counts (0.0 to 1.0)
 
             var maxVal = 0.0;
             for (var i = 0; i < values.size(); i++) {
@@ -1093,7 +1110,6 @@ class GradeEstimatorView extends WatchUi.DataField {
                 dc.fillRectangle(x1 + 1, y2, x2 - x1, y1 - y2);
 
                 if (grade.toNumber() % tickGrades == 0 && j != 0) {
-
                     dc.setColor(color_light_grey, Graphics.COLOR_TRANSPARENT);
                     dc.drawLine(x1, plotBottom, x1, plotTop);
 

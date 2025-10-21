@@ -1,6 +1,6 @@
 <layouts>
     <layout id="SmallNarrowLayout">
         <drawable class="Background" />
-        <label id="value_curr_grade" text="@Strings.UI_Label_Gradient_Current" x="50%" y="50%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_MEDIUM" />
+        <label id="v1" text="@Strings.UI_Label_Gradient_Current" x="50%" y="50%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_MEDIUM" />
     </layout>
 </layouts>

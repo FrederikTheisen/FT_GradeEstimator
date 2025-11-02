@@ -7,7 +7,6 @@
 
     <!-- SESSION : Session Data Definitions -->
     <fitField id="31" displayInActivitySummary="true" sortOrder="3" precision="1" dataLabel="@Strings.GC_ClimbDist" unitLabel="@Strings.Unit_Distance" />
-    <fitField id="33" displayInActivitySummary="true" sortOrder="5" precision="1" dataLabel="@Strings.GC_Label_Grade_Max" unitLabel="@Strings.Unit_Grade" />
 
     <fitField id="37" displayInActivitySummary="true" sortOrder="7" precision="1" dataLabel="@Strings.GC_MaxGrdTime" unitLabel="@Strings.Unit_Grade" />
 

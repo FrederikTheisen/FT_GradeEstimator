@@ -262,6 +262,10 @@ class GradeEstimatorView extends WatchUi.DataField {
         
         if (!LOGGING_ENALBED) { return; }
 
+        var gradeLoggingEnabled = Application.Properties.getValue("enable_grade_logging");
+        if (gradeLoggingEnabled instanceof Boolean) { GRADE_LOGGING_ENALBED = gradeLoggingEnabled; }
+        else { GRADE_LOGGING_ENALBED = true; }
+
         FIELD_SETUP_ERROR = true;
 
         try {

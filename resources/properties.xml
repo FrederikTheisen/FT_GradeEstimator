@@ -12,7 +12,7 @@
         <property id="debug_enabled" type="boolean">false</property>
         <property id="small_field_data" type="number">3</property>
         <property id="graphmode" type="number">0</property>
-        <property id="enable_logging" type="boolean">false</property>
+        <property id="enable_logging" type="boolean">true</property>
         <property id="enable_grade_logging" type="boolean">false</property>
     </properties>
 

@@ -15,7 +15,7 @@ class GradeEstimatorView extends WatchUi.DataField {
     var THRESHOLD_STEEP    = 0.10;    // percent
     var DIST_LOG_QUALITY   = 0.33;    // Quality threshold for distance calculation
     var MAX_LOG_QUALITY    = 0.5;     // Quality threshold for maximum grade
-    var LOG_SMOOTHED_GRADE = false; // Use smoothed grade for logging
+    // var LOG_SMOOTHED_GRADE = false; // Use smoothed grade for logging
     enum { LAYOUT_SMALL, LAYOUT_SMALL_NARROW, LAYOUT_WIDE, LAYOUT_LARGE, LAYOUT_FULLSCREEN }
     enum { UNIT_DIST_LONG, UNIT_DIST_SHORT, UNIT_VAM }
     enum { GRAPHMODE_BOTH, GRAPHMODE_BUFFER, GRAPHMODE_HISTOGRAM }
@@ -69,7 +69,9 @@ class GradeEstimatorView extends WatchUi.DataField {
 
     // FIT FIELDS
     var LOGGING_ENALBED as Boolean = true;
-    var gradeField, climbDistField, maxField, lapAvgGradeField, maxGradeForTimeField;
+    var GRADE_LOGGING_ENALBED as Boolean = false;
+    var FIELD_SETUP_ERROR as Boolean = false;
+    var gradeField, climbDistField, lapAvgGradeField, maxGradeForTimeField;
 
     // UI
     var label_light_str as String         = "---"; // Label for light distance
@@ -175,9 +177,16 @@ class GradeEstimatorView extends WatchUi.DataField {
             c += getProgressBar(progress, barlength);
             c += " " + gradeWindowSize.format("%d") + "s";
             if (!drawCompact()) { c += "|" + numValid.format("%d") + "s";}
-        } else if (bufIndex > 0) {
+        } 
+        else if (bufIndex > 0) {
             c = str_buffering + " ";
             c += getProgressBar(bufIndex.toFloat() / MIN_GRADE_WINDOW, 17 - str_buffering.length());
+        }
+        else if (FIELD_SETUP_ERROR) {
+            c = WatchUi.loadResource(Rez.Strings.UI_Label_Status_FieldError);
+        }
+        else if (!LOGGING_ENALBED) {
+            c = WatchUi.loadResource(Rez.Strings.UI_Label_Status_LoggingDisabled);
         }
         else {
             c = str_no_data + " ";
@@ -247,47 +256,56 @@ class GradeEstimatorView extends WatchUi.DataField {
     }
 
     function initializeFields() {
+        var loggingEnabled = Application.Properties.getValue("enable_logging");
+        if (loggingEnabled instanceof Boolean) { LOGGING_ENALBED = loggingEnabled; }
+        else { LOGGING_ENALBED = true; }
+        
         if (!LOGGING_ENALBED) { return; }
 
-        if (gradeField == null) {
-            gradeField = createField(
-                WatchUi.loadResource(Rez.Strings.GC_ChartTitle_Grade), 30,
-                FitContributor.DATA_TYPE_FLOAT,
-                {:mesgType=>FitContributor.MESG_TYPE_RECORD, :units=>WatchUi.loadResource(Rez.Strings.Unit_Grade) }
-            );
+        FIELD_SETUP_ERROR = true;
 
-            // Session totals
-            climbDistField = createField(
-                WatchUi.loadResource(Rez.Strings.GC_ClimbDist), 31,
-                FitContributor.DATA_TYPE_STRING,
-                {:mesgType=>FitContributor.MESG_TYPE_SESSION, :units=>getUnitString(UNIT_DIST_LONG), :count=>10 }
-            );
+        try {
+            if (GRADE_LOGGING_ENALBED) {
+                if (gradeField == null) {
+                    gradeField = createField(
+                        WatchUi.loadResource(Rez.Strings.GC_ChartTitle_Grade), 30,
+                        FitContributor.DATA_TYPE_FLOAT,
+                        {:mesgType=>FitContributor.MESG_TYPE_RECORD, :units=>WatchUi.loadResource(Rez.Strings.Unit_Grade) }
+                    );
+                }
+            }
+            else { gradeField = null; }
 
-            maxField = createField(
-                WatchUi.loadResource(Rez.Strings.GC_Label_Grade_Max), 33,
-                FitContributor.DATA_TYPE_FLOAT,
-                {:mesgType=>FitContributor.MESG_TYPE_SESSION, :units=>WatchUi.loadResource(Rez.Strings.Unit_Grade)}
-            );
+            if (climbDistField == null) {
+                // Session totals
+                climbDistField = createField(
+                    WatchUi.loadResource(Rez.Strings.GC_ClimbDist), 31,
+                    FitContributor.DATA_TYPE_STRING,
+                    {:mesgType=>FitContributor.MESG_TYPE_SESSION, :units=>getUnitString(UNIT_DIST_LONG), :count=>10 }
+                );
 
-            maxGradeForTimeField = createField(
-                WatchUi.loadResource(Rez.Strings.GC_MaxGrdTime), 37,
-                FitContributor.DATA_TYPE_STRING,
-                {:mesgType=>FitContributor.MESG_TYPE_SESSION, :units=>WatchUi.loadResource(Rez.Strings.Unit_Grade), :count=>16}
-            );
+                maxGradeForTimeField = createField(
+                    WatchUi.loadResource(Rez.Strings.GC_MaxGrdTime), 37,
+                    FitContributor.DATA_TYPE_STRING,
+                    {:mesgType=>FitContributor.MESG_TYPE_SESSION, :units=>WatchUi.loadResource(Rez.Strings.Unit_Grade), :count=>16}
+                );
 
-            // Lap Fields
-            lapAvgGradeField = createField(
-                WatchUi.loadResource(Rez.Strings.GC_Lap_AvgGrade), 36,
-                FitContributor.DATA_TYPE_FLOAT,
-                {:mesgType=>FitContributor.MESG_TYPE_LAP, :units=>WatchUi.loadResource(Rez.Strings.Unit_Grade)}
-            );
-        }
+                // Lap Fields
+                lapAvgGradeField = createField(
+                    WatchUi.loadResource(Rez.Strings.GC_Lap_AvgGrade), 36,
+                    FitContributor.DATA_TYPE_FLOAT,
+                    {:mesgType=>FitContributor.MESG_TYPE_LAP, :units=>WatchUi.loadResource(Rez.Strings.Unit_Grade)}
+                );
+            }
+        } 
+        catch (ex) { }
 
-        gradeField.setData(0.0);
-        climbDistField.setData("0.0/0.0");
-        maxField.setData(0.0);
-        lapAvgGradeField.setData(0.0);
-        maxGradeForTimeField.setData("NA/NA/NA");
+        if (gradeField != null) { gradeField.setData(0.0); }
+        if (climbDistField != null) { climbDistField.setData("0.0/0.0"); }
+        if (lapAvgGradeField != null) { lapAvgGradeField.setData(0.0); }
+        if (maxGradeForTimeField != null) { maxGradeForTimeField.setData("NA/NA/NA"); }
+
+        FIELD_SETUP_ERROR = false;
     }
 
     function initializeGradeHistogram() {
@@ -326,6 +344,10 @@ class GradeEstimatorView extends WatchUi.DataField {
         if (loggingEnabled instanceof Boolean) { LOGGING_ENALBED = loggingEnabled; }
         else { LOGGING_ENALBED = true; }
 
+        var gradeLoggingEnabled = Application.Properties.getValue("enable_grade_logging");
+        if (gradeLoggingEnabled instanceof Boolean) { GRADE_LOGGING_ENALBED = gradeLoggingEnabled; }
+        else { GRADE_LOGGING_ENALBED = true; }
+
         var bufferLen = Application.Properties.getValue("buffer_length");
         if (bufferLen instanceof Number) { SAMPLE_WINDOW = bufferLen; }
         else { SAMPLE_WINDOW = 35; }
@@ -346,9 +368,9 @@ class GradeEstimatorView extends WatchUi.DataField {
         if (maxQuality instanceof Float) { MAX_LOG_QUALITY = maxQuality; }
         else { MAX_LOG_QUALITY = 0.5; }
 
-        var saveSmooth = Application.Properties.getValue("save_smooth");
-        if (saveSmooth instanceof Boolean) { LOG_SMOOTHED_GRADE = saveSmooth; }
-        else { LOG_SMOOTHED_GRADE = false; }
+        // var saveSmooth = Application.Properties.getValue("save_smooth");
+        // if (saveSmooth instanceof Boolean) { LOG_SMOOTHED_GRADE = saveSmooth; }
+        // else { LOG_SMOOTHED_GRADE = false; }
 
         var thresholdLight = Application.Properties.getValue("threshold_light");
         if (thresholdLight instanceof Float) { THRESHOLD_LIGHT = thresholdLight / 100.0; }
@@ -529,12 +551,15 @@ class GradeEstimatorView extends WatchUi.DataField {
 
     function writeRecordFields() as Void {
         if (!LOGGING_ENALBED) { return; }
+        if (gradeField == null) { return; }
 
-        gradeField.setData(grade * 100.0);
+        try { gradeField.setData(grade * 100.0); }
+        catch (ex) { FIELD_SETUP_ERROR = true; }
     }
 
     function writeLapFields() as Void {
         if (!LOGGING_ENALBED) { return; }
+        if (lapAvgGradeField == null) { return; }
 
         if (lap_average_grade_count > 0) {
             lapAvgGradeField.setData(100 * lap_average_grade_sum / lap_average_grade_count);
@@ -556,11 +581,7 @@ class GradeEstimatorView extends WatchUi.DataField {
         if (_light >= 100.0) { climbDistString = _light.format("%.0f") + "/" + _steep.format("%.0f"); }
         else { climbDistString = _light.format("%.1f") + "/" + _steep.format("%.1f");}
         
-        climbDistField.setData(climbDistString); 
-        try { climbDistField.setData(climbDistString); } catch (ex) { }
-        
-        // Save max grade field
-        maxField.setData(maxGrade * 100.0);
+        if (climbDistField != null) { climbDistField.setData(climbDistString); } else { }
 
         // Only do histogram calculation occasionally to save CPU
         if (true) {
@@ -568,8 +589,7 @@ class GradeEstimatorView extends WatchUi.DataField {
             maxGrdTime += "/" + histogram.getHighGradeForTime(60).format("%.1f");
             maxGrdTime += "/" + histogram.getHighGradeForTime(1800).format("%.1f");
 
-            maxGradeForTimeField.setData(maxGrdTime);
-            try { maxGradeForTimeField.setData(maxGrdTime); } catch (ex) { }
+            if (maxGradeForTimeField != null) { maxGradeForTimeField.setData(maxGrdTime); } else { }
         }
     }
 

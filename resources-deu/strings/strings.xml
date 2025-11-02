@@ -34,7 +34,8 @@
     <string id="Unit_VAM">Meter / Stunde</string>
 
     <!-- Settings -->
-    <string id="enable_logging">Fit-Protokollierung aktivieren</string>
+    <string id="enable_logging">FIT-Protokollierung aktivieren</string>
+    <string id="enable_grade_logging">Steigungsdaten protokollieren</string>
     
     <string id="buffer_length">Puffergröße (Sek.)</string>
     <string id="buffer_fit_max">Max. Proben für Steigungsfit</string>

@@ -1,6 +1,6 @@
 <strings>
     <string id="AppName">Adaptive Grade Plus</string>
-    <string id="Version">v2.2</string>
+    <string id="Version">v2.3</string>
 
     <!-- UI labels -->
     <string id="UI_Label_Gradient_Current">Curr. Grade</string>
@@ -14,6 +14,8 @@
     <string id="UI_Label_Status_Buffering">BUFFERING</string>
     <string id="UI_Label_Status_Active">ACTIVE</string>
     <string id="UI_Label_Status_NoData">NO DATA</string>
+    <string id="UI_Label_Status_FieldError">FIT LOG ERR</string>
+    <string id="UI_Label_Status_LoggingDisabled">LOGGING DISABLED</string>
 
     <string id="UI_Label_RampasInhumanas">Rampas Inhumanas</string>
 
@@ -35,7 +37,8 @@
     <string id="Unit_VAM">m/h</string>
 
     <!-- Settings -->
-    <string id="enable_logging">Enable Fit Logging</string>
+    <string id="enable_logging">Enable FIT Logging</string>
+    <string id="enable_grade_logging">Log Gradient Data</string>
 
     <string id="buffer_length">Sample Buffer Size (seconds)</string>
     <string id="buffer_fit_max">Max Samples for Grade Fit</string>

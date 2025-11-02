@@ -32,7 +32,8 @@
     <string id="Unit_VAM">metros / hora</string>
 
     <!-- Settings -->
-    <string id="enable_logging">Activar registro Fit</string>
+    <string id="enable_logging">Activar registro FIT</string>
+    <string id="enable_grade_logging">Activar registro de pendiente</string>
 
     <string id="buffer_length">Tamaño de búfer (seg.)</string>
     <string id="buffer_fit_max">Muestras máx. para ajuste</string>

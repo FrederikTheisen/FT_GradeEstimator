@@ -32,7 +32,8 @@
     <string id="Unit_VAM">mètres / heure</string>
 
     <!-- Settings -->
-    <string id="enable_logging">Activer le journal Fit</string>
+    <string id="enable_logging">Activer le journal FIT</string>
+    <string id="enable_grade_logging">Activer le journal des pentes</string>
 
     <string id="buffer_length">Taille du tampon (s)</string>
     <string id="buffer_fit_max">Échantillons max pour pente</string>

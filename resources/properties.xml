@@ -2,7 +2,7 @@
 
     <properties>
         <property id="buffer_length" type="number">35</property>
-        <property id="buffer_fit_max" type="number">30</property>
+        <property id="buffer_fit_max" type="number">20</property>
         <property id="buffer_fit_min" type="number">7</property>
         <property id="threshold_log_dist" type="float">0.1</property>
         <property id="threshold_log_max" type="float">0.5</property>
@@ -12,11 +12,15 @@
         <property id="debug_enabled" type="boolean">false</property>
         <property id="small_field_data" type="number">3</property>
         <property id="graphmode" type="number">0</property>
-        <property id="enable_logging" type="boolean">true</property>
+        <property id="enable_logging" type="boolean">false</property>
+        <property id="enable_grade_logging" type="boolean">false</property>
     </properties>
 
     <settings>
         <setting propertyKey="@Properties.enable_logging" title="@Strings.enable_logging">
+                <settingConfig type="boolean" />
+        </setting>
+        <setting propertyKey="@Properties.enable_grade_logging" title="@Strings.enable_grade_logging">
                 <settingConfig type="boolean" />
         </setting>
         <group id="group_sample_buffer" title="@Strings.group_title_buffer" description="@Strings.group_desc_buffer">

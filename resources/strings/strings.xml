@@ -1,6 +1,6 @@
 <strings>
     <string id="AppName">Adaptive Grade Plus</string>
-    <string id="Version">v2.3</string>
+    <string id="Version">v2.4</string>
 
     <!-- UI labels -->
     <string id="UI_Label_Gradient_Current">Curr. Grade</string>
@@ -69,4 +69,6 @@
 
     <string id="group_title_misc">Other Settings</string>
     <string id="group_desc_misc"></string>
+
+    <string id="simple_mode">Display Large Grade Number</string>
 </strings>

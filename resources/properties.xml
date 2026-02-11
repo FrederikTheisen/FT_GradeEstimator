@@ -14,6 +14,7 @@
         <property id="graphmode" type="number">0</property>
         <property id="enable_logging" type="boolean">true</property>
         <property id="enable_grade_logging" type="boolean">false</property>
+        <property id="simple_mode" type="boolean">false</property>
     </properties>
 
     <settings>
@@ -54,6 +55,9 @@
         </group>
         
         <group id="group_misc" title="@Strings.group_title_misc" description="@Strings.group_desc_misc">
+            <setting propertyKey="@Properties.simple_mode" title="@Strings.simple_mode">
+                <settingConfig type="boolean" />
+            </setting>
             <setting propertyKey="@Properties.small_field_data" title="@Strings.small_field_data" prompt="@Strings.small_field_data">
                 <settingConfig type="list">
                     <listEntry value="0">@Strings.small_field_data_vam</listEntry>

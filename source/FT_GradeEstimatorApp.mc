@@ -43,7 +43,6 @@ class GradeEstimatorInputDelegate extends WatchUi.InputDelegate {
     }
 
     function onTap(clickEvent as WatchUi.ClickEvent) as Boolean {
-        if (dataField == null) { return false; }
         return dataField.handleTap(clickEvent);
     }
 }

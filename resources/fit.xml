@@ -6,7 +6,7 @@
     <fitField id="36" displayInActivityLaps="true" displayInChart="true" sortOrder="2" precision="1" chartTitle="@Strings.GC_Lap_AvgGrade" dataLabel="@Strings.GC_Lap_AvgGrade" unitLabel="@Strings.Unit_Grade" fillColor="#0099FF" />
 
     <!-- SESSION : Session Data Definitions -->
-    <fitField id="31" displayInActivitySummary="true" sortOrder="3" precision="1" dataLabel="@Strings.GC_ClimbDist" unitLabel="@Strings.Unit_Distance" />
+    <fitField id="31" displayInActivitySummary="true" sortOrder="3" precision="1" dataLabel="@Strings.GC_ClimbDist" unitLabel="@Strings.Unit_Distance_Mixed" />
 
     <fitField id="37" displayInActivitySummary="true" sortOrder="7" precision="1" dataLabel="@Strings.GC_MaxGrdTime" unitLabel="@Strings.Unit_Grade" />
 

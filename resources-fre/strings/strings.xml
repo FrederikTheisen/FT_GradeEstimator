@@ -2,11 +2,14 @@
     <string id="AppName">Pente Adaptive Plus</string>
 
     <!-- UI labels -->
-    <string id="UI_Label_Gradient_Current">Pente Actu.</string>
     <string id="UI_Label_Gradient_Max">Pente Max</string>
-    <string id="UI_Label_Distance_Steep">Montée Difficile</string>
-    <string id="UI_Label_Distance_Light">Dist. Montée</string>
+    <string id="UI_Label_Grade_Held">Pente max tenue</string>
+    <string id="UI_Label_Time_10s">10s</string>
+    <string id="UI_Label_Time_30min">30min</string>
+    <string id="UI_Label_Climb_Light">Légère</string>
+    <string id="UI_Label_Climb_Hard">Difficile</string>
     <string id="UI_Label_Distance_Climb">Dist. Montée</string>
+    <string id="UI_Label_Distance_Climb_Short">Dist. montée</string>
     <string id="UI_Label_VAM_Current">VAM Actu.</string>
     <string id="UI_Label_VAM_Average">VAM Moy.</string>
 
@@ -23,13 +26,10 @@
 
     <string id="GC_Label_Grade">Pente</string>
     <string id="GC_ClimbDist">Montée Légère/Difficile</string>
-    <string id="GC_Label_Grade_Max">Pente Maximale</string>
-    <string id="GC_MaxGrdTime">Pente max pendant 10s/60s/30m</string>
+    <string id="GC_MaxGrdTime">Pente max pendant 10s/1m/30m</string>
 
     <!-- General Labels -->
-    <string id="Unit_Grade">%</string>
-    <string id="Unit_Distance">km</string>
-    <string id="Unit_VAM">mètres / heure</string>
+    <string id="Unit_Distance_Mixed"></string>
 
     <!-- Settings -->
     <string id="enable_logging">Activer le journal FIT</string>

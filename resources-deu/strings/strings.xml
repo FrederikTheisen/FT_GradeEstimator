@@ -2,15 +2,16 @@
     <string id="AppName">Adaptive Steigung Plus</string>
 
     <!-- UI labels -->
-    <string id="UI_Label_Gradient_Current">Steigung</string>
     <string id="UI_Label_Gradient_Max">Max. Stg.</string>
-    <string id="UI_Label_Distance_Steep">Dist. </string>
-    <string id="UI_Label_Distance_Light">Dist. Anstieg</string>
+    <string id="UI_Label_Grade_Held">Max. gehalten</string>
+    <string id="UI_Label_Time_10s">10s</string>
+    <string id="UI_Label_Time_30min">30min</string>
+    <string id="UI_Label_Climb_Light">Leicht</string>
+    <string id="UI_Label_Climb_Hard">Hart</string>
     <string id="UI_Label_Distance_Climb">Dist. Anstieg</string>
+    <string id="UI_Label_Distance_Climb_Short">Dist. Anst.</string>
     <string id="UI_Label_VAM_Current">VAM</string>
     <string id="UI_Label_VAM_Average">Ø VAM</string>
-
-    <string id="UI_Label_RampasInhumanas"> Rampas Inhumanas</string> <!-- Needs space in front to fit -->
 
     <string id="UI_Label_Status_Buffering">DATEN SAMMELN</string>
     <string id="UI_Label_Status_Active">AKTIV</string>
@@ -25,13 +26,10 @@
 
     <string id="GC_Label_Grade">Steigung</string>
     <string id="GC_ClimbDist">Steigung Leichte/Starke</string>
-    <string id="GC_Label_Grade_Max">Maximale Steigung</string>
-    <string id="GC_MaxGrdTime">Max-Steigung für 10s/60s/30min</string>
+    <string id="GC_MaxGrdTime">Max-Steigung 10s/1m/30m</string>
 
     <!-- General Labels -->
-    <string id="Unit_Grade">%</string>
-    <string id="Unit_Distance">km</string>
-    <string id="Unit_VAM">Meter / Stunde</string>
+    <string id="Unit_Distance_Mixed"></string>
 
     <!-- Settings -->
     <string id="enable_logging">FIT-Protokollierung aktivieren</string>

@@ -51,13 +51,6 @@ class Histogram {
         }
     }
 
-    function getBinCount(binIndex as Number) as Number {
-        if (binIndex >= 0 && binIndex < self.numBins) {
-            return self.bins[binIndex];
-        }
-        return 0;
-    }
-
     //! Get the bin index for a given grade value
     function getBinIndex(grade as Float) as Number {
         var binIndex = ((grade - self.minBin) / self.binSize).toNumber();
@@ -88,26 +81,6 @@ class Histogram {
         computed = true;
     }
 
-    function getTotalCount() as Number {
-        return self.totalCount;
-    }
-
-    function getBinSize() as Float {
-        return self.binSize;
-    }
-
-    function getNumBins() as Number {
-        return self.numBins;
-    }
-
-    private function getNormalizedHistogram() as Array {
-        var result = new [numBins];
-        for (var i = 0; i < self.numBins; i++) {
-            result[i] = self.bins[i].toFloat() / self.totalCount; // Normalize to fraction
-        }
-        return result;
-    }
-
     private function getSampledBinRange() as Array {
         var minSampled = -1;
         var maxSampled = -1;
@@ -126,13 +99,6 @@ class Histogram {
             result.add(self.bins[i].toFloat() / self.totalCount);
         }
         return result;
-    }
-
-    function reset() {
-        for (var i = 0; i < numBins; i++) {
-            self.bins[i] = 0;
-        }
-        self.totalCount = 0;
     }
 
     //! Return the grade at which `percent` of the samples are at or above that grade.
@@ -180,6 +146,10 @@ class Histogram {
         var percent = (seconds.toFloat() / totalCount) * 100.0;
 
         return getHighGrade(percent);
+    }
+
+    public function getTrackedSeconds() as Number {
+        return self.totalCount;
     }
 
 }

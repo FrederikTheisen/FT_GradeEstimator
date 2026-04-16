@@ -1,13 +1,16 @@
 <strings>
     <string id="AppName">Adaptive Grade Plus</string>
-    <string id="Version">v2.4</string>
+    <string id="Version">v3.0</string>
 
     <!-- UI labels -->
-    <string id="UI_Label_Gradient_Current">Curr. Grade</string>
     <string id="UI_Label_Gradient_Max">Max Grade</string>
-    <string id="UI_Label_Distance_Steep">Hard Climb</string>
-    <string id="UI_Label_Distance_Light">Climbing Distance</string>
-    <string id="UI_Label_Distance_Climb">Dist. Climb</string>
+    <string id="UI_Label_Grade_Held">Max grade held</string>
+    <string id="UI_Label_Time_10s">10s</string>
+    <string id="UI_Label_Time_30min">30min</string>
+    <string id="UI_Label_Climb_Light">Light</string>
+    <string id="UI_Label_Climb_Hard">Hard</string>
+    <string id="UI_Label_Distance_Climb">Climbing distance</string>
+    <string id="UI_Label_Distance_Climb_Short">Climb dist.</string>
     <string id="UI_Label_VAM_Current">Curr. VAM</string>
     <string id="UI_Label_VAM_Average">Avg. VAM</string>
 
@@ -17,8 +20,6 @@
     <string id="UI_Label_Status_FieldError">FIT LOG ERR</string>
     <string id="UI_Label_Status_LoggingDisabled">LOGGING DISABLED</string>
 
-    <string id="UI_Label_RampasInhumanas">Rampas Inhumanas</string>
-
     <string id="UI_Label_Graph_NoData">No data to display</string>
 
     <!-- Garmin Connect data labels -->
@@ -27,14 +28,13 @@
     <string id="GC_Lap_AvgGrade">Lap Avg. Grade</string>
 
     <string id="GC_Label_Grade">Grade</string>
-    <string id="GC_ClimbDist">Climb dist light/hard</string>
-    <string id="GC_Label_Grade_Max">Maximum Grade</string>
-    <string id="GC_MaxGrdTime">Max grade held for 10s/60s/30m</string>
+    <string id="GC_ClimbDist">Climb dist. light/hard</string>
+    <string id="GC_MaxGrdTime">Max grade held for 10s/1m/30m</string>
     
     <!-- General Labels -->
     <string id="Unit_Grade">%</string>
     <string id="Unit_Distance">km</string>
-    <string id="Unit_VAM">m/h</string>
+    <string id="Unit_Distance_Mixed"></string>
 
     <!-- Settings -->
     <string id="enable_logging">Enable FIT Logging</string>

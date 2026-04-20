@@ -1,6 +1,6 @@
 <strings>
     <string id="AppName">Adaptive Grade Plus</string>
-    <string id="Version">v3.0</string>
+    <string id="Version">v3.1</string>
 
     <!-- UI labels -->
     <string id="UI_Label_Gradient_Max">Max Grade</string>

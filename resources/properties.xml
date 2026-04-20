@@ -8,7 +8,7 @@
         <property id="threshold_log_max" type="float">0.5</property>
         <property id="threshold_light" type="float">3.5</property>
         <property id="threshold_steep" type="float">8</property>
-        <property id="small_field_data" type="number">3</property>
+        <property id="small_field_data" type="number">2</property>
         <property id="graphmode" type="number">0</property>
         <property id="enable_logging" type="boolean">true</property>
         <property id="enable_grade_logging" type="boolean">false</property>

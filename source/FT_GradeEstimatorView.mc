@@ -155,34 +155,32 @@ class GradeEstimatorView extends WatchUi.DataField {
     }
 
     function getStatusString() as String {
-        var c = "";
-        var barlength = (drawCompact() ? 9 : 13) as Number;
-        if (calculating) {
-            c = str_active + " ";
-            var progress = Math.sqrt((gradeWindowSize.toFloat() - MIN_GRADE_WINDOW + 1) / (MAX_GRADE_WINDOW - MIN_GRADE_WINDOW + 1));
-            c += getProgressBar(progress, barlength);
-            c += " " + gradeWindowSize.format("%d") + "s";
-            if (!drawCompact()) { c += "|" + numValid.format("%d") + "s";}
-        } 
-        else if (bufIndex > 0) {
-            c = str_buffering + " ";
-            c += getProgressBar(bufIndex.toFloat() / MIN_GRADE_WINDOW, 17 - str_buffering.length());
-        }
-        else if (FIELD_SETUP_ERROR) {
-            c = WatchUi.loadResource(Rez.Strings.UI_Label_Status_FieldError);
+        if (FIELD_SETUP_ERROR) {
+            return WatchUi.loadResource(Rez.Strings.UI_Label_Status_FieldError);
         }
         else if (!LOGGING_ENALBED) {
-            c = WatchUi.loadResource(Rez.Strings.UI_Label_Status_LoggingDisabled);
+            return WatchUi.loadResource(Rez.Strings.UI_Label_Status_LoggingDisabled);
         }
-        else {
-            c = str_no_data + " ";
-
-            if (drawCompact()) { c = ""; }
-
-            c += getRotatingIcon();
-            c += " " + MIN_GRADE_WINDOW.format("%d") + "s|" + MAX_GRADE_WINDOW.format("%d") + "s|" + SAMPLE_WINDOW.format("%d") + "s";
+        else if (calculating) {
+            return str_active + " " + getStatusMetricString(quality);
         }
-        return c;
+        else if (bufIndex > 0) {
+            return str_buffering + " " + bufIndex.format("%d") + "/" + MIN_GRADE_WINDOW.format("%d");
+        }
+
+        return str_no_data;
+    }
+
+    function getStatusMetricString(progress as Float) as String {
+        var clampedProgress = progress;
+        if (clampedProgress < 0.0) { clampedProgress = 0.0; }
+        else if (clampedProgress > 1.0) { clampedProgress = 1.0; }
+
+        if (drawCompact() || useGradeFocusLayout() || isX30Unit) {
+            return (100.0 * clampedProgress).format("%.0f") + "%";
+        }
+
+        return getProgressBar(clampedProgress, 5);
     }
 
     function shouldAccLightDist() as Boolean { return (grade >= THRESHOLD_LIGHT && quality >= DIST_LOG_QUALITY); }

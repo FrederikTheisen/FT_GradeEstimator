@@ -13,8 +13,6 @@
 [![Downloads](https://img.shields.io/badge/downloads-1K%2B-007CC3?style=flat-square)](https://apps.garmin.com/en-US/apps/24827718-3484-48ab-977a-5e8055cbfbe2)
 [![Connect IQ](https://img.shields.io/badge/Connect%20IQ-Data%20Field-111111?style=flat-square)](https://developer.garmin.com/connect-iq/)
 
-<img src="GarminHeroImage.jpg" alt="Adaptive Grade Plus running on a Garmin Edge" width="100%">
-
 </div>
 
 Adaptive Grade Plus is a Connect IQ data field that replaces jumpy, delayed grade readings with an estimate designed for real-world road cycling. It uses adaptive linear regression to smooth the reading on steady climbs while shortening its sampling window when the road pitches up or down.
